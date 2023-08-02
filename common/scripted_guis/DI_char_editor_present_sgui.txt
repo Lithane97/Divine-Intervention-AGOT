@@ -1,11 +1,11 @@
 ﻿### Add All Lifestyle Perks
 DI_present_add_lifestyle_all = {
-	scope = chracter
+	scope = character
 
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -35,7 +35,7 @@ DI_present_remove_lifestyle_all = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -65,7 +65,7 @@ DI_present_add_lifestyle_martial = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -87,7 +87,7 @@ DI_present_remove_lifestyle_martial = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -109,7 +109,7 @@ DI_present_add_lifestyle_diplomacy = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -131,7 +131,7 @@ DI_present_remove_lifestyle_diplomacy = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -153,7 +153,7 @@ DI_present_add_lifestyle_stewardship = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -175,7 +175,7 @@ DI_present_remove_lifestyle_stewardship = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -197,7 +197,7 @@ DI_present_add_lifestyle_intrigue = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -219,7 +219,7 @@ DI_present_remove_lifestyle_intrigue = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -241,7 +241,7 @@ DI_present_add_lifestyle_learning = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -263,7 +263,7 @@ DI_present_remove_lifestyle_learning = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { 
@@ -285,7 +285,7 @@ DI_present_health_eliminate_issues = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -309,7 +309,7 @@ DI_present_health_add_good_genes = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -342,7 +342,7 @@ DI_present_health_remove_good_genes = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -373,7 +373,7 @@ DI_present_health_add_bad_genes = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -415,7 +415,7 @@ DI_present_health_remove_bad_genes = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { 
@@ -445,7 +445,7 @@ DI_present_health_add_no_stress_change = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -466,7 +466,7 @@ DI_present_health_remove_no_stress_change = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -488,7 +488,7 @@ DI_present_health_add_no_tyranny_change = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -509,7 +509,7 @@ DI_present_health_remove_no_tyranny_change = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -531,7 +531,7 @@ DI_present_health_add_no_dread_change = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -552,7 +552,7 @@ DI_present_health_remove_no_dread_change = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -574,7 +574,7 @@ DI_present_traits_randomize = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -598,7 +598,7 @@ DI_present_traits_add_special = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -632,7 +632,7 @@ DI_present_traits_remove_special = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -664,7 +664,7 @@ DI_present_traits_add_commander = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -686,7 +686,7 @@ DI_present_traits_remove_commander = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -708,7 +708,7 @@ DI_present_traits_add_giant = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -746,7 +746,7 @@ DI_present_traits_remove_giant = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -772,7 +772,7 @@ DI_present_traits_add_midget = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -810,7 +810,7 @@ DI_present_traits_remove_midget = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -834,7 +834,7 @@ DI_present_traits_add_ghostly = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -860,7 +860,7 @@ DI_present_traits_remove_ghostly = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -879,12 +879,14 @@ DI_present_traits_remove_ghostly = {
 
 ### Present Innovation Remove All Innovations
 DI_present_remove_all_innovations = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -898,7 +900,9 @@ DI_present_remove_all_innovations = {
 			}
 		}
 		else = {
-			innovation_remove_all_effect = yes
+			scope:root_target.culture = {
+				innovation_remove_all_effect = yes
+			}
 		}
 	}
 }
@@ -908,9 +912,11 @@ DI_present_innovation_regional = {
 	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -927,22 +933,26 @@ DI_present_innovation_regional = {
 			}
 		}
 		else = {
-			innovation_tribal_regional_effect = yes
-			innovation_early_medival_regional_effect = yes
-			innovation_high_medival_regional_effect = yes
-			innovation_late_medival_regional_effect = yes
+			scope:root_target.culture = {
+				innovation_tribal_regional_effect = yes
+				innovation_early_medival_regional_effect = yes
+				innovation_high_medival_regional_effect = yes
+				innovation_late_medival_regional_effect = yes
+			}
 		}
 	}
 }
 
 ### Present Innovation Add All Local Innovations
 DI_present_innovation_local = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -959,22 +969,26 @@ DI_present_innovation_local = {
 			}
 		}
 		else = {
-			innovation_tribal_effect = yes
-			innovation_early_medival_effect = yes
-			innovation_high_medival_effect = yes
-			innovation_late_medival_effect = yes
+			scope:root_target.culture = {
+				innovation_tribal_effect = yes
+				innovation_early_medival_effect = yes
+				innovation_high_medival_effect = yes
+				innovation_late_medival_effect = yes
+			}
 		}
 	}
 }
 
 ### Add Regional Tribal Innovations
 DI_present_innovation_regional_tribal = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -988,19 +1002,23 @@ DI_present_innovation_regional_tribal = {
 			}
 		}
 		else = {
-			innovation_tribal_regional_effect = yes
+			scope:root_target.culture = {
+				innovation_tribal_regional_effect = yes
+			}
 		}
 	}
 }
 
 ### Add Regional Early Medival Innovations
 DI_present_innovation_regional_early = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1014,19 +1032,23 @@ DI_present_innovation_regional_early = {
 			}
 		}
 		else = {
-			innovation_early_medival_regional_effect = yes
+			scope:root_target.culture = {
+				innovation_early_medival_regional_effect = yes
+			}
 		}
 	}
 }
 
 ### Add Regional High Medival Innovations
 DI_present_innovation_regional_high = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1040,19 +1062,23 @@ DI_present_innovation_regional_high = {
 			}
 		}
 		else = {
-			innovation_high_medival_regional_effect = yes
+			scope:root_target.culture = {
+				innovation_high_medival_regional_effect = yes
+			}
 		}
 	}
 }
 
 ### Add Regional Late Medival Innovations
 DI_present_innovation_regional_late = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1066,19 +1092,23 @@ DI_present_innovation_regional_late = {
 			}
 		}
 		else = {
-			innovation_late_medival_regional_effect = yes
+			scope:root_target.culture = {
+				innovation_late_medival_regional_effect = yes
+			}
 		}
 	}
 }
 
 ### Add All Local Tribal Innovations
 DI_present_innovation_tribal = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1092,19 +1122,23 @@ DI_present_innovation_tribal = {
 			}
 		}
 		else = {
-			innovation_tribal_effect = yes
+			scope:root_target.culture = {
+				innovation_tribal_effect = yes
+			}
 		}
 	}
 }
 
 ### Add All Local Early Medival Innovations
 DI_present_innovation_early = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1118,19 +1152,23 @@ DI_present_innovation_early = {
 			}
 		}
 		else = {
-			innovation_early_medival_effect = yes
+			scope:root_target.culture = {
+				innovation_early_medival_effect = yes
+			}
 		}
 	}
 }
 
 ### Add All Local High Medival Innovations
 DI_present_innovation_high = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1144,19 +1182,23 @@ DI_present_innovation_high = {
 			}
 		}
 		else = {
-			innovation_high_medival_effect = yes
+			scope:root_target.culture = {
+				innovation_high_medival_effect = yes
+			}
 		}
 	}
 }
 
 ### Add All Local Late Medival Innovations
 DI_present_innovation_late = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1170,7 +1212,9 @@ DI_present_innovation_late = {
 			}
 		}
 		else = {
-			innovation_late_medival_effect = yes
+			scope:root_target.culture = {
+				innovation_late_medival_effect = yes
+			}
 		}
 	}
 }
@@ -1178,12 +1222,14 @@ DI_present_innovation_late = {
 ### Tribal Innovations
 ### Longboats
 DI_present_innovation_longboats = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1207,16 +1253,18 @@ DI_present_innovation_longboats = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_longboats
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_longboats
+						}
 					}
+					add_innovation = innovation_longboats
 				}
-				add_innovation = innovation_longboats
-			}
-			else = {
-				remove_innovation = innovation_longboats
+				else = {
+					remove_innovation = innovation_longboats
+				}
 			}
 		}
 	}
@@ -1224,12 +1272,14 @@ DI_present_innovation_longboats = {
 
 ### elephantry
 DI_present_innovation_elephantry = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1253,16 +1303,18 @@ DI_present_innovation_elephantry = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_elephantry
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_elephantry
+						}
 					}
+					add_innovation = innovation_elephantry
 				}
-				add_innovation = innovation_elephantry
-			}
-			else = {
-				remove_innovation = innovation_elephantry
+				else = {
+					remove_innovation = innovation_elephantry
+				}
 			}
 		}
 	}
@@ -1270,12 +1322,14 @@ DI_present_innovation_elephantry = {
 
 ### war camels
 DI_present_innovation_war_camels = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1299,16 +1353,18 @@ DI_present_innovation_war_camels = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_war_camels
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_war_camels
+						}
 					}
+					add_innovation = innovation_war_camels
 				}
-				add_innovation = innovation_war_camels
-			}
-			else = {
-				remove_innovation = innovation_war_camels
+				else = {
+					remove_innovation = innovation_war_camels
+				}
 			}
 		}
 	}
@@ -1316,12 +1372,14 @@ DI_present_innovation_war_camels = {
 
 ### All Things
 DI_present_innovation_all_things = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1345,16 +1403,18 @@ DI_present_innovation_all_things = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_all_things
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_all_things
+						}
 					}
+					add_innovation = innovation_all_things
 				}
-				add_innovation = innovation_all_things
-			}
-			else = {
-				remove_innovation = innovation_all_things
+				else = {
+					remove_innovation = innovation_all_things
+				}
 			}
 		}
 	}
@@ -1362,12 +1422,14 @@ DI_present_innovation_all_things = {
 
 ### Unsullied
 DI_present_innovation_unsullied = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1391,16 +1453,18 @@ DI_present_innovation_unsullied = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_unsullied
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_unsullied
+						}
 					}
+					add_innovation = innovation_unsullied
 				}
-				add_innovation = innovation_unsullied
-			}
-			else = {
-				remove_innovation = innovation_unsullied
+				else = {
+					remove_innovation = innovation_unsullied
+				}
 			}
 		}
 	}
@@ -1409,12 +1473,14 @@ DI_present_innovation_unsullied = {
 ### Tribal Local Innovations
 ### Mottes
 DI_present_innovation_motte = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1438,16 +1504,18 @@ DI_present_innovation_motte = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_motte
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_motte
+						}
 					}
+					add_innovation = innovation_motte
 				}
-				add_innovation = innovation_motte
-			}
-			else = {
-				remove_innovation = innovation_motte
+				else = {
+					remove_innovation = innovation_motte
+				}		
 			}
 		}
 	}
@@ -1455,12 +1523,14 @@ DI_present_innovation_motte = {
 
 ### Catapult
 DI_present_innovation_catapult = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1484,16 +1554,18 @@ DI_present_innovation_catapult = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_catapult
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_catapult
+						}
 					}
+					add_innovation = innovation_catapult
 				}
-				add_innovation = innovation_catapult
-			}
-			else = {
-				remove_innovation = innovation_catapult
+				else = {
+					remove_innovation = innovation_catapult
+				}		
 			}
 		}
 	}
@@ -1501,12 +1573,14 @@ DI_present_innovation_catapult = {
 
 ### Barracks
 DI_present_innovation_barracks = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1530,16 +1604,18 @@ DI_present_innovation_barracks = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_barracks
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_barracks
+						}
 					}
+					add_innovation = innovation_barracks
 				}
-				add_innovation = innovation_barracks
-			}
-			else = {
-				remove_innovation = innovation_barracks
+				else = {
+					remove_innovation = innovation_barracks
+				}		
 			}
 		}
 	}
@@ -1547,12 +1623,14 @@ DI_present_innovation_barracks = {
 
 ### Mustering Grounds
 DI_present_innovation_mustering_grounds = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1576,16 +1654,18 @@ DI_present_innovation_mustering_grounds = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_mustering_grounds
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_mustering_grounds
+						}
 					}
+					add_innovation = innovation_mustering_grounds
 				}
-				add_innovation = innovation_mustering_grounds
-			}
-			else = {
-				remove_innovation = innovation_mustering_grounds
+				else = {
+					remove_innovation = innovation_mustering_grounds
+				}		
 			}
 		}
 	}
@@ -1593,12 +1673,14 @@ DI_present_innovation_mustering_grounds = {
 
 ### Bannus
 DI_present_innovation_bannus = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1622,16 +1704,18 @@ DI_present_innovation_bannus = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_bannus
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_bannus
+						}
 					}
+					add_innovation = innovation_bannus
 				}
-				add_innovation = innovation_bannus
-			}
-			else = {
-				remove_innovation = innovation_bannus
+				else = {
+					remove_innovation = innovation_bannus
+				}		
 			}
 		}
 	}
@@ -1639,12 +1723,14 @@ DI_present_innovation_bannus = {
 
 ### Quilted Armor
 DI_present_innovation_quilted_armor = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1668,16 +1754,18 @@ DI_present_innovation_quilted_armor = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_quilted_armor
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_quilted_armor
+						}
 					}
+					add_innovation = innovation_quilted_armor
 				}
-				add_innovation = innovation_quilted_armor
-			}
-			else = {
-				remove_innovation = innovation_quilted_armor
+				else = {
+					remove_innovation = innovation_quilted_armor
+				}		
 			}
 		}
 	}
@@ -1685,12 +1773,14 @@ DI_present_innovation_quilted_armor = {
 
 ### Public Works
 DI_present_innovation_development_01 = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1714,16 +1804,18 @@ DI_present_innovation_development_01 = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_development_01
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_development_01
+						}
 					}
+					add_innovation = innovation_development_01
 				}
-				add_innovation = innovation_development_01
-			}
-			else = {
-				remove_innovation = innovation_development_01
+				else = {
+					remove_innovation = innovation_development_01
+				}		
 			}
 		}
 	}
@@ -1731,12 +1823,14 @@ DI_present_innovation_development_01 = {
 
 ### Currency
 DI_present_innovation_currency_01 = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1760,16 +1854,18 @@ DI_present_innovation_currency_01 = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_currency_01
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_currency_01
+						}
 					}
+					add_innovation = innovation_currency_01
 				}
-				add_innovation = innovation_currency_01
-			}
-			else = {
-				remove_innovation = innovation_currency_01
+				else = {
+					remove_innovation = innovation_currency_01
+				}		
 			}
 		}
 	}
@@ -1777,12 +1873,14 @@ DI_present_innovation_currency_01 = {
 
 ### Gavelkind
 DI_present_innovation_gavelkind = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1806,16 +1904,18 @@ DI_present_innovation_gavelkind = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_gavelkind
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_gavelkind
+						}
 					}
+					add_innovation = innovation_gavelkind
 				}
-				add_innovation = innovation_gavelkind
-			}
-			else = {
-				remove_innovation = innovation_gavelkind
+				else = {
+					remove_innovation = innovation_gavelkind
+				}		
 			}
 		}
 	}
@@ -1823,12 +1923,14 @@ DI_present_innovation_gavelkind = {
 
 ### Crop Rotation
 DI_present_innovation_crop_rotation = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1852,16 +1954,18 @@ DI_present_innovation_crop_rotation = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_crop_rotation
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_crop_rotation
+						}
 					}
+					add_innovation = innovation_crop_rotation
 				}
-				add_innovation = innovation_crop_rotation
-			}
-			else = {
-				remove_innovation = innovation_crop_rotation
+				else = {
+					remove_innovation = innovation_crop_rotation
+				}		
 			}
 		}
 	}
@@ -1869,12 +1973,14 @@ DI_present_innovation_crop_rotation = {
 
 ### City Planning
 DI_present_innovation_city_planning = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1898,16 +2004,18 @@ DI_present_innovation_city_planning = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_city_planning
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_city_planning
+						}
 					}
+					add_innovation = innovation_city_planning
 				}
-				add_innovation = innovation_city_planning
-			}
-			else = {
-				remove_innovation = innovation_city_planning
+				else = {
+					remove_innovation = innovation_city_planning
+				}		
 			}
 		}
 	}
@@ -1915,12 +2023,14 @@ DI_present_innovation_city_planning = {
 
 ### Casus Belli
 DI_present_innovation_casus_belli = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1944,16 +2054,18 @@ DI_present_innovation_casus_belli = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_casus_belli
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_casus_belli
+						}
 					}
+					add_innovation = innovation_casus_belli
 				}
-				add_innovation = innovation_casus_belli
-			}
-			else = {
-				remove_innovation = innovation_casus_belli
+				else = {
+					remove_innovation = innovation_casus_belli
+				}		
 			}
 		}
 	}
@@ -1961,12 +2073,14 @@ DI_present_innovation_casus_belli = {
 
 ### Plenary Assemblies
 DI_present_innovation_plenary_assemblies = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -1990,16 +2104,18 @@ DI_present_innovation_plenary_assemblies = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_plenary_assemblies
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_plenary_assemblies
+						}
 					}
+					add_innovation = innovation_plenary_assemblies
 				}
-				add_innovation = innovation_plenary_assemblies
-			}
-			else = {
-				remove_innovation = innovation_plenary_assemblies
+				else = {
+					remove_innovation = innovation_plenary_assemblies
+				}		
 			}
 		}
 	}
@@ -2007,12 +2123,14 @@ DI_present_innovation_plenary_assemblies = {
 
 ### Ledger
 DI_present_innovation_ledger = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2036,16 +2154,18 @@ DI_present_innovation_ledger = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_ledger
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_ledger
+						}
 					}
+					add_innovation = innovation_ledger
 				}
-				add_innovation = innovation_ledger
-			}
-			else = {
-				remove_innovation = innovation_ledger
+				else = {
+					remove_innovation = innovation_ledger
+				}		
 			}
 		}
 	}
@@ -2054,12 +2174,14 @@ DI_present_innovation_ledger = {
 ### Early Medival Local Innovation Selection
 ### Battlements
 DI_present_innovation_battlements = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2083,16 +2205,18 @@ DI_present_innovation_battlements = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_battlements
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_battlements
+						}
 					}
+					add_innovation = innovation_battlements
 				}
-				add_innovation = innovation_battlements
-			}
-			else = {
-				remove_innovation = innovation_battlements
+				else = {
+					remove_innovation = innovation_battlements
+				}
 			}
 		}
 	}
@@ -2100,12 +2224,14 @@ DI_present_innovation_battlements = {
 
 ### Mangonel
 DI_present_innovation_mangonel = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2129,16 +2255,18 @@ DI_present_innovation_mangonel = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_mangonel
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_mangonel
+						}
 					}
+					add_innovation = innovation_mangonel
 				}
-				add_innovation = innovation_mangonel
-			}
-			else = {
-				remove_innovation = innovation_mangonel
+				else = {
+					remove_innovation = innovation_mangonel
+				}
 			}
 		}
 	}
@@ -2146,12 +2274,14 @@ DI_present_innovation_mangonel = {
 
 ### Burhs
 DI_present_innovation_burhs = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2175,16 +2305,18 @@ DI_present_innovation_burhs = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_burhs
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_burhs
+						}
 					}
+					add_innovation = innovation_burhs
 				}
-				add_innovation = innovation_burhs
-			}
-			else = {
-				remove_innovation = innovation_burhs
+				else = {
+					remove_innovation = innovation_burhs
+				}
 			}
 		}
 	}
@@ -2192,12 +2324,14 @@ DI_present_innovation_burhs = {
 
 ### House Soldiers
 DI_present_innovation_house_soldiers = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2221,16 +2355,18 @@ DI_present_innovation_house_soldiers = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_house_soldiers
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_house_soldiers
+						}
 					}
+					add_innovation = innovation_house_soldiers
 				}
-				add_innovation = innovation_house_soldiers
-			}
-			else = {
-				remove_innovation = innovation_house_soldiers
+				else = {
+					remove_innovation = innovation_house_soldiers
+				}
 			}
 		}
 	}
@@ -2238,12 +2374,14 @@ DI_present_innovation_house_soldiers = {
 
 ### Horseshoes
 DI_present_innovation_horseshoes = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2267,16 +2405,18 @@ DI_present_innovation_horseshoes = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_horseshoes
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_horseshoes
+						}
 					}
+					add_innovation = innovation_horseshoes
 				}
-				add_innovation = innovation_horseshoes
-			}
-			else = {
-				remove_innovation = innovation_horseshoes
+				else = {
+					remove_innovation = innovation_horseshoes
+				}
 			}
 		}
 	}
@@ -2284,12 +2424,14 @@ DI_present_innovation_horseshoes = {
 
 ### Arched Saddle
 DI_present_innovation_arched_saddle = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2313,16 +2455,18 @@ DI_present_innovation_arched_saddle = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_arched_saddle
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_arched_saddle
+						}
 					}
+					add_innovation = innovation_arched_saddle
 				}
-				add_innovation = innovation_arched_saddle
-			}
-			else = {
-				remove_innovation = innovation_arched_saddle
+				else = {
+					remove_innovation = innovation_arched_saddle
+				}
 			}
 		}
 	}
@@ -2330,12 +2474,14 @@ DI_present_innovation_arched_saddle = {
 
 ### Hereditary Rule
 DI_present_innovation_hereditary_rule = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2359,16 +2505,18 @@ DI_present_innovation_hereditary_rule = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_hereditary_rule
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_hereditary_rule
+						}
 					}
+					add_innovation = innovation_hereditary_rule
 				}
-				add_innovation = innovation_hereditary_rule
-			}
-			else = {
-				remove_innovation = innovation_hereditary_rule
+				else = {
+					remove_innovation = innovation_hereditary_rule
+				}
 			}
 		}
 	}
@@ -2376,12 +2524,14 @@ DI_present_innovation_hereditary_rule = {
 
 ### Manroialism
 DI_present_innovation_manorialism = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2405,16 +2555,18 @@ DI_present_innovation_manorialism = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_manorialism
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_manorialism
+						}
 					}
+					add_innovation = innovation_manorialism
 				}
-				add_innovation = innovation_manorialism
-			}
-			else = {
-				remove_innovation = innovation_manorialism
+				else = {
+					remove_innovation = innovation_manorialism
+				}
 			}
 		}
 	}
@@ -2422,12 +2574,14 @@ DI_present_innovation_manorialism = {
 
 ### Communal Government
 DI_present_innovation_development_02 = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2451,16 +2605,18 @@ DI_present_innovation_development_02 = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_development_02
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_development_02
+						}
 					}
+					add_innovation = innovation_development_02
 				}
-				add_innovation = innovation_development_02
-			}
-			else = {
-				remove_innovation = innovation_development_02
+				else = {
+					remove_innovation = innovation_development_02
+				}
 			}
 		}
 	}
@@ -2468,12 +2624,14 @@ DI_present_innovation_development_02 = {
 
 ### Coinage
 DI_present_innovation_currency_02 = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2497,16 +2655,18 @@ DI_present_innovation_currency_02 = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_currency_02
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_currency_02
+						}
 					}
+					add_innovation = innovation_currency_02
 				}
-				add_innovation = innovation_currency_02
-			}
-			else = {
-				remove_innovation = innovation_currency_02
+				else = {
+					remove_innovation = innovation_currency_02
+				}
 			}
 		}
 	}
@@ -2514,12 +2674,14 @@ DI_present_innovation_currency_02 = {
 
 ### Royal Prerogative
 DI_present_innovation_royal_prerogative = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2543,16 +2705,18 @@ DI_present_innovation_royal_prerogative = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_royal_prerogative
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_royal_prerogative
+						}
 					}
+					add_innovation = innovation_royal_prerogative
 				}
-				add_innovation = innovation_royal_prerogative
-			}
-			else = {
-				remove_innovation = innovation_royal_prerogative
+				else = {
+					remove_innovation = innovation_royal_prerogative
+				}
 			}
 		}
 	}
@@ -2560,12 +2724,14 @@ DI_present_innovation_royal_prerogative = {
 
 ### Chronicle Writing
 DI_present_innovation_chronicle_writing = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2589,29 +2755,33 @@ DI_present_innovation_chronicle_writing = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_chronicle_writing
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_chronicle_writing
+						}
 					}
+					add_innovation = innovation_chronicle_writing
 				}
-				add_innovation = innovation_chronicle_writing
-			}
-			else = {
-				remove_innovation = innovation_chronicle_writing
+				else = {
+					remove_innovation = innovation_chronicle_writing
+				}
 			}
 		}
 	}
 }
 
-### Armilary Sphere
+### Armillary Sphere
 DI_present_innovation_armilary_sphere = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2635,16 +2805,18 @@ DI_present_innovation_armilary_sphere = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_armilary_sphere
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_armilary_sphere
+						}
 					}
+					add_innovation = innovation_armilary_sphere
 				}
-				add_innovation = innovation_armilary_sphere
-			}
-			else = {
-				remove_innovation = innovation_armilary_sphere
+				else = {
+					remove_innovation = innovation_armilary_sphere
+				}
 			}
 		}
 	}
@@ -2652,12 +2824,14 @@ DI_present_innovation_armilary_sphere = {
 
 ### Baliffs
 DI_present_innovation_baliffs = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2681,16 +2855,18 @@ DI_present_innovation_baliffs = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_baliffs
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_baliffs
+						}
 					}
+					add_innovation = innovation_baliffs
 				}
-				add_innovation = innovation_baliffs
-			}
-			else = {
-				remove_innovation = innovation_baliffs
+				else = {
+					remove_innovation = innovation_baliffs
+				}
 			}
 		}
 	}
@@ -2699,12 +2875,14 @@ DI_present_innovation_baliffs = {
 ### High Medival Local Innovation Selection
 ### Hoardings
 DI_present_innovation_hoardings = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2728,16 +2906,18 @@ DI_present_innovation_hoardings = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_hoardings
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_hoardings
+						}
 					}
+					add_innovation = innovation_hoardings
 				}
-				add_innovation = innovation_hoardings
-			}
-			else = {
-				remove_innovation = innovation_hoardings
+				else = {
+					remove_innovation = innovation_hoardings
+				}			
 			}
 		}
 	}
@@ -2745,12 +2925,14 @@ DI_present_innovation_hoardings = {
 
 ### Trebuchet
 DI_present_innovation_trebuchet = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2774,16 +2956,18 @@ DI_present_innovation_trebuchet = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_trebuchet
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_trebuchet
+						}
 					}
+					add_innovation = innovation_trebuchet
 				}
-				add_innovation = innovation_trebuchet
-			}
-			else = {
-				remove_innovation = innovation_trebuchet
+				else = {
+					remove_innovation = innovation_trebuchet
+				}			
 			}
 		}
 	}
@@ -2791,12 +2975,14 @@ DI_present_innovation_trebuchet = {
 
 ### Castle Baileys
 DI_present_innovation_castle_baileys = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2820,16 +3006,18 @@ DI_present_innovation_castle_baileys = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_castle_baileys
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_castle_baileys
+						}
 					}
+					add_innovation = innovation_castle_baileys
 				}
-				add_innovation = innovation_castle_baileys
-			}
-			else = {
-				remove_innovation = innovation_castle_baileys
+				else = {
+					remove_innovation = innovation_castle_baileys
+				}			
 			}
 		}
 	}
@@ -2837,12 +3025,14 @@ DI_present_innovation_castle_baileys = {
 
 ### Men at Arms
 DI_present_innovation_men_at_arms = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2866,16 +3056,18 @@ DI_present_innovation_men_at_arms = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_men_at_arms
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_men_at_arms
+						}
 					}
+					add_innovation = innovation_men_at_arms
 				}
-				add_innovation = innovation_men_at_arms
-			}
-			else = {
-				remove_innovation = innovation_men_at_arms
+				else = {
+					remove_innovation = innovation_men_at_arms
+				}		
 			}
 		}
 	}
@@ -2883,12 +3075,14 @@ DI_present_innovation_men_at_arms = {
 
 ### Knighthood
 DI_present_innovation_knighthood = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2912,16 +3106,18 @@ DI_present_innovation_knighthood = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_knighthood
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_knighthood
+						}
 					}
+					add_innovation = innovation_knighthood
 				}
-				add_innovation = innovation_knighthood
-			}
-			else = {
-				remove_innovation = innovation_knighthood
+				else = {
+					remove_innovation = innovation_knighthood
+				}		
 			}
 		}
 	}
@@ -2929,12 +3125,14 @@ DI_present_innovation_knighthood = {
 
 ### Advanced Bowmaking
 DI_present_innovation_advanced_bowmaking = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -2958,16 +3156,18 @@ DI_present_innovation_advanced_bowmaking = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_advanced_bowmaking
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_advanced_bowmaking
+						}
 					}
+					add_innovation = innovation_advanced_bowmaking
 				}
-				add_innovation = innovation_advanced_bowmaking
-			}
-			else = {
-				remove_innovation = innovation_advanced_bowmaking
+				else = {
+					remove_innovation = innovation_advanced_bowmaking
+				}		
 			}
 		}
 	}
@@ -2975,12 +3175,14 @@ DI_present_innovation_advanced_bowmaking = {
 
 ### Heraldry
 DI_present_innovation_heraldry = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3004,16 +3206,18 @@ DI_present_innovation_heraldry = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_heraldry
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_heraldry
+						}
 					}
+					add_innovation = innovation_heraldry
 				}
-				add_innovation = innovation_heraldry
-			}
-			else = {
-				remove_innovation = innovation_heraldry
+				else = {
+					remove_innovation = innovation_heraldry
+				}		
 			}
 		}
 	}
@@ -3021,12 +3225,14 @@ DI_present_innovation_heraldry = {
 
 ### Windmills
 DI_present_innovation_windmills = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3050,16 +3256,18 @@ DI_present_innovation_windmills = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_windmills
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_windmills
+						}
 					}
+					add_innovation = innovation_windmills
 				}
-				add_innovation = innovation_windmills
-			}
-			else = {
-				remove_innovation = innovation_windmills
+				else = {
+					remove_innovation = innovation_windmills
+				}		
 			}
 		}
 	}
@@ -3067,12 +3275,14 @@ DI_present_innovation_windmills = {
 
 ### Divine Right
 DI_present_innovation_divine_right = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3096,16 +3306,18 @@ DI_present_innovation_divine_right = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_divine_right
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_divine_right
+						}
 					}
+					add_innovation = innovation_divine_right
 				}
-				add_innovation = innovation_divine_right
-			}
-			else = {
-				remove_innovation = innovation_divine_right
+				else = {
+					remove_innovation = innovation_divine_right
+				}		
 			}
 		}
 	}
@@ -3113,12 +3325,14 @@ DI_present_innovation_divine_right = {
 
 ### Land Grants
 DI_present_innovation_land_grants = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3142,16 +3356,18 @@ DI_present_innovation_land_grants = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_land_grants
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_land_grants
+						}
 					}
+					add_innovation = innovation_land_grants
 				}
-				add_innovation = innovation_land_grants
-			}
-			else = {
-				remove_innovation = innovation_land_grants
+				else = {
+					remove_innovation = innovation_land_grants
+				}		
 			}
 		}
 	}
@@ -3159,12 +3375,14 @@ DI_present_innovation_land_grants = {
 
 ### Scutage
 DI_present_innovation_scutage = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3188,16 +3406,18 @@ DI_present_innovation_scutage = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_scutage
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_scutage
+						}
 					}
+					add_innovation = innovation_scutage
 				}
-				add_innovation = innovation_scutage
-			}
-			else = {
-				remove_innovation = innovation_scutage
+				else = {
+					remove_innovation = innovation_scutage
+				}		
 			}
 		}
 	}
@@ -3205,12 +3425,14 @@ DI_present_innovation_scutage = {
 
 ### Guilds
 DI_present_innovation_guilds = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3234,16 +3456,18 @@ DI_present_innovation_guilds = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_guilds
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_guilds
+						}
 					}
+					add_innovation = innovation_guilds
 				}
-				add_innovation = innovation_guilds
-			}
-			else = {
-				remove_innovation = innovation_guilds
+				else = {
+					remove_innovation = innovation_guilds
+				}		
 			}
 		}
 	}
@@ -3251,12 +3475,14 @@ DI_present_innovation_guilds = {
 
 ### Urbanization
 DI_present_innovation_development_03 = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3280,16 +3506,18 @@ DI_present_innovation_development_03 = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_development_03
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_development_03
+						}
 					}
+					add_innovation = innovation_development_03
 				}
-				add_innovation = innovation_development_03
-			}
-			else = {
-				remove_innovation = innovation_development_03
+				else = {
+					remove_innovation = innovation_development_03
+				}
 			}
 		}
 	}
@@ -3297,12 +3525,14 @@ DI_present_innovation_development_03 = {
 
 ### Banking
 DI_present_innovation_currency_03 = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3326,16 +3556,18 @@ DI_present_innovation_currency_03 = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_currency_03
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_currency_03
+						}
 					}
+					add_innovation = innovation_currency_03
 				}
-				add_innovation = innovation_currency_03
-			}
-			else = {
-				remove_innovation = innovation_currency_03
+				else = {
+					remove_innovation = innovation_currency_03
+				}
 			}
 		}
 	}
@@ -3344,12 +3576,14 @@ DI_present_innovation_currency_03 = {
 ### Late Medival Local Innovation Selection
 ### machicolations
 DI_present_innovation_machicolations = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3373,16 +3607,18 @@ DI_present_innovation_machicolations = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_machicolations
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_machicolations
+						}
 					}
+					add_innovation = innovation_machicolations
 				}
-				add_innovation = innovation_machicolations
-			}
-			else = {
-				remove_innovation = innovation_machicolations
+				else = {
+					remove_innovation = innovation_machicolations
+				}
 			}
 		}
 	}
@@ -3390,12 +3626,14 @@ DI_present_innovation_machicolations = {
 
 ### Royal Armory
 DI_present_innovation_royal_armory = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3419,16 +3657,18 @@ DI_present_innovation_royal_armory = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_royal_armory
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_royal_armory
+						}
 					}
+					add_innovation = innovation_royal_armory
 				}
-				add_innovation = innovation_royal_armory
-			}
-			else = {
-				remove_innovation = innovation_royal_armory
+				else = {
+					remove_innovation = innovation_royal_armory
+				}
 			}
 		}
 	}
@@ -3436,12 +3676,14 @@ DI_present_innovation_royal_armory = {
 
 ### Standing Armies
 DI_present_innovation_standing_armies = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3465,16 +3707,18 @@ DI_present_innovation_standing_armies = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_standing_armies
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_standing_armies
+						}
 					}
+					add_innovation = innovation_standing_armies
 				}
-				add_innovation = innovation_standing_armies
-			}
-			else = {
-				remove_innovation = innovation_standing_armies
+				else = {
+					remove_innovation = innovation_standing_armies
+				}
 			}
 		}
 	}
@@ -3482,12 +3726,14 @@ DI_present_innovation_standing_armies = {
 
 ### Sappers
 DI_present_innovation_sappers = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3511,16 +3757,18 @@ DI_present_innovation_sappers = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_sappers
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_sappers
+						}
 					}
+					add_innovation = innovation_sappers
 				}
-				add_innovation = innovation_sappers
-			}
-			else = {
-				remove_innovation = innovation_sappers
+				else = {
+					remove_innovation = innovation_sappers
+				}
 			}
 		}
 	}
@@ -3528,12 +3776,14 @@ DI_present_innovation_sappers = {
 
 ### Plate Armor
 DI_present_innovation_plate_armor = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3557,16 +3807,18 @@ DI_present_innovation_plate_armor = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_plate_armor
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_plate_armor
+						}
 					}
+					add_innovation = innovation_plate_armor
 				}
-				add_innovation = innovation_plate_armor
-			}
-			else = {
-				remove_innovation = innovation_plate_armor
+				else = {
+					remove_innovation = innovation_plate_armor
+				}
 			}
 		}
 	}
@@ -3574,12 +3826,14 @@ DI_present_innovation_plate_armor = {
 
 ### Cranes
 DI_present_innovation_cranes = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3603,16 +3857,18 @@ DI_present_innovation_cranes = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_cranes
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_cranes
+						}
 					}
+					add_innovation = innovation_cranes
 				}
-				add_innovation = innovation_cranes
-			}
-			else = {
-				remove_innovation = innovation_cranes
+				else = {
+					remove_innovation = innovation_cranes
+				}
 			}
 		}
 	}
@@ -3620,12 +3876,14 @@ DI_present_innovation_cranes = {
 
 ### Noblesse Oblige
 DI_present_innovation_noblesse_oblige = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3649,16 +3907,18 @@ DI_present_innovation_noblesse_oblige = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_noblesse_oblige
+			scope:root_target.culture = {
+				if = { 
+					limit = {
+						NOT = {
+							has_innovation = innovation_noblesse_oblige
+						}
 					}
+					add_innovation = innovation_noblesse_oblige
 				}
-				add_innovation = innovation_noblesse_oblige
-			}
-			else = {
-				remove_innovation = innovation_noblesse_oblige
+				else = {
+					remove_innovation = innovation_noblesse_oblige
+				}
 			}
 		}
 	}
@@ -3666,12 +3926,14 @@ DI_present_innovation_noblesse_oblige = {
 
 ### Rightful Ownership
 DI_present_innovation_rightful_ownership = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3695,16 +3957,18 @@ DI_present_innovation_rightful_ownership = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_rightful_ownership
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_rightful_ownership
+						}
 					}
+					add_innovation = innovation_rightful_ownership
 				}
-				add_innovation = innovation_rightful_ownership
-			}
-			else = {
-				remove_innovation = innovation_rightful_ownership
+				else = {
+					remove_innovation = innovation_rightful_ownership
+				}								
 			}
 		}
 	}
@@ -3712,12 +3976,14 @@ DI_present_innovation_rightful_ownership = {
 
 ### Ermine CLoaks
 DI_present_innovation_ermine_cloaks = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3741,16 +4007,18 @@ DI_present_innovation_ermine_cloaks = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_ermine_cloaks
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_ermine_cloaks
+						}
 					}
+					add_innovation = innovation_ermine_cloaks
 				}
-				add_innovation = innovation_ermine_cloaks
-			}
-			else = {
-				remove_innovation = innovation_ermine_cloaks
+				else = {
+					remove_innovation = innovation_ermine_cloaks
+				}								
 			}
 		}
 	}
@@ -3758,12 +4026,14 @@ DI_present_innovation_ermine_cloaks = {
 
 ### Court Officials
 DI_present_innovation_court_officials = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3787,16 +4057,18 @@ DI_present_innovation_court_officials = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_court_officials
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_court_officials
+						}
 					}
+					add_innovation = innovation_court_officials
 				}
-				add_innovation = innovation_court_officials
-			}
-			else = {
-				remove_innovation = innovation_court_officials
+				else = {
+					remove_innovation = innovation_court_officials
+				}								
 			}
 		}
 	}
@@ -3804,12 +4076,14 @@ DI_present_innovation_court_officials = {
 
 ### Renaissance Thought
 DI_present_innovation_development_04 = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3833,16 +4107,18 @@ DI_present_innovation_development_04 = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_development_04
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_development_04
+						}
 					}
+					add_innovation = innovation_development_04
 				}
-				add_innovation = innovation_development_04
-			}
-			else = {
-				remove_innovation = innovation_development_04
+				else = {
+					remove_innovation = innovation_development_04
+				}								
 			}
 		}
 	}
@@ -3850,12 +4126,14 @@ DI_present_innovation_development_04 = {
 
 ### Promissory Notes
 DI_present_innovation_currency_04 = {
-	scope = culture
+	scope = character
 
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3879,16 +4157,18 @@ DI_present_innovation_currency_04 = {
 			}
 		}
 		else = {
-			if = {
-				limit = {
-					NOT = {
-						has_innovation = innovation_currency_04
+			scope:root_target.culture = {
+				if = {
+					limit = {
+						NOT = {
+							has_innovation = innovation_currency_04
+						}
 					}
+					add_innovation = innovation_currency_04
 				}
-				add_innovation = innovation_currency_04
-			}
-			else = {
-				remove_innovation = innovation_currency_04
+				else = {
+					remove_innovation = innovation_currency_04
+				}								
 			}
 		}
 	}
@@ -3902,7 +4182,7 @@ DI_present_innovation_outriders = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3948,7 +4228,7 @@ DI_present_innovation_primogeniture_westeros = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -3995,7 +4275,7 @@ DI_present_innovation_maesters = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {
@@ -4041,7 +4321,7 @@ DI_present_innovation_goldenheart_bowmen = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = {

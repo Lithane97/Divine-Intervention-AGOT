@@ -17,13 +17,11 @@ window = {
 	visible = "[GetVariableSystem.Exists('DI_religion_window_visible')]"
 	
 	state = {
-			name = init
-			trigger_on_create = yes
-			
-			on_start = "[GetScriptedGui('DI_religion_list_load').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+		name = init
+		trigger_on_create = yes
+		
+		on_start = "[GetScriptedGui('DI_religion_list_load').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 	}
-	
-	
 	
 	state = {
 		name = _show
@@ -58,15 +56,14 @@ window = {
 		scrollbox = {
 			layoutpolicy_vertical = expanding
 			layoutpolicy_horizontal = expanding
-			minimumsize = { 350 0 }
-
-			datacontext = "[GetGlobalList('religion_list')]"
+			minimumsize = { 400 100% }
 
 			blockoverride "scrollbox_content"
 			{
 				vbox = {
-					datamodel = "[GetGlobalList('religion_list')]"
+					name = "religions"
 					layoutpolicy_horizontal = expanding
+					datamodel = "[GetGlobalList('DI_religion_list')]"
 
 					item = {
 						vbox = {

@@ -64,14 +64,13 @@
 						max_width = 150
 						
 						layoutpolicy_horizontal = expanding
-						onclick = "[GetVariableSystem.Toggle('DI_char_spawner_immortal')]"
 						onclick = "[GetScriptedGui('DI_char_spawner_immortal_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 						parentanchor = center
 						
 						
 						blockoverride "checkbox" 
 						{
-							checked = "[GetVariableSystem.Exists('DI_char_spawner_immortal')]"
+							checked = "[GetPlayer.MakeScope.Var('DI_char_spawner_immortal').IsSet]"
 						}
 						
 						blockoverride "text"
@@ -94,14 +93,13 @@
 						max_width = 150
 						
 						layoutpolicy_horizontal = expanding
-						onclick = "[GetVariableSystem.Toggle('DI_char_spawner_100_stat_man')]"
 						onclick = "[GetScriptedGui('DI_char_spawner_100_stat_man_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 						parentanchor = center
 						
 						
 						blockoverride "checkbox" 
 						{
-							checked = "[GetVariableSystem.Exists('DI_char_spawner_100_stat_man')]"
+							checked = "[GetPlayer.MakeScope.Var('DI_char_spawner_100_stat_man').IsSet]"
 						}
 						
 						blockoverride "text"
@@ -123,14 +121,13 @@
 						max_width = 150
 						
 						layoutpolicy_horizontal = expanding
-						onclick = "[GetVariableSystem.Toggle('DI_char_spawner_good_traits')]"
 						onclick = "[GetScriptedGui('DI_char_spawner_good_traits_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 						parentanchor = center
 						
 						
 						blockoverride "checkbox" 
 						{
-							checked = "[GetVariableSystem.Exists('DI_char_spawner_good_traits')]"
+							checked = "[GetPlayer.MakeScope.Var('DI_char_spawner_good_traits').IsSet]"
 						}
 						
 						blockoverride "text"
@@ -231,14 +228,13 @@
 						max_width = 150
 						
 						layoutpolicy_horizontal = expanding
-						onclick = "[GetVariableSystem.Toggle('DI_char_spawner_female')]"
 						onclick = "[GetScriptedGui('DI_char_spawner_female_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 						parentanchor = center
 						
 						
 						blockoverride "checkbox" 
 						{
-							checked = "[GetVariableSystem.Exists('DI_char_spawner_female')]"
+							checked = "[GetPlayer.MakeScope.Var('DI_char_spawner_female').IsSet]"
 						}
 						
 						blockoverride "text"
@@ -261,14 +257,13 @@
 						max_width = 150
 						
 						layoutpolicy_horizontal = expanding
-						onclick = "[GetVariableSystem.Toggle('DI_marked_char_var')]"
 						onclick = "[GetScriptedGui('DI_marked_char_var_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 						parentanchor = center
 						
 						
 						blockoverride "checkbox" 
 						{
-							checked = "[GetVariableSystem.Exists('DI_marked_char_var')]"
+							checked = "[GetPlayer.MakeScope.Var('DI_marked_char_var').IsSet]"
 						}
 						
 						blockoverride "text"

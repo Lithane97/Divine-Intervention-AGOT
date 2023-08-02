@@ -6,7 +6,7 @@ DI_add_lifestyle_reveler_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -52,7 +52,7 @@ DI_remove_lifestyle_reveler_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -93,7 +93,7 @@ DI_add_lifestyle_blademaster_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -139,7 +139,7 @@ DI_remove_lifestyle_blademaster_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -180,7 +180,7 @@ DI_add_lifestyle_hunter_1_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -228,7 +228,7 @@ DI_remove_lifestyle_hunter_1_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -271,7 +271,7 @@ DI_add_lifestyle_hunter_2_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -319,7 +319,7 @@ DI_remove_lifestyle_hunter_2_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -362,7 +362,7 @@ DI_add_lifestyle_mystic_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -408,7 +408,7 @@ DI_remove_lifestyle_mystic_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -449,7 +449,7 @@ DI_add_lifestyle_physician_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -495,7 +495,7 @@ DI_remove_lifestyle_physician_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -536,7 +536,7 @@ DI_add_pilgrim_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = { 
 				limit = { has_character_flag = marked_for_edit }
@@ -582,7 +582,7 @@ DI_remove_pilgrim_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			} 
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -623,7 +623,7 @@ DI_add_tourney_participant_foot_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			} 
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -671,7 +671,7 @@ DI_remove_tourney_participant_foot_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			} 
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -714,7 +714,7 @@ DI_add_tourney_participant_bow_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			} 
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -762,7 +762,7 @@ DI_remove_tourney_participant_bow_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			} 
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -805,7 +805,7 @@ DI_add_tourney_participant_horse_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			} 
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -853,7 +853,7 @@ DI_remove_tourney_participant_horse_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			} 
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -896,7 +896,7 @@ DI_add_tourney_participant_wit_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			} 
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -944,7 +944,7 @@ DI_remove_tourney_participant_wit_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -987,7 +987,7 @@ DI_add_lifestyle_traveler_travel_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -1035,7 +1035,7 @@ DI_remove_lifestyle_traveler_travel_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -1078,7 +1078,7 @@ DI_add_lifestyle_traveler_danger_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -1126,7 +1126,7 @@ DI_remove_lifestyle_traveler_danger_xp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }

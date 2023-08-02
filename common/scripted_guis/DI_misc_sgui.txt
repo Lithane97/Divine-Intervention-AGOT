@@ -6,52 +6,6 @@
 	}
 }
 
-### Clear checkbox variables on game load ###
-DI_reset_checkbox = {
-	scope = global
-
-	trigger = {
-		is_triggered_only = yes
-	}
-
-	effect = {
-		if = {
-			limit = {
-				has_global_variable = DI_marked_char_var
-			}
-			remove_global_variable = DI_marked_char_var
-		}
-
-		if = {
-			limit = {
-				has_global_variable = DI_char_spawner_immortal
-			}
-			remove_global_variable = DI_char_spawner_immortal
-		}
-
-		if = {
-			limit = {
-				has_global_variable = DI_char_spawner_100_stat_man
-			}
-			remove_global_variable = DI_char_spawner_100_stat_man
-		}
-
-		if = {
-			limit = {
-				has_global_variable = DI_char_spawner_good_traits
-			}
-			remove_global_variable = DI_char_spawner_good_traits
-		}
-
-		if = {
-			limit = {
-				has_global_variable = DI_char_spawner_female
-			}
-			remove_global_variable = DI_char_spawner_female
-		}
-	}
-}
-
 DI_open_marriage = {
 	scope = character
 	
@@ -76,13 +30,14 @@ DI_open_vassal_contract = {
 	}
 }
 
+### Traits ###
 DI_add_trait = {
 	scope = character
 	
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -106,7 +61,7 @@ DI_remove_trait = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -130,7 +85,7 @@ DI_sexuality_heterosexual = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -154,7 +109,7 @@ DI_sexuality_homosexual = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -178,7 +133,7 @@ DI_sexuality_bisexual = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -202,7 +157,7 @@ DI_sexuality_asexual = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -233,9 +188,9 @@ DI_clear_all_marks = {
 		}
 		if = {
 			limit = {
-				has_global_variable_list = marked_characters 
+				has_variable_list = marked_characters 
 			}
-			clear_global_variable_list = marked_characters
+			clear_variable_list = marked_characters
 		}
 	}
 }
@@ -246,10 +201,10 @@ DI_char_spawner_resources_sgui = {
 	effect = {
 		if = {
 			limit = {
-				NOT = { has_global_variable = DI_char_spawner_count_increment_value }
+				NOT = { has_variable = DI_char_spawner_count_increment_value }
 			}
 
-			set_global_variable = {
+			set_variable = {
 				name = DI_char_spawner_count_increment_value
 				value = 1
 			}
@@ -257,10 +212,10 @@ DI_char_spawner_resources_sgui = {
 
 		if = {
 			limit = {
-				NOT = { has_global_variable = DI_char_spawner_age_increment_value }
+				NOT = { has_variable = DI_char_spawner_age_increment_value }
 			}
 
-			set_global_variable = {
+			set_variable = {
 				name = DI_char_spawner_age_increment_value
 				value = 18
 			}
@@ -274,9 +229,9 @@ DI_modifier_resources_sgui = {
 	effect = {
 		if = {
 			limit = {
-				NOT = { has_global_variable = DI_modifier_increment_value }
+				NOT = { has_variable = DI_modifier_increment_value }
 			}
-			set_global_variable = {
+			set_variable = {
 				name = DI_modifier_increment_value 
 				value = 1
 			}
@@ -290,9 +245,9 @@ DI_resources_sgui = {
     effect = {
 		if = {
 			limit = {
-				NOT = { has_global_variable = DI_increment_value }
+				NOT = { has_variable = DI_increment_value }
 			}
-			set_global_variable = {
+			set_variable = {
 				name = DI_increment_value
 				value = 500
 			}
@@ -324,21 +279,21 @@ DI_age_subtract = {
 
 DI_add_increment = {
 	is_valid = {
-        	global_var:DI_increment_value < 10000
+        	var:DI_increment_value < 10000
     	}
 
 	effect = {
 		if = {
 			limit = {
-				global_var:DI_increment_value < 1000
+				var:DI_increment_value < 1000
 			}
-			change_global_variable = {
+			change_variable = {
 				name = DI_increment_value
 						add = 100
 			}
 		}
 		else = {
-			change_global_variable = {
+			change_variable = {
 				name = DI_increment_value
 						add = 500
 			}
@@ -349,21 +304,21 @@ DI_add_increment = {
 
 DI_modifier_add_increment = {
 	is_valid = {
-        	global_var:DI_modifier_increment_value < 100
+        	var:DI_modifier_increment_value < 100
     	}
 
 	effect = {
 		if = {
 			limit = {
-				global_var:DI_modifier_increment_value < 5
+				var:DI_modifier_increment_value < 5
 			}
-			change_global_variable = {
+			change_variable = {
 				name = DI_modifier_increment_value
 					add = 1
 			}
 		}
 		else = {
-			change_global_variable = {
+			change_variable = {
 				name = DI_modifier_increment_value
 						add = 5
 			}
@@ -373,11 +328,11 @@ DI_modifier_add_increment = {
 
 DI_char_spawner_count_add_increment = {
 	is_valid = {
-        	global_var:DI_char_spawner_count_increment_value < 10
+        	var:DI_char_spawner_count_increment_value < 10
     	}
 
 	effect = {
-		change_global_variable = {
+		change_variable = {
 			name = DI_char_spawner_count_increment_value
 				add = 1
 		}
@@ -386,11 +341,11 @@ DI_char_spawner_count_add_increment = {
 
 DI_char_spawner_age_add_increment = {
 	is_valid = {
-        	global_var:DI_char_spawner_age_increment_value < 100
+        	var:DI_char_spawner_age_increment_value < 100
     	}
 
 	effect = {
-		change_global_variable = {
+		change_variable = {
 			name = DI_char_spawner_age_increment_value
 				add = 1
 		}
@@ -399,21 +354,21 @@ DI_char_spawner_age_add_increment = {
 
 DI_subtract_increment = {
 	is_valid = {
-       		 global_var:DI_increment_value > 100
+       		 var:DI_increment_value > 100
     	}
 	
 	effect = {
 		if = {
 			limit = {
-				global_var:DI_increment_value > 1000
+				var:DI_increment_value > 1000
 			}
-			change_global_variable = {
+			change_variable = {
 				name = DI_increment_value
 						subtract = 500
 			}
 		}
 		else = {
-			change_global_variable = {
+			change_variable = {
 				name = DI_increment_value
 						subtract = 100
 			}
@@ -423,21 +378,21 @@ DI_subtract_increment = {
 
 DI_modifier_subtract_increment = {
 	is_valid = {
-        	global_var:DI_modifier_increment_value > 1
+        	var:DI_modifier_increment_value > 1
     	}
 
 	effect = {
 		if = {
 			limit = {
-				global_var:DI_modifier_increment_value < 6
+				var:DI_modifier_increment_value < 6
 			}
-			change_global_variable = {
+			change_variable = {
 				name = DI_modifier_increment_value
 					subtract = 1
 			}
 		}
 		else = {
-			change_global_variable = {
+			change_variable = {
 				name = DI_modifier_increment_value
 						subtract = 5
 			}
@@ -447,11 +402,11 @@ DI_modifier_subtract_increment = {
 
 DI_char_spawner_count_subtract_increment = {
 	is_valid = {
-        	global_var:DI_char_spawner_count_increment_value > 1
+        	var:DI_char_spawner_count_increment_value > 1
     	}
 
 	effect = {
-		change_global_variable = {
+		change_variable = {
 			name = DI_char_spawner_count_increment_value
 				subtract = 1
 		}
@@ -460,11 +415,11 @@ DI_char_spawner_count_subtract_increment = {
 
 DI_char_spawner_age_subtract_increment = {
 	is_valid = {
-        	global_var:DI_char_spawner_age_increment_value > 1
+        	var:DI_char_spawner_age_increment_value > 1
     	}
 
 	effect = {
-		change_global_variable = {
+		change_variable = {
 			name = DI_char_spawner_age_increment_value
 				subtract = 1
 		}
@@ -475,7 +430,9 @@ add_prestige_effect = {
 	scope = character
 	
 	effect = {
-		add_prestige = global_var:DI_increment_value
+		scope:target = {
+			add_prestige = root.var:DI_increment_value
+		}
 	}
 }
 
@@ -484,9 +441,11 @@ remove_prestige_effect = {
 	scope = character
 	
 	effect = {
-		add_prestige = {
-			value = global_var:DI_increment_value
-			multiply = -1
+		scope:target = {
+			add_prestige = {
+				value = root.var:DI_increment_value
+				multiply = -1
+			}
 		}
 	}
 }
@@ -496,7 +455,9 @@ add_piety_effect = {
 	scope = character
 		
 	effect = {
-		add_piety = global_var:DI_increment_value
+		scope:target = {
+			add_piety = root.var:DI_increment_value
+		}
 	}
 }
 
@@ -505,9 +466,11 @@ remove_piety_effect = {
 	scope = character
 
 	effect = {
-		add_piety = {
-			value = global_var:DI_increment_value
-			multiply = -1
+		scope:target = {
+			add_piety = {
+				value = root.var:DI_increment_value
+				multiply = -1
+			}
 		}
 	}
 }
@@ -516,7 +479,9 @@ add_gold_effect = {
 	scope = character
 		
 	effect = {
-		add_gold = global_var:DI_increment_value
+		scope:target = { 
+			add_gold = root.var:DI_increment_value
+		}
 	}
 }
 
@@ -525,7 +490,9 @@ remove_gold_effect = {
 		scope = character
 		
 		effect = {
-			remove_short_term_gold = global_var:DI_increment_value
+			scope:target = { 
+				remove_short_term_gold = root.var:DI_increment_value
+			}
         }
 }
 
@@ -533,8 +500,10 @@ remove_gold_effect = {
 add_dprestige_effect = {
 	scope = character
 	effect = {
-		dynasty = {
-			add_dynasty_prestige = global_var:DI_increment_value
+		scope:target = {
+			dynasty = {
+				add_dynasty_prestige = root.var:DI_increment_value
+			}
 		}
     }
 }
@@ -544,10 +513,12 @@ remove_dprestige_effect = {
 	scope = character
 		
 	effect = {
-		dynasty = {
-			add_dynasty_prestige = {
-				value = global_var:DI_increment_value
-				multiply = -1
+		scope:target = { 
+			dynasty = {
+				add_dynasty_prestige = {
+					value = root.var:DI_increment_value
+					multiply = -1
+				}
 			}
 		}
 	}
@@ -558,7 +529,9 @@ clear_marked_character = {
 
 	effect = {
 		remove_character_flag = marked_for_edit
-		remove_list_global_variable = { name = marked_characters target = this}
+		scope:target = {
+			remove_list_variable = { name = marked_characters target = prev}
+		}
 	}
 }
 
@@ -751,9 +724,11 @@ DI_culture_change = {
 	scope = character
 	
 	effect = {
+		scope:selected_culture = { save_scope_as = selected_culture }
+
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -830,9 +805,11 @@ DI_religion_change = {
 	scope = character
 	
 	effect = {
+		scope:selected_faith = { save_scope_as = selected_faith }
+		
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -855,7 +832,17 @@ DI_religion_list_load = {
 	
 	effect = {
 		every_religion_global = {
-			add_to_global_variable_list = { name = religion_list target = this }
+			if = {
+				limit = {
+				  	NOT = {
+						any_in_global_list = {
+							variable = DI_religion_list
+							this = prev
+						}
+					}
+				}
+				add_to_global_variable_list = { name = DI_religion_list target = this }
+			}
 		}
 	}
 }
@@ -896,6 +883,21 @@ DI_change_myreligion_county = {
 }
 
 ### Character Spawner ###
+DI_marked_char_var_sgui = {
+	scope = character
+
+	effect = {
+		if = {
+			limit = {
+				has_variable	= DI_marked_char_var
+			}
+			remove_variable = DI_marked_char_var
+		}
+		else = {
+			set_variable = DI_marked_char_var
+		}
+	}
+}
 
 DI_char_spawner_female_sgui = {
 	scope = character
@@ -903,28 +905,12 @@ DI_char_spawner_female_sgui = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
-			remove_global_variable = DI_char_spawner_female
+			remove_variable = DI_char_spawner_female
 		}
 		else = {
-			set_global_variable = DI_char_spawner_female
-		}
-	}
-}
-
-DI_marked_char_var_sgui = {
-	scope = character
-
-	effect = {
-		if = {
-			limit = {
-				has_global_variable	= DI_marked_char_var
-			}
-			remove_global_variable = DI_marked_char_var
-		}
-		else = {
-			set_global_variable = DI_marked_char_var
+			set_variable = DI_char_spawner_female
 		}
 	}
 }
@@ -935,12 +921,12 @@ DI_char_spawner_immortal_sgui = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable	= DI_char_spawner_immortal
+				has_variable	= DI_char_spawner_immortal
 			}
-			remove_global_variable = DI_char_spawner_immortal
+			remove_variable = DI_char_spawner_immortal
 		}
 		else = {
-			set_global_variable = DI_char_spawner_immortal
+			set_variable = DI_char_spawner_immortal
 		}
 	}
 }
@@ -951,12 +937,12 @@ DI_char_spawner_100_stat_man_sgui = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_100_stat_man
+				has_variable = DI_char_spawner_100_stat_man
 			}
-			remove_global_variable = DI_char_spawner_100_stat_man
+			remove_variable = DI_char_spawner_100_stat_man
 		}
 		else = {
-			set_global_variable = DI_char_spawner_100_stat_man
+			set_variable = DI_char_spawner_100_stat_man
 		}
 	}
 }
@@ -967,12 +953,12 @@ DI_char_spawner_good_traits_sgui = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_good_traits
+				has_variable = DI_char_spawner_good_traits
 			}
-			remove_global_variable = DI_char_spawner_good_traits
+			remove_variable = DI_char_spawner_good_traits
 		}
 		else = {
-			set_global_variable = DI_char_spawner_good_traits
+			set_variable = DI_char_spawner_good_traits
 		}
 	}
 }

@@ -18,10 +18,10 @@ window = {
 	visible = "[GetVariableSystem.Exists('DI_culture_window_visible')]"
 	
 	state = {
-			name = init
-			trigger_on_create = yes
-			
-			on_start = "[GetScriptedGui('DI_culture_list_load').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+		name = init
+		trigger_on_create = yes
+		
+		on_start = "[GetScriptedGui('DI_culture_list_load').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 	}
 	
 	

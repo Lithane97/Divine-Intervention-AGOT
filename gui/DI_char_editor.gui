@@ -65,14 +65,13 @@ window = {
 						max_width = 150
 						
 						layoutpolicy_horizontal = expanding
-						onclick = "[GetVariableSystem.Toggle('DI_marked_char_var')]"
 						onclick = "[GetScriptedGui('DI_marked_char_var_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 						parentanchor = center
 						
 						
 						blockoverride "checkbox" 
 						{
-							checked = "[GetVariableSystem.Exists('DI_marked_char_var')]"
+							checked = "[GetPlayer.MakeScope.Var('DI_marked_char_var').IsSet]"
 						}
 						
 						blockoverride "text"

@@ -1,8 +1,3 @@
-
-
-# Advanced Cheat Menu Resources window by mrtats
-
-
 window = {
 	name = "DI_marked_characters_window"
 	parentanchor = top|right
@@ -108,7 +103,7 @@ window = {
 					blockoverride "scrollbox_content" {
 					
 						vbox = {
-							datamodel = "[GetGlobalList('marked_characters')]"
+							datamodel = "[GetPlayer.MakeScope.GetList('marked_characters')]"
 							layoutpolicy_horizontal = expanding
 
 							spacing = 10
@@ -568,7 +563,7 @@ window = {
 																
 																button_clear = {
 																	name = marked_character_clear
-																	onclick = "[GetScriptedGui('clear_marked_character').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+																	onclick = "[GetScriptedGui('clear_marked_character').Execute(GuiScope.SetRoot(Character.MakeScope).AddScope('target', GetPlayer.MakeScope).End)]"
 																}
 															}
 
@@ -595,7 +590,7 @@ window = {
 														
 														button_round = {
 															size = { 14 14 }
-															onclick = "[GetScriptedGui('remove_gold_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+															onclick = "[GetScriptedGui('remove_gold_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target', Character.MakeScope).End)]"
 
 															button_minus_small = {
 																name = "decrease_skill"
@@ -623,7 +618,7 @@ window = {
 														
 														button_round = {
 															size = { 14 14 }
-															onclick = "[GetScriptedGui('add_gold_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+															onclick = "[GetScriptedGui('add_gold_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target', Character.MakeScope).End)]"
 
 															button_plus_small = {
 																name = "increase_skill"
@@ -636,7 +631,7 @@ window = {
 													hbox = {														
 														button_round = {
 															size = { 14 14 }
-															onclick = "[GetScriptedGui('remove_prestige_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+															onclick = "[GetScriptedGui('remove_prestige_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target', Character.MakeScope).End)]"
 
 															button_minus_small = {
 																name = "decrease_skill"
@@ -664,7 +659,7 @@ window = {
 														
 														button_round = {
 															size = { 14 14 }
-															onclick = "[GetScriptedGui('add_prestige_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+															onclick = "[GetScriptedGui('add_prestige_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target', Character.MakeScope).End)]"
 
 															button_plus_small = {
 																name = "increase_skill"
@@ -678,7 +673,7 @@ window = {
 														spacing = 2
 														button_round = {
 															size = { 14 14 }
-															onclick = "[GetScriptedGui('remove_piety_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+															onclick = "[GetScriptedGui('remove_piety_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target', Character.MakeScope).End)]"
 
 															button_minus_small = {
 																name = "increase_skill"
@@ -706,7 +701,7 @@ window = {
 														
 														button_round = {
 															size = { 14 14 }
-															onclick = "[GetScriptedGui('add_piety_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+															onclick = "[GetScriptedGui('add_piety_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target', Character.MakeScope).End)]"
 
 															button_plus_small = {
 																name = "increase_skill"
@@ -720,7 +715,7 @@ window = {
 
 														button_round = {
 															size = { 14 14 }
-															onclick = "[GetScriptedGui('remove_dprestige_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+															onclick = "[GetScriptedGui('remove_dprestige_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target', Character.MakeScope).End)]"
 
 															button_minus_small = {
 																name = "increase_skill"
@@ -747,7 +742,7 @@ window = {
 														
 														button_round = {
 															size = { 14 14 }
-															onclick = "[GetScriptedGui('add_dprestige_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+															onclick = "[GetScriptedGui('add_dprestige_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target', Character.MakeScope).End)]"
 
 															button_plus_small = {
 																name = "increase_skill"
@@ -839,7 +834,7 @@ window = {
 																disableframe = 4
 															}
 															tooltip = DI_spawn_army_tt
-															onclick = "[GetScriptedGui('DI_spawn_army_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+															onclick = "[GetScriptedGui('DI_spawn_army_effect').Execute(GuiScope.SetRoot(Character.MakeScope).AddScope('target', GetPlayer.MakeScope).End)]"
 														}
 
 														button_round = {

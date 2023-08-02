@@ -1,15 +1,14 @@
 ﻿### ARMY SPAWNING EFFECTS ###
 ### Initialize
 DI_army_spawner_resources_sgui = {
-	scope = character
-	effect = {
+    scope = character
+    
+    effect = {
 		if = {
 			limit = {
-				NOT = {
-					has_global_variable = DI_army_spawner_increment_value
-				}
+				NOT = { has_variable = DI_army_spawner_increment_value }
 			}
-			set_global_variable = {
+			set_variable = {
 				name = DI_army_spawner_increment_value
 				value = 500
 			}
@@ -19,14 +18,15 @@ DI_army_spawner_resources_sgui = {
 
 DI_army_spawner_add_increment = {
 	is_valid = {
-		global_var:DI_army_spawner_increment_value < 100000
+		var:DI_army_spawner_increment_value < 100000
 	}
+
 	effect = {
 		if = {
 			limit = {
-				global_var:DI_army_spawner_increment_value >= 50000
+				var:DI_army_spawner_increment_value >= 50000
 			}
-			change_global_variable = {
+			change_variable = {
 				name = DI_army_spawner_increment_value
 				add = 10000
 			}
@@ -34,46 +34,47 @@ DI_army_spawner_add_increment = {
 		else_if = {
 			limit = {
 				AND = {
-					global_var:DI_army_spawner_increment_value < 50000
-					global_var:DI_army_spawner_increment_value >= 10000
+					var:DI_army_spawner_increment_value < 50000
+					var:DI_army_spawner_increment_value >= 10000
 				}
 			}
-			change_global_variable = {
+			change_variable = {
 				name = DI_army_spawner_increment_value
-				add = 5000
+						add = 5000
 			}
 		}
 		else_if = {
 			limit = {
 				AND = {
-					global_var:DI_army_spawner_increment_value < 10000
-					global_var:DI_army_spawner_increment_value >= 5000
+					var:DI_army_spawner_increment_value < 10000
+					var:DI_army_spawner_increment_value >= 5000
 				}
 			}
-			change_global_variable = {
+			change_variable = {
 				name = DI_army_spawner_increment_value
 				add = 1000
 			}
 		}
 		else = {
-			change_global_variable = {
+			change_variable = {
 				name = DI_army_spawner_increment_value
 				add = 500
 			}
 		}
-	}
+    }
 }
 
 DI_army_spawner_subtract_increment = {
 	is_valid = {
-		global_var:DI_army_spawner_increment_value > 500
+		var:DI_army_spawner_increment_value > 500
 	}
+
 	effect = {
 		if = {
 			limit = {
-				global_var:DI_army_spawner_increment_value > 50000
+				var:DI_army_spawner_increment_value > 50000
 			}
-			change_global_variable = {
+			change_variable = {
 				name = DI_army_spawner_increment_value
 				subtract = 10000
 			}
@@ -81,11 +82,11 @@ DI_army_spawner_subtract_increment = {
 		else_if = {
 			limit = {
 				AND = {
-					global_var:DI_army_spawner_increment_value <= 50000
-					global_var:DI_army_spawner_increment_value > 10000
+					var:DI_army_spawner_increment_value <= 50000
+					var:DI_army_spawner_increment_value > 10000
 				}
 			}
-			change_global_variable = {
+			change_variable = {
 				name = DI_army_spawner_increment_value
 				subtract = 5000
 			}
@@ -93,35 +94,39 @@ DI_army_spawner_subtract_increment = {
 		else_if = {
 			limit = {
 				AND = {
-					global_var:DI_army_spawner_increment_value <= 10000
-					global_var:DI_army_spawner_increment_value > 5000
+					var:DI_army_spawner_increment_value <= 10000
+					var:DI_army_spawner_increment_value > 5000
 				}
 			}
-			change_global_variable = {
+			change_variable = {
 				name = DI_army_spawner_increment_value
 				subtract = 1000
 			}
 		}
 		else = {
-			change_global_variable = {
+			change_variable = {
 				name = DI_army_spawner_increment_value
 				subtract = 500
 			}
 		}
-	}
+    }
 }
 
 ### Marked Characters Basic
 DI_spawn_army_effect = {
 	scope = character
+
 	effect = {
 		spawn_army = {
 			men_at_arms = {
 				type = light_footmen
-				men = global_var:DI_increment_value
-			}
+				men = scope:target.var:DI_increment_value
+		     }
+			 
 			location = root.location
+
 			inheritable = no
+			
 			name = light_footmen
 		}
 	}
@@ -131,21 +136,22 @@ DI_spawn_army_effect = {
 ### Light Footmen Spawner
 DI_light_footmen_effect = {
 	scope = character
+
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = light_footmen
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = light_footmen
 				}
@@ -155,7 +161,7 @@ DI_light_footmen_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = light_footmen
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -171,18 +177,18 @@ DI_bowmen_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = bowmen
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = bowmen
 				}
@@ -192,7 +198,7 @@ DI_bowmen_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = bowmen
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -208,18 +214,18 @@ DI_light_horsemen_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = light_horsemen
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = light_horsemen
 				}
@@ -229,7 +235,7 @@ DI_light_horsemen_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = light_horsemen
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -245,18 +251,18 @@ DI_pikemen_unit_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = pikemen_unit
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = pikemen_unit
 				}
@@ -266,7 +272,7 @@ DI_pikemen_unit_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = pikemen_unit
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -282,18 +288,18 @@ DI_armored_footmen_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = armored_footmen
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = armored_footmen
 				}
@@ -303,7 +309,7 @@ DI_armored_footmen_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = armored_footmen
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -319,18 +325,18 @@ DI_onager_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = onager
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = onager
 				}
@@ -340,7 +346,7 @@ DI_onager_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = onager
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -356,18 +362,18 @@ DI_armored_horsemen_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = armored_horsemen
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = armored_horsemen
 				}
@@ -377,7 +383,7 @@ DI_armored_horsemen_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = armored_horsemen
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -393,18 +399,18 @@ DI_mangonel_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = mangonel
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = mangonel
 				}
@@ -414,7 +420,7 @@ DI_mangonel_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = mangonel
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -430,18 +436,18 @@ DI_crossbowmen_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = crossbowmen
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = crossbowmen
 				}
@@ -451,7 +457,7 @@ DI_crossbowmen_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = crossbowmen
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -467,18 +473,18 @@ DI_trebuchet_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = trebuchet
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = trebuchet
 				}
@@ -488,7 +494,7 @@ DI_trebuchet_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = trebuchet
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -504,18 +510,18 @@ DI_house_guard_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = house_guard
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = house_guard
 				}
@@ -525,7 +531,7 @@ DI_house_guard_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = house_guard
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -542,18 +548,18 @@ DI_arbor_marines_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = arbor_marines
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = arbor_marines
 				}
@@ -563,7 +569,7 @@ DI_arbor_marines_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = arbor_marines
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -579,18 +585,18 @@ DI_barrow_knights_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = barrow_knights
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = barrow_knights
 				}
@@ -600,7 +606,7 @@ DI_barrow_knights_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = barrow_knights
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -616,18 +622,18 @@ DI_marsh_walker_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = marsh_walker
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = marsh_walker
 				}
@@ -637,7 +643,7 @@ DI_marsh_walker_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = marsh_walker
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -653,18 +659,18 @@ DI_trackers_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = trackers
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = trackers
 				}
@@ -674,7 +680,7 @@ DI_trackers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = trackers
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -690,18 +696,18 @@ DI_royal_crossbowmen_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = royal_crossbowmen
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = royal_crossbowmen
 				}
@@ -711,7 +717,7 @@ DI_royal_crossbowmen_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = royal_crossbowmen
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -727,18 +733,18 @@ DI_finger_scouts_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = finger_scouts
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = finger_scouts
 				}
@@ -748,7 +754,7 @@ DI_finger_scouts_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = finger_scouts
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -764,18 +770,18 @@ DI_cape_watch_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = cape_watch
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = cape_watch
 				}
@@ -785,7 +791,7 @@ DI_cape_watch_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = cape_watch
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -801,18 +807,18 @@ DI_green_hand_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = green_hand
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = green_hand
 				}
@@ -822,7 +828,7 @@ DI_green_hand_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = green_hand
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -838,18 +844,18 @@ DI_dragonkeepers_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = dragonkeepers
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = dragonkeepers
 				}
@@ -859,7 +865,7 @@ DI_dragonkeepers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = dragonkeepers
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -875,18 +881,18 @@ DI_honeywine_quirrels_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = honeywine_quirrels
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = honeywine_quirrels
 				}
@@ -896,7 +902,7 @@ DI_honeywine_quirrels_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = honeywine_quirrels
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -912,18 +918,18 @@ DI_reavers_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = reavers
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = reavers
 				}
@@ -933,7 +939,7 @@ DI_reavers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = reavers
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -949,18 +955,18 @@ DI_longbowmen_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = longbowmen
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = longbowmen
 				}
@@ -970,7 +976,7 @@ DI_longbowmen_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = longbowmen
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -986,18 +992,18 @@ DI_hunters_of_the_moon_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = hunters_of_the_moon
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = hunters_of_the_moon
 				}
@@ -1007,7 +1013,7 @@ DI_hunters_of_the_moon_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = hunters_of_the_moon
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1023,18 +1029,18 @@ DI_stolen_spears_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = stolen_spears
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = stolen_spears
 				}
@@ -1044,7 +1050,7 @@ DI_stolen_spears_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = stolen_spears
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1060,18 +1066,18 @@ DI_clan_champions_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = clan_champions
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = clan_champions
 				}
@@ -1081,7 +1087,7 @@ DI_clan_champions_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = clan_champions
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1097,18 +1103,18 @@ DI_winter_wolves_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = winter_wolves
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = winter_wolves
 				}
@@ -1118,7 +1124,7 @@ DI_winter_wolves_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = winter_wolves
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1134,18 +1140,18 @@ DI_greenblood_oars_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = greenblood_oars
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = greenblood_oars
 				}
@@ -1155,7 +1161,7 @@ DI_greenblood_oars_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = greenblood_oars
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1171,18 +1177,18 @@ DI_summer_knights_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = summer_knights
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = summer_knights
 				}
@@ -1192,7 +1198,7 @@ DI_summer_knights_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = summer_knights
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1207,18 +1213,18 @@ DI_river_bows_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = river_bows
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = river_bows
 				}
@@ -1228,7 +1234,7 @@ DI_river_bows_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = river_bows
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1243,18 +1249,18 @@ DI_sun_spears_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = sun_spears
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = sun_spears
 				}
@@ -1264,7 +1270,7 @@ DI_sun_spears_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = sun_spears
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1279,18 +1285,18 @@ DI_sand_steeds_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = sand_steeds
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = sand_steeds
 				}
@@ -1300,7 +1306,7 @@ DI_sand_steeds_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = sand_steeds
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1315,18 +1321,18 @@ DI_misty_shields_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = misty_shields
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = misty_shields
 				}
@@ -1336,7 +1342,7 @@ DI_misty_shields_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = misty_shields
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1351,18 +1357,18 @@ DI_sistermen_pirates_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = sistermen_pirates
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = sistermen_pirates
 				}
@@ -1372,7 +1378,7 @@ DI_sistermen_pirates_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = sistermen_pirates
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1387,18 +1393,18 @@ DI_unicorn_riders_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = unicorn_riders
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = unicorn_riders
 				}
@@ -1408,7 +1414,7 @@ DI_unicorn_riders_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = unicorn_riders
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1424,18 +1430,18 @@ DI_pass_pikes_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = pass_pikes
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = pass_pikes
 				}
@@ -1445,7 +1451,7 @@ DI_pass_pikes_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = pass_pikes
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1461,18 +1467,18 @@ DI_storm_knights_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = storm_knights
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = storm_knights
 				}
@@ -1482,7 +1488,7 @@ DI_storm_knights_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = storm_knights
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1498,18 +1504,18 @@ DI_winged_knights_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = winged_knights
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = winged_knights
 				}
@@ -1519,7 +1525,7 @@ DI_winged_knights_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = winged_knights
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1535,18 +1541,18 @@ DI_bloody_balesters_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = bloody_balesters
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = bloody_balesters
 				}
@@ -1556,7 +1562,7 @@ DI_bloody_balesters_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = bloody_balesters
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1571,18 +1577,18 @@ DI_sea_snakes_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = sea_snakes
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = sea_snakes
 				}
@@ -1592,7 +1598,7 @@ DI_sea_snakes_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = sea_snakes
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1607,18 +1613,18 @@ DI_wolfswood_hunters_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = wolfswood_hunters
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = wolfswood_hunters
 				}
@@ -1628,7 +1634,7 @@ DI_wolfswood_hunters_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = wolfswood_hunters
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1643,18 +1649,18 @@ DI_purple_sailors_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = purple_sailors
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = purple_sailors
 				}
@@ -1664,7 +1670,7 @@ DI_purple_sailors_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = purple_sailors
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1679,18 +1685,18 @@ DI_seal_hunters_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = seal_hunters
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = seal_hunters
 				}
@@ -1700,7 +1706,7 @@ DI_seal_hunters_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = seal_hunters
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1715,18 +1721,18 @@ DI_weeping_guard_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = weeping_guard
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = weeping_guard
 				}
@@ -1736,7 +1742,7 @@ DI_weeping_guard_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = weeping_guard
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1751,18 +1757,18 @@ DI_myrish_crossbows_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = myrish_crossbows
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = myrish_crossbows
 				}
@@ -1772,7 +1778,7 @@ DI_myrish_crossbows_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = myrish_crossbows
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1787,18 +1793,18 @@ DI_holy_guard_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = holy_guard
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = holy_guard
 				}
@@ -1808,7 +1814,7 @@ DI_holy_guard_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = holy_guard
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1823,18 +1829,18 @@ DI_indentured_legion_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = indentured_legion
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = indentured_legion
 				}
@@ -1844,7 +1850,7 @@ DI_indentured_legion_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = indentured_legion
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1859,18 +1865,18 @@ DI_cohort_of_the_three_thousand_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = cohort_of_the_three_thousand
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = cohort_of_the_three_thousand
 				}
@@ -1880,7 +1886,7 @@ DI_cohort_of_the_three_thousand_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = cohort_of_the_three_thousand
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1895,18 +1901,18 @@ DI_stepstone_sailors_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = stepstone_sailors
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = stepstone_sailors
 				}
@@ -1916,7 +1922,7 @@ DI_stepstone_sailors_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = stepstone_sailors
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1931,18 +1937,18 @@ DI_triarchs_herd_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = triarchs_herd
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = triarchs_herd
 				}
@@ -1952,7 +1958,7 @@ DI_triarchs_herd_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = triarchs_herd
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1967,18 +1973,18 @@ DI_unsullied_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = unsullied
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = unsullied
 				}
@@ -1988,7 +1994,7 @@ DI_unsullied_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = unsullied
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2003,18 +2009,18 @@ DI_collared_bows_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = collared_bows
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = collared_bows
 				}
@@ -2024,7 +2030,7 @@ DI_collared_bows_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = collared_bows
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2039,18 +2045,18 @@ DI_pit_warriors_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = pit_warriors
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = pit_warriors
 				}
@@ -2060,7 +2066,7 @@ DI_pit_warriors_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = pit_warriors
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2075,18 +2081,18 @@ DI_iron_legion_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = iron_legion
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = iron_legion
 				}
@@ -2096,7 +2102,7 @@ DI_iron_legion_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = iron_legion
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2111,18 +2117,18 @@ DI_bronze_raiders_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = bronze_raiders
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = bronze_raiders
 				}
@@ -2132,7 +2138,7 @@ DI_bronze_raiders_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = bronze_raiders
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2147,18 +2153,18 @@ DI_outriders_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = outriders
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = outriders
 				}
@@ -2168,7 +2174,7 @@ DI_outriders_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = outriders
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2185,18 +2191,18 @@ DI_accolade_maa_archers_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_archers
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = accolade_maa_archers
 				}
@@ -2206,7 +2212,7 @@ DI_accolade_maa_archers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_archers
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2222,18 +2228,18 @@ DI_accolade_maa_skirmishers_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_skirmishers
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = accolade_maa_skirmishers
 				}
@@ -2243,7 +2249,7 @@ DI_accolade_maa_skirmishers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_skirmishers
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2259,18 +2265,18 @@ DI_accolade_maa_pikes_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_pikes
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = accolade_maa_pikes
 				}
@@ -2280,7 +2286,7 @@ DI_accolade_maa_pikes_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_pikes
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2296,18 +2302,18 @@ DI_accolade_maa_outriders_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_outriders
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = accolade_maa_outriders
 				}
@@ -2317,7 +2323,7 @@ DI_accolade_maa_outriders_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_outriders
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2333,18 +2339,18 @@ DI_accolade_maa_vanguards_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_vanguards
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = accolade_maa_vanguards
 				}
@@ -2354,7 +2360,7 @@ DI_accolade_maa_vanguards_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_vanguards
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2370,18 +2376,18 @@ DI_accolade_maa_lancers_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_lancers
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = accolade_maa_lancers
 				}
@@ -2391,7 +2397,7 @@ DI_accolade_maa_lancers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_lancers
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2407,18 +2413,18 @@ DI_accolade_maa_crossbowers_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_crossbowers
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = accolade_maa_crossbowers
 				}
@@ -2428,7 +2434,7 @@ DI_accolade_maa_crossbowers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_crossbowers
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2444,18 +2450,18 @@ DI_accolade_maa_cameliers_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_cameliers
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = accolade_maa_cameliers
 				}
@@ -2465,7 +2471,7 @@ DI_accolade_maa_cameliers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_cameliers
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2481,18 +2487,18 @@ DI_accolade_maa_elephantiers_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_elephantiers
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = accolade_maa_elephantiers
 				}
@@ -2502,7 +2508,7 @@ DI_accolade_maa_elephantiers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_elephantiers
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2518,18 +2524,18 @@ DI_accolade_maa_horse_archers_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_horse_archers
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = accolade_maa_horse_archers
 				}
@@ -2539,7 +2545,7 @@ DI_accolade_maa_horse_archers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_horse_archers
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2556,18 +2562,18 @@ DI_camel_rider_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = camel_rider
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = camel_rider
 				}
@@ -2577,7 +2583,7 @@ DI_camel_rider_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = camel_rider
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2593,18 +2599,18 @@ DI_war_elephant_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = war_elephant
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = war_elephant
 				}
@@ -2614,7 +2620,7 @@ DI_war_elephant_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = war_elephant
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2629,18 +2635,18 @@ DI_poorfellow_skirmishers_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = poorfellow_skirmishers
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = poorfellow_skirmishers
 				}
@@ -2650,7 +2656,7 @@ DI_poorfellow_skirmishers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = poorfellow_skirmishers
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2665,18 +2671,18 @@ DI_warriors_sons_heavy_infantry_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = warriors_sons_heavy_infantry
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = warriors_sons_heavy_infantry
 				}
@@ -2686,7 +2692,7 @@ DI_warriors_sons_heavy_infantry_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = warriors_sons_heavy_infantry
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2701,18 +2707,18 @@ DI_warriors_sons_heavy_cav_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = warriors_sons_heavy_cav
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = warriors_sons_heavy_cav
 				}
@@ -2722,7 +2728,7 @@ DI_warriors_sons_heavy_cav_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = warriors_sons_heavy_cav
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2737,18 +2743,18 @@ DI_sarsfield_horse_archers_effect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
-				limit = {
-					has_character_flag = marked_for_edit
-				}
+				limit = { has_character_flag = marked_for_edit }
+				save_scope_as = target
+
 				spawn_army = {
 					men_at_arms = {
 						type = sarsfield_horse_archers
-						men = global_var:DI_army_spawner_increment_value
+						men = root.var:DI_army_spawner_increment_value
 					}
-					location = root.location
+					location = scope:target.location
 					inheritable = no
 					name = sarsfield_horse_archers
 				}
@@ -2758,7 +2764,7 @@ DI_sarsfield_horse_archers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = sarsfield_horse_archers
-					men = global_var:DI_army_spawner_increment_value
+					men = root.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no

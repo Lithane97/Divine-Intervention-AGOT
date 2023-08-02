@@ -5,30 +5,74 @@ DI_martial_councillor = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
+		}
 		
-		set_variable = {
+		set_global_variable = {
 			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+			value = var:DI_char_spawner_age_increment_value
 		}
 
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -36,32 +80,10 @@ DI_martial_councillor = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 6
 							fertility = 6
 							employer = scope:target
@@ -128,8 +150,8 @@ DI_martial_councillor = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 6
 						fertility = 6
 						employer = scope:target
@@ -199,30 +221,74 @@ DI_diplomacy_councillor = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -230,32 +296,10 @@ DI_diplomacy_councillor = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 6
 							fertility = 6
 							employer = scope:target
@@ -321,8 +365,8 @@ DI_diplomacy_councillor = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 6
 						fertility = 6
 						employer = scope:target
@@ -391,30 +435,74 @@ DI_stewardship_councillor = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -422,32 +510,10 @@ DI_stewardship_councillor = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 6
 							fertility = 6
 							employer = scope:target
@@ -513,8 +579,8 @@ DI_stewardship_councillor = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 6
 						fertility = 6
 						employer = scope:target
@@ -583,30 +649,74 @@ DI_intrigue_councillor = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -614,32 +724,10 @@ DI_intrigue_councillor = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 6
 							fertility = 6
 							employer = scope:target
@@ -705,8 +793,8 @@ DI_intrigue_councillor = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 6
 						fertility = 6
 						employer = scope:target
@@ -775,30 +863,74 @@ DI_learning_councillor = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -818,8 +950,8 @@ DI_learning_councillor = {
 							}
 
 							create_character = {
-								age = var:age_var
-								gender_female_chance = var:gender_var
+								age = global_var:age_var
+								gender_female_chance = global_var:gender_var
 								health = 6
 								fertility = 6
 								employer = scope:target
@@ -848,7 +980,7 @@ DI_learning_councillor = {
 								target = scope:new_councillor
 							}
 						}
-						else = {
+						else_if = {
 							limit = {
 								exists = cp:councillor_court_chaplain
 								cp:councillor_court_chaplain = {
@@ -923,8 +1055,8 @@ DI_learning_councillor = {
 							}
 						}
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 6
 							fertility = 6
 							employer = scope:target
@@ -953,7 +1085,7 @@ DI_learning_councillor = {
 							target = scope:new_councillor
 						}
 					}
-					else = {
+					else_if = {
 						limit = {
 							exists = cp:councillor_court_chaplain
 							cp:councillor_court_chaplain = {
@@ -1024,30 +1156,74 @@ DI_knight = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -1055,32 +1231,10 @@ DI_knight = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -1139,8 +1293,8 @@ DI_knight = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -1160,7 +1314,6 @@ DI_knight = {
 							add_trait_xp = { trait = lifestyle_blademaster value = 100 }
 							add_perk = stalwart_leader_perk
 						}
-						random_traits = yes
 						save_scope_as = new_courtier
 					}
 					scope:target = {
@@ -1204,30 +1357,74 @@ DI_commander = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -1235,32 +1432,10 @@ DI_commander = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -1320,8 +1495,8 @@ DI_commander = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -1342,7 +1517,6 @@ DI_commander = {
 							add_perk = stalwart_leader_perk
 							add_commander_traits_effect = yes
 						}
-						random_traits = yes
 						save_scope_as = new_courtier
 					}
 					scope:target = {
@@ -1385,79 +1559,126 @@ DI_child = {
 	scope = character
 	
 	effect = {
+		save_scope_as = root_target
+		
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
-		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
 		}
 
 		### Set father / mother gender vars
 		if = {
 			limit = {
-				root = { is_male = yes }
+				is_male = yes
 			}
-			set_variable = {
+			set_global_variable = {
 				name = father_var
-				value = root
+				value = scope:root_target
 			}
 			if ={
 				limit = {
-					root.primary_spouse ?= { is_female = yes }
+					scope:root_target.primary_spouse ?= { is_female = yes }
 				}
-				set_variable = {
+				set_global_variable = {
 					name = mother_var
-					value = root.primary_spouse
+					value = scope:root_target.primary_spouse
 				}
 			}
 			else = {
-				set_variable = {
+				set_global_variable = {
 					name = mother_var
 					value = no
 				}
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = mother_var
-				value = root
+				value = scope:root_target
 			}
 			if ={
 				limit = {
-					root.primary_spouse ?= { is_male = yes }
+					scope:root_target.primary_spouse ?= { is_male = yes }
 				}
-				set_variable = {
+				set_global_variable = {
 					name = father_var
-					value = root.primary_spouse
+					value = scope:root_target.primary_spouse
 				}
 			}
 			else = {
-				set_variable = {
+				set_global_variable = {
 					name = father_var
 					value = no
 				}
 			}
 		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
+		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -1465,28 +1686,6 @@ DI_child = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						### Set father / mother gender vars
 						if = {
@@ -1536,8 +1735,8 @@ DI_child = {
 						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -1584,7 +1783,7 @@ DI_child = {
 						}
 						if = {
 							limit = {
-								global_var:DI_char_spawner_count_increment_value > 1
+								global_var:count_var > 1
 							}
 							scope:new_courtier = {
 								add_trait = twin
@@ -1598,16 +1797,16 @@ DI_child = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
 						faith = scope:target.faith
 						culture = scope:target.culture
 						dynasty_house = scope:target.house
-						father = var:father_var
-						mother = var:mother_var
+						father = global_var:father_var
+						mother = global_var:mother_var
 						martial = { 7 12 }
 						prowess = { 5 12 }
 						diplomacy = { 5 10 }
@@ -1646,7 +1845,7 @@ DI_child = {
 					}
 					if = {
 						limit = {
-							global_var:DI_char_spawner_count_increment_value > 1
+							global_var:count_var > 1
 						}
 						scope:new_courtier = {
 							add_trait = twin
@@ -1664,30 +1863,74 @@ DI_sibling = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -1695,32 +1938,10 @@ DI_sibling = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -1767,7 +1988,7 @@ DI_sibling = {
 						}
 						if = {
 							limit = {
-								global_var:DI_char_spawner_count_increment_value > 1
+								global_var:count_var > 1
 							}
 							scope:new_courtier = {
 								add_trait = twin
@@ -1781,8 +2002,8 @@ DI_sibling = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -1829,7 +2050,7 @@ DI_sibling = {
 					}
 					if = {
 						limit = {
-							global_var:DI_char_spawner_count_increment_value > 1
+							global_var:count_var > 1
 						}
 						scope:new_courtier = {
 							add_trait = twin
@@ -1849,30 +2070,74 @@ DI_normal_courtier = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -1880,32 +2145,10 @@ DI_normal_courtier = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -1965,8 +2208,8 @@ DI_normal_courtier = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -2030,30 +2273,74 @@ DI_low_normal_courtier = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -2061,32 +2348,10 @@ DI_low_normal_courtier = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -2146,8 +2411,8 @@ DI_low_normal_courtier = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -2211,30 +2476,74 @@ DI_op_courtier = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -2242,32 +2551,10 @@ DI_op_courtier = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 6
 							fertility = 6
 							employer = scope:target
@@ -2326,8 +2613,8 @@ DI_op_courtier = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 6
 						fertility = 6
 						employer = scope:target
@@ -2390,30 +2677,74 @@ DI_low_op_courtier = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -2421,32 +2752,10 @@ DI_low_op_courtier = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 6
 							fertility = 6
 							employer = scope:target
@@ -2505,8 +2814,8 @@ DI_low_op_courtier = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 6
 						fertility = 6
 						employer = scope:target
@@ -2569,30 +2878,74 @@ DI_court_physician = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -2600,32 +2953,10 @@ DI_court_physician = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -2689,8 +3020,8 @@ DI_court_physician = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -2756,15 +3087,76 @@ DI_court_lady_in_waiting = {
 	scope = character
 	
 	effect = {
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+
+			set_global_variable = {
+				name = gender_var
+				value = 100
+			}
+		}
+		else = {
+			set_global_variable = {
+				name = gender_var
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -2772,14 +3164,9 @@ DI_court_lady_in_waiting = {
 					
 					hidden_effect = {
 						save_scope_as = target
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
+							age = global_var:age_var
 							gender = female
 							health = 5
 							fertility = 0.5
@@ -2841,7 +3228,7 @@ DI_court_lady_in_waiting = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
+						age = global_var:age_var
 						gender = female
 						health = 5
 						fertility = 0.5
@@ -2905,15 +3292,10 @@ DI_court_eunuch = {
 	scope = character
 	
 	effect = {
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
-		}
-		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -2921,14 +3303,9 @@ DI_court_eunuch = {
 					
 					hidden_effect = {
 						save_scope_as = target
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
+							age = global_var:age_var
 							gender = male
 							health = 5
 							fertility = 0.5
@@ -2990,7 +3367,7 @@ DI_court_eunuch = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
+						age = global_var:age_var
 						gender = male
 						health = 5
 						fertility = 0.5
@@ -3056,30 +3433,74 @@ DI_court_cultural_emissary = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -3087,32 +3508,10 @@ DI_court_cultural_emissary = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -3172,8 +3571,8 @@ DI_court_cultural_emissary = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -3237,30 +3636,74 @@ DI_court_keeper_of_swans = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -3268,32 +3711,10 @@ DI_court_keeper_of_swans = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -3357,8 +3778,8 @@ DI_court_keeper_of_swans = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -3426,30 +3847,74 @@ DI_court_chief_qadi = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -3457,32 +3922,10 @@ DI_court_chief_qadi = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -3543,8 +3986,8 @@ DI_court_chief_qadi = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -3609,30 +4052,74 @@ DI_court_garuda = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -3640,32 +4127,10 @@ DI_court_garuda = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -3727,8 +4192,8 @@ DI_court_garuda = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -3794,30 +4259,74 @@ DI_court_gardener = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -3825,32 +4334,10 @@ DI_court_gardener = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -3911,8 +4398,8 @@ DI_court_gardener = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -3977,30 +4464,74 @@ DI_court_antiquarian = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -4008,32 +4539,10 @@ DI_court_antiquarian = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -4093,8 +4602,8 @@ DI_court_antiquarian = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -4158,30 +4667,74 @@ DI_court_tutor = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -4189,32 +4742,10 @@ DI_court_tutor = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -4274,8 +4805,8 @@ DI_court_tutor = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -4339,30 +4870,74 @@ DI_court_food_taster = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -4370,32 +4945,10 @@ DI_court_food_taster = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -4456,8 +5009,8 @@ DI_court_food_taster = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -4522,30 +5075,74 @@ DI_court_master_of_horse = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -4553,32 +5150,10 @@ DI_court_master_of_horse = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -4637,8 +5212,8 @@ DI_court_master_of_horse = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -4701,30 +5276,74 @@ DI_court_master_of_hunt = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -4732,32 +5351,10 @@ DI_court_master_of_hunt = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -4821,8 +5418,8 @@ DI_court_master_of_hunt = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -4890,30 +5487,74 @@ DI_court_royal_architect = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -4921,32 +5562,10 @@ DI_court_royal_architect = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -5005,8 +5624,8 @@ DI_court_royal_architect = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -5069,30 +5688,74 @@ DI_court_high_almoner = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -5100,32 +5763,10 @@ DI_court_high_almoner = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -5185,8 +5826,8 @@ DI_court_high_almoner = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -5250,30 +5891,74 @@ DI_court_seneschal = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -5281,32 +5966,10 @@ DI_court_seneschal = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -5366,8 +6029,8 @@ DI_court_seneschal = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -5431,30 +6094,74 @@ DI_court_cupbearer = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -5462,32 +6169,10 @@ DI_court_cupbearer = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -5547,8 +6232,8 @@ DI_court_cupbearer = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -5612,30 +6297,74 @@ DI_court_jester = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -5643,32 +6372,10 @@ DI_court_jester = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -5731,8 +6438,8 @@ DI_court_jester = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -5799,30 +6506,74 @@ DI_court_poet = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -5830,32 +6581,10 @@ DI_court_poet = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -5915,8 +6644,8 @@ DI_court_poet = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -5980,30 +6709,74 @@ DI_court_musician = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -6011,32 +6784,10 @@ DI_court_musician = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -6096,8 +6847,8 @@ DI_court_musician = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -6161,30 +6912,74 @@ DI_court_bodyguard = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -6192,32 +6987,10 @@ DI_court_bodyguard = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -6286,8 +7059,8 @@ DI_court_bodyguard = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -6360,30 +7133,74 @@ DI_court_champion = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -6391,32 +7208,10 @@ DI_court_champion = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -6484,8 +7279,8 @@ DI_court_champion = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -6557,30 +7352,74 @@ DI_court_executioner = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_female
+			}
+			set_global_variable = DI_char_spawner_female
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		set_global_variable = {
+			name = age_var
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
+		}
+		
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -6588,32 +7427,10 @@ DI_court_executioner = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -6681,8 +7498,8 @@ DI_court_executioner = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target
@@ -6754,217 +7571,74 @@ DI_court_artificer = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
 
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 100
 			}
 		}
 		else = {
-			set_variable = {
+			set_global_variable = {
 				name = gender_var
 				value = 0
 			}
 		}
-		
-		set_variable = {
-			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
-		}
-		
-		while = { count = global_var:DI_char_spawner_count_increment_value
-			if = {
-				limit = {
-					has_global_variable = DI_marked_char_var
-				}
-				
-				every_living_character = {
-					limit = { has_character_flag = marked_for_edit }
-					
-					hidden_effect = {
-						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
-
-						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
-							health = 5
-							fertility = 0.5
-							employer = scope:target
-							faith = scope:target.faith
-							culture = scope:target.culture
-							dynasty = none
-							martial = { 15 17 }
-							prowess = { 15 17 }
-							diplomacy = { 15 17 }
-							stewardship = { 15 17 }
-							intrigue = { 15 17 }
-							learning = { 15 17 }
-							random_traits_list = {
-								count = 1
-								education_stewardship_3 = {}
-								education_stewardship_4 = {}
-							}
-							
-							
-							random_traits = yes
-							after_creation = {
-								create_inspiration = { type = weapon_inspiration }
-							}
-							save_scope_as = new_courtier
-						}
-						scope:target = {
-							if = {
-								limit = {
-									has_global_variable = DI_char_spawner_immortal
-								}
-								scope:new_courtier = {
-									add_trait = immortal
-								}
-							}
-							if = {
-								limit = {
-									has_global_variable = DI_char_spawner_100_stat_man
-								}
-								scope:new_courtier = {
-									add_trait = 100_stat_man
-								}
-							}
-							if = {
-								limit = {
-									has_global_variable = DI_char_spawner_good_traits
-								}
-								scope:new_courtier = {
-									add_trait = loyal
-									add_trait = beauty_good_3
-									add_trait = intellect_good_3
-									add_trait = physique_good_3
-								}
-							}
-						}
-					}
-				}
-			}
-			else = {
-				hidden_effect = {
-					save_scope_as = target
-				
-					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
-						health = 5
-						fertility = 0.5
-						employer = scope:target
-						faith = scope:target.faith
-						culture = scope:target.culture
-						dynasty = none
-						martial = { 15 17 }
-						prowess = { 15 17 }
-						diplomacy = { 15 17 }
-						stewardship = { 15 17 }
-						intrigue = { 15 17 }
-						learning = { 15 17 }
-						random_traits_list = {
-							count = 1
-							education_stewardship_3 = {}
-							education_stewardship_4 = {}
-						}
-						
-						
-						random_traits = yes
-						after_creation = {
-							create_inspiration = { type = weapon_inspiration }
-						}
-						save_scope_as = new_courtier
-					}
-					scope:target = {
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_immortal
-							}
-							scope:new_courtier = {
-								add_trait = immortal
-							}
-						}
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_100_stat_man
-							}
-							scope:new_courtier = {
-								add_trait = 100_stat_man
-							}
-						}
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_good_traits
-							}
-							scope:new_courtier = {
-								add_trait = loyal
-								add_trait = beauty_good_3
-								add_trait = intellect_good_3
-								add_trait = physique_good_3
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-DI_court_artificer = {
-	scope = character
-	
-	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_char_spawner_female
+				has_variable = DI_char_spawner_female
 			}
-
-			set_variable = {
-				name = gender_var
-				value = 100
-			}
+			set_global_variable = DI_char_spawner_female
 		}
 		else = {
-			set_variable = {
-				name = gender_var
-				value = 0
-			}
+			remove_global_variable = DI_char_spawner_female
 		}
 		
-		set_variable = {
+		set_global_variable = {
 			name = age_var
-			value = global_var:DI_char_spawner_age_increment_value
+			value = var:DI_char_spawner_age_increment_value
+		}
+
+		set_global_variable = {
+			name = count_var
+			value = var:DI_char_spawner_count_increment_value
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_immortal
+			}
+			set_global_variable = DI_char_spawner_immortal
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_immortal
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_100_stat_man
+			}
+			set_global_variable = DI_char_spawner_100_stat_man
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_100_stat_man
+		}
+
+		if = {
+			limit = {
+				has_variable = DI_char_spawner_good_traits
+			}
+			set_global_variable = DI_char_spawner_good_traits
+		}
+		else = {
+			remove_global_variable = DI_char_spawner_good_traits
 		}
 		
-		while = { count = global_var:DI_char_spawner_count_increment_value
+		while = { count = var:DI_char_spawner_count_increment_value
 			if = {
 				limit = {
-					has_global_variable = DI_marked_char_var
+					has_variable = DI_marked_char_var
 				}
 				
 				every_living_character = {
@@ -6972,32 +7646,10 @@ DI_court_artificer = {
 					
 					hidden_effect = {
 						save_scope_as = target
-					
-						if = {
-							limit = {
-								has_global_variable = DI_char_spawner_female
-							}
-				
-							set_variable = {
-								name = gender_var
-								value = 100
-							}
-						}
-						else = {
-							set_variable = {
-								name = gender_var
-								value = 0
-							}
-						}
-						
-						set_variable = {
-							name = age_var
-							value = global_var:DI_char_spawner_age_increment_value
-						}
 
 						create_character = {
-							age = var:age_var
-							gender_female_chance = var:gender_var
+							age = global_var:age_var
+							gender_female_chance = global_var:gender_var
 							health = 5
 							fertility = 0.5
 							employer = scope:target
@@ -7049,7 +7701,7 @@ DI_court_artificer = {
 									add_trait = beauty_good_3
 									add_trait = intellect_good_3
 									add_trait = physique_good_3
-							}
+								}
 							}
 						}
 					}
@@ -7060,8 +7712,8 @@ DI_court_artificer = {
 					save_scope_as = target
 				
 					create_character = {
-						age = var:age_var
-						gender_female_chance = var:gender_var
+						age = global_var:age_var
+						gender_female_chance = global_var:gender_var
 						health = 5
 						fertility = 0.5
 						employer = scope:target

@@ -234,7 +234,7 @@ DI_add_diplomacy = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -258,7 +258,7 @@ DI_remove_diplomacy = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -288,7 +288,7 @@ DI_add_martial = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -312,7 +312,7 @@ DI_remove_martial = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -344,7 +344,7 @@ DI_add_stewardship = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -368,7 +368,7 @@ DI_remove_stewardship = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -400,7 +400,7 @@ DI_add_intrigue = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -424,7 +424,7 @@ DI_remove_intrigue = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -456,7 +456,7 @@ DI_add_learning = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -480,7 +480,7 @@ DI_remove_learning = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -512,7 +512,7 @@ DI_add_prowess = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -536,7 +536,7 @@ DI_remove_prowess = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -568,7 +568,7 @@ DI_add_diplomacy_pp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -592,7 +592,7 @@ DI_remove_diplomacy_pp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -616,7 +616,7 @@ DI_add_martial_pp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -640,7 +640,7 @@ DI_remove_martial_pp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -664,7 +664,7 @@ DI_add_stewardship_pp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -688,7 +688,7 @@ DI_remove_stewardship_pp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -712,7 +712,7 @@ DI_add_intrigue_pp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -736,7 +736,7 @@ DI_remove_intrigue_pp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -760,7 +760,7 @@ DI_add_learning_pp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }
@@ -784,7 +784,7 @@ DI_remove_learning_pp = {
 	effect = {
 		if = {
 			limit = {
-				has_global_variable = DI_marked_char_var
+				has_variable = DI_marked_char_var
 			}
 			every_living_character = {
 				limit = { has_character_flag = marked_for_edit }

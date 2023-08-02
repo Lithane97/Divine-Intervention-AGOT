@@ -878,7 +878,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_regional_tribal').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_regional_tribal').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										tooltip = DI_present_innovation_regional_tribal_TT
@@ -909,7 +909,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_tribal').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_tribal').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										tooltip = DI_present_innovation_tribal_TT
@@ -940,7 +940,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_regional_early').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_regional_early').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										tooltip = DI_present_innovation_regional_early_TT
@@ -971,7 +971,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_early').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_early').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										tooltip = DI_present_innovation_early_TT
@@ -996,13 +996,44 @@ window = {
 										}
 									}
 
+									#Present Innovation Regional High
+									button_standard_hover = {
+										name = present_innovation_regional_high_button
+										layoutpolicy_horizontal = expanding
+										layoutpolicy_vertical = expanding
+										size = { 0 50 }
+										onclick = "[GetScriptedGui('DI_present_innovation_regional_high').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										button_ignore = none
+
+										tooltip = DI_present_innovation_regional_high_TT
+										using = tooltip_ne
+
+										hbox = {
+											margin = { 5 0 }
+											margin_right = 10
+											spacing = 10
+					
+											icon = {
+												size = { 50 50 }
+												texture = "gfx/interface/icons/currencies/icon_dynasty_prestige_03.dds"
+											}
+					
+											text_single = {
+												layoutpolicy_horizontal = expanding
+												text = DI_present_innovation_regional_high
+												default_format = "#clickable"
+											}
+											
+										}
+									}
+
 									#Present Innovation High
 									button_standard_hover = {
 										name = present_innovation_high_button
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_high').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_high').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										tooltip = DI_present_innovation_high_TT
@@ -1027,13 +1058,44 @@ window = {
 										}
 									}
 
+									#Present Innovation Regional Late
+									button_standard_hover = {
+										name = present_innovation_regional_late_button
+										layoutpolicy_horizontal = expanding
+										layoutpolicy_vertical = expanding
+										size = { 0 50 }
+										onclick = "[GetScriptedGui('DI_present_innovation_regional_late').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+										button_ignore = none
+
+										tooltip = DI_present_innovation_regional_late_TT
+										using = tooltip_ne
+
+										hbox = {
+											margin = { 5 0 }
+											margin_right = 10
+											spacing = 10
+					
+											icon = {
+												size = { 50 50 }
+												texture = "gfx/interface/icons/currencies/icon_dynasty_prestige_05.dds"
+											}
+					
+											text_single = {
+												layoutpolicy_horizontal = expanding
+												text = DI_present_innovation_regional_late
+												default_format = "#clickable"
+											}
+											
+										}
+									}
+
 									#Present Innovation Late
 									button_standard_hover = {
 										name = present_innovation_late_button
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_late').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_late').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										tooltip = DI_present_innovation_late_TT
@@ -1076,7 +1138,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_horseshoes').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_horseshoes').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1104,7 +1166,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_outriders').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_outriders').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1132,7 +1194,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_motte').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_motte').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1160,7 +1222,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_barracks').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_barracks').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1188,7 +1250,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_mustering_grounds').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_mustering_grounds').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1216,7 +1278,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_bannus').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_bannus').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1244,7 +1306,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_quilted_armor').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_quilted_armor').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1272,7 +1334,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_heraldry').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_heraldry').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1300,7 +1362,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_primogeniture_westeros').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_primogeniture_westeros').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1328,7 +1390,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_development_01').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_development_01').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1356,7 +1418,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_currency_01').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_currency_01').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1384,7 +1446,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_gavelkind').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_gavelkind').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1412,7 +1474,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_crop_rotation').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_crop_rotation').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1440,7 +1502,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_city_planning').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_city_planning').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1468,7 +1530,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_casus_belli').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_casus_belli').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1496,7 +1558,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_plenary_assemblies').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_plenary_assemblies').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1524,7 +1586,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_ledger').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_ledger').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1552,7 +1614,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_all_things').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_all_things').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1580,7 +1642,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_unsullied').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_unsullied').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1608,7 +1670,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_longboats').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_longboats').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1648,7 +1710,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_catapult').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_catapult').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1676,7 +1738,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_knighthood').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_knighthood').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1704,7 +1766,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_plate_armor').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_plate_armor').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1732,7 +1794,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_battlements').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_battlements').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1760,7 +1822,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_burhs').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_burhs').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1788,7 +1850,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_house_soldiers').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_house_soldiers').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1816,7 +1878,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_arched_saddle').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_arched_saddle').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1844,7 +1906,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_hereditary_rule').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_hereditary_rule').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1872,7 +1934,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_manorialism').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_manorialism').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1900,7 +1962,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_development_02').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_development_02').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1928,7 +1990,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_currency_02').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_currency_02').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1956,7 +2018,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_royal_prerogative').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_royal_prerogative').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -1984,7 +2046,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_chronicle_writing').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_chronicle_writing').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2012,7 +2074,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_armilary_sphere').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_armilary_sphere').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2040,7 +2102,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_baliffs').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_baliffs').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2068,7 +2130,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_maesters').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_maesters').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2096,7 +2158,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_goldenheart_bowmen').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_goldenheart_bowmen').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2124,7 +2186,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_elephantry').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_elephantry').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2152,7 +2214,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_war_camels').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_war_camels').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2193,7 +2255,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_mangonel').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_mangonel').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2221,7 +2283,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_hoardings').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_hoardings').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2249,7 +2311,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_castle_baileys').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_castle_baileys').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2277,7 +2339,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_men_at_arms').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_men_at_arms').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2305,7 +2367,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_advanced_bowmaking').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_advanced_bowmaking').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2333,7 +2395,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_windmills').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_windmills').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2361,7 +2423,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_divine_right').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_divine_right').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2389,7 +2451,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_land_grants').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_land_grants').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2417,7 +2479,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_scutage').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_scutage').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2445,7 +2507,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_guilds').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_guilds').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2473,7 +2535,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_development_03').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_development_03').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2501,7 +2563,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_currency_03').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_currency_03').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2542,7 +2604,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_trebuchet').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_trebuchet').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2570,7 +2632,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_machicolations').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_machicolations').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2598,7 +2660,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_royal_armory').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_royal_armory').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2626,7 +2688,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_standing_armies').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_standing_armies').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2654,7 +2716,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_sappers').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_sappers').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2682,7 +2744,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_cranes').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_cranes').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2710,7 +2772,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_noblesse_oblige').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_noblesse_oblige').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2738,7 +2800,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_rightful_ownership').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_rightful_ownership').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2766,7 +2828,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_ermine_cloaks').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_ermine_cloaks').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2794,7 +2856,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_court_officials').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_court_officials').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2822,7 +2884,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_development_04').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_development_04').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2850,7 +2912,7 @@ window = {
 										layoutpolicy_horizontal = expanding
 										layoutpolicy_vertical = expanding
 										size = { 0 50 }
-										onclick = "[GetScriptedGui('DI_present_innovation_currency_04').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+										onclick = "[GetScriptedGui('DI_present_innovation_currency_04').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 										button_ignore = none
 
 										hbox = {
@@ -2880,7 +2942,7 @@ window = {
 									name = "present_innovation_all_regional_button"
 									size = { 140 30}
 									layoutpolicy_horizontal = expanding
-									onclick = "[GetScriptedGui('DI_present_innovation_regional').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+									onclick = "[GetScriptedGui('DI_present_innovation_regional').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 									button_ignore = none
 									text = DI_present_innovation_regional
 									tooltip = DI_present_innovation_regional_TT
@@ -2892,7 +2954,7 @@ window = {
 									name = "present_innovation_all_local_button"
 									size = { 140 30}
 									layoutpolicy_horizontal = expanding
-									onclick = "[GetScriptedGui('DI_present_innovation_local').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+									onclick = "[GetScriptedGui('DI_present_innovation_local').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 									button_ignore = none
 									text = DI_present_innovation_local
 									tooltip = DI_present_innovation_local_TT
@@ -2904,7 +2966,7 @@ window = {
 									name = "present_remove_innovation_all_button"
 									size = { 140 30}
 									layoutpolicy_horizontal = expanding
-									onclick = "[GetScriptedGui('DI_present_remove_all_innovations').Execute(GuiScope.SetRoot(GetPlayer.GetCulture.MakeScope).End)]"
+									onclick = "[GetScriptedGui('DI_present_remove_all_innovations').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 									button_ignore = none
 									text = DI_present_remove_all_innovations
 									tooltip = DI_present_remove_all_innovations_TT
