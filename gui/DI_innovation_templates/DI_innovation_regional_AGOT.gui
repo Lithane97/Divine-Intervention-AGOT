@@ -1,0 +1,1104 @@
+template DI_Innovation_Regional_AGOT
+{
+	# Bronze Age
+	hbox = {
+		visible = "[GetVariableSystem.HasValue('DI_culture_era_tab', 'tribal')]"
+		flowcontainer = {
+			margin_top = 10
+			margin_right = 45
+	
+			flowcontainer = {
+				datacontext = "[GetCultureInnovationType('innovation_agot_northern_fighting')]"
+				direction = horizontal
+	
+				allow_outside = yes
+				using = tooltip_es
+				ignoreinvisible = yes
+	
+				tooltipwidget = {
+					using = DI_culture_innovation_tooltip
+				}
+	
+				button_standard_hover = {
+					visible = "[GetScriptedGui('DI_culture_has_innovation_agot_northern_fighting').IsValid(GuiScope.SetRoot(Culture.MakeScope).End)]"
+					size = { 256 66 }
+					onrightclick = "[GetScriptedGui('DI_remove_innovation_agot_northern_fighting').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					button_ignore = none
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+	
+							vbox = {
+								position = {0 -1}
+	
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_unlocked"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_agot_northern_fighting"
+									max_width = 150
+									align = nobaseline
+									margin = { 3 0 }
+									default_format = "#P"
+									alpha = 0.7
+								}
+	
+							}
+						}
+					}
+				}
+	
+				button_standard_hover = {
+					visible = "[Not(GetScriptedGui('DI_culture_has_innovation_agot_northern_fighting').IsValid(GuiScope.SetRoot(Culture.MakeScope).End))]"
+					size = { 256 66 }
+					onclick = "[GetScriptedGui('DI_add_innovation_agot_northern_fighting').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+						allow_outside = yes
+						ignoreinvisible = yes
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+							alwaystransparent = yes
+	
+							vbox = {
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_clickable"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_agot_northern_fighting"
+									align = left
+									margin = { 3 0 }
+									default_format = "#clickable"
+								}
+							}
+						}
+					}
+				}
+			}
+	
+			spacer = {
+				size = { 45 0 }
+			}
+	
+			flowcontainer = {
+				datacontext = "[GetCultureInnovationType('innovation_all_things')]"
+				direction = horizontal
+	
+				allow_outside = yes
+				using = tooltip_es
+				ignoreinvisible = yes
+	
+				tooltipwidget = {
+					using = DI_culture_innovation_tooltip
+				}
+	
+				button_standard_hover = {
+					visible = "[GetScriptedGui('DI_culture_has_innovation_all_things').IsValid(GuiScope.SetRoot(Culture.MakeScope).End)]"
+					size = { 256 66 }
+					onrightclick = "[GetScriptedGui('DI_remove_innovation_all_things').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					button_ignore = none
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+	
+							vbox = {
+								position = {0 -1}
+	
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_unlocked"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_all_things"
+									max_width = 150
+									align = nobaseline
+									margin = { 3 0 }
+									default_format = "#P"
+									alpha = 0.7
+								}
+	
+							}
+						}
+					}
+				}
+	
+				button_standard_hover = {
+					visible = "[Not(GetScriptedGui('DI_culture_has_innovation_all_things').IsValid(GuiScope.SetRoot(Culture.MakeScope).End))]"
+					size = { 256 66 }
+					onclick = "[GetScriptedGui('DI_add_innovation_all_things').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+						allow_outside = yes
+						ignoreinvisible = yes
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+							alwaystransparent = yes
+	
+							vbox = {
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_clickable"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_all_things"
+									align = left
+									margin = { 3 0 }
+									default_format = "#clickable"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# Iron Age
+	hbox = {
+		visible = "[GetVariableSystem.HasValue('DI_culture_era_tab', 'early_medieval')]"
+		flowcontainer = {
+			margin_top = 10
+			margin_right = 45
+	
+			flowcontainer = {
+				datacontext = "[GetCultureInnovationType('innovation_maesters')]"
+				direction = horizontal
+	
+				allow_outside = yes
+				using = tooltip_es
+				ignoreinvisible = yes
+	
+				tooltipwidget = {
+					using = DI_culture_innovation_tooltip
+				}
+	
+				button_standard_hover = {
+					visible = "[GetScriptedGui('DI_culture_has_innovation_maesters').IsValid(GuiScope.SetRoot(Culture.MakeScope).End)]"
+					size = { 256 66 }
+					onrightclick = "[GetScriptedGui('DI_remove_innovation_maesters').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					button_ignore = none
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+	
+							vbox = {
+								position = {0 -1}
+	
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_unlocked"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_maesters"
+									max_width = 150
+									align = nobaseline
+									margin = { 3 0 }
+									default_format = "#P"
+									alpha = 0.7
+								}
+	
+							}
+						}
+					}
+				}
+	
+				button_standard_hover = {
+					visible = "[Not(GetScriptedGui('DI_culture_has_innovation_maesters').IsValid(GuiScope.SetRoot(Culture.MakeScope).End))]"
+					size = { 256 66 }
+					onclick = "[GetScriptedGui('DI_add_innovation_maesters').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+						allow_outside = yes
+						ignoreinvisible = yes
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+							alwaystransparent = yes
+	
+							vbox = {
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_clickable"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_maesters"
+									align = left
+									margin = { 3 0 }
+									default_format = "#clickable"
+								}
+							}
+						}
+					}
+				}
+			}
+	
+			spacer = {
+				size = { 45 0 }
+			}
+	
+			flowcontainer = {
+				datacontext = "[GetCultureInnovationType('innovation_agot_dorne_fighting')]"
+				direction = horizontal
+	
+				allow_outside = yes
+				using = tooltip_es
+				ignoreinvisible = yes
+	
+				tooltipwidget = {
+					using = DI_culture_innovation_tooltip
+				}
+	
+				button_standard_hover = {
+					visible = "[GetScriptedGui('DI_culture_has_innovation_agot_dorne_fighting').IsValid(GuiScope.SetRoot(Culture.MakeScope).End)]"
+					size = { 256 66 }
+					onrightclick = "[GetScriptedGui('DI_remove_innovation_agot_dorne_fighting').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					button_ignore = none
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+	
+							vbox = {
+								position = {0 -1}
+	
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_unlocked"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_agot_dorne_fighting"
+									max_width = 150
+									align = nobaseline
+									margin = { 3 0 }
+									default_format = "#P"
+									alpha = 0.7
+								}
+	
+							}
+						}
+					}
+				}
+	
+				button_standard_hover = {
+					visible = "[Not(GetScriptedGui('DI_culture_has_innovation_agot_dorne_fighting').IsValid(GuiScope.SetRoot(Culture.MakeScope).End))]"
+					size = { 256 66 }
+					onclick = "[GetScriptedGui('DI_add_innovation_agot_dorne_fighting').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+						allow_outside = yes
+						ignoreinvisible = yes
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+							alwaystransparent = yes
+	
+							vbox = {
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_clickable"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_agot_dorne_fighting"
+									align = left
+									margin = { 3 0 }
+									default_format = "#clickable"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	hbox = {
+		visible = "[GetVariableSystem.HasValue('DI_culture_era_tab', 'early_medieval')]"
+		flowcontainer = {
+			margin_top = 10
+			margin_right = 45
+	
+			flowcontainer = {
+				datacontext = "[GetCultureInnovationType('innovation_agot_vale_fighting')]"
+				direction = horizontal
+	
+				allow_outside = yes
+				using = tooltip_es
+				ignoreinvisible = yes
+	
+				tooltipwidget = {
+					using = DI_culture_innovation_tooltip
+				}
+	
+				button_standard_hover = {
+					visible = "[GetScriptedGui('DI_culture_has_innovation_agot_vale_fighting').IsValid(GuiScope.SetRoot(Culture.MakeScope).End)]"
+					size = { 256 66 }
+					onrightclick = "[GetScriptedGui('DI_remove_innovation_agot_vale_fighting').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					button_ignore = none
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+	
+							vbox = {
+								position = {0 -1}
+	
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_unlocked"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_agot_vale_fighting"
+									max_width = 150
+									align = nobaseline
+									margin = { 3 0 }
+									default_format = "#P"
+									alpha = 0.7
+								}
+	
+							}
+						}
+					}
+				}
+	
+				button_standard_hover = {
+					visible = "[Not(GetScriptedGui('DI_culture_has_innovation_agot_vale_fighting').IsValid(GuiScope.SetRoot(Culture.MakeScope).End))]"
+					size = { 256 66 }
+					onclick = "[GetScriptedGui('DI_add_innovation_agot_vale_fighting').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+						allow_outside = yes
+						ignoreinvisible = yes
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+							alwaystransparent = yes
+	
+							vbox = {
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_clickable"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_agot_vale_fighting"
+									align = left
+									margin = { 3 0 }
+									default_format = "#clickable"
+								}
+							}
+						}
+					}
+				}
+			}
+	
+			spacer = {
+				size = { 45 0 }
+			}
+	
+			flowcontainer = {
+				datacontext = "[GetCultureInnovationType('innovation_agot_crownlands_fighting')]"
+				direction = horizontal
+	
+				allow_outside = yes
+				using = tooltip_es
+				ignoreinvisible = yes
+	
+				tooltipwidget = {
+					using = DI_culture_innovation_tooltip
+				}
+	
+				button_standard_hover = {
+					visible = "[GetScriptedGui('DI_culture_has_innovation_agot_crownlands_fighting').IsValid(GuiScope.SetRoot(Culture.MakeScope).End)]"
+					size = { 256 66 }
+					onrightclick = "[GetScriptedGui('DI_remove_innovation_agot_crownlands_fighting').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					button_ignore = none
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+	
+							vbox = {
+								position = {0 -1}
+	
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_unlocked"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_agot_crownlands_fighting"
+									max_width = 150
+									align = nobaseline
+									margin = { 3 0 }
+									default_format = "#P"
+									alpha = 0.7
+								}
+	
+							}
+						}
+					}
+				}
+	
+				button_standard_hover = {
+					visible = "[Not(GetScriptedGui('DI_culture_has_innovation_agot_crownlands_fighting').IsValid(GuiScope.SetRoot(Culture.MakeScope).End))]"
+					size = { 256 66 }
+					onclick = "[GetScriptedGui('DI_add_innovation_agot_crownlands_fighting').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+						allow_outside = yes
+						ignoreinvisible = yes
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+							alwaystransparent = yes
+	
+							vbox = {
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_clickable"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_agot_crownlands_fighting"
+									align = left
+									margin = { 3 0 }
+									default_format = "#clickable"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	hbox = {
+		visible = "[GetVariableSystem.HasValue('DI_culture_era_tab', 'early_medieval')]"
+		flowcontainer = {
+			margin_top = 10
+			margin_right = 45
+	
+			flowcontainer = {
+				datacontext = "[GetCultureInnovationType('innovation_agot_reach_fighting')]"
+				direction = horizontal
+	
+				allow_outside = yes
+				using = tooltip_es
+				ignoreinvisible = yes
+	
+				tooltipwidget = {
+					using = DI_culture_innovation_tooltip
+				}
+	
+				button_standard_hover = {
+					visible = "[GetScriptedGui('DI_culture_has_innovation_agot_reach_fighting').IsValid(GuiScope.SetRoot(Culture.MakeScope).End)]"
+					size = { 256 66 }
+					onrightclick = "[GetScriptedGui('DI_remove_innovation_agot_reach_fighting').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					button_ignore = none
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+	
+							vbox = {
+								position = {0 -1}
+	
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_unlocked"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_agot_reach_fighting"
+									max_width = 150
+									align = nobaseline
+									margin = { 3 0 }
+									default_format = "#P"
+									alpha = 0.7
+								}
+	
+							}
+						}
+					}
+				}
+	
+				button_standard_hover = {
+					visible = "[Not(GetScriptedGui('DI_culture_has_innovation_agot_reach_fighting').IsValid(GuiScope.SetRoot(Culture.MakeScope).End))]"
+					size = { 256 66 }
+					onclick = "[GetScriptedGui('DI_add_innovation_agot_reach_fighting').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+						allow_outside = yes
+						ignoreinvisible = yes
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+							alwaystransparent = yes
+	
+							vbox = {
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_clickable"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_agot_reach_fighting"
+									align = left
+									margin = { 3 0 }
+									default_format = "#clickable"
+								}
+							}
+						}
+					}
+				}
+			}
+	
+			spacer = {
+				size = { 45 0 }
+			}
+	
+			flowcontainer = {
+				datacontext = "[GetCultureInnovationType('innovation_agot_riverlands_fighting')]"
+				direction = horizontal
+	
+				allow_outside = yes
+				using = tooltip_es
+				ignoreinvisible = yes
+	
+				tooltipwidget = {
+					using = DI_culture_innovation_tooltip
+				}
+	
+				button_standard_hover = {
+					visible = "[GetScriptedGui('DI_culture_has_innovation_agot_riverlands_fighting').IsValid(GuiScope.SetRoot(Culture.MakeScope).End)]"
+					size = { 256 66 }
+					onrightclick = "[GetScriptedGui('DI_remove_innovation_agot_riverlands_fighting').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					button_ignore = none
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+	
+							vbox = {
+								position = {0 -1}
+	
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_unlocked"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_agot_riverlands_fighting"
+									max_width = 150
+									align = nobaseline
+									margin = { 3 0 }
+									default_format = "#P"
+									alpha = 0.7
+								}
+	
+							}
+						}
+					}
+				}
+	
+				button_standard_hover = {
+					visible = "[Not(GetScriptedGui('DI_culture_has_innovation_agot_riverlands_fighting').IsValid(GuiScope.SetRoot(Culture.MakeScope).End))]"
+					size = { 256 66 }
+					onclick = "[GetScriptedGui('DI_add_innovation_agot_riverlands_fighting').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+						allow_outside = yes
+						ignoreinvisible = yes
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+							alwaystransparent = yes
+	
+							vbox = {
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_clickable"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_agot_riverlands_fighting"
+									align = left
+									margin = { 3 0 }
+									default_format = "#clickable"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	hbox = {
+		visible = "[GetVariableSystem.HasValue('DI_culture_era_tab', 'early_medieval')]"
+		flowcontainer = {
+			margin_top = 10
+			margin_right = 45
+	
+			flowcontainer = {
+				datacontext = "[GetCultureInnovationType('innovation_agot_westerlands_fighting')]"
+				direction = horizontal
+	
+				allow_outside = yes
+				using = tooltip_es
+				ignoreinvisible = yes
+	
+				tooltipwidget = {
+					using = DI_culture_innovation_tooltip
+				}
+	
+				button_standard_hover = {
+					visible = "[GetScriptedGui('DI_culture_has_innovation_agot_westerlands_fighting').IsValid(GuiScope.SetRoot(Culture.MakeScope).End)]"
+					size = { 256 66 }
+					onrightclick = "[GetScriptedGui('DI_remove_innovation_agot_westerlands_fighting').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					button_ignore = none
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+	
+							vbox = {
+								position = {0 -1}
+	
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_unlocked"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_agot_westerlands_fighting"
+									max_width = 150
+									align = nobaseline
+									margin = { 3 0 }
+									default_format = "#P"
+									alpha = 0.7
+								}
+	
+							}
+						}
+					}
+				}
+	
+				button_standard_hover = {
+					visible = "[Not(GetScriptedGui('DI_culture_has_innovation_agot_westerlands_fighting').IsValid(GuiScope.SetRoot(Culture.MakeScope).End))]"
+					size = { 256 66 }
+					onclick = "[GetScriptedGui('DI_add_innovation_agot_westerlands_fighting').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+						allow_outside = yes
+						ignoreinvisible = yes
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+							alwaystransparent = yes
+	
+							vbox = {
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_clickable"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_agot_westerlands_fighting"
+									align = left
+									margin = { 3 0 }
+									default_format = "#clickable"
+								}
+							}
+						}
+					}
+				}
+			}
+	
+			spacer = {
+				size = { 45 0 }
+			}
+	
+			flowcontainer = {
+				datacontext = "[GetCultureInnovationType('innovation_agot_stormlands_fighting')]"
+				direction = horizontal
+	
+				allow_outside = yes
+				using = tooltip_es
+				ignoreinvisible = yes
+	
+				tooltipwidget = {
+					using = DI_culture_innovation_tooltip
+				}
+	
+				button_standard_hover = {
+					visible = "[GetScriptedGui('DI_culture_has_innovation_agot_stormlands_fighting').IsValid(GuiScope.SetRoot(Culture.MakeScope).End)]"
+					size = { 256 66 }
+					onrightclick = "[GetScriptedGui('DI_remove_innovation_agot_stormlands_fighting').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+					button_ignore = none
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+	
+							vbox = {
+								position = {0 -1}
+	
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_unlocked"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_agot_stormlands_fighting"
+									max_width = 150
+									align = nobaseline
+									margin = { 3 0 }
+									default_format = "#P"
+									alpha = 0.7
+								}
+	
+							}
+						}
+					}
+				}
+	
+				button_standard_hover = {
+					visible = "[Not(GetScriptedGui('DI_culture_has_innovation_agot_stormlands_fighting').IsValid(GuiScope.SetRoot(Culture.MakeScope).End))]"
+					size = { 256 66 }
+					onclick = "[GetScriptedGui('DI_add_innovation_agot_stormlands_fighting').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+	
+					hbox = {
+						margin = { 3 3 }
+						margin_right = 8
+						spacing = 5
+						allow_outside = yes
+						ignoreinvisible = yes
+	
+						background = {
+							using = Background_Area
+						}
+	
+						widget = {
+							size = { 90 60 }
+	
+							DI_icon_innovation = {
+								parentanchor = center
+							}
+						}
+	
+						widget = {
+							size = { 150 60 }
+							alwaystransparent = yes
+	
+							vbox = {
+								ignoreinvisible = yes
+	
+								text_multi = {
+									name = "name_clickable"
+									layoutpolicy_horizontal = expanding
+									text = "innovation_agot_stormlands_fighting"
+									align = left
+									margin = { 3 0 }
+									default_format = "#clickable"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

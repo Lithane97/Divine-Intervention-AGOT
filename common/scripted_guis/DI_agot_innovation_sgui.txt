@@ -1,0 +1,334 @@
+﻿### Check innovation, add innovation ###
+# outriders
+DI_culture_has_innovation_outriders = {
+	scope = culture
+
+	is_valid = {
+		has_innovation = innovation_outriders
+	}
+}
+
+DI_add_innovation_outriders = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_outriders
+		}
+	}
+}
+
+# primogeniture_westeros
+DI_culture_has_innovation_primogeniture_westeros = {
+	scope = culture
+
+	is_valid = {
+		has_innovation = innovation_primogeniture_westeros
+	}
+}
+
+DI_add_innovation_primogeniture_westeros = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_primogeniture_westeros
+		}
+	}
+}
+
+# agot_northern_fighting
+DI_culture_has_innovation_agot_northern_fighting = {
+	scope = culture
+
+	is_valid = {
+		has_innovation = innovation_agot_northern_fighting
+	}
+}
+
+DI_add_innovation_agot_northern_fighting = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_agot_northern_fighting
+		}
+	}
+}
+
+# maesters
+DI_culture_has_innovation_maesters = {
+	scope = culture
+
+	is_valid = {
+		has_innovation = innovation_maesters
+	}
+}
+
+DI_add_innovation_maesters = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_maesters
+		}
+	}
+}
+
+# agot_dorne_fighting
+DI_culture_has_innovation_agot_dorne_fighting = {
+	scope = culture
+
+	is_valid = {
+		has_innovation = innovation_agot_dorne_fighting
+	}
+}
+
+DI_add_innovation_agot_dorne_fighting = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_agot_dorne_fighting
+		}
+	}
+}
+
+# agot_vale_fighting
+DI_culture_has_innovation_agot_vale_fighting = {
+	scope = culture
+
+	is_valid = {
+		has_innovation = innovation_agot_vale_fighting
+	}
+}
+
+DI_add_innovation_agot_vale_fighting = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_agot_vale_fighting
+		}
+	}
+}
+
+# agot_crownlands_fighting
+DI_culture_has_innovation_agot_crownlands_fighting = {
+	scope = culture
+
+	is_valid = {
+		has_innovation = innovation_agot_crownlands_fighting
+	}
+}
+
+DI_add_innovation_agot_crownlands_fighting = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_agot_crownlands_fighting
+		}
+	}
+}
+
+# agot_reach_fighting
+DI_culture_has_innovation_agot_reach_fighting = {
+	scope = culture
+
+	is_valid = {
+		has_innovation = innovation_agot_reach_fighting
+	}
+}
+
+DI_add_innovation_agot_reach_fighting = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_agot_reach_fighting
+		}
+	}
+}
+
+# agot_riverlands_fighting
+DI_culture_has_innovation_agot_riverlands_fighting = {
+	scope = culture
+
+	is_valid = {
+		has_innovation = innovation_agot_riverlands_fighting
+	}
+}
+
+DI_add_innovation_agot_riverlands_fighting = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_agot_riverlands_fighting
+		}
+	}
+}
+
+# agot_westerlands_fighting
+DI_culture_has_innovation_agot_westerlands_fighting = {
+	scope = culture
+
+	is_valid = {
+		has_innovation = innovation_agot_westerlands_fighting
+	}
+}
+
+DI_add_innovation_agot_westerlands_fighting = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_agot_westerlands_fighting
+		}
+	}
+}
+
+# agot_stormlands_fighting
+DI_culture_has_innovation_agot_stormlands_fighting = {
+	scope = culture
+
+	is_valid = {
+		has_innovation = innovation_agot_stormlands_fighting
+	}
+}
+
+DI_add_innovation_agot_stormlands_fighting = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_agot_stormlands_fighting
+		}
+	}
+}
+
+### Remove Innovations ###
+##########################
+
+### Military ###
+# outriders
+DI_remove_innovation_outriders = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_outriders
+		}
+	}
+}
+
+# primogeniture_westeros
+DI_remove_innovation_primogeniture_westeros = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_primogeniture_westeros
+		}
+	}
+}
+
+# agot_northern_fighting
+DI_remove_innovation_agot_northern_fighting = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_agot_northern_fighting
+		}
+	}
+}
+
+# maesters
+DI_remove_innovation_maesters = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_maesters
+		}
+	}
+}
+
+# agot_dorne_fighting
+DI_remove_innovation_agot_dorne_fighting = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_agot_dorne_fighting
+		}
+	}
+}
+
+# agot_vale_fighting
+DI_remove_innovation_agot_vale_fighting = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_agot_vale_fighting
+		}
+	}
+}
+
+# agot_crownlands_fighting
+DI_remove_innovation_agot_crownlands_fighting = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_agot_crownlands_fighting
+		}
+	}
+}
+
+# agot_reach_fighting
+DI_remove_innovation_agot_reach_fighting = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_agot_reach_fighting
+		}
+	}
+}
+
+# agot_riverlands_fighting
+DI_remove_innovation_agot_riverlands_fighting = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_agot_riverlands_fighting
+		}
+	}
+}
+
+# agot_westerlands_fighting
+DI_remove_innovation_agot_westerlands_fighting = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_agot_westerlands_fighting
+		}
+	}
+}
+
+# agot_stormlands_fighting
+DI_remove_innovation_agot_stormlands_fighting = {
+	scope = character
+
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_agot_stormlands_fighting
+		}
+	}
+}

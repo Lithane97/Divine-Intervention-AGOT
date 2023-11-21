@@ -5,11 +5,11 @@ DI_present_add_lifestyle_all = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				lifestyle_martial_present_effect = yes
 				lifestyle_diplomacy_present_effect = yes
@@ -35,11 +35,11 @@ DI_present_remove_lifestyle_all = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				lifestyle_martial_present_no_effect = yes
 				lifestyle_diplomacy_present_no_effect = yes
@@ -65,11 +65,11 @@ DI_present_add_lifestyle_martial = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				lifestyle_martial_present_effect = yes
 			}
@@ -87,11 +87,11 @@ DI_present_remove_lifestyle_martial = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				lifestyle_martial_present_no_effect = yes
 			}
@@ -109,11 +109,11 @@ DI_present_add_lifestyle_diplomacy = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				lifestyle_diplomacy_present_effect = yes
 			}
@@ -131,11 +131,11 @@ DI_present_remove_lifestyle_diplomacy = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				lifestyle_diplomacy_present_no_effect = yes
 			}
@@ -153,11 +153,11 @@ DI_present_add_lifestyle_stewardship = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				lifestyle_stewardship_present_effect = yes
 			}
@@ -175,11 +175,11 @@ DI_present_remove_lifestyle_stewardship = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				lifestyle_stewardship_present_no_effect = yes
 			}
@@ -197,11 +197,11 @@ DI_present_add_lifestyle_intrigue = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				lifestyle_intrigue_present_effect = yes
 			}
@@ -219,11 +219,11 @@ DI_present_remove_lifestyle_intrigue = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				lifestyle_intrigue_present_no_effect = yes
 			}
@@ -241,11 +241,11 @@ DI_present_add_lifestyle_learning = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				lifestyle_learning_present_effect = yes
 			}
@@ -263,11 +263,11 @@ DI_present_remove_lifestyle_learning = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = { 
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				lifestyle_learning_present_no_effect = yes
 			}
@@ -285,11 +285,11 @@ DI_present_health_eliminate_issues = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 			set_weight_0 = yes
 			eliminated_health_problem_effect = yes
@@ -309,11 +309,11 @@ DI_present_health_add_good_genes = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				remove_health_conflict_effect = yes
 
@@ -342,11 +342,11 @@ DI_present_health_remove_good_genes = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 
 				remove_trait = physique_good_3
@@ -373,11 +373,11 @@ DI_present_health_add_bad_genes = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				remove_health_conflict_forbadgene_effect = yes
 				remove_trait = physique_good_3
@@ -415,11 +415,11 @@ DI_present_health_remove_bad_genes = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = { 
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				remove_trait = beauty_bad_3
 				remove_trait = intellect_bad_3
@@ -445,11 +445,11 @@ DI_present_health_add_no_stress_change = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				add_character_modifier = no_stress_change 
 			}
@@ -466,11 +466,11 @@ DI_present_health_remove_no_stress_change = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				remove_character_modifier = no_stress_change 
 			}
@@ -488,11 +488,11 @@ DI_present_health_add_no_tyranny_change = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				add_character_modifier = no_tyranny_change 
 			}
@@ -509,11 +509,11 @@ DI_present_health_remove_no_tyranny_change = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				remove_character_modifier = no_tyranny_change 
 			}
@@ -531,11 +531,11 @@ DI_present_health_add_no_dread_change = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				add_character_modifier = no_dread_change 
 			}
@@ -552,11 +552,11 @@ DI_present_health_remove_no_dread_change = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				remove_character_modifier = no_dread_change 
 			}
@@ -574,11 +574,11 @@ DI_present_traits_randomize = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				clear_personality_traits_effect = yes
 				personality_trait_randomizer_effect = yes
@@ -598,11 +598,11 @@ DI_present_traits_add_special = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				add_trait = immortal
 				set_immortal_age = 30
@@ -632,11 +632,11 @@ DI_present_traits_remove_special = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				remove_trait = immortal
 				remove_trait = 100_stat_man
@@ -664,11 +664,11 @@ DI_present_traits_add_commander = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				add_commander_traits_effect = yes
 			}
@@ -686,11 +686,11 @@ DI_present_traits_remove_commander = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				remove_commander_traits_effect = yes
 			}
@@ -708,11 +708,11 @@ DI_present_traits_add_giant = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				remove_trait = dwarf
 				remove_trait = physique_good_1
@@ -746,11 +746,11 @@ DI_present_traits_remove_giant = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				set_weight_0 = yes
 				remove_trait = physique_good_3
@@ -772,11 +772,11 @@ DI_present_traits_add_midget = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				remove_trait = giant
 				remove_trait = physique_good_1
@@ -810,11 +810,11 @@ DI_present_traits_remove_midget = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				remove_trait = physique_bad_3
 				remove_trait = dwarf
@@ -834,11 +834,11 @@ DI_present_traits_add_ghostly = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				change_current_weight = 0
 				add_trait = albino
@@ -860,11 +860,11 @@ DI_present_traits_remove_ghostly = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				remove_trait = albino
 				remove_trait = spindly
@@ -886,11 +886,11 @@ DI_present_remove_all_innovations = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 
@@ -916,28 +916,28 @@ DI_present_innovation_regional = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 
 				scope:target.culture = {
 					innovation_tribal_regional_effect = yes
-					innovation_early_medival_regional_effect = yes
-					innovation_high_medival_regional_effect = yes
-					innovation_late_medival_regional_effect = yes
+					innovation_early_medieval_regional_effect = yes
+					innovation_high_medieval_regional_effect = yes
+					innovation_late_medieval_regional_effect = yes
 				}
 			}
 		}
 		else = {
 			scope:root_target.culture = {
 				innovation_tribal_regional_effect = yes
-				innovation_early_medival_regional_effect = yes
-				innovation_high_medival_regional_effect = yes
-				innovation_late_medival_regional_effect = yes
+				innovation_early_medieval_regional_effect = yes
+				innovation_high_medieval_regional_effect = yes
+				innovation_late_medieval_regional_effect = yes
 			}
 		}
 	}
@@ -952,28 +952,28 @@ DI_present_innovation_local = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
 				scope:target.culture = {
 					innovation_tribal_effect = yes
-					innovation_early_medival_effect = yes
-					innovation_high_medival_effect = yes
-					innovation_late_medival_effect = yes
+					innovation_early_medieval_effect = yes
+					innovation_high_medieval_effect = yes
+					innovation_late_medieval_effect = yes
 				}
 			}
 		}
 		else = {
 			scope:root_target.culture = {
 				innovation_tribal_effect = yes
-				innovation_early_medival_effect = yes
-				innovation_high_medival_effect = yes
-				innovation_late_medival_effect = yes
+				innovation_early_medieval_effect = yes
+				innovation_high_medieval_effect = yes
+				innovation_late_medieval_effect = yes
 			}
 		}
 	}
@@ -988,11 +988,11 @@ DI_present_innovation_regional_tribal = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -1009,7 +1009,7 @@ DI_present_innovation_regional_tribal = {
 	}
 }
 
-### Add Regional Early Medival Innovations
+### Add Regional Early Medieval Innovations
 DI_present_innovation_regional_early = {
 	scope = character
 
@@ -1018,28 +1018,28 @@ DI_present_innovation_regional_early = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
 				scope:target.culture = {
-					innovation_early_medival_regional_effect = yes		
+					innovation_early_medieval_regional_effect = yes		
 				}
 			}
 		}
 		else = {
 			scope:root_target.culture = {
-				innovation_early_medival_regional_effect = yes
+				innovation_early_medieval_regional_effect = yes
 			}
 		}
 	}
 }
 
-### Add Regional High Medival Innovations
+### Add Regional High Medieval Innovations
 DI_present_innovation_regional_high = {
 	scope = character
 
@@ -1048,28 +1048,28 @@ DI_present_innovation_regional_high = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
 				scope:target.culture = {
-					innovation_high_medival_regional_effect = yes	
+					innovation_high_medieval_regional_effect = yes	
 				}	
 			}
 		}
 		else = {
 			scope:root_target.culture = {
-				innovation_high_medival_regional_effect = yes
+				innovation_high_medieval_regional_effect = yes
 			}
 		}
 	}
 }
 
-### Add Regional Late Medival Innovations
+### Add Regional Late Medieval Innovations
 DI_present_innovation_regional_late = {
 	scope = character
 
@@ -1078,22 +1078,22 @@ DI_present_innovation_regional_late = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
 				scope:target.culture = {
-					innovation_late_medival_regional_effect = yes	
+					innovation_late_medieval_regional_effect = yes	
 				}	
 			}
 		}
 		else = {
 			scope:root_target.culture = {
-				innovation_late_medival_regional_effect = yes
+				innovation_late_medieval_regional_effect = yes
 			}
 		}
 	}
@@ -1108,11 +1108,11 @@ DI_present_innovation_tribal = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -1129,7 +1129,7 @@ DI_present_innovation_tribal = {
 	}
 }
 
-### Add All Local Early Medival Innovations
+### Add All Local Early Medieval Innovations
 DI_present_innovation_early = {
 	scope = character
 
@@ -1138,28 +1138,28 @@ DI_present_innovation_early = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
 				scope:target.culture = {
-					innovation_early_medival_effect = yes	
+					innovation_early_medieval_effect = yes	
 				}	
 			}
 		}
 		else = {
 			scope:root_target.culture = {
-				innovation_early_medival_effect = yes
+				innovation_early_medieval_effect = yes
 			}
 		}
 	}
 }
 
-### Add All Local High Medival Innovations
+### Add All Local High Medieval Innovations
 DI_present_innovation_high = {
 	scope = character
 
@@ -1168,28 +1168,28 @@ DI_present_innovation_high = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
 				scope:target.culture = {
-					innovation_high_medival_effect = yes	
+					innovation_high_medieval_effect = yes	
 				}	
 			}
 		}
 		else = {
 			scope:root_target.culture = {
-				innovation_high_medival_effect = yes
+				innovation_high_medieval_effect = yes
 			}
 		}
 	}
 }
 
-### Add All Local Late Medival Innovations
+### Add All Local Late Medieval Innovations
 DI_present_innovation_late = {
 	scope = character
 
@@ -1198,22 +1198,22 @@ DI_present_innovation_late = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
 				scope:target.culture = {
-					innovation_late_medival_effect = yes
+					innovation_late_medieval_effect = yes
 				}		
 			}
 		}
 		else = {
 			scope:root_target.culture = {
-				innovation_late_medival_effect = yes
+				innovation_late_medieval_effect = yes
 			}
 		}
 	}
@@ -1229,11 +1229,11 @@ DI_present_innovation_longboats = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -1279,11 +1279,11 @@ DI_present_innovation_elephantry = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -1329,11 +1329,11 @@ DI_present_innovation_war_camels = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -1379,24 +1379,30 @@ DI_present_innovation_all_things = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
 				scope:target.culture = {
 					if = {
 						limit = {
-							NOT = {
-								has_innovation = innovation_all_things
+							AND = {
+								NOT = {
+									has_innovation = innovation_all_things
+								}
+								has_fp1_dlc_trigger = yes
 							}
 						}
 						add_innovation = innovation_all_things
 					}
-					else = {
+					else_if = {
+						limit = {
+							has_fp1_dlc_trigger = yes
+						}
 						remove_innovation = innovation_all_things
 					}								
 				}
@@ -1406,13 +1412,19 @@ DI_present_innovation_all_things = {
 			scope:root_target.culture = {
 				if = {
 					limit = {
-						NOT = {
-							has_innovation = innovation_all_things
+						AND = {
+							NOT = {
+								has_innovation = innovation_all_things
+							}
+							has_fp1_dlc_trigger = yes
 						}
 					}
 					add_innovation = innovation_all_things
 				}
-				else = {
+				else_if = {
+					limit = {
+						has_fp1_dlc_trigger = yes
+					}
 					remove_innovation = innovation_all_things
 				}
 			}
@@ -1429,11 +1441,11 @@ DI_present_innovation_unsullied = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -1480,11 +1492,11 @@ DI_present_innovation_motte = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -1530,11 +1542,11 @@ DI_present_innovation_catapult = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -1580,11 +1592,11 @@ DI_present_innovation_barracks = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -1630,11 +1642,11 @@ DI_present_innovation_mustering_grounds = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -1680,11 +1692,11 @@ DI_present_innovation_bannus = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -1730,11 +1742,11 @@ DI_present_innovation_quilted_armor = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -1780,11 +1792,11 @@ DI_present_innovation_development_01 = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -1830,11 +1842,11 @@ DI_present_innovation_currency_01 = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -1880,11 +1892,11 @@ DI_present_innovation_gavelkind = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -1930,11 +1942,11 @@ DI_present_innovation_crop_rotation = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -1980,11 +1992,11 @@ DI_present_innovation_city_planning = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2030,11 +2042,11 @@ DI_present_innovation_casus_belli = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2080,11 +2092,11 @@ DI_present_innovation_plenary_assemblies = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2130,11 +2142,11 @@ DI_present_innovation_ledger = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2171,7 +2183,7 @@ DI_present_innovation_ledger = {
 	}
 }
 
-### Early Medival Local Innovation Selection
+### Early Medieval Local Innovation Selection
 ### Battlements
 DI_present_innovation_battlements = {
 	scope = character
@@ -2181,11 +2193,11 @@ DI_present_innovation_battlements = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2231,11 +2243,11 @@ DI_present_innovation_mangonel = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2281,11 +2293,11 @@ DI_present_innovation_burhs = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2331,11 +2343,11 @@ DI_present_innovation_house_soldiers = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2381,11 +2393,11 @@ DI_present_innovation_horseshoes = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2431,11 +2443,11 @@ DI_present_innovation_arched_saddle = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2481,11 +2493,11 @@ DI_present_innovation_hereditary_rule = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2531,11 +2543,11 @@ DI_present_innovation_manorialism = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2581,11 +2593,11 @@ DI_present_innovation_development_02 = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2631,11 +2643,11 @@ DI_present_innovation_currency_02 = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2681,11 +2693,11 @@ DI_present_innovation_royal_prerogative = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2731,11 +2743,11 @@ DI_present_innovation_chronicle_writing = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2781,11 +2793,11 @@ DI_present_innovation_armilary_sphere = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2831,11 +2843,11 @@ DI_present_innovation_baliffs = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2872,7 +2884,7 @@ DI_present_innovation_baliffs = {
 	}
 }
 
-### High Medival Local Innovation Selection
+### High Medieval Local Innovation Selection
 ### Hoardings
 DI_present_innovation_hoardings = {
 	scope = character
@@ -2882,11 +2894,11 @@ DI_present_innovation_hoardings = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2932,11 +2944,11 @@ DI_present_innovation_trebuchet = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -2982,11 +2994,11 @@ DI_present_innovation_castle_baileys = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3032,11 +3044,11 @@ DI_present_innovation_men_at_arms = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3082,11 +3094,11 @@ DI_present_innovation_knighthood = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3132,11 +3144,11 @@ DI_present_innovation_advanced_bowmaking = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3182,11 +3194,11 @@ DI_present_innovation_heraldry = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3232,11 +3244,11 @@ DI_present_innovation_windmills = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3282,11 +3294,11 @@ DI_present_innovation_divine_right = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3332,11 +3344,11 @@ DI_present_innovation_land_grants = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3382,11 +3394,11 @@ DI_present_innovation_scutage = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3432,11 +3444,11 @@ DI_present_innovation_guilds = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3482,11 +3494,11 @@ DI_present_innovation_development_03 = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3532,11 +3544,11 @@ DI_present_innovation_currency_03 = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3573,7 +3585,7 @@ DI_present_innovation_currency_03 = {
 	}
 }
 
-### Late Medival Local Innovation Selection
+### Late Medieval Local Innovation Selection
 ### machicolations
 DI_present_innovation_machicolations = {
 	scope = character
@@ -3583,11 +3595,11 @@ DI_present_innovation_machicolations = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3633,11 +3645,11 @@ DI_present_innovation_royal_armory = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3683,11 +3695,11 @@ DI_present_innovation_standing_armies = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3733,11 +3745,11 @@ DI_present_innovation_sappers = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3783,11 +3795,11 @@ DI_present_innovation_plate_armor = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3833,11 +3845,11 @@ DI_present_innovation_cranes = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3883,11 +3895,11 @@ DI_present_innovation_noblesse_oblige = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3933,11 +3945,11 @@ DI_present_innovation_rightful_ownership = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -3983,11 +3995,11 @@ DI_present_innovation_ermine_cloaks = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -4033,11 +4045,11 @@ DI_present_innovation_court_officials = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -4083,11 +4095,11 @@ DI_present_innovation_development_04 = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -4133,11 +4145,11 @@ DI_present_innovation_currency_04 = {
 		
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -4182,11 +4194,11 @@ DI_present_innovation_outriders = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -4228,11 +4240,11 @@ DI_present_innovation_primogeniture_westeros = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -4275,11 +4287,11 @@ DI_present_innovation_maesters = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -4321,11 +4333,11 @@ DI_present_innovation_goldenheart_bowmen = {
 	effect = {
 		if = {
 			limit = {
-				has_variable = DI_marked_char_var
+				has_variable = DI_pinned_char_var
 			}
 			every_living_character = {
 				limit = {
-					has_character_flag = marked_for_edit
+					has_character_flag = pinned_for_edit
 				}
 				save_scope_as = target
 				
@@ -4360,3 +4372,711 @@ DI_present_innovation_goldenheart_bowmen = {
 	}
 }
 
+### Present Laws ###
+DI_present_laws_gender_equality = {
+	scope = faith #Faith of the player
+
+	saved_scopes = {
+		culture #Culture of the player
+		target #Target of the player
+	} 
+
+	effect = {
+		## DOCTRINE_GENDER
+		if = {
+			limit = { has_doctrine = doctrine_gender_male_dominated }
+			remove_doctrine = doctrine_gender_male_dominated
+		}
+		else_if = {
+			limit = { has_doctrine = doctrine_gender_female_dominated }
+			remove_doctrine = doctrine_gender_female_dominated
+		}
+
+		if = {
+			limit = { NOT = { has_doctrine = doctrine_gender_equal } }
+			add_doctrine = doctrine_gender_equal
+		}
+
+		## DOCTRINE_CLERICAL_GENDER
+		if = {
+			limit = { has_doctrine = doctrine_clerical_gender_male_only }
+			remove_doctrine = doctrine_clerical_gender_male_only
+		}
+		else_if = {
+			limit = { has_doctrine = doctrine_clerical_gender_female_only }
+			remove_doctrine = doctrine_clerical_gender_female_only
+		}
+
+		if = {
+			limit = { NOT = { has_doctrine = doctrine_clerical_gender_either } }
+			add_doctrine = doctrine_clerical_gender_either
+		}
+
+
+		## DOCTRINE_ADULTERY_MEN & DOCTRINE_ADULTERY_WOMEN
+		#Makes the adultery doctrine same for both genders (picks lesser version)
+
+		#Any of them accepted? Both should be accepted
+		if = {
+			limit = {
+				OR = {
+					has_doctrine = doctrine_adultery_men_accepted
+					has_doctrine = doctrine_adultery_women_accepted
+				}
+			}
+
+			#Is male wrong?
+			if = {
+				limit = { NOT = { has_doctrine = doctrine_adultery_men_accepted } }
+
+				if = {
+					limit = { has_doctrine = doctrine_adultery_men_crime }
+					remove_doctrine = doctrine_adultery_men_crime
+				}
+				else_if = {
+					limit = { has_doctrine = doctrine_adultery_men_shunned }
+					remove_doctrine = doctrine_adultery_men_shunned
+				}
+				add_doctrine = doctrine_adultery_men_accepted
+			}
+
+			#Is female wrong?
+			if = {
+				limit = { NOT = { has_doctrine = doctrine_adultery_women_accepted } }
+
+				if = {
+					limit = { has_doctrine = doctrine_adultery_women_crime }
+					remove_doctrine = doctrine_adultery_women_crime
+				}
+				else_if = {
+					limit = { has_doctrine = doctrine_adultery_women_shunned }
+					remove_doctrine = doctrine_adultery_women_shunned
+				}
+				add_doctrine = doctrine_adultery_women_accepted
+			}
+		}
+		##Any of them shunned? Both should be shunned
+		else_if = {
+			limit = {
+				OR = {
+					has_doctrine = doctrine_adultery_men_shunned
+					has_doctrine = doctrine_adultery_women_shunned
+				}
+			}
+
+			#Is male wrong?
+			if = {
+				limit = { NOT = { has_doctrine = doctrine_adultery_men_shunned } }
+				remove_doctrine = doctrine_adultery_men_crime
+				add_doctrine = doctrine_adultery_men_shunned
+			}
+
+			#Is female wrong?
+			if = {
+				limit = { NOT = { has_doctrine = doctrine_adultery_women_shunned } }
+				remove_doctrine = doctrine_adultery_women_crime
+				add_doctrine = doctrine_adultery_women_shunned
+			}
+		}
+		##Else: they're both criminal, nothing to do here
+
+		scope:target = {
+			if = {
+				limit = {
+					OR = {
+						has_realm_law = male_preference_law
+						has_realm_law = female_preference_law
+						has_realm_law = female_only_law
+						has_realm_law = male_only_law
+					}
+				}
+				add_realm_law = equal_law
+			}
+		}
+
+		scope:culture = {
+			if = {
+				limit = {
+					OR = {
+						has_cultural_pillar = martial_custom_male_only
+						has_cultural_pillar = martial_custom_female_only
+					}
+				}
+				set_culture_pillar = martial_custom_equal
+			}
+		}
+	}
+}
+
+DI_present_laws_gender_inverse = {
+	scope = faith #Faith of the player
+
+	saved_scopes = {
+		culture # Culture of the player
+		target # The player
+	}
+
+	effect = {
+		## DOCTRINE_GENDER
+		if = {
+			limit = { has_doctrine = doctrine_gender_male_dominated }
+			remove_doctrine = doctrine_gender_male_dominated
+			add_doctrine = doctrine_gender_female_dominated
+		}
+		else_if = {
+			limit = { has_doctrine = doctrine_gender_female_dominated }
+			remove_doctrine = doctrine_gender_female_dominated
+			add_doctrine = doctrine_gender_male_dominated
+		}
+		#Else: equal, do nothing
+
+		## DOCTRINE_CLERICAL_GENDER
+		if = {
+			limit = { has_doctrine = doctrine_clerical_gender_male_only }
+			remove_doctrine = doctrine_clerical_gender_male_only
+			add_doctrine = doctrine_clerical_gender_female_only
+		}
+		else_if = {
+			limit = { has_doctrine = doctrine_clerical_gender_female_only }
+			remove_doctrine = doctrine_clerical_gender_female_only
+			add_doctrine = doctrine_clerical_gender_male_only
+		}
+		#Else: either, do nothing
+
+		## DOCTRINE_ADULTERY_MEN & DOCTRINE_ADULTERY_WOMEN
+		# Men and women swap doctrine
+		if = {
+			limit = {
+				NOR = {
+					AND = {
+						has_doctrine = doctrine_adultery_women_accepted
+						has_doctrine = doctrine_adultery_men_accepted
+					}
+					AND = {
+						has_doctrine = doctrine_adultery_women_shunned
+						has_doctrine = doctrine_adultery_men_shunned
+					}
+					AND = {
+						has_doctrine = doctrine_adultery_women_crime
+						has_doctrine = doctrine_adultery_men_crime
+					}
+				}
+			}
+			# Save women's doctrine
+			if = {
+				limit = { has_doctrine = doctrine_adultery_women_accepted }
+				save_scope_value_as = {
+					name = doctrine_adultery_women
+					value = flag:doctrine_adultery_women_accepted
+				}
+			}
+			else_if = {
+				limit = {  has_doctrine = doctrine_adultery_women_shunned }
+				save_scope_value_as = {
+					name = doctrine_adultery_women
+					value = flag:doctrine_adultery_women_shunned
+				}
+			}
+			else_if = {
+				limit = {  has_doctrine = doctrine_adultery_women_crime }
+				save_scope_value_as = {
+					name = doctrine_adultery_women
+					value = flag:doctrine_adultery_women_crime
+				}
+			}
+
+			# Give women mens' doctrine
+			if = {
+				limit = { has_doctrine = doctrine_adultery_men_accepted }
+				if = {
+					limit = { has_doctrine = doctrine_adultery_women_shunned }
+					remove_doctrine = doctrine_adultery_women_shunned
+				}
+				else_if = {
+					limit = { has_doctrine = doctrine_adultery_women_crime }
+					remove_doctrine = doctrine_adultery_women_crime
+				}
+				add_doctrine = doctrine_adultery_women_accepted
+			}
+			else_if = {
+				limit = { has_doctrine = doctrine_adultery_men_shunned }
+				if = {
+					limit = { has_doctrine = doctrine_adultery_women_accepted }
+					remove_doctrine = doctrine_adultery_women_accepted
+				}
+				else_if = {
+					limit = { has_doctrine = doctrine_adultery_women_crime }
+					remove_doctrine = doctrine_adultery_women_crime
+				}
+				add_doctrine = doctrine_adultery_women_shunned
+			}
+			else_if = {
+				limit = { has_doctrine = doctrine_adultery_men_crime }
+				if = {
+					limit = { has_doctrine = doctrine_adultery_women_accepted }
+					remove_doctrine = doctrine_adultery_women_accepted
+				}
+				else_if = {
+					limit = { has_doctrine = doctrine_adultery_women_shunned }
+					remove_doctrine = doctrine_adultery_women_shunned
+				}
+				add_doctrine = doctrine_adultery_women_crime
+			}
+
+			# Give men women' doctrine
+			if = {
+				limit = { scope:doctrine_adultery_women = flag:doctrine_adultery_women_accepted }
+				if = {
+					limit = { has_doctrine = doctrine_adultery_men_shunned }
+					remove_doctrine = doctrine_adultery_men_shunned
+				}
+				else_if = {
+					limit = { has_doctrine = doctrine_adultery_men_crime }
+					remove_doctrine = doctrine_adultery_men_crime
+				}
+				add_doctrine = doctrine_adultery_men_accepted
+			}
+			else_if = {
+				limit = { scope:doctrine_adultery_women = flag:doctrine_adultery_women_shunned }
+				if = {
+					limit = { has_doctrine = doctrine_adultery_men_accepted }
+					remove_doctrine = doctrine_adultery_men_accepted
+				}
+				else_if = {
+					limit = { has_doctrine = doctrine_adultery_men_crime }
+					remove_doctrine = doctrine_adultery_men_crime
+				}
+				add_doctrine = doctrine_adultery_men_shunned
+			}
+			else_if = {
+				limit = { scope:doctrine_adultery_women = flag:doctrine_adultery_women_crime }
+				if = {
+					limit = { has_doctrine = doctrine_adultery_men_accepted }
+					remove_doctrine = doctrine_adultery_men_accepted
+				}
+				else_if = {
+					limit = { has_doctrine = doctrine_adultery_men_shunned }
+					remove_doctrine = doctrine_adultery_men_shunned
+				}
+				add_doctrine = doctrine_adultery_men_crime
+			}
+		}
+
+		scope:target = {
+			# Take care of any titles with their own title laws.
+			every_held_title = {
+				limit = { can_title_have_law_general_trigger = yes }
+				# Invert male-only.
+				if = {
+					limit = { has_title_law = male_only_law }
+					remove_title_law = male_only_law
+					add_title_law = female_only_law
+				}
+				# Invert female-only.
+				else_if = {
+					limit = { has_title_law = female_only_law }
+					remove_title_law = female_only_law
+					add_title_law = male_only_law
+				}
+			}
+			# Now realm law.
+			if = {
+				limit = { has_realm_law = male_only_law }
+				add_realm_law = female_only_law
+				if = {
+					limit = {
+						highest_held_title_tier >= tier_county
+						is_male = yes
+						is_ai = yes
+						any_heir = { is_female = yes }
+					}
+					depose = yes
+				}
+			}
+			else_if = {
+				limit = { has_realm_law = male_preference_law }
+				add_realm_law = female_preference_law
+				if = {
+					limit = {
+						highest_held_title_tier >= tier_county
+						is_male = yes
+						is_ai = yes
+						any_heir = { is_female = yes }
+					}
+					depose = yes
+				}
+			}
+			else_if = {
+				limit = { has_realm_law = female_preference_law }
+				add_realm_law = male_preference_law
+				if = {
+					limit = {
+						highest_held_title_tier >= tier_county
+						is_female = yes
+						is_ai = yes
+						any_heir = { is_male = yes }
+					}
+					depose = yes
+				}
+			}
+			else_if = {
+				limit = { has_realm_law = female_only_law }
+				add_realm_law = male_only_law
+				if = {
+					limit = {
+						highest_held_title_tier >= tier_county
+						is_female = yes
+						is_ai = yes
+						any_heir = { is_male = yes }
+					}
+					depose = yes
+				}
+			}
+			#Else: equal, nothing changes
+		}
+
+		if = {
+			limit = {
+				has_doctrine = doctrine_clerical_gender_male_only
+				religious_head ?= { is_female = yes }
+			}
+			religious_head = { depose = yes }
+		}
+		else_if = {
+			limit = {
+				has_doctrine = doctrine_clerical_gender_female_only
+				religious_head ?= { is_male = yes }
+			}
+			religious_head = { depose = yes }
+		}
+
+		scope:culture = {
+			if = {
+				limit = { has_cultural_pillar = martial_custom_male_only }
+				set_culture_pillar = martial_custom_female_only
+			}
+			else_if = {
+				limit = { has_cultural_pillar = martial_custom_female_only }
+				set_culture_pillar = martial_custom_male_only
+			}
+		}
+	}
+}
+
+DI_present_laws_gender_female_dominated = {
+	scope = faith # Player faith
+
+	saved_scopes = {
+		culture # Player culture
+		target # Player
+	} 
+
+	effect = {
+		## DOCTRINE_GENDER
+		if = {
+			limit = { has_doctrine = doctrine_gender_equal }
+			remove_doctrine = doctrine_gender_equal
+		}
+		else_if = {
+			limit = { has_doctrine = doctrine_gender_male_dominated }
+			remove_doctrine = doctrine_gender_male_dominated
+		}
+
+		if = {
+			limit = { NOT = { has_doctrine = doctrine_gender_female_dominated } }
+			add_doctrine = doctrine_gender_female_dominated
+		}
+
+		## DOCTRINE_CLERICAL_GENDER
+		if = {
+			limit = { has_doctrine = doctrine_clerical_gender_male_only }
+			remove_doctrine = doctrine_clerical_gender_male_only
+		}
+		else_if = {
+			limit = { has_doctrine = doctrine_clerical_gender_either }
+			remove_doctrine = doctrine_clerical_gender_either
+		}
+
+		if = {
+			limit = { NOT = { has_doctrine = doctrine_clerical_gender_female_only } }
+			add_doctrine = doctrine_clerical_gender_female_only
+		}
+
+
+		## DOCTRINE_ADULTERY_MEN & DOCTRINE_ADULTERY_WOMEN
+		# Remove accepted for men, add shunned
+		# Add accepted for women, remove shunned
+		if = {
+			limit = {
+				has_doctrine = doctrine_adultery_women_shunned
+			}
+			remove_doctrine = doctrine_adultery_women_shunned
+		}
+		if = {
+			limit = {
+				has_doctrine = doctrine_adultery_women_crime
+			}
+			remove_doctrine = doctrine_adultery_women_crime
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_doctrine = doctrine_adultery_women_accepted
+				}
+			}
+			add_doctrine = doctrine_adultery_women_accepted
+		}
+		if = {
+			limit = {
+				has_doctrine = doctrine_adultery_men_accepted
+			}
+			remove_doctrine = doctrine_adultery_men_accepted
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_doctrine = doctrine_adultery_men_shunned
+				}
+			}
+			add_doctrine = doctrine_adultery_men_shunned
+		}
+
+		if = {
+			limit = {
+				has_doctrine = doctrine_clerical_gender_female_only
+				religious_head ?= { is_male = yes }
+			}
+			religious_head = { depose = yes }
+		}
+
+		scope:culture = {
+			if = {
+				limit = { has_cultural_pillar = martial_custom_male_only }
+				set_culture_pillar = martial_custom_female_only
+			}
+			else_if = {
+				limit = { has_cultural_pillar = martial_custom_female_only }
+				set_culture_pillar = martial_custom_male_only
+			}
+		}
+
+		scope:target = {
+			if = {
+				limit = {
+					OR = {
+						has_realm_law = male_preference_law
+						has_realm_law = male_only_law
+						has_realm_law = female_preference_law
+						has_realm_law = equal_law
+					}
+				}
+				add_realm_law = female_only_law
+			}
+		}
+
+		scope:culture = {
+			if = {
+				limit = {
+					OR = {
+						has_cultural_pillar = martial_custom_male_only
+						has_cultural_pillar = martial_custom_equal
+					}
+				}
+				set_culture_pillar = martial_custom_female_only
+			}
+		}
+	}
+}
+
+DI_present_laws_gender_male_dominated = {
+	scope = faith # Player faith
+
+	saved_scopes = {
+		culture # Player culture
+		target # Player
+	} 
+
+	effect = {
+		## DOCTRINE_GENDER
+		if = {
+			limit = { has_doctrine = doctrine_gender_equal }
+			remove_doctrine = doctrine_gender_equal
+		}
+		else_if = {
+			limit = { has_doctrine = doctrine_gender_female_dominated }
+			remove_doctrine = doctrine_gender_female_dominated
+		}
+
+		if = {
+			limit = { NOT = { has_doctrine = doctrine_gender_male_dominated } }
+			add_doctrine = doctrine_gender_male_dominated
+		}
+
+		## DOCTRINE_CLERICAL_GENDER
+		if = {
+			limit = { has_doctrine = doctrine_clerical_gender_female_only }
+			remove_doctrine = doctrine_clerical_gender_female_only
+		}
+		else_if = {
+			limit = { has_doctrine = doctrine_clerical_gender_either }
+			remove_doctrine = doctrine_clerical_gender_either
+		}
+
+		if = {
+			limit = { NOT = { has_doctrine = doctrine_clerical_gender_male_only } }
+			add_doctrine = doctrine_clerical_gender_male_only
+		}
+
+
+		## DOCTRINE_ADULTERY_MEN & DOCTRINE_ADULTERY_WOMEN
+		# Remove accepted for women, add shunned
+		# Add accepted for men, remove shunned
+		if = {
+			limit = {
+				has_doctrine = doctrine_adultery_men_shunned
+			}
+			remove_doctrine = doctrine_adultery_men_shunned
+		}
+		if = {
+			limit = {
+				has_doctrine = doctrine_adultery_men_crime
+			}
+			remove_doctrine = doctrine_adultery_men_crime
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_doctrine = doctrine_adultery_men_accepted
+				}
+			}
+			add_doctrine = doctrine_adultery_men_accepted
+		}
+		if = {
+			limit = {
+				has_doctrine = doctrine_adultery_women_accepted
+			}
+			remove_doctrine = doctrine_adultery_women_accepted
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_doctrine = doctrine_adultery_women_shunned
+				}
+			}
+			add_doctrine = doctrine_adultery_women_shunned
+		}
+
+		if = {
+			limit = {
+				has_doctrine = doctrine_clerical_gender_male_only
+				religious_head ?= { is_female = yes }
+			}
+			religious_head = { depose = yes }
+		}
+
+		scope:target = {
+			if = {
+				limit = {
+					OR = {
+						has_realm_law = male_preference_law
+						has_realm_law = female_only_law
+						has_realm_law = female_preference_law
+						has_realm_law = equal_law
+					}
+				}
+				add_realm_law = male_only_law
+			}
+		}
+
+		scope:culture = {
+			if = {
+				limit = {
+					OR = {
+						has_cultural_pillar = martial_custom_female_only
+						has_cultural_pillar = martial_custom_equal
+					}
+				}
+				set_culture_pillar = martial_custom_male_only
+			}
+		}
+	}
+}
+
+# temporal head of faith
+DI_present_laws_temporal_hof = {
+	scope = faith # Player faith
+
+	saved_scopes = {
+		culture # Player culture
+		target # Player
+	}
+
+	effect = {
+		if = {
+			limit = {
+				OR = {
+					has_doctrine = doctrine_clerical_succession_spiritual_fixed_appointment
+					has_doctrine = doctrine_clerical_succession_spiritual_appointment
+					has_doctrine = doctrine_clerical_succession_temporal_fixed_appointment
+				}
+			}
+			if = {
+				limit = {
+					has_doctrine = doctrine_clerical_succession_spiritual_fixed_appointment
+				}
+				remove_doctrine = doctrine_clerical_succession_spiritual_fixed_appointment
+			}
+			else_if = {
+				limit = {
+					has_doctrine = doctrine_clerical_succession_spiritual_appointment
+				}
+				remove_doctrine = doctrine_clerical_succession_spiritual_appointment
+			}
+			else_if = {
+				limit = {
+					has_doctrine = doctrine_clerical_succession_temporal_fixed_appointment
+				}
+				remove_doctrine = doctrine_clerical_succession_temporal_fixed_appointment
+			}
+			add_doctrine = doctrine_clerical_succession_temporal_appointment
+		}
+		
+		if = {
+			limit = {
+				has_doctrine = doctrine_theocracy_temporal
+			}
+			remove_doctrine = doctrine_theocracy_temporal
+			add_doctrine = doctrine_theocracy_lay_clergy
+		}
+
+		if = {
+			limit = {
+				OR = {
+					has_doctrine = doctrine_no_head
+					has_doctrine = doctrine_spiritual_head
+				}
+			}
+			if = {
+				limit = {
+					has_doctrine = doctrine_no_head
+				}
+				remove_doctrine = doctrine_no_head
+			}
+			else_if = {
+				limit = {
+					has_doctrine = doctrine_spiritual_head
+				}
+				remove_doctrine = doctrine_spiritual_head
+			}
+			add_doctrine = doctrine_temporal_head
+		}
+
+		if = {
+			limit = {
+				has_doctrine = doctrine_temporal_head
+			}
+
+			set_religious_head_title = title:d_toscana
+		}
+	}
+}

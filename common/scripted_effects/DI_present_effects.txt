@@ -651,12 +651,21 @@ innovation_tribal_effect = {
 
 innovation_tribal_regional_effect = {
 		#culture_group_regional
-		if = { limit = { NOT = { has_innovation = innovation_all_things } } add_innovation = innovation_all_things }
-		if = { limit = { NOT = { has_innovation = innovation_unsullied } } add_innovation = innovation_unsullied }
+		if = { 
+			limit = { 
+				AND = { 
+					NOT = { 
+						has_innovation = innovation_all_things 
+						has_fp1_dlc_trigger = yes
+					} 
+				} 
+			} 
+			add_innovation = innovation_all_things 
+		}		if = { limit = { NOT = { has_innovation = innovation_unsullied } } add_innovation = innovation_unsullied }
 		if = { limit = { NOT = { has_innovation = innovation_longboats } } add_innovation = innovation_longboats }
 }
 
-innovation_early_medival_effect = {
+innovation_early_medieval_effect = {
 		#culture_group_military
 		if = { limit = { NOT = { has_innovation = innovation_catapult } } add_innovation = innovation_catapult }
 		if = { limit = { NOT = { has_innovation = innovation_knighthood } } add_innovation = innovation_knighthood }
@@ -676,7 +685,7 @@ innovation_early_medival_effect = {
 		if = { limit = { NOT = { has_innovation = innovation_baliffs } } add_innovation = innovation_baliffs }
 }
 
-innovation_early_medival_regional_effect = {
+innovation_early_medieval_regional_effect = {
 		#culture_group_regional
 		if = { limit = { NOT = { has_innovation = innovation_maesters } } add_innovation = innovation_maesters }
 		if = { limit = { NOT = { has_innovation = innovation_goldenheart_bowmen } } add_innovation = innovation_goldenheart_bowmen }
@@ -684,7 +693,7 @@ innovation_early_medival_regional_effect = {
 		if = { limit = { NOT = { has_innovation = innovation_war_camels } } add_innovation = innovation_war_camels }
 }
 
-innovation_high_medival_effect = {
+innovation_high_medieval_effect = {
 		#culture_group_military
 		if = { limit = { NOT = { has_innovation = innovation_mangonel } } add_innovation = innovation_mangonel }
 		if = { limit = { NOT = { has_innovation = innovation_hoardings } } add_innovation = innovation_hoardings }
@@ -702,12 +711,12 @@ innovation_high_medival_effect = {
 		if = { limit = { NOT = { has_innovation = innovation_currency_03 } } add_innovation = innovation_currency_03 }
 }
 
-innovation_high_medival_regional_effect = {
+innovation_high_medieval_regional_effect = {
 		#culture_group_regional
 		
 }
 
-innovation_late_medival_effect = {
+innovation_late_medieval_effect = {
 		#culture_group_military
 		if = { limit = { NOT = { has_innovation = innovation_machicolations } } add_innovation = innovation_machicolations }
 		if = { limit = { NOT = { has_innovation = innovation_trebuchet } } add_innovation = innovation_trebuchet }
@@ -725,7 +734,7 @@ innovation_late_medival_effect = {
 		if = { limit = { NOT = { has_innovation = innovation_currency_04 } } add_innovation = innovation_currency_04 }
 }
 
-innovation_late_medival_regional_effect = {
+innovation_late_medieval_regional_effect = {
 		#culture_group_regional
 
 }
