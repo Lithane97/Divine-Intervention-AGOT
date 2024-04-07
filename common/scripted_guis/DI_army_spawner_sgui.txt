@@ -1,112 +1,122 @@
 ﻿### ARMY SPAWNING EFFECTS ###
-### Initialize
-DI_army_spawner_resources_sgui = {
-    scope = character
-    
-    effect = {
-		if = {
-			limit = {
-				NOT = { has_variable = DI_army_spawner_increment_value }
-			}
-			set_variable = {
-				name = DI_army_spawner_increment_value
-				value = 500
-			}
-		}
-	}
-}
-
 DI_army_spawner_add_increment = {
+	scope = character
+	
 	is_valid = {
-		var:DI_army_spawner_increment_value < 100000
+		# any_owned_story = {
+		# 	story_type = DI_misc_variables_story
+		# 	var:DI_army_spawner_increment_value < 100000
+		# }
 	}
 
 	effect = {
-		if = {
+		random_owned_story = {
 			limit = {
-				var:DI_army_spawner_increment_value >= 50000
+				story_type = DI_misc_variables_story
 			}
-			change_variable = {
-				name = DI_army_spawner_increment_value
-				add = 10000
-			}
+			save_scope_as = DI_story
 		}
-		else_if = {
-			limit = {
-				AND = {
-					var:DI_army_spawner_increment_value < 50000
-					var:DI_army_spawner_increment_value >= 10000
+		scope:DI_story = {
+			if = {
+				limit = {
+					var:DI_army_spawner_increment_value >= 50000
+				}
+				change_variable = {
+					name = DI_army_spawner_increment_value
+					add = 10000
 				}
 			}
-			change_variable = {
-				name = DI_army_spawner_increment_value
-						add = 5000
-			}
-		}
-		else_if = {
-			limit = {
-				AND = {
-					var:DI_army_spawner_increment_value < 10000
-					var:DI_army_spawner_increment_value >= 5000
+			else_if = {
+				limit = {
+					AND = {
+						var:DI_army_spawner_increment_value < 50000
+						var:DI_army_spawner_increment_value >= 10000
+					}
+				}
+				change_variable = {
+					name = DI_army_spawner_increment_value
+							add = 5000
 				}
 			}
-			change_variable = {
-				name = DI_army_spawner_increment_value
-				add = 1000
+			else_if = {
+				limit = {
+					AND = {
+						var:DI_army_spawner_increment_value < 10000
+						var:DI_army_spawner_increment_value >= 5000
+					}
+				}
+				change_variable = {
+					name = DI_army_spawner_increment_value
+					add = 1000
+				}
 			}
-		}
-		else = {
-			change_variable = {
-				name = DI_army_spawner_increment_value
-				add = 500
+			else = {
+				change_variable = {
+					name = DI_army_spawner_increment_value
+					add = 500
+				}
 			}
 		}
     }
 }
 
 DI_army_spawner_subtract_increment = {
+	scope = character
+	
 	is_valid = {
-		var:DI_army_spawner_increment_value > 500
+		any_owned_story = {
+			story_type = DI_misc_variables_story
+			var:DI_army_spawner_increment_value > 500
+		}
 	}
 
 	effect = {
-		if = {
+		random_owned_story = {
 			limit = {
-				var:DI_army_spawner_increment_value > 50000
+				story_type = DI_misc_variables_story
 			}
-			change_variable = {
-				name = DI_army_spawner_increment_value
-				subtract = 10000
-			}
+			save_scope_as = DI_story
 		}
-		else_if = {
-			limit = {
-				AND = {
-					var:DI_army_spawner_increment_value <= 50000
-					var:DI_army_spawner_increment_value > 10000
+
+		scope:DI_story = {
+			if = {
+				limit = {
+					var:DI_army_spawner_increment_value > 50000
+				}
+				change_variable = {
+					name = DI_army_spawner_increment_value
+					subtract = 10000
 				}
 			}
-			change_variable = {
-				name = DI_army_spawner_increment_value
-				subtract = 5000
-			}
-		}
-		else_if = {
-			limit = {
-				AND = {
-					var:DI_army_spawner_increment_value <= 10000
-					var:DI_army_spawner_increment_value > 5000
+			else_if = {
+				limit = {
+					AND = {
+						var:DI_army_spawner_increment_value <= 50000
+						var:DI_army_spawner_increment_value > 10000
+					}
+				}
+				change_variable = {
+					name = DI_army_spawner_increment_value
+					subtract = 5000
 				}
 			}
-			change_variable = {
-				name = DI_army_spawner_increment_value
-				subtract = 1000
+			else_if = {
+				limit = {
+					AND = {
+						var:DI_army_spawner_increment_value <= 10000
+						var:DI_army_spawner_increment_value > 5000
+					}
+				}
+				change_variable = {
+					name = DI_army_spawner_increment_value
+					subtract = 1000
+				}
 			}
-		}
-		else = {
-			change_variable = {
-				name = DI_army_spawner_increment_value
-				subtract = 500
+			else = {
+				change_variable = {
+					name = DI_army_spawner_increment_value
+					subtract = 500
+				}
 			}
 		}
     }
@@ -114,13 +124,64 @@ DI_army_spawner_subtract_increment = {
 
 ### BASIC MAA ###
 ### Light Footmen Spawner
+### Levy ###
+DI_levy_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					levies = scope:DI_story.var:DI_army_spawner_increment_value
+
+					location = scope:target.location
+					
+					inheritable = no
+
+					name = game_concept_levies
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				levies = scope:DI_story.var:DI_army_spawner_increment_value
+
+				location = root.location
+				
+				inheritable = no
+
+				name = game_concept_levies
+			}
+		}
+	}
+}
 DI_light_footmen_effect = {
 	scope = character
 
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -129,7 +190,7 @@ DI_light_footmen_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = light_footmen
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 
 					location = scope:target.location
@@ -145,7 +206,7 @@ DI_light_footmen_effect = {
 				
 				men_at_arms = {
 					type = light_footmen
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				
 				location = root.location
@@ -163,9 +224,16 @@ DI_bowmen_effect = {
 	scope = character
 
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -174,7 +242,7 @@ DI_bowmen_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = bowmen
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					
 					location = scope:target.location
@@ -190,7 +258,7 @@ DI_bowmen_effect = {
 				
 				men_at_arms = {
 					type = bowmen
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				
 				location = root.location
@@ -208,9 +276,16 @@ DI_light_horsemen_effect = {
 	scope = character
 
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -219,7 +294,7 @@ DI_light_horsemen_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = light_horsemen
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					
 					location = scope:target.location
@@ -235,7 +310,7 @@ DI_light_horsemen_effect = {
 				
 				men_at_arms = {
 					type = light_horsemen
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				
 				location = root.location
@@ -253,9 +328,16 @@ DI_pikemen_unit_effect = {
 	scope = character
 
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -264,7 +346,7 @@ DI_pikemen_unit_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = pikemen_unit
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					
 					location = scope:target.location
@@ -280,7 +362,7 @@ DI_pikemen_unit_effect = {
 				
 				men_at_arms = {
 					type = pikemen_unit
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				
 				location = root.location
@@ -298,9 +380,16 @@ DI_armored_footmen_effect = {
 	scope = character
 
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -309,7 +398,7 @@ DI_armored_footmen_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = armored_footmen
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					
 					location = scope:target.location
@@ -325,7 +414,7 @@ DI_armored_footmen_effect = {
 
 				men_at_arms = {
 					type = armored_footmen
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				
 				location = root.location
@@ -338,59 +427,74 @@ DI_armored_footmen_effect = {
 	}
 }
 
-### onager Spawner
-DI_onager_effect = {
-	scope = character
+# AGOT Removed
+### onager Spawner ###
+# DI_onager_effect = {
+# 	scope = character
 
-	effect = {
-		if = {
-			limit = {
-				has_variable = DI_pinned_char_var
-			}
-			every_living_character = {
-				limit = { has_character_flag = pinned_for_edit }
-				save_scope_as = target
+# 	effect = {
+# 		random_owned_story = {
+# 			limit = {
+# 				story_type = DI_misc_variables_story
+# 			}
+# 			save_scope_as = DI_story
+# 		}
+		
+# 		if = {
+# 			limit = {
+# 				scope:DI_story = { has_variable = DI_pinned_char_var }
+# 			}
+# 			every_living_character = {
+# 				limit = { has_character_flag = pinned_for_edit }
+# 				save_scope_as = target
 
-				spawn_army = {
-					men_at_arms = {
-						type = onager
-						men = root.var:DI_army_spawner_increment_value
-					}
+# 				spawn_army = {
+# 					men_at_arms = {
+# 						type = onager
+# 						men = scope:DI_story.var:DI_army_spawner_increment_value
+# 					}
 					
-					location = scope:target.location
+# 					location = scope:target.location
 					
-					inheritable = no
+# 					inheritable = no
 					
-					name = onager
-				}
-			}
-		}
-		else = {
-			spawn_army = {
+# 					name = onager
+# 				}
+# 			}
+# 		}
+# 		else = {
+# 			spawn_army = {
 				
-				men_at_arms = {
-					type = onager
-					men = root.var:DI_army_spawner_increment_value
-				}
+# 				men_at_arms = {
+# 					type = onager
+# 					men = scope:DI_story.var:DI_army_spawner_increment_value
+# 				}
 				
-				location = root.location
+# 				location = root.location
 				
-				inheritable = no
+# 				inheritable = no
 				
-				name = onager
-			}
-		}
-	}
-}
+# 				name = onager
+# 			}
+# 		}
+# 	}
+# }
 
 ### armored horsemen Spawner
 DI_armored_horsemen_effect = {
 	scope = character
 
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -399,7 +503,7 @@ DI_armored_horsemen_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = armored_horsemen
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					
 					location = scope:target.location
@@ -415,7 +519,7 @@ DI_armored_horsemen_effect = {
 				
 				men_at_arms = {
 					type = armored_horsemen
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				
 				location = root.location
@@ -428,59 +532,74 @@ DI_armored_horsemen_effect = {
 	}
 }
 
+# AGOT Removed
 ### mangonel Spawner
-DI_mangonel_effect = {
-	scope = character
+# DI_mangonel_effect = {
+# 	scope = character
 
-	effect = {
-		if = {
-			limit = {
-				has_variable = DI_pinned_char_var
-			}
-			every_living_character = {
-				limit = { has_character_flag = pinned_for_edit }
-				save_scope_as = target
+# 	effect = {
+# 		random_owned_story = {
+# 			limit = {
+# 				story_type = DI_misc_variables_story
+# 			}
+# 			save_scope_as = DI_story
+# 		}
+		
+# 		if = {
+# 			limit = {
+# 				scope:DI_story = { has_variable = DI_pinned_char_var }
+# 			}
+# 			every_living_character = {
+# 				limit = { has_character_flag = pinned_for_edit }
+# 				save_scope_as = target
 
-				spawn_army = {
-					men_at_arms = {
-						type = mangonel
-						men = root.var:DI_army_spawner_increment_value
-					}
+# 				spawn_army = {
+# 					men_at_arms = {
+# 						type = mangonel
+# 						men = scope:DI_story.var:DI_army_spawner_increment_value
+# 					}
 					
-					location = scope:target.location
+# 					location = scope:target.location
 					
-					inheritable = no
+# 					inheritable = no
 					
-					name = mangonel
-				}
-			}
-		}
-		else = {
-			spawn_army = {
+# 					name = mangonel
+# 				}
+# 			}
+# 		}
+# 		else = {
+# 			spawn_army = {
 				
-				men_at_arms = {
-					type = mangonel
-					men = root.var:DI_army_spawner_increment_value
-				}
+# 				men_at_arms = {
+# 					type = mangonel
+# 					men = scope:DI_story.var:DI_army_spawner_increment_value
+# 				}
 				
-				location = root.location
+# 				location = root.location
 				
-				inheritable = no
+# 				inheritable = no
 				
-				name = mangonel
-			}
-		}
-	}
-}
+# 				name = mangonel
+# 			}
+# 		}
+# 	}
+# }
 
 ### crossbowmen Spawner
 DI_crossbowmen_effect = {
 	scope = character
 
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -489,7 +608,7 @@ DI_crossbowmen_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = crossbowmen
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					
 					location = scope:target.location
@@ -505,7 +624,7 @@ DI_crossbowmen_effect = {
 				
 				men_at_arms = {
 					type = crossbowmen
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				
 				location = root.location
@@ -518,59 +637,74 @@ DI_crossbowmen_effect = {
 	}
 }
 
+# AGOT Removed
 ### trebuchet Spawner
-DI_trebuchet_effect = {
-	scope = character
+# DI_trebuchet_effect = {
+# 	scope = character
 
-	effect = {
-		if = {
-			limit = {
-				has_variable = DI_pinned_char_var
-			}
-			every_living_character = {
-				limit = { has_character_flag = pinned_for_edit }
-				save_scope_as = target
+# 	effect = {
+# 		random_owned_story = {
+# 			limit = {
+# 				story_type = DI_misc_variables_story
+# 			}
+# 			save_scope_as = DI_story
+# 		}
+		
+# 		if = {
+# 			limit = {
+# 				scope:DI_story = { has_variable = DI_pinned_char_var }
+# 			}
+# 			every_living_character = {
+# 				limit = { has_character_flag = pinned_for_edit }
+# 				save_scope_as = target
 				
-				spawn_army = {
-					men_at_arms = {
-						type = trebuchet
-						men = root.var:DI_army_spawner_increment_value
-					}
+# 				spawn_army = {
+# 					men_at_arms = {
+# 						type = trebuchet
+# 						men = scope:DI_story.var:DI_army_spawner_increment_value
+# 					}
 					
-					location = scope:target.location
+# 					location = scope:target.location
 					
-					inheritable = no
+# 					inheritable = no
 					
-					name = trebuchet
-				}
-			}
-		}
-		else = {
-			spawn_army = {
+# 					name = trebuchet
+# 				}
+# 			}
+# 		}
+# 		else = {
+# 			spawn_army = {
 				
-				men_at_arms = {
-					type = trebuchet
-					men = root.var:DI_army_spawner_increment_value
-				}
+# 				men_at_arms = {
+# 					type = trebuchet
+# 					men = scope:DI_story.var:DI_army_spawner_increment_value
+# 				}
 				
-				location = root.location
+# 				location = root.location
 				
-				inheritable = no
+# 				inheritable = no
 				
-				name = trebuchet
-			}
-		}
-	}
-}
+# 				name = trebuchet
+# 			}
+# 		}
+# 	}
+# }
 
 ### house guard Spawner
 DI_house_guard_effect = {
 	scope = character
 
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -579,7 +713,7 @@ DI_house_guard_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = house_guard
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					
 					location = scope:target.location
@@ -595,7 +729,7 @@ DI_house_guard_effect = {
 				
 				men_at_arms = {
 					type = house_guard
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				
 				location = root.location
@@ -613,9 +747,16 @@ DI_house_guard_effect = {
 DI_arbor_marines_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -624,7 +765,7 @@ DI_arbor_marines_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = arbor_marines
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -636,7 +777,7 @@ DI_arbor_marines_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = arbor_marines
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -650,9 +791,16 @@ DI_arbor_marines_effect = {
 DI_barrow_knights_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -661,7 +809,7 @@ DI_barrow_knights_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = barrow_knights
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -673,7 +821,7 @@ DI_barrow_knights_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = barrow_knights
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -687,9 +835,16 @@ DI_barrow_knights_effect = {
 DI_marsh_walker_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -698,7 +853,7 @@ DI_marsh_walker_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = marsh_walker
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -710,7 +865,7 @@ DI_marsh_walker_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = marsh_walker
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -724,9 +879,16 @@ DI_marsh_walker_effect = {
 DI_trackers_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -735,7 +897,7 @@ DI_trackers_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = trackers
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -747,7 +909,7 @@ DI_trackers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = trackers
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -761,9 +923,16 @@ DI_trackers_effect = {
 DI_royal_crossbowmen_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -772,7 +941,7 @@ DI_royal_crossbowmen_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = royal_crossbowmen
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -784,7 +953,7 @@ DI_royal_crossbowmen_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = royal_crossbowmen
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -798,9 +967,16 @@ DI_royal_crossbowmen_effect = {
 DI_finger_scouts_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -809,7 +985,7 @@ DI_finger_scouts_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = finger_scouts
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -821,7 +997,7 @@ DI_finger_scouts_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = finger_scouts
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -835,9 +1011,16 @@ DI_finger_scouts_effect = {
 DI_cape_watch_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -846,7 +1029,7 @@ DI_cape_watch_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = cape_watch
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -858,7 +1041,7 @@ DI_cape_watch_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = cape_watch
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -872,9 +1055,16 @@ DI_cape_watch_effect = {
 DI_green_hand_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -883,7 +1073,7 @@ DI_green_hand_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = green_hand
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -895,7 +1085,7 @@ DI_green_hand_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = green_hand
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -909,9 +1099,16 @@ DI_green_hand_effect = {
 DI_dragonkeepers_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -920,7 +1117,7 @@ DI_dragonkeepers_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = dragonkeepers
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -932,7 +1129,7 @@ DI_dragonkeepers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = dragonkeepers
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -946,9 +1143,16 @@ DI_dragonkeepers_effect = {
 DI_honeywine_quirrels_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -957,7 +1161,7 @@ DI_honeywine_quirrels_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = honeywine_quirrels
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -969,7 +1173,7 @@ DI_honeywine_quirrels_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = honeywine_quirrels
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -983,9 +1187,16 @@ DI_honeywine_quirrels_effect = {
 DI_reavers_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -994,7 +1205,7 @@ DI_reavers_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = reavers
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1006,7 +1217,7 @@ DI_reavers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = reavers
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1020,9 +1231,16 @@ DI_reavers_effect = {
 DI_longbowmen_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1031,7 +1249,7 @@ DI_longbowmen_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = longbowmen
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1043,7 +1261,7 @@ DI_longbowmen_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = longbowmen
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1057,9 +1275,16 @@ DI_longbowmen_effect = {
 DI_hunters_of_the_moon_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1068,7 +1293,7 @@ DI_hunters_of_the_moon_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = hunters_of_the_moon
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1080,7 +1305,7 @@ DI_hunters_of_the_moon_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = hunters_of_the_moon
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1094,9 +1319,16 @@ DI_hunters_of_the_moon_effect = {
 DI_stolen_spears_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1105,7 +1337,7 @@ DI_stolen_spears_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = stolen_spears
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1117,7 +1349,7 @@ DI_stolen_spears_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = stolen_spears
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1131,9 +1363,16 @@ DI_stolen_spears_effect = {
 DI_clan_champions_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1142,7 +1381,7 @@ DI_clan_champions_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = clan_champions
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1154,7 +1393,7 @@ DI_clan_champions_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = clan_champions
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1168,9 +1407,16 @@ DI_clan_champions_effect = {
 DI_winter_wolves_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1179,7 +1425,7 @@ DI_winter_wolves_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = winter_wolves
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1191,7 +1437,7 @@ DI_winter_wolves_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = winter_wolves
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1205,9 +1451,16 @@ DI_winter_wolves_effect = {
 DI_greenblood_oars_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1216,7 +1469,7 @@ DI_greenblood_oars_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = greenblood_oars
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1228,7 +1481,7 @@ DI_greenblood_oars_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = greenblood_oars
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1242,9 +1495,16 @@ DI_greenblood_oars_effect = {
 DI_summer_knights_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1253,7 +1513,7 @@ DI_summer_knights_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = summer_knights
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1265,7 +1525,7 @@ DI_summer_knights_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = summer_knights
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1278,9 +1538,16 @@ DI_summer_knights_effect = {
 DI_river_bows_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1289,7 +1556,7 @@ DI_river_bows_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = river_bows
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1301,7 +1568,7 @@ DI_river_bows_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = river_bows
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1314,9 +1581,16 @@ DI_river_bows_effect = {
 DI_sun_spears_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1325,7 +1599,7 @@ DI_sun_spears_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = sun_spears
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1337,7 +1611,7 @@ DI_sun_spears_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = sun_spears
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1350,9 +1624,16 @@ DI_sun_spears_effect = {
 DI_sand_steeds_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1361,7 +1642,7 @@ DI_sand_steeds_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = sand_steeds
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1373,7 +1654,7 @@ DI_sand_steeds_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = sand_steeds
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1386,9 +1667,16 @@ DI_sand_steeds_effect = {
 DI_misty_shields_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1397,7 +1685,7 @@ DI_misty_shields_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = misty_shields
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1409,7 +1697,7 @@ DI_misty_shields_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = misty_shields
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1422,9 +1710,16 @@ DI_misty_shields_effect = {
 DI_sistermen_pirates_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1433,7 +1728,7 @@ DI_sistermen_pirates_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = sistermen_pirates
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1445,7 +1740,7 @@ DI_sistermen_pirates_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = sistermen_pirates
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1458,9 +1753,16 @@ DI_sistermen_pirates_effect = {
 DI_unicorn_riders_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1469,7 +1771,7 @@ DI_unicorn_riders_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = unicorn_riders
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1481,7 +1783,7 @@ DI_unicorn_riders_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = unicorn_riders
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1495,9 +1797,16 @@ DI_unicorn_riders_effect = {
 DI_pass_pikes_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1506,7 +1815,7 @@ DI_pass_pikes_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = pass_pikes
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1518,7 +1827,7 @@ DI_pass_pikes_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = pass_pikes
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1532,9 +1841,16 @@ DI_pass_pikes_effect = {
 DI_storm_knights_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1543,7 +1859,7 @@ DI_storm_knights_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = storm_knights
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1555,7 +1871,7 @@ DI_storm_knights_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = storm_knights
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1569,9 +1885,16 @@ DI_storm_knights_effect = {
 DI_winged_knights_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1580,7 +1903,7 @@ DI_winged_knights_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = winged_knights
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1592,7 +1915,7 @@ DI_winged_knights_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = winged_knights
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1606,9 +1929,16 @@ DI_winged_knights_effect = {
 DI_bloody_balesters_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1617,7 +1947,7 @@ DI_bloody_balesters_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = bloody_balesters
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1629,7 +1959,7 @@ DI_bloody_balesters_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = bloody_balesters
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1642,9 +1972,16 @@ DI_bloody_balesters_effect = {
 DI_sea_snakes_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1653,7 +1990,7 @@ DI_sea_snakes_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = sea_snakes
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1665,7 +2002,7 @@ DI_sea_snakes_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = sea_snakes
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1678,9 +2015,16 @@ DI_sea_snakes_effect = {
 DI_wolfswood_hunters_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1689,7 +2033,7 @@ DI_wolfswood_hunters_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = wolfswood_hunters
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1701,7 +2045,7 @@ DI_wolfswood_hunters_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = wolfswood_hunters
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1714,9 +2058,16 @@ DI_wolfswood_hunters_effect = {
 DI_purple_sailors_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1725,7 +2076,7 @@ DI_purple_sailors_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = purple_sailors
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1737,7 +2088,7 @@ DI_purple_sailors_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = purple_sailors
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1750,9 +2101,16 @@ DI_purple_sailors_effect = {
 DI_seal_hunters_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1761,7 +2119,7 @@ DI_seal_hunters_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = seal_hunters
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1773,7 +2131,7 @@ DI_seal_hunters_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = seal_hunters
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1786,9 +2144,16 @@ DI_seal_hunters_effect = {
 DI_weeping_guard_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1797,7 +2162,7 @@ DI_weeping_guard_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = weeping_guard
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1809,7 +2174,7 @@ DI_weeping_guard_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = weeping_guard
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1822,9 +2187,16 @@ DI_weeping_guard_effect = {
 DI_myrish_crossbows_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1833,7 +2205,7 @@ DI_myrish_crossbows_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = myrish_crossbows
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1845,7 +2217,7 @@ DI_myrish_crossbows_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = myrish_crossbows
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1858,9 +2230,16 @@ DI_myrish_crossbows_effect = {
 DI_holy_guard_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1869,7 +2248,7 @@ DI_holy_guard_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = holy_guard
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1881,7 +2260,7 @@ DI_holy_guard_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = holy_guard
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1894,9 +2273,16 @@ DI_holy_guard_effect = {
 DI_indentured_legion_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1905,7 +2291,7 @@ DI_indentured_legion_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = indentured_legion
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1917,7 +2303,7 @@ DI_indentured_legion_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = indentured_legion
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1930,9 +2316,16 @@ DI_indentured_legion_effect = {
 DI_cohort_of_the_three_thousand_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1941,7 +2334,7 @@ DI_cohort_of_the_three_thousand_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = cohort_of_the_three_thousand
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1953,7 +2346,7 @@ DI_cohort_of_the_three_thousand_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = cohort_of_the_three_thousand
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -1966,9 +2359,16 @@ DI_cohort_of_the_three_thousand_effect = {
 DI_stepstone_sailors_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -1977,7 +2377,7 @@ DI_stepstone_sailors_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = stepstone_sailors
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -1989,7 +2389,7 @@ DI_stepstone_sailors_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = stepstone_sailors
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2002,9 +2402,16 @@ DI_stepstone_sailors_effect = {
 DI_triarchs_herd_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2013,7 +2420,7 @@ DI_triarchs_herd_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = triarchs_herd
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2025,7 +2432,7 @@ DI_triarchs_herd_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = triarchs_herd
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2038,9 +2445,16 @@ DI_triarchs_herd_effect = {
 DI_unsullied_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2049,7 +2463,7 @@ DI_unsullied_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = unsullied
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2061,7 +2475,7 @@ DI_unsullied_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = unsullied
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2074,9 +2488,16 @@ DI_unsullied_effect = {
 DI_collared_bows_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2085,7 +2506,7 @@ DI_collared_bows_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = collared_bows
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2097,7 +2518,7 @@ DI_collared_bows_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = collared_bows
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2110,9 +2531,16 @@ DI_collared_bows_effect = {
 DI_pit_warriors_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2121,7 +2549,7 @@ DI_pit_warriors_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = pit_warriors
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2133,7 +2561,7 @@ DI_pit_warriors_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = pit_warriors
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2146,9 +2574,16 @@ DI_pit_warriors_effect = {
 DI_iron_legion_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2157,7 +2592,7 @@ DI_iron_legion_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = iron_legion
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2169,7 +2604,7 @@ DI_iron_legion_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = iron_legion
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2182,9 +2617,16 @@ DI_iron_legion_effect = {
 DI_bronze_raiders_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2193,7 +2635,7 @@ DI_bronze_raiders_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = bronze_raiders
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2205,47 +2647,11 @@ DI_bronze_raiders_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = bronze_raiders
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
 				name = bronze_raiders
-			}
-		}
-	}
-}
-
-DI_outriders_effect = {
-	scope = character
-	effect = {
-		if = {
-			limit = {
-				has_variable = DI_pinned_char_var
-			}
-			every_living_character = {
-				limit = { has_character_flag = pinned_for_edit }
-				save_scope_as = target
-
-				spawn_army = {
-					men_at_arms = {
-						type = outriders
-						men = root.var:DI_army_spawner_increment_value
-					}
-					location = scope:target.location
-					inheritable = no
-					name = outriders
-				}
-			}
-		}
-		else = {
-			spawn_army = {
-				men_at_arms = {
-					type = outriders
-					men = root.var:DI_army_spawner_increment_value
-				}
-				location = root.location
-				inheritable = no
-				name = outriders
 			}
 		}
 	}
@@ -2256,9 +2662,16 @@ DI_outriders_effect = {
 DI_accolade_maa_archers_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2267,7 +2680,7 @@ DI_accolade_maa_archers_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_archers
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2279,7 +2692,7 @@ DI_accolade_maa_archers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_archers
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2293,9 +2706,16 @@ DI_accolade_maa_archers_effect = {
 DI_accolade_maa_skirmishers_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2304,7 +2724,7 @@ DI_accolade_maa_skirmishers_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_skirmishers
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2316,7 +2736,7 @@ DI_accolade_maa_skirmishers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_skirmishers
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2330,9 +2750,16 @@ DI_accolade_maa_skirmishers_effect = {
 DI_accolade_maa_pikes_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2341,7 +2768,7 @@ DI_accolade_maa_pikes_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_pikes
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2353,7 +2780,7 @@ DI_accolade_maa_pikes_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_pikes
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2367,9 +2794,16 @@ DI_accolade_maa_pikes_effect = {
 DI_accolade_maa_outriders_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2378,7 +2812,7 @@ DI_accolade_maa_outriders_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_outriders
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2390,7 +2824,7 @@ DI_accolade_maa_outriders_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_outriders
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2404,9 +2838,16 @@ DI_accolade_maa_outriders_effect = {
 DI_accolade_maa_vanguards_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2415,7 +2856,7 @@ DI_accolade_maa_vanguards_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_vanguards
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2427,7 +2868,7 @@ DI_accolade_maa_vanguards_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_vanguards
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2441,9 +2882,16 @@ DI_accolade_maa_vanguards_effect = {
 DI_accolade_maa_lancers_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2452,7 +2900,7 @@ DI_accolade_maa_lancers_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_lancers
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2464,7 +2912,7 @@ DI_accolade_maa_lancers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_lancers
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2478,9 +2926,16 @@ DI_accolade_maa_lancers_effect = {
 DI_accolade_maa_crossbowers_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2489,7 +2944,7 @@ DI_accolade_maa_crossbowers_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_crossbowers
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2501,7 +2956,7 @@ DI_accolade_maa_crossbowers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_crossbowers
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2515,9 +2970,16 @@ DI_accolade_maa_crossbowers_effect = {
 DI_accolade_maa_cameliers_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2526,7 +2988,7 @@ DI_accolade_maa_cameliers_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_cameliers
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2538,7 +3000,7 @@ DI_accolade_maa_cameliers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_cameliers
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2552,9 +3014,16 @@ DI_accolade_maa_cameliers_effect = {
 DI_accolade_maa_elephantiers_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2563,7 +3032,7 @@ DI_accolade_maa_elephantiers_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_elephantiers
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2575,7 +3044,7 @@ DI_accolade_maa_elephantiers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_elephantiers
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2589,9 +3058,16 @@ DI_accolade_maa_elephantiers_effect = {
 DI_accolade_maa_horse_archers_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2600,7 +3076,7 @@ DI_accolade_maa_horse_archers_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = accolade_maa_horse_archers
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2612,7 +3088,7 @@ DI_accolade_maa_horse_archers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = accolade_maa_horse_archers
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2627,9 +3103,16 @@ DI_accolade_maa_horse_archers_effect = {
 DI_camel_rider_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2638,7 +3121,7 @@ DI_camel_rider_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = camel_rider
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2650,7 +3133,7 @@ DI_camel_rider_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = camel_rider
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2664,9 +3147,16 @@ DI_camel_rider_effect = {
 DI_war_elephant_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2675,7 +3165,7 @@ DI_war_elephant_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = war_elephant
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2687,7 +3177,7 @@ DI_war_elephant_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = war_elephant
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2700,9 +3190,16 @@ DI_war_elephant_effect = {
 DI_poorfellow_skirmishers_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2711,7 +3208,7 @@ DI_poorfellow_skirmishers_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = poorfellow_skirmishers
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2723,7 +3220,7 @@ DI_poorfellow_skirmishers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = poorfellow_skirmishers
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2736,9 +3233,16 @@ DI_poorfellow_skirmishers_effect = {
 DI_warriors_sons_heavy_infantry_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2747,7 +3251,7 @@ DI_warriors_sons_heavy_infantry_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = warriors_sons_heavy_infantry
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2759,7 +3263,7 @@ DI_warriors_sons_heavy_infantry_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = warriors_sons_heavy_infantry
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2772,9 +3276,16 @@ DI_warriors_sons_heavy_infantry_effect = {
 DI_warriors_sons_heavy_cav_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2783,7 +3294,7 @@ DI_warriors_sons_heavy_cav_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = warriors_sons_heavy_cav
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2795,7 +3306,7 @@ DI_warriors_sons_heavy_cav_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = warriors_sons_heavy_cav
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
@@ -2808,9 +3319,16 @@ DI_warriors_sons_heavy_cav_effect = {
 DI_sarsfield_horse_archers_effect = {
 	scope = character
 	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
 		if = {
 			limit = {
-				has_variable = DI_pinned_char_var
+				scope:DI_story = { has_variable = DI_pinned_char_var }
 			}
 			every_living_character = {
 				limit = { has_character_flag = pinned_for_edit }
@@ -2819,7 +3337,7 @@ DI_sarsfield_horse_archers_effect = {
 				spawn_army = {
 					men_at_arms = {
 						type = sarsfield_horse_archers
-						men = root.var:DI_army_spawner_increment_value
+						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
@@ -2831,7 +3349,7 @@ DI_sarsfield_horse_archers_effect = {
 			spawn_army = {
 				men_at_arms = {
 					type = sarsfield_horse_archers
-					men = root.var:DI_army_spawner_increment_value
+					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
