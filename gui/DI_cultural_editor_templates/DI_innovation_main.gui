@@ -1,4 +1,4 @@
-template DI_Innovation_AGOT_Main
+template DI_Innovation_Main
 {	
 	vbox = {
 		layoutpolicy_horizontal = expanding
