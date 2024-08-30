@@ -390,8 +390,11 @@ Types Pinned_Characters
 			vbox = {
 				portrait_head_small = {}
 
+				min_width = 160
+
 				# Stress Widget #
 				hbox = {
+					visible = "[Not(Character.HasTrait( GetTrait('dragon') ))]"
 				
 					button_round = {
 						size = { 25 25 }
@@ -879,6 +882,8 @@ Types Pinned_Characters
 
 									# Dynasty
 									widget = {
+										visible = "[Not(Character.HasTrait( GetTrait('dragon') ))]"
+
 										size = { 45 40 }
 
 										coa_house_small = {
@@ -900,7 +905,10 @@ Types Pinned_Characters
 											margin = { 0 2 }
 										}
 
+										# Humans
 										vbox = {
+											visible = "[Not(Character.HasTrait( GetTrait('dragon') ))]"
+
 											layoutpolicy_horizontal = expanding
 											hbox = {
 												spacing = 25
@@ -1071,6 +1079,141 @@ Types Pinned_Characters
 														alwaystransparent = yes
 													}
 												}														
+											}
+										}
+
+										# Dragons
+										vbox = {
+											visible = "[Character.HasTrait( GetTrait('dragon') )]"
+											
+											layoutpolicy_horizontal = expanding
+											hbox = {
+												spacing = 25
+												
+												button_round = {
+													size = { 25 25 }
+													onclick = "[GetScriptedGui('DI_agot_dragons_remove_size_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+
+													button_minus_small = {
+														name = "decrease_skill"
+														parentanchor = center
+														alwaystransparent = yes
+													}
+												}
+
+												hbox = {
+													spacing = 2
+													icon = {
+														parentanchor = left
+														size = { 25 25 }
+														texture = "gfx/interface/icons/icon_dragon_size.dds"
+													}
+													
+													text_single = {															
+														size = { 80 20 }
+														text = "[Character.MakeScope.ScriptValue('dragon_size')|0]"
+														default_format = "#high"
+														autoresize = no
+														align = nobaseline
+													}
+												}
+												
+												button_round = {
+													size = { 25 25 }
+													onclick = "[GetScriptedGui('DI_agot_dragons_add_size_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+
+													button_plus_small = {
+														name = "increase_skill"
+														parentanchor = center
+														alwaystransparent = yes
+													}
+												}
+											}
+											
+											hbox = {	
+												spacing = 25
+
+												button_round = {
+													size = { 25 25 }
+													onclick = "[GetScriptedGui('DI_agot_dragons_remove_draconic_dread_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+
+													button_minus_small = {
+														name = "decrease_skill"
+														parentanchor = center
+														alwaystransparent = yes
+													}
+												}
+												
+												hbox = {
+													spacing = 2
+													icon = {
+														parentanchor = left
+														size = { 25 25 }
+														texture = "gfx/interface/icons/icon_draconic_dread.dds"
+													}
+													
+													text_single = {
+														size = { 80 20 }
+														text = "[Character.MakeScope.ScriptValue('draconic_dread')|0]"
+														default_format = "#high"
+														autoresize = no
+														align = nobaseline
+													}
+												}
+												
+												button_round = {
+													size = { 25 25 }
+													onclick = "[GetScriptedGui('DI_agot_dragons_add_draconic_dread_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+
+													button_plus_small = {
+														name = "increase_skill"
+														parentanchor = center
+														alwaystransparent = yes
+													}
+												}														
+											}
+
+											hbox = {
+												spacing = 25
+
+												button_round = {
+													size = { 25 25 }
+													onclick = "[GetScriptedGui('DI_agot_dragons_remove_temperament_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+
+													button_minus_small = {
+														name = "increase_skill"
+														parentanchor = center
+														alwaystransparent = yes
+													}
+												}
+												
+												hbox = {
+													spacing = 2
+													icon = {
+														parentanchor = left
+														size = { 25 25 }
+														texture = "gfx/interface/icons/icon_draconic_temperament.dds"
+													}
+													
+													text_single = {
+														size = { 80 20 }
+														text = "[Character.MakeScope.ScriptValue('temperament')|0]"
+														default_format = "#high"
+														autoresize = no
+														align = nobaseline
+													}
+												}
+												
+												button_round = {
+													size = { 25 25 }
+													onclick = "[GetScriptedGui('DI_agot_dragons_add_temperament_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+
+													button_plus_small = {
+														name = "increase_skill"
+														parentanchor = center
+														alwaystransparent = yes
+													}
+												}
 											}
 										}
 									}

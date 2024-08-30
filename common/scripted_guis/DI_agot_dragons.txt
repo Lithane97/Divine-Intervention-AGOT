@@ -1,0 +1,59 @@
+DI_agot_dragons_add_size_effect = {
+	scope = character
+
+	effect = {
+		change_dragon_size = {
+			VALUE = 1
+		}
+	}
+}
+
+DI_agot_dragons_remove_size_effect = {
+	scope = character
+
+	effect = {
+		change_dragon_size = {
+			VALUE = -1
+		}
+	}
+}
+
+DI_agot_dragons_add_draconic_dread_effect = {
+	scope = character
+
+	effect = {
+		change_draconic_dread = {
+			VALUE = 1
+		}
+	}
+}
+
+DI_agot_dragons_remove_draconic_dread_effect = {
+	scope = character
+
+	effect = {
+		change_draconic_dread = {
+			VALUE = -1
+		}
+	}
+}
+
+DI_agot_dragons_add_temperament_effect = {
+	scope = character
+
+	effect = {
+		change_temperament = {
+			VALUE = 1
+		}
+	}
+}
+
+DI_agot_dragons_remove_temperament_effect = {
+	scope = character
+
+	effect = {
+		change_temperament = {
+			VALUE = -1
+		}
+	}
+}
