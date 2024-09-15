@@ -1,0 +1,142 @@
+﻿DI_add_trait_xp = {
+	if = {
+		limit = {
+			$TRACK$ = flag:Bow
+		}
+		add_trait_xp = {
+			trait = $TRAIT$
+			track = bow
+			value = $VALUE$
+		}
+	}
+	else_if = {
+		limit = {
+			$TRACK$ = flag:Foot
+		}
+		add_trait_xp = {
+			trait = $TRAIT$
+			track = foot
+			value = $VALUE$
+		}
+	}
+	else_if = {
+		limit = {
+			$TRACK$ = flag:Horse
+		}
+		add_trait_xp = {
+			trait = $TRAIT$
+			track = horse
+			value = $VALUE$
+		}
+	}
+	else_if = {
+		limit = {
+			$TRACK$ = flag:Wit
+		}
+		add_trait_xp = {
+			trait = $TRAIT$
+			track = wit
+			value = $VALUE$
+		}
+	}
+	else_if = {
+		limit = {
+			$TRACK$ = flag:Wanderer
+		}
+		add_trait_xp = {
+			trait = $TRAIT$
+			track = travel
+			value = $VALUE$
+		}
+	}
+	else_if = {
+		limit = {
+			$TRACK$ = flag:Seasoned
+		}
+		add_trait_xp = {
+			trait = $TRAIT$
+			track = danger
+			value = $VALUE$
+		}
+	}
+	else_if = {
+		limit = {
+			$TRACK$ = flag:Venator
+		}
+		add_trait_xp = {
+			trait = $TRAIT$
+			track = hunter
+			value = $VALUE$
+		}
+	}
+	else_if = {
+		limit = {
+			$TRACK$ = flag:Falconer
+		}
+		add_trait_xp = {
+			trait = $TRAIT$
+			track = falconer
+			value = $VALUE$
+		}
+	}
+	else_if = {
+		limit = {
+			$TRACK$ = flag:esr_popular_among_peers
+		}
+		add_trait_xp = {
+			trait = $TRAIT$
+			track = esr_popular_among_peers
+			value = $VALUE$
+		}
+	}
+	else_if = {
+		limit = {
+			$TRACK$ = flag:esr_well_connected
+		}
+		add_trait_xp = {
+			trait = $TRAIT$
+			track = esr_well_connected
+			value = $VALUE$
+		}
+	}
+	else_if = {
+		limit = {
+			$TRACK$ = flag:esr_friends_in_high_places
+		}
+		add_trait_xp = {
+			trait = $TRAIT$
+			track = esr_friends_in_high_places
+			value = $VALUE$
+		}
+	}
+	else_if = {
+		limit = {
+			$TRACK$ = flag:esr_social_pariah
+		}
+		add_trait_xp = {
+			trait = $TRAIT$
+			track = esr_social_pariah
+			value = $VALUE$
+		}
+	}
+	else_if = {
+		limit = {
+			$TRACK$ = flag:dragon_training
+		}
+		add_trait_xp = {
+			trait = $TRAIT$
+			track = dragon_training
+			value = $VALUE$
+		}
+	}
+	else_if = {
+		limit = {
+			$TRACK$ = flag:dragon_bond
+		}
+		add_trait_xp = {
+			trait = $TRAIT$
+			track = dragon_bond
+			value = $VALUE$
+		}
+	}
+}

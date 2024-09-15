@@ -1,0 +1,18 @@
+﻿DI_trait_track_check = {
+    OR = {
+        scope:track = flag:Wanderer
+        scope:track = flag:Seasoned
+        scope:track = flag:Foot
+        scope:track = flag:Bow
+        scope:track = flag:Horse
+        scope:track = flag:Wit
+        scope:track = flag:Venator
+        scope:track = flag:Falconer
+        scope:track = flag:esr_popular_among_peers
+        scope:track = flag:esr_well_connected
+        scope:track = flag:esr_friends_in_high_places
+        scope:track = flag:esr_social_pariah
+        scope:track = flag:dragon_training
+        scope:track = flag:dragon_bond
+    }
+}
