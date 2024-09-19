@@ -1087,12 +1087,16 @@ Types Pinned_Characters
 											visible = "[Character.HasTrait( GetTrait('dragon') )]"
 											
 											layoutpolicy_horizontal = expanding
+
+											margin_left = 20
+											
 											hbox = {
 												spacing = 25
+												expand = {}
 												
 												button_round = {
 													size = { 25 25 }
-													onclick = "[GetScriptedGui('DI_agot_dragons_remove_size_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+													onclick = "[GetScriptedGui('DI_agot_dragons_remove_size_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target', Character.MakeScope).End)]"
 
 													button_minus_small = {
 														name = "decrease_skill"
@@ -1107,6 +1111,7 @@ Types Pinned_Characters
 														parentanchor = left
 														size = { 25 25 }
 														texture = "gfx/interface/icons/icon_dragon_size.dds"
+														tooltip = "DI_DRAGON_SIZE_TOOLTIP"
 													}
 													
 													text_single = {															
@@ -1120,7 +1125,7 @@ Types Pinned_Characters
 												
 												button_round = {
 													size = { 25 25 }
-													onclick = "[GetScriptedGui('DI_agot_dragons_add_size_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+													onclick = "[GetScriptedGui('DI_agot_dragons_add_size_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target', Character.MakeScope).End)]"
 
 													button_plus_small = {
 														name = "increase_skill"
@@ -1132,10 +1137,11 @@ Types Pinned_Characters
 											
 											hbox = {	
 												spacing = 25
+												expand = {}
 
 												button_round = {
 													size = { 25 25 }
-													onclick = "[GetScriptedGui('DI_agot_dragons_remove_draconic_dread_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+													onclick = "[GetScriptedGui('DI_agot_dragons_remove_draconic_dread_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target', Character.MakeScope).End)]"
 
 													button_minus_small = {
 														name = "decrease_skill"
@@ -1150,6 +1156,7 @@ Types Pinned_Characters
 														parentanchor = left
 														size = { 25 25 }
 														texture = "gfx/interface/icons/icon_draconic_dread.dds"
+														tooltip = "DI_DRAGON_DREAD_TOOLTIP"
 													}
 													
 													text_single = {
@@ -1163,7 +1170,7 @@ Types Pinned_Characters
 												
 												button_round = {
 													size = { 25 25 }
-													onclick = "[GetScriptedGui('DI_agot_dragons_add_draconic_dread_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+													onclick = "[GetScriptedGui('DI_agot_dragons_add_draconic_dread_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target', Character.MakeScope).End)]"
 
 													button_plus_small = {
 														name = "increase_skill"
@@ -1175,10 +1182,11 @@ Types Pinned_Characters
 
 											hbox = {
 												spacing = 25
+												expand = {}
 
 												button_round = {
 													size = { 25 25 }
-													onclick = "[GetScriptedGui('DI_agot_dragons_remove_temperament_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+													onclick = "[GetScriptedGui('DI_agot_dragons_remove_temperament_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target', Character.MakeScope).End)]"
 
 													button_minus_small = {
 														name = "increase_skill"
@@ -1193,6 +1201,7 @@ Types Pinned_Characters
 														parentanchor = left
 														size = { 25 25 }
 														texture = "gfx/interface/icons/icon_draconic_temperament.dds"
+														tooltip = "DI_DRAGON_TEMPERAMENT_TOOLTIP"
 													}
 													
 													text_single = {
@@ -1206,7 +1215,7 @@ Types Pinned_Characters
 												
 												button_round = {
 													size = { 25 25 }
-													onclick = "[GetScriptedGui('DI_agot_dragons_add_temperament_effect').Execute(GuiScope.SetRoot(Character.MakeScope).End)]"
+													onclick = "[GetScriptedGui('DI_agot_dragons_add_temperament_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('target', Character.MakeScope).End)]"
 
 													button_plus_small = {
 														name = "increase_skill"

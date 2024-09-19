@@ -1,3 +1,6 @@
 ﻿l_english:
  ### WINDOWS ### 
  DI_AGOT_w_title: "A Game of Thrones"
+ DI_DRAGON_SIZE_TOOLTIP: "Size of the dragon"
+ DI_DRAGON_DREAD_TOOLTIP: "Dread of the dragon"
+ DI_DRAGON_TEMPERAMENT_TOOLTIP: "Temperament of the dragon"
