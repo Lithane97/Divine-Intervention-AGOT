@@ -8,6 +8,11 @@
         scope:track = flag:Wit
         scope:track = flag:Venator
         scope:track = flag:Falconer
+        scope:track = flag:Bandit
+        scope:track = flag:Trickster
+        scope:track = flag:Thief
+        scope:track = flag:Poacher
+        scope:track = flag:Marauder
         scope:track = flag:esr_popular_among_peers
         scope:track = flag:esr_well_connected
         scope:track = flag:esr_friends_in_high_places
