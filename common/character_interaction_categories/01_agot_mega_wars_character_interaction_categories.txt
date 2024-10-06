@@ -4,6 +4,6 @@
 #														#
 #########################################################
 interaction_category_agot_debug = {
-	index = 11
+	index = 14
 	desc = "AGOT_MEGA_WARS_DEBUG_ACTIONS"
 }
