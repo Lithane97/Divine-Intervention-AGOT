@@ -530,3 +530,58 @@ DI_remove_innovation_agot_free_companies = {
 	}
 }
 
+DI_culture_has_innovation_agot_giants = {
+    scope = culture
+
+    is_valid = {
+        has_innovation = innovation_agot_giants
+    }
+}
+
+DI_add_innovation_agot_giants = {
+    scope = character
+
+    effect = {
+        var:DI_innovation_selected_culture = {
+            add_innovation = innovation_agot_giants
+        }
+    }
+}
+
+DI_remove_innovation_agot_giants = {
+    scope = character
+
+    effect = {
+        var:DI_innovation_selected_culture = {
+            remove_innovation = innovation_agot_giants
+        }
+    }
+}
+
+DI_culture_has_innovation_agot_anti_dragon_fighting = {
+    scope = culture
+
+    is_valid = {
+        has_innovation = innovation_agot_anti_dragon_fighting
+    }
+}
+
+DI_add_innovation_agot_anti_dragon_fighting = {
+    scope = character
+
+    effect = {
+        var:DI_innovation_selected_culture = {
+            add_innovation = innovation_agot_anti_dragon_fighting
+        }
+    }
+}
+
+DI_remove_innovation_agot_anti_dragon_fighting = {
+    scope = character
+
+    effect = {
+        var:DI_innovation_selected_culture = {
+            remove_innovation = innovation_agot_anti_dragon_fighting
+        }
+    }
+}

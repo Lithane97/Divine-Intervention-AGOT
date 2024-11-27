@@ -4,3 +4,6 @@
  DI_DRAGON_SIZE_TOOLTIP: "Size of the dragon"
  DI_DRAGON_DREAD_TOOLTIP: "Dread of the dragon"
  DI_DRAGON_TEMPERAMENT_TOOLTIP: "Temperament of the dragon"
+ DI_PC_dragon_size: "Size: [Character.MakeScope.ScriptValue('dragon_size')|0]"
+ DI_PC_dragon_dread: "Dread: [Character.MakeScope.ScriptValue('draconic_dread')|0]"
+ DI_PC_dragon_temperament: "Temperament: [Character.MakeScope.ScriptValue('temperament')|0]"
