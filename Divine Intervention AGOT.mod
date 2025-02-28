@@ -4,6 +4,6 @@ tags={
 	"Total Conversion"
 }
 name="Divine Intervention AGOT Cheat Menu"
-supported_version="1.13.0.4"
+supported_version="1.14.2.1"
 path="C:/Users/litha/OneDrive/Documents/Paradox Interactive/Crusader Kings III/replace with local path"
 remote_file_id="2996152542"
