@@ -1,4 +1,4 @@
-﻿personality_trait_randomizer_effect = {
+﻿DI_personality_trait_randomizer_effect = {
     random_list = {
         10 = { add_trait = lustful }
         10 = { add_trait = chaste }
@@ -46,7 +46,7 @@
     }
 }
 
-clear_personality_traits_effect = {
+DI_clear_personality_traits_effect = {
     if = { limit = { has_trait = lustful } remove_trait = lustful }
     if = { limit = { has_trait = chaste } remove_trait = chaste }
     if = { limit = { has_trait = gluttonous } remove_trait = gluttonous }
@@ -88,12 +88,12 @@ clear_personality_traits_effect = {
     if = { limit = { has_trait = rude } remove_trait = rude }
 }
 
-set_weight_0 = {
+DI_set_weight_0 = {
     change_current_weight = 200
     change_current_weight = -100
 }
 
-add_commander_traits_effect = {
+DI_add_commander_traits_effect = {
     add_trait = logistician
     add_trait = military_engineer
     add_trait = aggressive_attacker
@@ -110,9 +110,27 @@ add_commander_traits_effect = {
     add_trait = forest_fighter
     add_trait = cautious_leader
     add_trait = organizer
+    if = { limit = { has_trait = logistician } add_trait_xp = { trait = logistician value = 100 } }
+    if = { limit = { has_trait = military_engineer } add_trait_xp = { trait = military_engineer value = 100 } }
+    if = { limit = { has_trait = aggressive_attacker } add_trait_xp = { trait = aggressive_attacker value = 100 } }
+    if = { limit = { has_trait = unyielding_defender } add_trait_xp = { trait = unyielding_defender value = 100 } }
+    if = { limit = { has_trait = forder } add_trait_xp = { trait = forder value = 100 } }
+    if = { limit = { has_trait = flexible_leader } add_trait_xp = { trait = flexible_leader value = 100 } }
+    if = { limit = { has_trait = desert_warrior } add_trait_xp = { trait = desert_warrior value = 100 } }
+    if = { limit = { has_trait = jungle_stalker } add_trait_xp = { trait = jungle_stalker value = 100 } }
+    if = { limit = { has_trait = reaver } add_trait_xp = { trait = reaver value = 100 } }
+    if = { limit = { has_trait = reckless } add_trait_xp = { trait = reckless value = 100 } }
+    if = { limit = { has_trait = holy_warrior } add_trait_xp = { trait = holy_warrior value = 100 } }
+    if = { limit = { has_trait = open_terrain_expert } add_trait_xp = { trait = open_terrain_expert value = 100 } }
+    if = { limit = { has_trait = rough_terrain_expert } add_trait_xp = { trait = rough_terrain_expert value = 100 } }
+    if = { limit = { has_trait = forest_fighter } add_trait_xp = { trait = forest_fighter value = 100 } }
+    if = { limit = { has_trait = cautious_leader } add_trait_xp = { trait = cautious_leader value = 100 } }
+    if = { limit = { has_trait = organizer } add_trait_xp = { trait = organizer value = 100 } }
+    # adding trait xp to newly added commander traits so they can progress right away #
+    # effect add_trait_xp = {trait = organizer value=100}}`
 }
 
-remove_commander_traits_effect = {
+DI_remove_commander_traits_effect = {
     if = { limit = { has_trait = logistician } remove_trait = logistician }
     if = { limit = { has_trait = military_engineer } remove_trait = military_engineer }
     if = { limit = { has_trait = aggressive_attacker } remove_trait = aggressive_attacker }
@@ -131,7 +149,7 @@ remove_commander_traits_effect = {
     if = { limit = { has_trait = organizer } remove_trait = organizer }
 }
 
-lifestyle_martial_present_effect = {
+DI_lifestyle_martial_present_effect = {
     if = { limit = { NOT = { has_perk = bellum_justum_perk } } add_perk = bellum_justum_perk }
     if = { limit = { NOT = { has_perk = parthian_tactics_perk } } add_perk = parthian_tactics_perk }
     if = { limit = { NOT = { has_perk = envelopment_perk } } add_perk = envelopment_perk }
@@ -165,7 +183,7 @@ lifestyle_martial_present_effect = {
     }
 }
 
-lifestyle_diplomacy_present_effect = {
+DI_lifestyle_diplomacy_present_effect = {
     if = { limit = { NOT = { has_perk = thoughtful_perk } } add_perk = thoughtful_perk }
     if = { limit = { NOT = { has_perk = ducal_conquest_perk } } add_perk = ducal_conquest_perk }
     if = { limit = { NOT = { has_perk = forced_vassalage_perk } } add_perk = forced_vassalage_perk }
@@ -199,7 +217,7 @@ lifestyle_diplomacy_present_effect = {
     }
 }
 
-lifestyle_stewardship_present_effect = {
+DI_lifestyle_stewardship_present_effect = {
     if = { limit = { NOT = { has_perk = golden_obligations_perk } } add_perk = golden_obligations_perk }
     if = { limit = { NOT = { has_perk = heregeld_perk } } add_perk = heregeld_perk }
     if = { limit = { NOT = { has_perk = detailed_ledgers_perk } } add_perk = detailed_ledgers_perk }
@@ -233,7 +251,7 @@ lifestyle_stewardship_present_effect = {
     }
 }
 
-lifestyle_intrigue_present_effect = {
+DI_lifestyle_intrigue_present_effect = {
     if = { limit = { NOT = { has_perk = truth_is_relative_perk } } add_perk = truth_is_relative_perk }
     if = { limit = { NOT = { has_perk = digging_for_dirt_perk } } add_perk = digging_for_dirt_perk }
     if = { limit = { NOT = { has_perk = kidnapper_perk } } add_perk = kidnapper_perk }
@@ -276,7 +294,7 @@ lifestyle_intrigue_present_effect = {
     }
 }
 
-lifestyle_learning_present_effect = {
+DI_lifestyle_learning_present_effect = {
     if = { limit = { NOT = { has_perk = anatomical_studies_perk } } add_perk = anatomical_studies_perk }
     if = { limit = { NOT = { has_perk = carefree_perk } } add_perk = carefree_perk }
     if = { limit = { NOT = { has_perk = mental_resilience_perk } } add_perk = mental_resilience_perk }
@@ -310,7 +328,41 @@ lifestyle_learning_present_effect = {
     }
 }
 
-lifestyle_martial_present_no_effect = {
+DI_lifestyle_wandering_present_effect = {
+    if = { limit = { NOT = { has_perk = mustering_the_troops_perk } } add_perk = mustering_the_troops_perk }
+    if = { limit = { NOT = { has_perk = know_your_land_know_your_people_perk } } add_perk = know_your_land_know_your_people_perk }
+    if = { limit = { NOT = { has_perk = no_stone_unturned_perk } } add_perk = no_stone_unturned_perk }
+    if = { limit = { NOT = { has_perk = travel_logs_perk } } add_perk = travel_logs_perk }
+    if = { limit = { NOT = { has_perk = local_inspection_perk } } add_perk = local_inspection_perk }
+    if = { limit = { NOT = { has_perk = local_arbitration_perk } } add_perk = local_arbitration_perk }
+    if = { limit = { NOT = { has_perk = realm_charts_perk } } add_perk = realm_charts_perk }
+    if = { limit = { NOT = { has_perk = personal_touch_perk } } add_perk = personal_touch_perk }
+    if = { limit = { NOT = { has_perk = surveyor_perk } } add_perk = surveyor_perk }
+    if = { limit = { NOT = { has_perk = well_prepared_perk } } add_perk = well_prepared_perk }
+    if = { limit = { NOT = { has_perk = far_and_wide_perk } } add_perk = far_and_wide_perk }
+    if = { limit = { NOT = { has_perk = just_one_more_hill_perk } } add_perk = just_one_more_hill_perk }
+    if = { limit = { NOT = { has_perk = roaming_perk } } add_perk = roaming_perk }
+    if = { limit = { NOT = { has_perk = of_the_people_perk } } add_perk = of_the_people_perk }
+    if = { limit = { NOT = { has_perk = local_hero_perk } } add_perk = local_hero_perk }
+    if = { limit = { NOT = { has_perk = travel_companion_perk } } add_perk = travel_companion_perk }
+    if = { limit = { NOT = { has_perk = the_home_away_from_home_perk } } add_perk = the_home_away_from_home_perk }
+    if = { limit = { NOT = { has_perk = wayfarer_perk } } add_perk = wayfarer_perk }
+    if = { limit = { NOT = { has_perk = power_at_home_perk } } add_perk = power_at_home_perk }
+    if = { limit = { NOT = { has_perk = mercenary_contacts_perk } } add_perk = mercenary_contacts_perk }
+    if = { limit = { NOT = { has_perk = journey_planner_perk } } add_perk = journey_planner_perk }
+    if = { limit = { NOT = { has_perk = finally_there_perk } } add_perk = finally_there_perk }
+    if = { limit = { NOT = { has_perk = journey_perk } } add_perk = journey_perk }
+    if = { limit = { NOT = { has_perk = souvenirs_aplenty_perk } } add_perk = souvenirs_aplenty_perk }
+    if = { limit = { NOT = { has_perk = gracious_host_impeccable_guest_perk } } add_perk = gracious_host_impeccable_guest_perk }
+    if = { limit = { NOT = { has_perk = been_there_done_that_perk } } add_perk = been_there_done_that_perk }
+    if = { limit = { NOT = { has_perk = voyager_perk } } add_perk = voyager_perk }
+    add_character_modifier = {
+        modifier = no_lifestyle_wandering
+        days = -1
+    }
+}
+
+DI_lifestyle_martial_present_no_effect = {
     if = { limit = { has_perk = bellum_justum_perk } remove_perk = bellum_justum_perk }
     if = { limit = { has_perk = parthian_tactics_perk } remove_perk = parthian_tactics_perk }
     if = { limit = { has_perk = envelopment_perk } remove_perk = envelopment_perk }
@@ -344,7 +396,8 @@ lifestyle_martial_present_no_effect = {
     remove_character_modifier = no_lifestyle_martial
 }
 
-lifestyle_diplomacy_present_no_effect = {
+
+DI_lifestyle_diplomacy_present_no_effect = {
     if = { limit = { has_perk = thoughtful_perk } remove_perk = thoughtful_perk }
     if = { limit = { has_perk = ducal_conquest_perk } remove_perk = ducal_conquest_perk }
     if = { limit = { has_perk = forced_vassalage_perk } remove_perk = forced_vassalage_perk }
@@ -378,7 +431,7 @@ lifestyle_diplomacy_present_no_effect = {
     remove_character_modifier = no_lifestyle_diplomacy
 }
 
-lifestyle_stewardship_present_no_effect = {
+DI_lifestyle_stewardship_present_no_effect = {
     if = { limit = { has_perk = golden_obligations_perk } remove_perk = golden_obligations_perk }
     if = { limit = { has_perk = heregeld_perk } remove_perk = heregeld_perk }
     if = { limit = { has_perk = detailed_ledgers_perk } remove_perk = detailed_ledgers_perk }
@@ -412,7 +465,7 @@ lifestyle_stewardship_present_no_effect = {
     remove_character_modifier = no_lifestyle_stewardship
 }
 
-lifestyle_intrigue_present_no_effect = {
+DI_lifestyle_intrigue_present_no_effect = {
     if = { limit = { has_perk = truth_is_relative_perk } remove_perk = truth_is_relative_perk }
     if = { limit = { has_perk = digging_for_dirt_perk } remove_perk = digging_for_dirt_perk }
     if = { limit = { has_perk = kidnapper_perk } remove_perk = kidnapper_perk }
@@ -455,7 +508,7 @@ lifestyle_intrigue_present_no_effect = {
     remove_character_modifier = no_lifestyle_intrigue
 }
 
-lifestyle_learning_present_no_effect = {
+DI_lifestyle_learning_present_no_effect = {
     if = { limit = { has_perk = anatomical_studies_perk } remove_perk = anatomical_studies_perk }
     if = { limit = { has_perk = carefree_perk } remove_perk = carefree_perk }
     if = { limit = { has_perk = mental_resilience_perk } remove_perk = mental_resilience_perk }
@@ -489,7 +542,41 @@ lifestyle_learning_present_no_effect = {
     remove_character_modifier = no_lifestyle_learning
 }
 
-eliminated_health_problem_effect = {
+DI_lifestyle_wandering_present_no_effect = {
+    if = { limit = { has_perk = mustering_the_troops_perk } remove_perk = mustering_the_troops_perk }
+    if = { limit = { has_perk = know_your_land_know_your_people_perk } remove_perk = know_your_land_know_your_people_perk }
+    if = { limit = { has_perk = no_stone_unturned_perk } remove_perk = no_stone_unturned_perk }
+    if = { limit = { has_perk = travel_logs_perk } remove_perk = travel_logs_perk }
+    if = { limit = { has_perk = local_inspection_perk } remove_perk = local_inspection_perk }
+    if = { limit = { has_perk = local_arbitration_perk } remove_perk = local_arbitration_perk }
+    if = { limit = { has_perk = realm_charts_perk } remove_perk = realm_charts_perk }
+    if = { limit = { has_perk = personal_touch_perk } remove_perk = personal_touch_perk }
+    if = { limit = { has_perk = surveyor_perk } remove_perk = surveyor_perk }
+    if = { limit = { has_perk = well_prepared_perk } remove_perk = well_prepared_perk }
+    if = { limit = { has_perk = far_and_wide_perk } remove_perk = far_and_wide_perk }
+    if = { limit = { has_perk = just_one_more_hill_perk } remove_perk = just_one_more_hill_perk }
+    if = { limit = { has_perk = roaming_perk } remove_perk = roaming_perk }
+    if = { limit = { has_perk = of_the_people_perk } remove_perk = of_the_people_perk }
+    if = { limit = { has_perk = local_hero_perk } remove_perk = local_hero_perk }
+    if = { limit = { has_perk = travel_companion_perk } remove_perk = travel_companion_perk }
+    if = { limit = { has_perk = the_home_away_from_home_perk } remove_perk = the_home_away_from_home_perk }
+    if = { limit = { has_perk = wayfarer_perk } remove_perk = wayfarer_perk }
+    if = { limit = { has_perk = power_at_home_perk } remove_perk = power_at_home_perk }
+    if = { limit = { has_perk = mercenary_contacts_perk } remove_perk = mercenary_contacts_perk }
+    if = { limit = { has_perk = journey_planner_perk } remove_perk = journey_planner_perk }
+    if = { limit = { has_perk = finally_there_perk } remove_perk = finally_there_perk }
+    if = { limit = { has_perk = journey_perk } remove_perk = journey_perk }
+    if = { limit = { has_perk = souvenirs_aplenty_perk } remove_perk = souvenirs_aplenty_perk }
+    if = { limit = { has_perk = gracious_host_impeccable_guest_perk } remove_perk = gracious_host_impeccable_guest_perk }
+    if = { limit = { has_perk = been_there_done_that_perk } remove_perk = been_there_done_that_perk }
+    if = { limit = { has_perk = voyager_perk } remove_perk = voyager_perk }
+    remove_trait = lifestyle_surveyor
+    remove_trait = lifestyle_wayfarer
+    remove_trait = lifestyle_voyager
+    remove_character_modifier = no_lifestyle_wandering
+}
+
+DI_eliminated_health_problem_effect = {
     if = { limit = { has_trait = drunkard } remove_trait = drunkard }
     if = { limit = { has_trait = depressed_1 } remove_trait = depressed_1 }
     if = { limit = { has_trait = depressed_genetic } remove_trait = depressed_genetic }
@@ -520,8 +607,24 @@ eliminated_health_problem_effect = {
     if = { limit = { has_trait = smallpox } remove_trait = smallpox }
     if = { limit = { has_trait = sickly } remove_trait = sickly }
     if = { limit = { has_trait = scarred } remove_trait = scarred }
-    if = { limit = { has_trait = eunuch } remove_trait = eunuch }
+    if = { limit = { has_trait = eunuch_1 } remove_trait = eunuch_1 }
+    if = { limit = { has_trait = beardless_eunuch } remove_trait = beardless_eunuch }
     if = { limit = { has_trait = blind } remove_trait = blind }
+    if = { limit = { has_trait = clubfooted } remove_trait = clubfooted }
+    if = { limit = { has_trait = hunchbacked } remove_trait = hunchbacked }
+    if = { limit = { has_trait = lisping } remove_trait = lisping }
+    if = { limit = { has_trait = stuttering } remove_trait = stuttering }
+    if = { limit = { has_trait = dwarf } remove_trait = dwarf }
+    if = { limit = { has_trait = giant } remove_trait = giant }
+    if = { limit = { has_trait = inbred } remove_trait = inbred }
+    if = { limit = { has_trait = weak } remove_trait = weak }
+    if = { limit = { has_trait = dull } remove_trait = dull }
+    if = { limit = { has_trait = impotent } remove_trait = impotent }
+    if = { limit = { has_trait = spindly } remove_trait = spindly }
+    if = { limit = { has_trait = scaly } remove_trait = scaly }
+    if = { limit = { has_trait = wheezing } remove_trait = wheezing }
+    if = { limit = { has_trait = bleeder } remove_trait = bleeder }
+    if = { limit = { has_trait = infertile } remove_trait = infertile }
 
     hidden_effect = {
         if = {
@@ -625,193 +728,7 @@ eliminated_health_problem_effect = {
     }
 }
 
-innovation_tribal_effect = {
-    if = { limit = { NOT = { has_innovation = innovation_agot_gavelkind } } add_innovation = innovation_agot_gavelkind }
-    if = { limit = { NOT = { has_innovation = innovation_agot_siege_01 } } add_innovation = innovation_agot_siege_01 }
-    if = { limit = { NOT = { has_innovation = innovation_agot_sword_bound } } add_innovation = innovation_agot_sword_bound }
-    if = { limit = { NOT = { has_innovation = innovation_motte } } add_innovation = innovation_motte }
-    if = { limit = { NOT = { has_innovation = innovation_barracks } } add_innovation = innovation_barracks }
-    if = { limit = { NOT = { has_innovation = innovation_mustering_grounds } } add_innovation = innovation_mustering_grounds }
-    if = { limit = { NOT = { has_innovation = innovation_bannus } } add_innovation = innovation_bannus }
-    if = { limit = { NOT = { has_innovation = innovation_quilted_armor } } add_innovation = innovation_quilted_armor }
-    if = { limit = { NOT = { has_innovation = innovation_development_01 } } add_innovation = innovation_development_01 }
-    if = { limit = { NOT = { has_innovation = innovation_currency_01 } } add_innovation = innovation_currency_01 }
-    if = { limit = { NOT = { has_innovation = innovation_crop_rotation } } add_innovation = innovation_crop_rotation }
-    if = { limit = { NOT = { has_innovation = innovation_city_planning } } add_innovation = innovation_city_planning }
-    if = { limit = { NOT = { has_innovation = innovation_casus_belli } } add_innovation = innovation_casus_belli }
-    if = { limit = { NOT = { has_innovation = innovation_plenary_assemblies } } add_innovation = innovation_plenary_assemblies }
-    if = { limit = { NOT = { has_innovation = innovation_ledger } } add_innovation = innovation_ledger }
-}
-
-innovation_tribal_regional_effect = {
-    #culture_group_regional
-    if = { limit = { NOT = { has_innovation = innovation_unsullied } } add_innovation = innovation_unsullied }
-    if = { limit = { NOT = { has_innovation = innovation_longboats } } add_innovation = innovation_longboats }
-    if = { limit = { NOT = { has_innovation = innovation_agot_northern_fighting } } add_innovation = innovation_agot_northern_fighting }
-    if = { limit = { NOT = { has_innovation = innovation_agot_giants } } add_innovation = innovation_agot_giants }
-    if = { limit = { NOT = { has_innovation = innovation_all_things } } add_innovation = innovation_all_things }
-}
-
-innovation_early_medieval_effect = {
-    if = { limit = { NOT = { has_innovation = innovation_agot_heraldry } } add_innovation = innovation_agot_heraldry }
-    if = { limit = { NOT = { has_innovation = innovation_catapult } } add_innovation = innovation_catapult }
-    if = { limit = { NOT = { has_innovation = innovation_agot_mail } } add_innovation = innovation_agot_mail }
-    if = { limit = { NOT = { has_innovation = innovation_knighthood } } add_innovation = innovation_knighthood }
-    if = { limit = { NOT = { has_innovation = innovation_battlements } } add_innovation = innovation_battlements }
-    if = { limit = { NOT = { has_innovation = innovation_burhs } } add_innovation = innovation_burhs }
-    if = { limit = { NOT = { has_innovation = innovation_house_soldiers } } add_innovation = innovation_house_soldiers }
-    if = { limit = { NOT = { has_innovation = innovation_horseshoes } } add_innovation = innovation_horseshoes }
-    if = { limit = { NOT = { has_innovation = innovation_arched_saddle } } add_innovation = innovation_arched_saddle }
-    if = { limit = { NOT = { has_innovation = innovation_manorialism } } add_innovation = innovation_manorialism }
-    if = { limit = { NOT = { has_innovation = innovation_development_02 } } add_innovation = innovation_development_02 }
-    if = { limit = { NOT = { has_innovation = innovation_currency_02 } } add_innovation = innovation_currency_02 }
-    if = { limit = { NOT = { has_innovation = innovation_royal_prerogative } } add_innovation = innovation_royal_prerogative }
-    if = { limit = { NOT = { has_innovation = innovation_chronicle_writing } } add_innovation = innovation_chronicle_writing }
-    if = { limit = { NOT = { has_innovation = innovation_armilary_sphere } } add_innovation = innovation_armilary_sphere }
-    if = { limit = { NOT = { has_innovation = innovation_baliffs } } add_innovation = innovation_baliffs }
-
-}
-
-innovation_early_medieval_regional_effect = {
-    if = { limit = { NOT = { has_innovation = innovation_arched_saddle } } add_innovation = innovation_arched_saddle }
-    if = { limit = { NOT = { has_innovation = innovation_elephantry } } add_innovation = innovation_elephantry }
-    if = { limit = { NOT = { has_innovation = innovation_war_camels } } add_innovation = innovation_war_camels }
-    if = { limit = { NOT = { has_innovation = innovation_maesters } } add_innovation = innovation_maesters }
-    if = { limit = { NOT = { has_innovation = innovation_agot_dorne_fighting } } add_innovation = innovation_agot_dorne_fighting }
-    if = { limit = { NOT = { has_innovation = innovation_agot_vale_fighting } } add_innovation = innovation_agot_vale_fighting }
-    if = { limit = { NOT = { has_innovation = innovation_agot_crownlands_fighting } } add_innovation = innovation_agot_crownlands_fighting }
-    if = { limit = { NOT = { has_innovation = innovation_agot_reach_fighting } } add_innovation = innovation_agot_reach_fighting }
-    if = { limit = { NOT = { has_innovation = innovation_agot_riverlands_fighting } } add_innovation = innovation_agot_riverlands_fighting }
-    if = { limit = { NOT = { has_innovation = innovation_agot_westerlands_fighting } } add_innovation = innovation_agot_westerlands_fighting }
-    if = { limit = { NOT = { has_innovation = innovation_agot_stormlands_fighting } } add_innovation = innovation_agot_stormlands_fighting }
-    if = { limit = { NOT = { has_innovation = innovation_goldenheart_bowmen } } add_innovation = innovation_goldenheart_bowmen }
-    if = { limit = { NOT = { has_innovation = innovation_agot_stepstone_fighting } } add_innovation = innovation_agot_stepstone_fighting }
-    if = { limit = { NOT = { has_innovation = innovation_agot_anti_dragon_fighting } } add_innovation = innovation_agot_anti_dragon_fighting }
-}
-
-innovation_high_medieval_effect = {
-    if = { limit = { NOT = { has_innovation = innovation_mangonel } } add_innovation = innovation_mangonel }
-    if = { limit = { NOT = { has_innovation = innovation_plate_armor } } add_innovation = innovation_plate_armor }
-    if = { limit = { NOT = { has_innovation = innovation_hoardings } } add_innovation = innovation_hoardings }
-    if = { limit = { NOT = { has_innovation = innovation_castle_baileys } } add_innovation = innovation_castle_baileys }
-    if = { limit = { NOT = { has_innovation = innovation_men_at_arms } } add_innovation = innovation_men_at_arms }
-    if = { limit = { NOT = { has_innovation = innovation_advanced_bowmaking } } add_innovation = innovation_advanced_bowmaking }
-    if = { limit = { NOT = { has_innovation = innovation_windmills } } add_innovation = innovation_windmills }
-    if = { limit = { NOT = { has_innovation = innovation_divine_right } } add_innovation = innovation_divine_right }
-    if = { limit = { NOT = { has_innovation = innovation_land_grants } } add_innovation = innovation_land_grants }
-    if = { limit = { NOT = { has_innovation = innovation_scutage } } add_innovation = innovation_scutage }
-    if = { limit = { NOT = { has_innovation = innovation_guilds } } add_innovation = innovation_guilds }
-    if = { limit = { NOT = { has_innovation = innovation_development_03 } } add_innovation = innovation_development_03 }
-    if = { limit = { NOT = { has_innovation = innovation_currency_03 } } add_innovation = innovation_currency_03 }
-
-}
-
-innovation_high_medieval_regional_effect = {
-    #culture_group_regional
-    if = { limit = { NOT = { has_innovation = innovation_agot_free_companies } } add_innovation = innovation_agot_free_companies }
-}
-
-innovation_late_medieval_effect = {
-    if = { limit = { NOT = { has_innovation = innovation_trebuchet } } add_innovation = innovation_trebuchet }
-    if = { limit = { NOT = { has_innovation = innovation_agot_professional_lances } } add_innovation = innovation_agot_professional_lances }
-    if = { limit = { NOT = { has_innovation = innovation_machicolations } } add_innovation = innovation_machicolations }
-    if = { limit = { NOT = { has_innovation = innovation_royal_armory } } add_innovation = innovation_royal_armory }
-    if = { limit = { NOT = { has_innovation = innovation_standing_armies } } add_innovation = innovation_standing_armies }
-    if = { limit = { NOT = { has_innovation = innovation_sappers } } add_innovation = innovation_sappers }
-    if = { limit = { NOT = { has_innovation = innovation_cranes } } add_innovation = innovation_cranes }
-    if = { limit = { NOT = { has_innovation = innovation_noblesse_oblige } } add_innovation = innovation_noblesse_oblige }
-    if = { limit = { NOT = { has_innovation = innovation_rightful_ownership } } add_innovation = innovation_rightful_ownership }
-    if = { limit = { NOT = { has_innovation = innovation_ermine_cloaks } } add_innovation = innovation_ermine_cloaks }
-    if = { limit = { NOT = { has_innovation = innovation_court_officials } } add_innovation = innovation_court_officials }
-    if = { limit = { NOT = { has_innovation = innovation_development_04 } } add_innovation = innovation_development_04 }
-    if = { limit = { NOT = { has_innovation = innovation_currency_04 } } add_innovation = innovation_currency_04 }
-}
-
-innovation_late_medieval_regional_effect = {
-    #culture_group_regional
-
-}
-
-innovation_remove_all_effect = {
-    remove_innovation = innovation_agot_gavelkind
-    remove_innovation = innovation_agot_siege_01
-    remove_innovation = innovation_agot_sword_bound
-    remove_innovation = innovation_motte
-    remove_innovation = innovation_barracks
-    remove_innovation = innovation_mustering_grounds
-    remove_innovation = innovation_bannus
-    remove_innovation = innovation_quilted_armor
-    remove_innovation = innovation_development_01
-    remove_innovation = innovation_currency_01
-    remove_innovation = innovation_crop_rotation
-    remove_innovation = innovation_city_planning
-    remove_innovation = innovation_casus_belli
-    remove_innovation = innovation_plenary_assemblies
-    remove_innovation = innovation_ledger
-    remove_innovation = innovation_unsullied
-    remove_innovation = innovation_longboats
-    remove_innovation = innovation_agot_northern_fighting
-    remove_innovation = innovation_agot_giants
-    remove_innovation = innovation_all_things
-    remove_innovation = innovation_agot_heraldry
-    remove_innovation = innovation_catapult
-    remove_innovation = innovation_agot_mail
-    remove_innovation = innovation_knighthood
-    remove_innovation = innovation_battlements
-    remove_innovation = innovation_burhs
-    remove_innovation = innovation_house_soldiers
-    remove_innovation = innovation_horseshoes
-    remove_innovation = innovation_arched_saddle
-    remove_innovation = innovation_manorialism
-    remove_innovation = innovation_development_02
-    remove_innovation = innovation_currency_02
-    remove_innovation = innovation_royal_prerogative
-    remove_innovation = innovation_chronicle_writing
-    remove_innovation = innovation_armilary_sphere
-    remove_innovation = innovation_baliffs
-    remove_innovation = innovation_elephantry
-    remove_innovation = innovation_war_camels
-    remove_innovation = innovation_maesters
-    remove_innovation = innovation_agot_dorne_fighting
-    remove_innovation = innovation_agot_vale_fighting
-    remove_innovation = innovation_agot_crownlands_fighting
-    remove_innovation = innovation_agot_reach_fighting
-    remove_innovation = innovation_agot_riverlands_fighting
-    remove_innovation = innovation_agot_westerlands_fighting
-    remove_innovation = innovation_agot_stormlands_fighting
-    remove_innovation = innovation_goldenheart_bowmen
-    remove_innovation = innovation_agot_stepstone_fighting
-    remove_innovation = innovation_agot_anti_dragon_fighting
-    remove_innovation = innovation_mangonel
-    remove_innovation = innovation_plate_armor
-    remove_innovation = innovation_hoardings
-    remove_innovation = innovation_castle_baileys
-    remove_innovation = innovation_men_at_arms
-    remove_innovation = innovation_advanced_bowmaking
-    remove_innovation = innovation_windmills
-    remove_innovation = innovation_divine_right
-    remove_innovation = innovation_land_grants
-    remove_innovation = innovation_scutage
-    remove_innovation = innovation_guilds
-    remove_innovation = innovation_development_03
-    remove_innovation = innovation_currency_03
-    remove_innovation = innovation_agot_free_companies
-    remove_innovation = innovation_trebuchet
-    remove_innovation = innovation_agot_professional_lances
-    remove_innovation = innovation_machicolations
-    remove_innovation = innovation_royal_armory
-    remove_innovation = innovation_standing_armies
-    remove_innovation = innovation_sappers
-    remove_innovation = innovation_cranes
-    remove_innovation = innovation_noblesse_oblige
-    remove_innovation = innovation_rightful_ownership
-    remove_innovation = innovation_ermine_cloaks
-    remove_innovation = innovation_court_officials
-    remove_innovation = innovation_development_04
-    remove_innovation = innovation_currency_04
-}
-
-remove_health_conflict_effect = {
+DI_remove_health_conflict_effect = {
     if = { limit = { has_trait = beauty_bad_1 } remove_trait = beauty_bad_1 }
     if = { limit = { has_trait = beauty_bad_2 } remove_trait = beauty_bad_2 }
     if = { limit = { has_trait = beauty_bad_3 } remove_trait = beauty_bad_3 }
@@ -842,11 +759,10 @@ remove_health_conflict_effect = {
     if = { limit = { has_trait = wheezing } remove_trait = wheezing }
     if = { limit = { has_trait = bleeder } remove_trait = bleeder }
     if = { limit = { has_trait = infertile } remove_trait = infertile }
-    if = { limit = { has_trait = inbred } remove_trait = inbred }
 }
 
 #remove health conflicts other than worst traits (for bad genes present only)
-remove_health_conflict_forbadgene_effect = {
+DI_remove_health_conflict_forbadgene_effect = {
     if = { limit = { has_trait = beauty_bad_1 } remove_trait = beauty_bad_1 }
     if = { limit = { has_trait = beauty_bad_2 } remove_trait = beauty_bad_2 }
     if = { limit = { has_trait = beauty_good_1 } remove_trait = beauty_good_1 }
@@ -861,25 +777,144 @@ remove_health_conflict_forbadgene_effect = {
     if = { limit = { has_trait = physique_good_2 } remove_trait = physique_good_2 }
 }
 
-remove_education_traits_effect = {
+#add best education traits
+DI_add_education_traits_effect = {
+    if = { limit = { NOT = { has_trait = education_learning_5 } } add_trait = education_learning_5 }
+    if = { limit = { NOT = { has_trait = education_intrigue_5 } } add_trait = education_intrigue_5 }
+    if = { limit = { NOT = { has_trait = education_diplomacy_5 } } add_trait = education_diplomacy_5 }
+    if = { limit = { NOT = { has_trait = education_stewardship_5 } } add_trait = education_stewardship_5 }
+    if = { limit = { NOT = { has_trait = education_martial_5 } } add_trait = education_martial_5 }
+}
+
+#remove all Education traits
+DI_remove_education_traits_effect = {
     if = { limit = { has_trait = education_learning_1 } remove_trait = education_learning_1 }
     if = { limit = { has_trait = education_learning_2 } remove_trait = education_learning_2 }
     if = { limit = { has_trait = education_learning_3 } remove_trait = education_learning_3 }
     if = { limit = { has_trait = education_learning_4 } remove_trait = education_learning_4 }
+    if = { limit = { has_trait = education_learning_5 } remove_trait = education_learning_5 }
     if = { limit = { has_trait = education_intrigue_1 } remove_trait = education_intrigue_1 }
     if = { limit = { has_trait = education_intrigue_2 } remove_trait = education_intrigue_2 }
     if = { limit = { has_trait = education_intrigue_3 } remove_trait = education_intrigue_3 }
     if = { limit = { has_trait = education_intrigue_4 } remove_trait = education_intrigue_4 }
+    if = { limit = { has_trait = education_intrigue_5 } remove_trait = education_intrigue_5 }
     if = { limit = { has_trait = education_diplomacy_1 } remove_trait = education_diplomacy_1 }
     if = { limit = { has_trait = education_diplomacy_2 } remove_trait = education_diplomacy_2 }
     if = { limit = { has_trait = education_diplomacy_3 } remove_trait = education_diplomacy_3 }
     if = { limit = { has_trait = education_diplomacy_4 } remove_trait = education_diplomacy_4 }
+    if = { limit = { has_trait = education_diplomacy_5 } remove_trait = education_diplomacy_5 }
     if = { limit = { has_trait = education_stewardship_1 } remove_trait = education_stewardship_1 }
     if = { limit = { has_trait = education_stewardship_2 } remove_trait = education_stewardship_2 }
     if = { limit = { has_trait = education_stewardship_3 } remove_trait = education_stewardship_3 }
     if = { limit = { has_trait = education_stewardship_4 } remove_trait = education_stewardship_4 }
+    if = { limit = { has_trait = education_stewardship_5 } remove_trait = education_stewardship_5 }
     if = { limit = { has_trait = education_martial_1 } remove_trait = education_martial_1 }
     if = { limit = { has_trait = education_martial_2 } remove_trait = education_martial_2 }
     if = { limit = { has_trait = education_martial_3 } remove_trait = education_martial_3 }
     if = { limit = { has_trait = education_martial_4 } remove_trait = education_martial_4 }
+    if = { limit = { has_trait = education_martial_5 } remove_trait = education_martial_5 }
+}
+
+#boost education traits to best level
+DI_boost_education_traits_effect = {
+    if = { limit = { has_trait = education_learning_1 } remove_trait = education_learning_1 add_trait = education_learning_5 }
+    if = { limit = { has_trait = education_learning_2 } remove_trait = education_learning_2 add_trait = education_learning_5 }
+    if = { limit = { has_trait = education_learning_3 } remove_trait = education_learning_3 add_trait = education_learning_5 }
+    if = { limit = { has_trait = education_learning_4 } remove_trait = education_learning_4 add_trait = education_learning_5 }
+    if = { limit = { has_trait = education_intrigue_1 } remove_trait = education_intrigue_1 add_trait = education_intrigue_5 }
+    if = { limit = { has_trait = education_intrigue_2 } remove_trait = education_intrigue_2 add_trait = education_intrigue_5 }
+    if = { limit = { has_trait = education_intrigue_3 } remove_trait = education_intrigue_3 add_trait = education_intrigue_5 }
+    if = { limit = { has_trait = education_intrigue_4 } remove_trait = education_intrigue_4 add_trait = education_intrigue_5 }
+    if = { limit = { has_trait = education_diplomacy_1 } remove_trait = education_diplomacy_1 add_trait = education_diplomacy_5 }
+    if = { limit = { has_trait = education_diplomacy_2 } remove_trait = education_diplomacy_2 add_trait = education_diplomacy_5 }
+    if = { limit = { has_trait = education_diplomacy_3 } remove_trait = education_diplomacy_3 add_trait = education_diplomacy_5 }
+    if = { limit = { has_trait = education_diplomacy_4 } remove_trait = education_diplomacy_4 add_trait = education_diplomacy_5 }
+    if = { limit = { has_trait = education_stewardship_1 } remove_trait = education_stewardship_1 add_trait = education_stewardship_5 }
+    if = { limit = { has_trait = education_stewardship_2 } remove_trait = education_stewardship_2 add_trait = education_stewardship_5 }
+    if = { limit = { has_trait = education_stewardship_3 } remove_trait = education_stewardship_3 add_trait = education_stewardship_5 }
+    if = { limit = { has_trait = education_stewardship_4 } remove_trait = education_stewardship_4 add_trait = education_stewardship_5 }
+    if = { limit = { has_trait = education_martial_1 } remove_trait = education_martial_1 add_trait = education_martial_5 }
+    if = { limit = { has_trait = education_martial_2 } remove_trait = education_martial_2 add_trait = education_martial_5 }
+    if = { limit = { has_trait = education_martial_3 } remove_trait = education_martial_3 add_trait = education_martial_5 }
+    if = { limit = { has_trait = education_martial_4 } remove_trait = education_martial_4 add_trait = education_martial_5 }
+}
+
+
+# add auxillary traits fitting for education
+DI_boost_education_extra_traits_effect = {
+    if = {
+        limit = {
+            OR = {
+                has_trait = education_learning_1
+                has_trait = education_learning_2
+                has_trait = education_learning_3
+                has_trait = education_learning_4
+                has_trait = education_learning_5
+            }
+        }
+        add_trait = lifestyle_herbalist
+        add_trait = lifestyle_mystic
+    }
+    if = {
+        limit = {
+            OR = {
+                has_trait = education_intrigue_1
+                has_trait = education_intrigue_2
+                has_trait = education_intrigue_3
+                has_trait = education_intrigue_4
+                has_trait = education_intrigue_5
+            }
+        }
+        add_trait = lifestyle_herbalist
+        add_trait = lifestyle_mystic
+        add_trait = lifestyle_blademaster
+    }
+    if = {
+        limit = {
+            OR = {
+                has_trait = education_diplomacy_1
+                has_trait = education_diplomacy_2
+                has_trait = education_diplomacy_3
+                has_trait = education_diplomacy_4
+                has_trait = education_diplomacy_5
+            }
+        }
+        add_trait = lifestyle_reveler
+        add_trait = lifestyle_poet
+    }
+    if = {
+        limit = {
+            OR = {
+                has_trait = education_stewardship_1
+                has_trait = education_stewardship_2
+                has_trait = education_stewardship_3
+                has_trait = education_stewardship_4
+                has_trait = education_stewardship_5
+            }
+        }
+        add_trait = lifestyle_gardener
+        add_trait = lifestyle_poet
+    }
+    if = {
+        limit = {
+            OR = {
+                has_trait = education_martial_1
+                has_trait = education_martial_2
+                has_trait = education_martial_3
+                has_trait = education_martial_4
+                has_trait = education_martial_5
+            }
+        }
+        add_trait = lifestyle_blademaster
+        add_trait = lifestyle_hunter
+        add_trait = education_martial_prowess_4
+    }
+    if = { limit = { has_trait = education_martial_prowess_1 } remove_trait = education_martial_prowess_1 add_trait = education_martial_prowess_4 }
+    if = { limit = { has_trait = education_martial_prowess_2 } remove_trait = education_martial_prowess_2 add_trait = education_martial_prowess_4 }
+    if = { limit = { has_trait = education_martial_prowess_3 } remove_trait = education_martial_prowess_3 add_trait = education_martial_prowess_4 }
+    if = { limit = { has_trait = lifestyle_blademaster } add_trait_xp = { trait = lifestyle_blademaster value = 100 } }
+    if = { limit = { has_trait = lifestyle_mystic } add_trait_xp = { trait = lifestyle_mystic value = 100 } }
+    if = { limit = { has_trait = lifestyle_hunter } add_trait_xp = { trait = lifestyle_hunter track = Venator value = 100 } }
+    if = { limit = { has_trait = lifestyle_hunter } add_trait_xp = { trait = lifestyle_hunter track = Falconer value = 100 } }
+    if = { limit = { has_trait = lifestyle_reveler } add_trait_xp = { trait = lifestyle_reveler value = 100 } }
 }
