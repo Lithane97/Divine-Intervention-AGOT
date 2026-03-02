@@ -298,8 +298,8 @@ template DI_vbox_character_single
                                 size = { 60 25 }
                                 button_ignore = none
 
-                                onclick = "[GetScriptedGui('DI_add_diplomacy').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                                onrightclick = "[GetScriptedGui('DI_remove_diplomacy').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                onclick = "[GetScriptedGui('DI_add_diplomacy_primary').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                onrightclick = "[GetScriptedGui('DI_remove_diplomacy_primary').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 
                                 text = DI_apply_skill
                                 tooltip = "DI_skill_diplomacy_tt"
@@ -371,8 +371,8 @@ template DI_vbox_character_single
                                     size = { 60 25 }
                                     button_ignore = none
 
-                                    onclick = "[GetScriptedGui('DI_add_martial').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                                    onrightclick = "[GetScriptedGui('DI_remove_martial').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                    onclick = "[GetScriptedGui('DI_add_martial_primary').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                    onrightclick = "[GetScriptedGui('DI_remove_martial_primary').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 
                                     text = DI_apply_skill
                                     tooltip = "DI_skill_martial_tt"
@@ -446,8 +446,8 @@ template DI_vbox_character_single
                                 size = { 60 25 }
                                 button_ignore = none
 
-                                onclick = "[GetScriptedGui('DI_add_stewardship').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                                onrightclick = "[GetScriptedGui('DI_remove_stewardship').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                onclick = "[GetScriptedGui('DI_add_stewardship_primary').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                onrightclick = "[GetScriptedGui('DI_remove_stewardship_primary').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 
                                 text = DI_apply_skill
                                 tooltip = "DI_skill_stewardship_tt"
@@ -520,8 +520,8 @@ template DI_vbox_character_single
                                     size = { 60 25 }
                                     button_ignore = none
 
-                                    onclick = "[GetScriptedGui('DI_add_intrigue').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                                    onrightclick = "[GetScriptedGui('DI_remove_intrigue').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                    onclick = "[GetScriptedGui('DI_add_intrigue_primary').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                    onrightclick = "[GetScriptedGui('DI_remove_intrigue_primary').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 
                                     text = DI_apply_skill
                                     tooltip = "DI_skill_intrigue_tt"
@@ -595,8 +595,8 @@ template DI_vbox_character_single
                                 size = { 60 25 }
                                 button_ignore = none
 
-                                onclick = "[GetScriptedGui('DI_add_learning').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                                onrightclick = "[GetScriptedGui('DI_remove_learning').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                onclick = "[GetScriptedGui('DI_add_learning_primary').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                onrightclick = "[GetScriptedGui('DI_remove_learning_primary').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 
                                 text = DI_apply_skill
                                 tooltip = "DI_skill_learning_tt"
@@ -669,8 +669,8 @@ template DI_vbox_character_single
                                     size = { 60 25 }
                                     button_ignore = none
 
-                                    onclick = "[GetScriptedGui('DI_add_prowess').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                                    onrightclick = "[GetScriptedGui('DI_remove_prowess').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                    onclick = "[GetScriptedGui('DI_add_prowess_primary').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                                    onrightclick = "[GetScriptedGui('DI_remove_prowess_primary').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 
                                     text = DI_apply_skill
                                     tooltip = "DI_skill_prowess_tt"
