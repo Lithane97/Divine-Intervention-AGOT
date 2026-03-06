@@ -4,5 +4,5 @@ tags={
 	"Total Conversion"
 }
 name="Divine Intervention AGOT Cheat Menu"
-supported_version="1.18.2"
+supported_version="1.18.3.1"
 remote_file_id="2996152542"
