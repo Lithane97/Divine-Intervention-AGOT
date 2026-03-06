@@ -1,9 +1,0 @@
-template DI_Innovation_Main
-{
-    vbox = {
-        layoutpolicy_horizontal = expanding
-        datacontext = "[GetPlayer.MakeScope.Var('DI_innovation_selected_culture').Culture]"
-
-        using = DI_innovation_all_AGOT
-    }
-}

@@ -904,10 +904,10 @@ template DI_AS_All_Types
         }
 
         DI_army_spawner_vbox = {
-            datacontext = "[GetMenAtArmsType('purple_sailors')]"
+            datacontext = "[GetMenAtArmsType('purple_marines')]"
 
             blockoverride "on_add" {
-                onclick = "[GetScriptedGui('DI_purple_sailors_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onclick = "[GetScriptedGui('DI_purple_marines_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
             }
         }
 
@@ -1428,10 +1428,10 @@ template DI_AS_All_Types
         }
 
         DI_army_spawner_vbox = {
-            datacontext = "[GetMenAtArmsType('bloody_balesters')]"
+            datacontext = "[GetMenAtArmsType('rain_bringers')]"
 
             blockoverride "on_add" {
-                onclick = "[GetScriptedGui('DI_bloody_balesters_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onclick = "[GetScriptedGui('DI_rain_bringers_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
             }
         }
 
@@ -1536,6 +1536,14 @@ template DI_AS_All_Types
 
             blockoverride "on_add" {
                 onclick = "[GetScriptedGui('DI_dragons_regiment_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('shrikes')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_shrikes_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
             }
         }
 
@@ -1756,6 +1764,30 @@ template DI_AS_All_Types
         }
 
         DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('pirate_archers')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_pirate_archers_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('pirate_pikemen')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_pirate_pikemen_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('pirate_skirmishers')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_pirate_skirmishers_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
             datacontext = "[GetMenAtArmsType('laamp_settler_maa')]"
 
             blockoverride "on_add" {
@@ -1800,6 +1832,78 @@ template DI_AS_All_Types
 
             blockoverride "on_add" {
                 onclick = "[GetScriptedGui('DI_cailin_archers_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('grey_wolves')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_grey_wolves_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('hammers_of_justice')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_hammers_of_justice_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('morne_guardians')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_morne_guardians_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('dust_devils')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_dust_devils_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('head_collectors')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_head_collectors_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('cruel_chains')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_cruel_chains_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('bloody_blades')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_bloody_blades_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('sharp_claws')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_sharp_claws_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('ursulas_screams')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_ursulas_screams_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
             }
         }
 
