@@ -1036,6 +1036,14 @@ template DI_AS_All_Types
         }
 
         DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('shrouded_guard')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_shrouded_guard_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
             datacontext = "[GetMenAtArmsType('flower_spears')]"
 
             blockoverride "on_add" {
@@ -1448,6 +1456,82 @@ template DI_AS_All_Types
 
             blockoverride "on_add" {
                 onclick = "[GetScriptedGui('DI_bronze_raiders_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('sons_of_gendel')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_sons_of_gendel_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('fire_flingers')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_fire_flingers_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('cannibal_bows')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_cannibal_bows_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('bat_catchers')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_bat_catchers_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('ice_skatters')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_ice_skatters_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('cairn_wardens')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_cairn_wardens_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('wildling_raiders')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_wildling_raiders_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('dogsled_chariots')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_dogsled_chariots_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+
+            blockoverride "visible_when" {
+                visible = "[GetVariableSystem.HasValue('army_spawner_tab', 'other')]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('black_soles')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_black_soles_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
             }
         }
 

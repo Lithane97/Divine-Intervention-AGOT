@@ -7,7 +7,6 @@
     add_innovation = innovation_unsullied
     add_innovation = innovation_longboats
     add_innovation = innovation_motte
-    add_innovation = innovation_catapult
     add_innovation = innovation_barracks
     add_innovation = innovation_mustering_grounds
     add_innovation = innovation_bannus
@@ -42,7 +41,6 @@ DI_remove_innovations_tribal_effect = {
     remove_innovation = innovation_unsullied
     remove_innovation = innovation_longboats
     remove_innovation = innovation_motte
-    remove_innovation = innovation_catapult
     remove_innovation = innovation_barracks
     remove_innovation = innovation_mustering_grounds
     remove_innovation = innovation_bannus
@@ -70,11 +68,7 @@ DI_remove_innovations_tribal_effect = {
 
 DI_add_innovations_early_medieval_effect = {
     add_innovation = innovation_agot_heraldry
-    add_innovation = innovation_catapult
     add_innovation = innovation_agot_mail
-    add_innovation = innovation_elephantry
-    add_innovation = innovation_war_camels
-    add_innovation = innovation_knighthood
     add_innovation = innovation_maesters
     add_innovation = innovation_agot_dorne_fighting
     add_innovation = innovation_agot_vale_fighting
@@ -101,6 +95,7 @@ DI_add_innovations_early_medieval_effect = {
     add_innovation = innovation_baliffs
     add_innovation = fp3_innovation_mural_sextant
     add_innovation = innovation_knighthood
+    add_innovation = innovation_catapult
     add_innovation = innovation_elephantry
     add_innovation = innovation_war_camels
     add_innovation = innovation_compass
@@ -110,11 +105,7 @@ DI_add_innovations_early_medieval_effect = {
 
 DI_remove_innovations_early_medieval_effect = {
     remove_innovation = innovation_agot_heraldry
-    remove_innovation = innovation_catapult
     remove_innovation = innovation_agot_mail
-    remove_innovation = innovation_elephantry
-    remove_innovation = innovation_war_camels
-    remove_innovation = innovation_knighthood
     remove_innovation = innovation_maesters
     remove_innovation = innovation_agot_dorne_fighting
     remove_innovation = innovation_agot_vale_fighting
@@ -141,6 +132,7 @@ DI_remove_innovations_early_medieval_effect = {
     remove_innovation = innovation_baliffs
     remove_innovation = fp3_innovation_mural_sextant
     remove_innovation = innovation_knighthood
+    remove_innovation = innovation_catapult
     remove_innovation = innovation_elephantry
     remove_innovation = innovation_war_camels
     remove_innovation = innovation_compass
@@ -149,8 +141,6 @@ DI_remove_innovations_early_medieval_effect = {
 }
 
 DI_add_innovations_high_medieval_effect = {
-    add_innovation = innovation_mangonel
-    add_innovation = innovation_plate_armor
     add_innovation = innovation_agot_free_companies
     add_innovation = innovation_agot_valyrian_knights
     add_innovation = innovation_mangonel
@@ -170,8 +160,6 @@ DI_add_innovations_high_medieval_effect = {
 }
 
 DI_remove_innovations_high_medieval_effect = {
-    remove_innovation = innovation_mangonel
-    remove_innovation = innovation_plate_armor
     remove_innovation = innovation_agot_free_companies
     remove_innovation = innovation_agot_valyrian_knights
     remove_innovation = innovation_mangonel
@@ -191,7 +179,6 @@ DI_remove_innovations_high_medieval_effect = {
 }
 
 DI_add_innovations_late_medieval_effect = {
-    add_innovation = innovation_trebuchet
     add_innovation = innovation_agot_professional_lances
     add_innovation = fp3_innovation_fritware
     add_innovation = innovation_trebuchet
@@ -209,7 +196,6 @@ DI_add_innovations_late_medieval_effect = {
 }
 
 DI_remove_innovations_late_medieval_effect = {
-    remove_innovation = innovation_trebuchet
     remove_innovation = innovation_agot_professional_lances
     remove_innovation = fp3_innovation_fritware
     remove_innovation = innovation_trebuchet
