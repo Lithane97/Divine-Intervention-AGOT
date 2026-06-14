@@ -2,138 +2,144 @@
     switch = {
         trigger = $TRACK$
 
-        flag:Bow = {
-            add_trait_xp = {
-                trait = $TRAIT$
-                track = bow
-                value = $VALUE$
-            }
-        }
-        flag:Foot = {
-            add_trait_xp = {
-                trait = $TRAIT$
-                track = foot
-                value = $VALUE$
-            }
-        }
-        flag:Horse = {
-            add_trait_xp = {
-                trait = $TRAIT$
-                track = horse
-                value = $VALUE$
-            }
-        }
-        flag:Wit = {
-            add_trait_xp = {
-                trait = $TRAIT$
-                track = wit
-                value = $VALUE$
-            }
-        }
-        flag:Wanderer = {
-            add_trait_xp = {
-                trait = $TRAIT$
-                track = travel
-                value = $VALUE$
-            }
-        }
-        flag:Seasoned = {
-            add_trait_xp = {
-                trait = $TRAIT$
-                track = danger
-                value = $VALUE$
-            }
-        }
-        flag:Venator = {
-            add_trait_xp = {
-                trait = $TRAIT$
-                track = hunter
-                value = $VALUE$
-            }
-        }
-        flag:Falconer = {
-            add_trait_xp = {
-                trait = $TRAIT$
-                track = falconer
-                value = $VALUE$
-            }
-        }
-        flag:Bandit = {
+        flag:bandit = {
             add_trait_xp = {
                 trait = $TRAIT$
                 track = bandit
                 value = $VALUE$
             }
         }
-        flag:Trickster = {
+        flag:bow = {
             add_trait_xp = {
                 trait = $TRAIT$
-                track = trickster
+                track = bow
                 value = $VALUE$
             }
         }
-        flag:Thief = {
+        flag:danger = {
             add_trait_xp = {
                 trait = $TRAIT$
-                track = thief
+                track = danger
                 value = $VALUE$
             }
         }
-        flag:Poacher = {
+        flag:dragon_bond = {
             add_trait_xp = {
                 trait = $TRAIT$
-                track = poacher
+                track = dragon_bond
                 value = $VALUE$
             }
         }
-        flag:Marauder = {
+        flag:dragon_training = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = dragon_training
+                value = $VALUE$
+            }
+        }
+        flag:esr_friends_in_high_places = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = esr_friends_in_high_places
+                value = $VALUE$
+            }
+        }
+        flag:esr_popular_among_peers = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = esr_popular_among_peers
+                value = $VALUE$
+            }
+        }
+        flag:esr_social_pariah = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = esr_social_pariah
+                value = $VALUE$
+            }
+        }
+        flag:esr_well_connected = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = esr_well_connected
+                value = $VALUE$
+            }
+        }
+        flag:falconer = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = falconer
+                value = $VALUE$
+            }
+        }
+        flag:foot = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = foot
+                value = $VALUE$
+            }
+        }
+        flag:horse = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = horse
+                value = $VALUE$
+            }
+        }
+        flag:hunter = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = hunter
+                value = $VALUE$
+            }
+        }
+        flag:marauder = {
             add_trait_xp = {
                 trait = $TRAIT$
                 track = marauder
                 value = $VALUE$
             }
         }
-		flag:esr_popular_among_peers = {
-			add_trait_xp = {
-				trait = $TRAIT$
-				track = esr_popular_among_peers
-				value = $VALUE$
-			}
-		}
-		flag:esr_well_connected = {
-			add_trait_xp = {
-				trait = $TRAIT$
-				track = esr_well_connected
-				value = $VALUE$
-			}
-		}
-		flag:esr_friends_in_high_places = {
-			add_trait_xp = {
-				trait = $TRAIT$
-				track = esr_friends_in_high_places
-				value = $VALUE$
-			}
-		}
-		flag:esr_social_pariah = {
-			add_trait_xp = {
-				trait = $TRAIT$
-				track = esr_social_pariah
-				value = $VALUE$
-			}
-		}
-		flag:dragon_training = {
-			add_trait_xp = {
-				trait = $TRAIT$
-				track = dragon_training
-				value = $VALUE$
-			}
-		}
-		flag:dragon_bond = {
-			add_trait_xp = {
-				trait = $TRAIT$
-				track = dragon_bond
-				value = $VALUE$
-			}
-		}
+        flag:poacher = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = poacher
+                value = $VALUE$
+            }
+        }
+        flag:thief = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = thief
+                value = $VALUE$
+            }
+        }
+        flag:travel = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = travel
+                value = $VALUE$
+            }
+        }
+        flag:trickster = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = trickster
+                value = $VALUE$
+            }
+        }
+        flag:wit = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = wit
+                value = $VALUE$
+            }
+        }
+        fallback = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                value = $VALUE$
+            }
+        }
     }
 }
