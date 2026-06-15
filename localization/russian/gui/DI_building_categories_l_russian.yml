@@ -1,6 +1,8 @@
 ﻿l_russian:
 
  # AUTO-GENERATED building category labels
+ DI_tm_level_selector: "Level Selector"
+ DI_tm_building_button_tt: "#Bold Left-Click#! to build this building chain at the level selected above. \n#Bold Right-Click#! to destroy this building chain."
  DI_00_AAA_agot_overrides: "Aaa Agot Overrides"
  DI_00_admin_buildings: "Admin Buildings"
  DI_00_agot_duchy_buildings: "Agot Duchy Buildings"
