@@ -704,10 +704,10 @@ template DI_AS_All_Types
         }
 
         DI_army_spawner_vbox = {
-            datacontext = "[GetMenAtArmsType('bone_collectos')]"
+            datacontext = "[GetMenAtArmsType('bone_collectors')]"
 
             blockoverride "on_add" {
-                onclick = "[GetScriptedGui('DI_bone_collectos_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onclick = "[GetScriptedGui('DI_bone_collectors_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
             }
         }
 

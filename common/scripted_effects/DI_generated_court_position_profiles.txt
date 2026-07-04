@@ -159,6 +159,10 @@ DI_apply_court_position_profile_effect = {
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
+                target = trait:nightswatch
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
                 target = trait:overseer
             }
         }
@@ -174,6 +178,10 @@ DI_apply_court_position_profile_effect = {
             add_to_variable_list = {
                 name = DI_cs_trait_list
                 target = trait:administrator
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
+                target = trait:nightswatch
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
@@ -195,6 +203,10 @@ DI_apply_court_position_profile_effect = {
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
+                target = trait:nightswatch
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
                 target = trait:overseer
             }
         }
@@ -210,6 +222,10 @@ DI_apply_court_position_profile_effect = {
             add_to_variable_list = {
                 name = DI_cs_trait_list
                 target = trait:administrator
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
+                target = trait:nightswatch
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
@@ -231,6 +247,10 @@ DI_apply_court_position_profile_effect = {
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
+                target = trait:nightswatch
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
                 target = trait:overseer
             }
         }
@@ -246,6 +266,10 @@ DI_apply_court_position_profile_effect = {
             add_to_variable_list = {
                 name = DI_cs_trait_list
                 target = trait:administrator
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
+                target = trait:nightswatch
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
@@ -267,6 +291,10 @@ DI_apply_court_position_profile_effect = {
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
+                target = trait:nightswatch
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
                 target = trait:overseer
             }
         }
@@ -282,6 +310,10 @@ DI_apply_court_position_profile_effect = {
             add_to_variable_list = {
                 name = DI_cs_trait_list
                 target = trait:administrator
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
+                target = trait:nightswatch
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
@@ -303,6 +335,10 @@ DI_apply_court_position_profile_effect = {
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
+                target = trait:nightswatch
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
                 target = trait:overseer
             }
         }
@@ -318,6 +354,10 @@ DI_apply_court_position_profile_effect = {
             add_to_variable_list = {
                 name = DI_cs_trait_list
                 target = trait:administrator
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
+                target = trait:nightswatch
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
@@ -339,6 +379,10 @@ DI_apply_court_position_profile_effect = {
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
+                target = trait:nightswatch
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
                 target = trait:overseer
             }
         }
@@ -354,6 +398,10 @@ DI_apply_court_position_profile_effect = {
             add_to_variable_list = {
                 name = DI_cs_trait_list
                 target = trait:administrator
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
+                target = trait:nightswatch
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
@@ -375,6 +423,10 @@ DI_apply_court_position_profile_effect = {
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
+                target = trait:nightswatch
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
                 target = trait:overseer
             }
         }
@@ -390,6 +442,10 @@ DI_apply_court_position_profile_effect = {
             add_to_variable_list = {
                 name = DI_cs_trait_list
                 target = trait:administrator
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
+                target = trait:nightswatch
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
@@ -411,6 +467,10 @@ DI_apply_court_position_profile_effect = {
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
+                target = trait:nightswatch
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
                 target = trait:overseer
             }
         }
@@ -426,6 +486,10 @@ DI_apply_court_position_profile_effect = {
             add_to_variable_list = {
                 name = DI_cs_trait_list
                 target = trait:administrator
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
+                target = trait:nightswatch
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
@@ -447,6 +511,10 @@ DI_apply_court_position_profile_effect = {
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
+                target = trait:nightswatch
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
                 target = trait:overseer
             }
         }
@@ -462,6 +530,10 @@ DI_apply_court_position_profile_effect = {
             add_to_variable_list = {
                 name = DI_cs_trait_list
                 target = trait:administrator
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
+                target = trait:nightswatch
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
@@ -934,6 +1006,10 @@ DI_apply_court_position_profile_effect = {
             add_to_variable_list = {
                 name = DI_cs_trait_list
                 target = trait:intellect_good_3
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
+                target = trait:lifestyle_mystic
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
@@ -1661,6 +1737,10 @@ DI_apply_court_position_profile_effect = {
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
+                target = trait:lifestyle_mariner
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
                 target = trait:overseer
             }
         }
@@ -2097,6 +2177,10 @@ DI_apply_court_position_profile_effect = {
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
+                target = trait:disgraced_maester
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
                 target = trait:inquisitive
             }
             add_to_variable_list = {
@@ -2300,6 +2384,14 @@ DI_apply_court_position_profile_effect = {
             add_to_variable_list = {
                 name = DI_cs_trait_list
                 target = trait:compassionate
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
+                target = trait:nightswatch
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
+                target = trait:septon
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
@@ -2513,6 +2605,10 @@ DI_apply_court_position_profile_effect = {
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
+                target = trait:lifestyle_mariner
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
                 target = trait:loyal
             }
             add_to_variable_list = {
@@ -2619,6 +2715,10 @@ DI_apply_court_position_profile_effect = {
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
+                target = trait:septon
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
                 target = trait:shrewd
             }
             add_to_variable_list = {
@@ -2664,6 +2764,10 @@ DI_apply_court_position_profile_effect = {
             add_to_variable_list = {
                 name = DI_cs_trait_list
                 target = trait:diligent
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
+                target = trait:military_engineer
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
@@ -2930,6 +3034,819 @@ DI_apply_court_position_profile_effect = {
     }
 }
 
+DI_apply_court_position_validity_effect = {
+    switch = {
+        trigger = $COURT_POSITION$
+        court_position_type:armorer_camp_officer = {
+            random_list = {
+                1 = {
+                    add_trait = wrathful
+                }
+                1 = {
+                    add_trait = gregarious
+                }
+                1 = {
+                    add_trait = humble
+                }
+                1 = {
+                    add_trait = diligent
+                }
+            }
+        }
+        court_position_type:b_deep_lake_keeper = {
+            remove_trait = maester
+            remove_trait = septon
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:b_eastwatch_by_the_sea_keeper = {
+            remove_trait = maester
+            remove_trait = septon
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:b_greenguard_keeper = {
+            remove_trait = maester
+            remove_trait = septon
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:b_greyguard_keeper = {
+            remove_trait = maester
+            remove_trait = septon
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:b_hoarfrost_hill_keeper = {
+            remove_trait = maester
+            remove_trait = septon
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:b_icemark_keeper = {
+            remove_trait = maester
+            remove_trait = septon
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:b_long_barrow_keeper = {
+            remove_trait = maester
+            remove_trait = septon
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:b_oakenshield_keeper = {
+            remove_trait = maester
+            remove_trait = septon
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:b_queensgate_keeper = {
+            remove_trait = maester
+            remove_trait = septon
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:b_rimegate_keeper = {
+            remove_trait = maester
+            remove_trait = septon
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:b_sable_hall_keeper = {
+            remove_trait = maester
+            remove_trait = septon
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:b_sentinel_stand_keeper = {
+            remove_trait = maester
+            remove_trait = septon
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:b_stonedoor_keeper = {
+            remove_trait = maester
+            remove_trait = septon
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:b_the_nightfort_keeper = {
+            remove_trait = maester
+            remove_trait = septon
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:b_the_shadow_tower_keeper = {
+            remove_trait = maester
+            remove_trait = septon
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:b_the_torches_keeper = {
+            remove_trait = maester
+            remove_trait = septon
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:b_westwatch_by_the_bridge_keeper = {
+            remove_trait = maester
+            remove_trait = septon
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:b_woodswatch_by_the_pool_keeper = {
+            remove_trait = maester
+            remove_trait = septon
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:bloodrider_court_position = {
+            remove_trait = blind
+            remove_trait = disloyal
+            remove_trait = infirm
+        }
+        court_position_type:bodyguard_court_position = {
+            remove_trait = blind
+            remove_trait = infirm
+        }
+        court_position_type:camp_cook_camp_officer = {
+            random_list = {
+                1 = {
+                    add_trait = gluttonous
+                }
+                1 = {
+                    add_trait = humble
+                }
+                1 = {
+                    add_trait = diligent
+                }
+            }
+        }
+        court_position_type:camp_priest_camp_officer = {
+            random_list = {
+                1 = {
+                    add_trait = zealous
+                }
+                1 = {
+                    add_trait = gregarious
+                }
+                1 = {
+                    add_trait = compassionate
+                }
+                1 = {
+                    add_trait = diligent
+                }
+                1 = {
+                    add_trait = pilgrim
+                }
+                1 = {
+                    add_trait = holy_warrior
+                }
+                1 = {
+                    add_trait = faith_warrior
+                }
+            }
+            set_character_faith = scope:target.faith
+        }
+        court_position_type:champion_court_position = {
+            remove_trait = blind
+            remove_trait = infirm
+        }
+        court_position_type:chief_engineer_camp_officer = {
+            random_list = {
+                1 = {
+                    add_trait = patient
+                }
+                1 = {
+                    add_trait = stubborn
+                }
+                1 = {
+                    add_trait = eccentric
+                }
+                1 = {
+                    add_trait = diligent
+                }
+                1 = {
+                    add_trait = military_engineer
+                }
+                1 = {
+                    add_trait = logistician
+                }
+            }
+        }
+        court_position_type:chief_eunuch_court_position = {
+            random_list = {
+                1 = {
+                    add_trait = eunuch_1
+                }
+                1 = {
+                    add_trait = beardless_eunuch
+                }
+            }
+        }
+        court_position_type:chief_forager_camp_officer = {
+            random_list = {
+                1 = {
+                    add_trait = humble
+                }
+                1 = {
+                    add_trait = eccentric
+                }
+                1 = {
+                    add_trait = deceitful
+                }
+                1 = {
+                    add_trait = diligent
+                }
+                1 = {
+                    add_trait = lifestyle_mystic
+                }
+                1 = {
+                    add_trait = lifestyle_gardener
+                }
+                1 = {
+                    add_trait = lifestyle_herbalist
+                }
+                1 = {
+                    add_trait = lifestyle_physician
+                }
+                1 = {
+                    add_trait = scholar
+                }
+                1 = {
+                    add_trait = witch
+                }
+            }
+        }
+        court_position_type:court_astrologer_court_position = {
+            random_list = {
+                1 = {
+                    add_trait = nomadic_philosophy
+                }
+                1 = {
+                    add_trait = lifestyle_mystic
+                }
+            }
+        }
+        court_position_type:court_brewmaster_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+            remove_trait = zealous
+            random_list = {
+                1 = {
+                    add_trait = lifestyle_reveler
+                }
+                1 = {
+                    add_trait = diligent
+                }
+                1 = {
+                    add_trait = patient
+                }
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        OR = {
+                            faith = faith:cold_gods
+                            faith = faith:cold_gods_wildling
+                            faith = faith:dothraki_faith
+                            faith = faith:drowned_god
+                            faith = faith:eldritch_bloodgod
+                            faith = faith:eldritch_deep_dreams
+                            faith = faith:eldritch_fishgod
+                            faith = faith:eldritch_leng
+                            faith = faith:eldritch_starry_wisdom
+                            faith = faith:eldritch_yellow
+                            faith = faith:fc_pan_bearded
+                            faith = faith:fc_pan_blackgoat
+                            faith = faith:fc_pan_boash
+                            faith = faith:fc_pan_braavos
+                            faith = faith:fc_pan_essaria
+                            faith = faith:fc_pan_faceless
+                            faith = faith:fc_pan_lorath
+                            faith = faith:fc_pan_lys
+                            faith = faith:fc_pan_moon
+                            faith = faith:fc_pan_myr
+                            faith = faith:fc_pan_pentos
+                            faith = faith:fc_pan_tyrosh
+                            faith = faith:fc_pan_volantis
+                            faith = faith:fg_pan_bronze
+                            faith = faith:fg_pan_elenei
+                            faith = faith:fg_pan_garth
+                            faith = faith:fg_pan_merling
+                            faith = faith:fg_pan_sisters
+                            faith = faith:fg_pan_sni
+                            faith = faith:fg_unknown
+                            faith = faith:fots_axe
+                            faith = faith:fots_dragon
+                            faith = faith:fots_drowned
+                            faith = faith:fots_oldnew
+                            faith = faith:fots_pure
+                            faith = faith:fots_sands
+                            faith = faith:fots_scourged
+                            faith = faith:fots_seven
+                            faith = faith:fots_stars
+                            faith = faith:fots_sword
+                            faith = faith:god_naath
+                            faith = faith:ib_ven_god_king
+                            faith = faith:ib_ven_sound
+                            faith = faith:mother_orphan
+                            faith = faith:mother_rhoyne
+                            faith = faith:mother_summer
+                            faith = faith:old_gods_btw_dnc
+                            faith = faith:old_gods_btw_fnf
+                            faith = faith:old_gods_btw_mns
+                            faith = faith:old_gods_btw_pnv
+                            faith = faith:old_gods_btw_sas
+                            faith = faith:old_gods_btw_sni
+                            faith = faith:old_gods_children
+                            faith = faith:old_gods_dns
+                            faith = faith:old_gods_fng
+                            faith = faith:old_gods_mnv
+                            faith = faith:old_gods_rng
+                            faith = faith:old_gods_rnh
+                            faith = faith:old_gods_sns
+                            faith = faith:old_gods_snw
+                            faith = faith:old_gods_wnw
+                            faith = faith:order_chain
+                            faith = faith:order_cow
+                            faith = faith:order_paradise
+                            faith = faith:order_spice
+                            faith = faith:order_sting
+                            faith = faith:qh_commoner
+                            faith = faith:qh_pureborn
+                            faith = faith:qh_warlock
+                            faith = faith:rhllor_asshai
+                            faith = faith:rhllor_fc
+                            faith = faith:rhllor_fots
+                            faith = faith:rhllor_hyrkoon
+                            faith = faith:sarnori_faith
+                            faith = faith:sc_harpy
+                            faith = faith:sc_spear
+                            faith = faith:shanty_basilisks
+                            faith = faith:shanty_black
+                            faith = faith:shanty_brindle
+                            faith = faith:shanty_greenhell
+                            faith = faith:shanty_toad
+                            faith = faith:shepherd_faith
+                            faith = faith:song_moon
+                            faith = faith:song_mossovy
+                            faith = faith:song_nefer
+                            faith = faith:storm_god
+                            faith = faith:summer_gods_pan
+                            faith = faith:valyrian_pan_dragon
+                            faith = faith:valyrian_pan_freehold
+                            faith = faith:yt_court_ancestor
+                            faith = faith:yt_court_bloodstone
+                            faith = faith:yt_court_celestial
+                            faith = faith:yt_court_jewel
+                            faith = faith:yt_court_leng
+                        }
+                    }
+                }
+                random_list = {
+                    1 = { set_character_faith = faith:cold_gods }
+                    1 = { set_character_faith = faith:cold_gods_wildling }
+                    1 = { set_character_faith = faith:dothraki_faith }
+                    1 = { set_character_faith = faith:drowned_god }
+                    1 = { set_character_faith = faith:eldritch_bloodgod }
+                    1 = { set_character_faith = faith:eldritch_deep_dreams }
+                    1 = { set_character_faith = faith:eldritch_fishgod }
+                    1 = { set_character_faith = faith:eldritch_leng }
+                    1 = { set_character_faith = faith:eldritch_starry_wisdom }
+                    1 = { set_character_faith = faith:eldritch_yellow }
+                    1 = { set_character_faith = faith:fc_pan_bearded }
+                    1 = { set_character_faith = faith:fc_pan_blackgoat }
+                    1 = { set_character_faith = faith:fc_pan_boash }
+                    1 = { set_character_faith = faith:fc_pan_braavos }
+                    1 = { set_character_faith = faith:fc_pan_essaria }
+                    1 = { set_character_faith = faith:fc_pan_faceless }
+                    1 = { set_character_faith = faith:fc_pan_lorath }
+                    1 = { set_character_faith = faith:fc_pan_lys }
+                    1 = { set_character_faith = faith:fc_pan_moon }
+                    1 = { set_character_faith = faith:fc_pan_myr }
+                    1 = { set_character_faith = faith:fc_pan_pentos }
+                    1 = { set_character_faith = faith:fc_pan_tyrosh }
+                    1 = { set_character_faith = faith:fc_pan_volantis }
+                    1 = { set_character_faith = faith:fg_pan_bronze }
+                    1 = { set_character_faith = faith:fg_pan_elenei }
+                    1 = { set_character_faith = faith:fg_pan_garth }
+                    1 = { set_character_faith = faith:fg_pan_merling }
+                    1 = { set_character_faith = faith:fg_pan_sisters }
+                    1 = { set_character_faith = faith:fg_pan_sni }
+                    1 = { set_character_faith = faith:fg_unknown }
+                    1 = { set_character_faith = faith:fots_axe }
+                    1 = { set_character_faith = faith:fots_dragon }
+                    1 = { set_character_faith = faith:fots_drowned }
+                    1 = { set_character_faith = faith:fots_oldnew }
+                    1 = { set_character_faith = faith:fots_pure }
+                    1 = { set_character_faith = faith:fots_sands }
+                    1 = { set_character_faith = faith:fots_scourged }
+                    1 = { set_character_faith = faith:fots_seven }
+                    1 = { set_character_faith = faith:fots_stars }
+                    1 = { set_character_faith = faith:fots_sword }
+                    1 = { set_character_faith = faith:god_naath }
+                    1 = { set_character_faith = faith:ib_ven_god_king }
+                    1 = { set_character_faith = faith:ib_ven_sound }
+                    1 = { set_character_faith = faith:mother_orphan }
+                    1 = { set_character_faith = faith:mother_rhoyne }
+                    1 = { set_character_faith = faith:mother_summer }
+                    1 = { set_character_faith = faith:old_gods_btw_dnc }
+                    1 = { set_character_faith = faith:old_gods_btw_fnf }
+                    1 = { set_character_faith = faith:old_gods_btw_mns }
+                    1 = { set_character_faith = faith:old_gods_btw_pnv }
+                    1 = { set_character_faith = faith:old_gods_btw_sas }
+                    1 = { set_character_faith = faith:old_gods_btw_sni }
+                    1 = { set_character_faith = faith:old_gods_children }
+                    1 = { set_character_faith = faith:old_gods_dns }
+                    1 = { set_character_faith = faith:old_gods_fng }
+                    1 = { set_character_faith = faith:old_gods_mnv }
+                    1 = { set_character_faith = faith:old_gods_rng }
+                    1 = { set_character_faith = faith:old_gods_rnh }
+                    1 = { set_character_faith = faith:old_gods_sns }
+                    1 = { set_character_faith = faith:old_gods_snw }
+                    1 = { set_character_faith = faith:old_gods_wnw }
+                    1 = { set_character_faith = faith:order_chain }
+                    1 = { set_character_faith = faith:order_cow }
+                    1 = { set_character_faith = faith:order_paradise }
+                    1 = { set_character_faith = faith:order_spice }
+                    1 = { set_character_faith = faith:order_sting }
+                    1 = { set_character_faith = faith:qh_commoner }
+                    1 = { set_character_faith = faith:qh_pureborn }
+                    1 = { set_character_faith = faith:qh_warlock }
+                    1 = { set_character_faith = faith:rhllor_asshai }
+                    1 = { set_character_faith = faith:rhllor_fc }
+                    1 = { set_character_faith = faith:rhllor_fots }
+                    1 = { set_character_faith = faith:rhllor_hyrkoon }
+                    1 = { set_character_faith = faith:sarnori_faith }
+                    1 = { set_character_faith = faith:sc_harpy }
+                    1 = { set_character_faith = faith:sc_spear }
+                    1 = { set_character_faith = faith:shanty_basilisks }
+                    1 = { set_character_faith = faith:shanty_black }
+                    1 = { set_character_faith = faith:shanty_brindle }
+                    1 = { set_character_faith = faith:shanty_greenhell }
+                    1 = { set_character_faith = faith:shanty_toad }
+                    1 = { set_character_faith = faith:shepherd_faith }
+                    1 = { set_character_faith = faith:song_moon }
+                    1 = { set_character_faith = faith:song_mossovy }
+                    1 = { set_character_faith = faith:song_nefer }
+                    1 = { set_character_faith = faith:storm_god }
+                    1 = { set_character_faith = faith:summer_gods_pan }
+                    1 = { set_character_faith = faith:valyrian_pan_dragon }
+                    1 = { set_character_faith = faith:valyrian_pan_freehold }
+                    1 = { set_character_faith = faith:yt_court_ancestor }
+                    1 = { set_character_faith = faith:yt_court_bloodstone }
+                    1 = { set_character_faith = faith:yt_court_celestial }
+                    1 = { set_character_faith = faith:yt_court_jewel }
+                    1 = { set_character_faith = faith:yt_court_leng }
+                }
+            }
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:court_scholar_court_position = {
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:crimson_cloaks_commander_court_position = {
+            remove_trait = kingsguard
+            remove_trait = maester
+            remove_trait = septon
+        }
+        court_position_type:eparch_court_position = {
+            remove_trait = beardless_eunuch
+            remove_trait = eunuch_1
+        }
+        court_position_type:executioner_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:garuda_court_position = {
+            set_knight_status = force
+        }
+        court_position_type:goldcloaks_court_position = {
+            remove_trait = kingsguard
+            remove_trait = maester
+            remove_trait = septon
+        }
+        court_position_type:grey_cloaks_commander_court_position = {
+            remove_trait = kingsguard
+            remove_trait = maester
+            remove_trait = septon
+        }
+        court_position_type:head_groom_camp_officer = {
+            random_list = {
+                1 = {
+                    add_trait = patient
+                }
+                1 = {
+                    add_trait = calm
+                }
+                1 = {
+                    add_trait = diligent
+                }
+            }
+        }
+        court_position_type:head_porter_camp_officer = {
+            random_list = {
+                1 = {
+                    add_trait = humble
+                }
+                1 = {
+                    add_trait = content
+                }
+                1 = {
+                    add_trait = diligent
+                }
+                1 = {
+                    add_trait = athletic
+                }
+            }
+        }
+        court_position_type:high_reeve_court_position = {
+            remove_trait = kingsguard
+            remove_trait = maester
+            remove_trait = septon
+        }
+        court_position_type:huntperson_camp_officer = {
+            random_list = {
+                1 = {
+                    add_trait = patient
+                }
+                1 = {
+                    add_trait = callous
+                }
+                1 = {
+                    add_trait = brave
+                }
+                1 = {
+                    add_trait = diligent
+                }
+                1 = {
+                    add_trait = lifestyle_hunter
+                }
+                1 = {
+                    add_trait = athletic
+                }
+            }
+        }
+        court_position_type:justiciar_court_position = {
+            remove_trait = kingsguard
+            remove_trait = maester
+            remove_trait = septon
+        }
+        court_position_type:keeper_of_keys_court_position = {
+            remove_trait = kingsguard
+            remove_trait = maester
+            remove_trait = septon
+        }
+        court_position_type:kennelperson_camp_officer = {
+            random_list = {
+                1 = {
+                    add_trait = gregarious
+                }
+                1 = {
+                    add_trait = stubborn
+                }
+                1 = {
+                    add_trait = diligent
+                }
+            }
+        }
+        court_position_type:laureate_camp_officer = {
+            random_list = {
+                1 = {
+                    add_trait = gregarious
+                }
+                1 = {
+                    add_trait = arrogant
+                }
+                1 = {
+                    add_trait = fickle
+                }
+                1 = {
+                    add_trait = lifestyle_poet
+                }
+                1 = {
+                    add_trait = lifestyle_reveler
+                }
+            }
+        }
+        court_position_type:master_bard_camp_officer = {
+            random_list = {
+                1 = {
+                    add_trait = gregarious
+                }
+                1 = {
+                    add_trait = arrogant
+                }
+                1 = {
+                    add_trait = deceitful
+                }
+                1 = {
+                    add_trait = diligent
+                }
+                1 = {
+                    add_trait = lifestyle_poet
+                }
+                1 = {
+                    add_trait = drunkard
+                }
+            }
+        }
+        court_position_type:master_of_arms_camp_officer = {
+            random_list = {
+                1 = {
+                    add_trait = brave
+                }
+                1 = {
+                    add_trait = stubborn
+                }
+                1 = {
+                    add_trait = callous
+                }
+                1 = {
+                    add_trait = diligent
+                }
+                1 = {
+                    add_trait = aggressive_attacker
+                }
+                1 = {
+                    add_trait = unyielding_defender
+                }
+                1 = {
+                    add_trait = organizer
+                }
+            }
+        }
+        court_position_type:master_of_hunt_court_position = {
+            remove_trait = blind
+            remove_trait = infirm
+        }
+        court_position_type:master_of_spoils_camp_officer = {
+            random_list = {
+                1 = {
+                    add_trait = greedy
+                }
+                1 = {
+                    add_trait = stubborn
+                }
+                1 = {
+                    add_trait = just
+                }
+                1 = {
+                    add_trait = diligent
+                }
+            }
+        }
+        court_position_type:master_thief_camp_officer = {
+            random_list = {
+                1 = {
+                    add_trait = craven
+                }
+                1 = {
+                    add_trait = deceitful
+                }
+                1 = {
+                    add_trait = arbitrary
+                }
+                1 = {
+                    add_trait = diligent
+                }
+            }
+        }
+        court_position_type:nw_septon = {
+            if = {
+                limit = { age < 16 }
+                set_age = 16
+            }
+        }
+        court_position_type:person_haggler_camp_officer = {
+            random_list = {
+                1 = {
+                    add_trait = callous
+                }
+                1 = {
+                    add_trait = sadistic
+                }
+                1 = {
+                    add_trait = greedy
+                }
+                1 = {
+                    add_trait = diligent
+                }
+            }
+        }
+        court_position_type:quartermaster_camp_officer = {
+            random_list = {
+                1 = {
+                    add_trait = greedy
+                }
+                1 = {
+                    add_trait = gluttonous
+                }
+                1 = {
+                    add_trait = diligent
+                }
+                1 = {
+                    add_trait = logistician
+                }
+                1 = {
+                    add_trait = organizer
+                }
+            }
+        }
+        court_position_type:royal_counter_court_position = {
+            remove_trait = kingsguard
+            remove_trait = maester
+            remove_trait = septon
+        }
+        court_position_type:royal_mint_officer_court_position = {
+            remove_trait = kingsguard
+            remove_trait = maester
+            remove_trait = septon
+        }
+        court_position_type:royal_scales_court_position = {
+            remove_trait = kingsguard
+            remove_trait = maester
+            remove_trait = septon
+        }
+        court_position_type:sea_watch_commander_court_position = {
+            remove_trait = kingsguard
+            remove_trait = maester
+            remove_trait = septon
+        }
+        court_position_type:wet_nurse_court_position = {
+            remove_trait = devoted
+        }
+        court_position_type:witness_camp_officer = {
+            random_list = {
+                1 = {
+                    add_trait = honest
+                }
+                1 = {
+                    add_trait = just
+                }
+                1 = {
+                    add_trait = brave
+                }
+            }
+        }
+        fallback = { }
+    }
+}
+
 DI_apply_court_position_trait_xp_effect = {
     switch = {
         trigger = $COURT_POSITION$
@@ -2983,15 +3900,100 @@ DI_apply_court_position_trait_xp_effect = {
     }
 }
 
+DI_select_ordered_court_position_holder_effect = {
+    switch = {
+        trigger = scope:court_position_type
+        court_position_type:bloodrider_court_position = {
+            ordered_court_position_holder = {
+                type = bloodrider_court_position
+                order_by = {
+                    value = aptitude:bloodrider_court_position
+                    multiply = -1
+                }
+                save_scope_as = DI_selected_court_position_holder
+            }
+        }
+        court_position_type:bodyguard_court_position = {
+            ordered_court_position_holder = {
+                type = bodyguard_court_position
+                order_by = {
+                    value = aptitude:bodyguard_court_position
+                    multiply = -1
+                }
+                save_scope_as = DI_selected_court_position_holder
+            }
+        }
+        court_position_type:court_artificer_court_position = {
+            ordered_court_position_holder = {
+                type = court_artificer_court_position
+                order_by = {
+                    value = aptitude:court_artificer_court_position
+                    multiply = -1
+                }
+                save_scope_as = DI_selected_court_position_holder
+            }
+        }
+        court_position_type:garuda_court_position = {
+            ordered_court_position_holder = {
+                type = garuda_court_position
+                order_by = {
+                    value = aptitude:garuda_court_position
+                    multiply = -1
+                }
+                save_scope_as = DI_selected_court_position_holder
+            }
+        }
+        court_position_type:justiciar_court_position = {
+            ordered_court_position_holder = {
+                type = justiciar_court_position
+                order_by = {
+                    value = aptitude:justiciar_court_position
+                    multiply = -1
+                }
+                save_scope_as = DI_selected_court_position_holder
+            }
+        }
+        court_position_type:lady_in_waiting_court_position = {
+            ordered_court_position_holder = {
+                type = lady_in_waiting_court_position
+                order_by = {
+                    value = aptitude:lady_in_waiting_court_position
+                    multiply = -1
+                }
+                save_scope_as = DI_selected_court_position_holder
+            }
+        }
+        fallback = { }
+    }
+}
+
+DI_revoke_selected_court_position_holder_effect = {
+    if = {
+        limit = { DI_should_use_ordered_court_position_revoke = yes }
+        DI_select_ordered_court_position_holder_effect = yes
+        if = {
+            limit = { exists = scope:DI_selected_court_position_holder }
+            revoke_court_position = {
+                recipient = scope:DI_selected_court_position_holder
+                court_position = scope:court_position_type
+            }
+        }
+    }
+    else = {
+        revoke_court_position = { court_position = scope:court_position_type }
+    }
+}
+
 DI_spawn_selected_court_position_effect = {
     DI_spawn_low_court_character_effect = yes
     scope:new_courtier = {
+        DI_apply_court_position_validity_effect = { COURT_POSITION = scope:court_position_type }
         DI_apply_court_position_trait_xp_effect = { COURT_POSITION = scope:court_position_type }
         DI_court_position_post_spawn_effect = { COURT_POSITION = scope:court_position_type }
     }
     if = {
-        limit = { NOT = { can_employ_court_position_type = scope:court_position_type } }
-        revoke_court_position = { court_position = scope:court_position_type }
+        limit = { NOT = { DI_can_employ_selected_court_position = yes } }
+        DI_revoke_selected_court_position_holder_effect = yes
     }
     appoint_court_position = {
         recipient = scope:new_courtier

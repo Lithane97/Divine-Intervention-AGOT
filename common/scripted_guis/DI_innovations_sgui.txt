@@ -79,6 +79,32 @@ DI_culture_has_innovation_maesters = {
 	}
 }
 
+# innovation_agot_landed_gentry
+DI_remove_innovation_agot_landed_gentry = {
+	scope = character
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_agot_landed_gentry
+		}
+	}
+}
+
+DI_add_innovation_agot_landed_gentry = {
+	scope = character
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_agot_landed_gentry
+		}
+	}
+}
+
+DI_culture_has_innovation_agot_landed_gentry = {
+	scope = culture
+	is_valid = {
+		has_innovation = innovation_agot_landed_gentry
+	}
+}
+
 # innovation_agot_dorne_fighting
 DI_remove_innovation_agot_dorne_fighting = {
 	scope = character

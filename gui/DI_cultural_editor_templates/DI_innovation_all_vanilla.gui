@@ -1714,6 +1714,27 @@ template DI_innovation_all_vanilla
 
 
             DI_innovation_flowcontainer = {
+                datacontext = "[GetCultureInnovationType('innovation_agot_landed_gentry')]"
+
+                blockoverride "has_visible" {
+                    visible = "[GetScriptedGui('DI_culture_has_innovation_agot_landed_gentry').IsValid(GuiScope.SetRoot(Culture.MakeScope).End)]"
+                }
+
+                blockoverride "on_remove" {
+                    onrightclick = "[GetScriptedGui('DI_remove_innovation_agot_landed_gentry').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                }
+
+                blockoverride "not_has_visible" {
+                    visible = "[Not(GetScriptedGui('DI_culture_has_innovation_agot_landed_gentry').IsValid(GuiScope.SetRoot(Culture.MakeScope).End))]"
+                }
+
+                blockoverride "on_add" {
+                    onclick = "[GetScriptedGui('DI_add_innovation_agot_landed_gentry').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                }
+            }
+
+
+            DI_innovation_flowcontainer = {
                 datacontext = "[GetCultureInnovationType('innovation_agot_dorne_fighting')]"
 
                 blockoverride "has_visible" {

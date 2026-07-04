@@ -936,6 +936,69 @@ DI_tm_destroy_building_agot_the_wall_sgui = {
     }
 }
 
+DI_tm_building_agot_great_fleet_sgui = {
+    scope = character # Player Character
+
+    is_valid = {
+        OR = {
+            NOT = { has_variable = DI_title_manager_building_level }
+            var:DI_title_manager_building_level = 1
+            var:DI_title_manager_building_level = 2
+            var:DI_title_manager_building_level = 3
+        }
+    }
+
+    effect = {
+        save_scope_as = player
+
+        every_in_list = {
+            variable = DI_action_provinces
+            save_scope_as = province
+
+            scope:province = {
+                if = {
+                    limit = {
+                        OR = {
+                            NOT = { scope:player = { has_variable = DI_title_manager_building_level } }
+                            scope:player = { var:DI_title_manager_building_level = 1 }
+                        }
+                    }
+                    add_building = agot_great_fleet_01
+                }
+                else_if = {
+                    limit = {
+                        scope:player = { var:DI_title_manager_building_level = 2 }
+                    }
+                    add_building = agot_great_fleet_02
+                }
+                else_if = {
+                    limit = {
+                        scope:player = { var:DI_title_manager_building_level = 3 }
+                    }
+                    add_building = agot_great_fleet_03
+                }
+            }
+        }
+    }
+}
+
+DI_tm_destroy_building_agot_great_fleet_sgui = {
+    scope = character # Player Character
+
+    effect = {
+        every_in_list = {
+            variable = DI_action_provinces
+            save_scope_as = province
+
+            scope:province = {
+                if = { limit = { has_building = agot_great_fleet_03 } remove_building = agot_great_fleet_03 }
+                else_if = { limit = { has_building = agot_great_fleet_02 } remove_building = agot_great_fleet_02 }
+                else_if = { limit = { has_building = agot_great_fleet_01 } remove_building = agot_great_fleet_01 }
+            }
+        }
+    }
+}
+
 DI_tm_building_monastery_sgui = {
     scope = character # Player Character
 
@@ -13133,6 +13196,61 @@ DI_tm_destroy_building_agot_dead_goose_tree_sgui = {
 
             scope:province = {
                 if = { limit = { has_building = agot_dead_goose_tree_01 } remove_building = agot_dead_goose_tree_01 }
+            }
+        }
+    }
+}
+
+DI_tm_building_agot_burned_port_sgui = {
+    scope = character # Player Character
+
+    is_valid = {
+        OR = {
+            NOT = { has_variable = DI_title_manager_building_level }
+            var:DI_title_manager_building_level = 1
+            var:DI_title_manager_building_level = 2
+        }
+    }
+
+    effect = {
+        save_scope_as = player
+
+        every_in_list = {
+            variable = DI_action_provinces
+            save_scope_as = province
+
+            scope:province = {
+                if = {
+                    limit = {
+                        OR = {
+                            NOT = { scope:player = { has_variable = DI_title_manager_building_level } }
+                            scope:player = { var:DI_title_manager_building_level = 1 }
+                        }
+                    }
+                    add_building = agot_burned_port_01
+                }
+                else_if = {
+                    limit = {
+                        scope:player = { var:DI_title_manager_building_level = 2 }
+                    }
+                    add_building = agot_burned_port_02
+                }
+            }
+        }
+    }
+}
+
+DI_tm_destroy_building_agot_burned_port_sgui = {
+    scope = character # Player Character
+
+    effect = {
+        every_in_list = {
+            variable = DI_action_provinces
+            save_scope_as = province
+
+            scope:province = {
+                if = { limit = { has_building = agot_burned_port_02 } remove_building = agot_burned_port_02 }
+                else_if = { limit = { has_building = agot_burned_port_01 } remove_building = agot_burned_port_01 }
             }
         }
     }
@@ -26432,6 +26550,8 @@ DI_remove_buildings_sgui = {
                 if = { limit = { has_building = agot_bronzegate_01 } remove_building = agot_bronzegate_01 }
                 if = { limit = { has_building = agot_btw_frostfang_crypts_01 } remove_building = agot_btw_frostfang_crypts_01 }
                 if = { limit = { has_building = agot_btw_milkwater_cairns_01 } remove_building = agot_btw_milkwater_cairns_01 }
+                if = { limit = { has_building = agot_burned_port_02 } remove_building = agot_burned_port_02 }
+                else_if = { limit = { has_building = agot_burned_port_01 } remove_building = agot_burned_port_01 }
                 if = { limit = { has_building = agot_castamere_01 } remove_building = agot_castamere_01 }
                 if = { limit = { has_building = agot_castamere_ruins_02 } remove_building = agot_castamere_ruins_02 }
                 else_if = { limit = { has_building = agot_castamere_ruins_01 } remove_building = agot_castamere_ruins_01 }
@@ -26484,6 +26604,9 @@ DI_remove_buildings_sgui = {
                 if = { limit = { has_building = agot_grand_temple_of_gelenei_01 } remove_building = agot_grand_temple_of_gelenei_01 }
                 if = { limit = { has_building = agot_grand_temple_of_trios_01 } remove_building = agot_grand_temple_of_trios_01 }
                 if = { limit = { has_building = agot_grassfield_florestries_01 } remove_building = agot_grassfield_florestries_01 }
+                if = { limit = { has_building = agot_great_fleet_03 } remove_building = agot_great_fleet_03 }
+                else_if = { limit = { has_building = agot_great_fleet_02 } remove_building = agot_great_fleet_02 }
+                else_if = { limit = { has_building = agot_great_fleet_01 } remove_building = agot_great_fleet_01 }
                 if = { limit = { has_building = agot_great_ice_dome_01 } remove_building = agot_great_ice_dome_01 }
                 if = { limit = { has_building = agot_great_wheel_01 } remove_building = agot_great_wheel_01 }
                 if = { limit = { has_building = agot_grey_cliffs_01 } remove_building = agot_grey_cliffs_01 }
@@ -27140,6 +27263,7 @@ DI_max_building_upgrades_sgui = {
                 if = { limit = { has_building_or_higher = agot_bronzegate_01 NOT = { has_building = agot_bronzegate_01 } } add_building = agot_bronzegate_01 }
                 if = { limit = { has_building_or_higher = agot_btw_frostfang_crypts_01 NOT = { has_building = agot_btw_frostfang_crypts_01 } } add_building = agot_btw_frostfang_crypts_01 }
                 if = { limit = { has_building_or_higher = agot_btw_milkwater_cairns_01 NOT = { has_building = agot_btw_milkwater_cairns_01 } } add_building = agot_btw_milkwater_cairns_01 }
+                if = { limit = { has_building_or_higher = agot_burned_port_01 NOT = { has_building = agot_burned_port_02 } } add_building = agot_burned_port_02 }
                 if = { limit = { has_building_or_higher = agot_castamere_01 NOT = { has_building = agot_castamere_01 } } add_building = agot_castamere_01 }
                 if = { limit = { has_building_or_higher = agot_castamere_ruins_01 NOT = { has_building = agot_castamere_ruins_02 } } add_building = agot_castamere_ruins_02 }
                 if = { limit = { has_building_or_higher = agot_castle_black_01 NOT = { has_building = agot_castle_black_01 } } add_building = agot_castle_black_01 }
@@ -27185,6 +27309,7 @@ DI_max_building_upgrades_sgui = {
                 if = { limit = { has_building_or_higher = agot_grand_temple_of_gelenei_01 NOT = { has_building = agot_grand_temple_of_gelenei_01 } } add_building = agot_grand_temple_of_gelenei_01 }
                 if = { limit = { has_building_or_higher = agot_grand_temple_of_trios_01 NOT = { has_building = agot_grand_temple_of_trios_01 } } add_building = agot_grand_temple_of_trios_01 }
                 if = { limit = { has_building_or_higher = agot_grassfield_florestries_01 NOT = { has_building = agot_grassfield_florestries_01 } } add_building = agot_grassfield_florestries_01 }
+                if = { limit = { has_building_or_higher = agot_great_fleet_01 NOT = { has_building = agot_great_fleet_03 } } add_building = agot_great_fleet_03 }
                 if = { limit = { has_building_or_higher = agot_great_ice_dome_01 NOT = { has_building = agot_great_ice_dome_01 } } add_building = agot_great_ice_dome_01 }
                 if = { limit = { has_building_or_higher = agot_great_wheel_01 NOT = { has_building = agot_great_wheel_01 } } add_building = agot_great_wheel_01 }
                 if = { limit = { has_building_or_higher = agot_grey_cliffs_01 NOT = { has_building = agot_grey_cliffs_01 } } add_building = agot_grey_cliffs_01 }
@@ -27684,6 +27809,9 @@ DI_construct_building_sgui = {
                     flag:agot_slave_intrigue_02 = { add_building = agot_slave_intrigue_02 }
                     flag:agot_slave_intrigue_03 = { add_building = agot_slave_intrigue_03 }
                     flag:agot_the_wall_01 = { add_building = agot_the_wall_01 }
+                    flag:agot_great_fleet_01 = { add_building = agot_great_fleet_01 }
+                    flag:agot_great_fleet_02 = { add_building = agot_great_fleet_02 }
+                    flag:agot_great_fleet_03 = { add_building = agot_great_fleet_03 }
                     flag:monastery_01 = { add_building = monastery_01 }
                     flag:monastery_02 = { add_building = monastery_02 }
                     flag:monastery_03 = { add_building = monastery_03 }
@@ -28049,6 +28177,8 @@ DI_construct_building_sgui = {
                     flag:agot_ramsgate_01 = { add_building = agot_ramsgate_01 }
                     flag:agot_oldcastle_01 = { add_building = agot_oldcastle_01 }
                     flag:agot_dead_goose_tree_01 = { add_building = agot_dead_goose_tree_01 }
+                    flag:agot_burned_port_01 = { add_building = agot_burned_port_01 }
+                    flag:agot_burned_port_02 = { add_building = agot_burned_port_02 }
                     flag:agot_port_of_oldtown_01 = { add_building = agot_port_of_oldtown_01 }
                     flag:agot_chequered_square_01 = { add_building = agot_chequered_square_01 }
                     flag:agot_oldtown_walls_01 = { add_building = agot_oldtown_walls_01 }
@@ -28851,6 +28981,10 @@ DI_destroy_building_sgui = {
                     flag:agot_btw_milkwater_cairns = {
                         if = { limit = { has_building = agot_btw_milkwater_cairns_01 } remove_building = agot_btw_milkwater_cairns_01 }
                     }
+                    flag:agot_burned_port = {
+                        if = { limit = { has_building = agot_burned_port_02 } remove_building = agot_burned_port_02 }
+                        else_if = { limit = { has_building = agot_burned_port_01 } remove_building = agot_burned_port_01 }
+                    }
                     flag:agot_castamere = {
                         if = { limit = { has_building = agot_castamere_01 } remove_building = agot_castamere_01 }
                     }
@@ -28992,6 +29126,11 @@ DI_destroy_building_sgui = {
                     }
                     flag:agot_grassfield_florestries = {
                         if = { limit = { has_building = agot_grassfield_florestries_01 } remove_building = agot_grassfield_florestries_01 }
+                    }
+                    flag:agot_great_fleet = {
+                        if = { limit = { has_building = agot_great_fleet_03 } remove_building = agot_great_fleet_03 }
+                        else_if = { limit = { has_building = agot_great_fleet_02 } remove_building = agot_great_fleet_02 }
+                        else_if = { limit = { has_building = agot_great_fleet_01 } remove_building = agot_great_fleet_01 }
                     }
                     flag:agot_great_ice_dome = {
                         if = { limit = { has_building = agot_great_ice_dome_01 } remove_building = agot_great_ice_dome_01 }

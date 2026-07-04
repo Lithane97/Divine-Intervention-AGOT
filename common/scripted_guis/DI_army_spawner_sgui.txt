@@ -3951,8 +3951,8 @@ DI_patriarchal_guard_effect = {
 	}
 }
 
-### Bone Collectos Spawner
-DI_bone_collectos_effect = {
+### Bone Collectors Spawner
+DI_bone_collectors_effect = {
 	scope = character
 
 	effect = {
@@ -3973,24 +3973,24 @@ DI_bone_collectos_effect = {
 
 				spawn_army = {
 					men_at_arms = {
-						type = bone_collectos
+						type = bone_collectors
 						men = scope:DI_story.var:DI_army_spawner_increment_value
 					}
 					location = scope:target.location
 					inheritable = no
-					name = bone_collectos
+					name = bone_collectors
 				}
 			}
 		}
 		else = {
 			spawn_army = {
 				men_at_arms = {
-					type = bone_collectos
+					type = bone_collectors
 					men = scope:DI_story.var:DI_army_spawner_increment_value
 				}
 				location = root.location
 				inheritable = no
-				name = bone_collectos
+				name = bone_collectors
 			}
 		}
 	}

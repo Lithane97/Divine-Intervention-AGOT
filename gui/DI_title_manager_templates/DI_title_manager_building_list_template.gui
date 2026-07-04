@@ -2228,6 +2228,73 @@ template DI_TM_Building_List_Template
                     layoutpolicy_horizontal = expanding
                     align = left
                     margin = { 0 7 }
+                    text = "DI_00_agot_great_project_buildings"
+                    default_format = "#bold"
+                    fontsize_min = 14
+                }
+
+                button_standard = {
+                    parentanchor = left|vcenter
+                    size = { 100% 100% }
+                    alpha = 0
+                    text = ""
+                    onclick = "[GetVariableSystem.Toggle('DI_TM_00_agot_great_project_buildings_open')]"
+                }
+            }
+
+            button_list_expand = {
+                checked = "[GetVariableSystem.Exists('DI_TM_00_agot_great_project_buildings_open')]"
+                onclick = "[GetVariableSystem.Toggle('DI_TM_00_agot_great_project_buildings_open')]"
+            }
+        }
+
+        vbox = {
+            visible = "[GetVariableSystem.Exists('DI_TM_00_agot_great_project_buildings_open')]"
+
+            layoutpolicy_horizontal = expanding
+            spacing = 5
+
+            button_standard_clean = {
+                layoutpolicy_horizontal = expanding
+                size = { 0 44 }
+                enabled = "[GetScriptedGui('DI_tm_building_agot_great_fleet_sgui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onclick = "[GetScriptedGui('DI_tm_building_agot_great_fleet_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onrightclick = "[GetScriptedGui('DI_tm_destroy_building_agot_great_fleet_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                button_ignore = none
+                tooltip = "DI_tm_building_button_tt"
+                using = tooltip_w
+
+                background = { using = Background_Area_Dark }
+
+                text_single = {
+                    parentanchor = left|vcenter
+                    margin_left = 8
+                    text = "building_type_agot_great_fleet_01"
+                    default_format = "#low"
+                    }
+            }
+        }
+
+        hbox = {
+            layoutpolicy_horizontal = expanding
+
+            widget = {
+                layoutpolicy_horizontal = expanding
+                size = { 0 36 }
+
+                background = {
+                    using = Background_Area_Dark
+
+                    modify_texture = {
+                        texture = "gfx/interface/component_masks/mask_fade_horizontal_right.dds"
+                        blend_mode = alphamultiply
+                    }
+                }
+
+                text_label_left = {
+                    layoutpolicy_horizontal = expanding
+                    align = left
+                    margin = { 0 7 }
                     text = "DI_00_agot_special_buildings"
                     default_format = "#bold"
                     fontsize_min = 14
@@ -6638,6 +6705,26 @@ template DI_TM_Building_List_Template
                     parentanchor = left|vcenter
                     margin_left = 8
                     text = "building_type_agot_dead_goose_tree_01"
+                    default_format = "#low"
+                    }
+            }
+
+            button_standard_clean = {
+                layoutpolicy_horizontal = expanding
+                size = { 0 44 }
+                enabled = "[GetScriptedGui('DI_tm_building_agot_burned_port_sgui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onclick = "[GetScriptedGui('DI_tm_building_agot_burned_port_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onrightclick = "[GetScriptedGui('DI_tm_destroy_building_agot_burned_port_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                button_ignore = none
+                tooltip = "DI_tm_building_button_tt"
+                using = tooltip_w
+
+                background = { using = Background_Area_Dark }
+
+                text_single = {
+                    parentanchor = left|vcenter
+                    margin_left = 8
+                    text = "building_type_agot_burned_port_01"
                     default_format = "#low"
                     }
             }

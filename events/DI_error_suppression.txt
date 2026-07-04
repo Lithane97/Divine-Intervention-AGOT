@@ -44,6 +44,7 @@ DI_error_suppression.1 = {
         fix_variable_error = { X = agot_bronzegate }
         fix_variable_error = { X = agot_btw_frostfang_crypts }
         fix_variable_error = { X = agot_btw_milkwater_cairns }
+        fix_variable_error = { X = agot_burned_port }
         fix_variable_error = { X = agot_castamere }
         fix_variable_error = { X = agot_castamere_ruins }
         fix_variable_error = { X = agot_castle_black }
@@ -89,6 +90,7 @@ DI_error_suppression.1 = {
         fix_variable_error = { X = agot_grand_temple_of_gelenei }
         fix_variable_error = { X = agot_grand_temple_of_trios }
         fix_variable_error = { X = agot_grassfield_florestries }
+        fix_variable_error = { X = agot_great_fleet }
         fix_variable_error = { X = agot_great_ice_dome }
         fix_variable_error = { X = agot_great_wheel }
         fix_variable_error = { X = agot_grey_cliffs }
@@ -510,6 +512,8 @@ DI_error_suppression.1 = {
         fix_variable_error = { X = agot_bronzegate_01 }
         fix_variable_error = { X = agot_btw_frostfang_crypts_01 }
         fix_variable_error = { X = agot_btw_milkwater_cairns_01 }
+        fix_variable_error = { X = agot_burned_port_01 }
+        fix_variable_error = { X = agot_burned_port_02 }
         fix_variable_error = { X = agot_castamere_01 }
         fix_variable_error = { X = agot_castamere_ruins_01 }
         fix_variable_error = { X = agot_castamere_ruins_02 }
@@ -569,6 +573,9 @@ DI_error_suppression.1 = {
         fix_variable_error = { X = agot_grand_temple_of_gelenei_01 }
         fix_variable_error = { X = agot_grand_temple_of_trios_01 }
         fix_variable_error = { X = agot_grassfield_florestries_01 }
+        fix_variable_error = { X = agot_great_fleet_01 }
+        fix_variable_error = { X = agot_great_fleet_02 }
+        fix_variable_error = { X = agot_great_fleet_03 }
         fix_variable_error = { X = agot_great_ice_dome_01 }
         fix_variable_error = { X = agot_great_wheel_01 }
         fix_variable_error = { X = agot_grey_cliffs_01 }
