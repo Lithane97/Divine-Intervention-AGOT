@@ -29,7 +29,7 @@ template DI_TM_Building_List_Template
                     layoutpolicy_horizontal = expanding
                     align = left
                     margin = { 0 7 }
-                    text = "game_concept_castle_holding"
+                    text = "DI_holding_type_castle_holding"
                     default_format = "#bold"
                     fontsize_min = 14
                 }
@@ -54,6 +54,26 @@ template DI_TM_Building_List_Template
 
             layoutpolicy_horizontal = expanding
             spacing = 5
+
+            button_standard_clean = {
+                layoutpolicy_horizontal = expanding
+                size = { 0 44 }
+                enabled = "[GetScriptedGui('DI_tm_building_castle_sgui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onclick = "[GetScriptedGui('DI_tm_building_castle_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onrightclick = "[GetScriptedGui('DI_tm_destroy_building_castle_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                button_ignore = none
+                tooltip = "DI_tm_building_button_tt"
+                using = tooltip_w
+
+                background = { using = Background_Area_Dark }
+
+                text_single = {
+                    parentanchor = left|vcenter
+                    margin_left = 8
+                    text = "DI_holding_type_castle_holding"
+                    default_format = "#low"
+                    }
+            }
 
             button_standard_clean = {
                 layoutpolicy_horizontal = expanding
@@ -111,26 +131,6 @@ template DI_TM_Building_List_Template
                     parentanchor = left|vcenter
                     margin_left = 8
                     text = "building_type_agot_ironwood_01"
-                    default_format = "#low"
-                    }
-            }
-
-            button_standard_clean = {
-                layoutpolicy_horizontal = expanding
-                size = { 0 44 }
-                enabled = "[GetScriptedGui('DI_tm_building_castle_sgui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                onclick = "[GetScriptedGui('DI_tm_building_castle_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                onrightclick = "[GetScriptedGui('DI_tm_destroy_building_castle_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                button_ignore = none
-                tooltip = "DI_tm_building_button_tt"
-                using = tooltip_w
-
-                background = { using = Background_Area_Dark }
-
-                text_single = {
-                    parentanchor = left|vcenter
-                    margin_left = 8
-                    text = "game_concept_castle_holding"
                     default_format = "#low"
                     }
             }
@@ -236,7 +236,7 @@ template DI_TM_Building_List_Template
                     layoutpolicy_horizontal = expanding
                     align = left
                     margin = { 0 7 }
-                    text = "game_concept_city_holding"
+                    text = "DI_holding_type_city_holding"
                     default_format = "#bold"
                     fontsize_min = 14
                 }
@@ -265,6 +265,26 @@ template DI_TM_Building_List_Template
             button_standard_clean = {
                 layoutpolicy_horizontal = expanding
                 size = { 0 44 }
+                enabled = "[GetScriptedGui('DI_tm_building_city_sgui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onclick = "[GetScriptedGui('DI_tm_building_city_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onrightclick = "[GetScriptedGui('DI_tm_destroy_building_city_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                button_ignore = none
+                tooltip = "DI_tm_building_button_tt"
+                using = tooltip_w
+
+                background = { using = Background_Area_Dark }
+
+                text_single = {
+                    parentanchor = left|vcenter
+                    margin_left = 8
+                    text = "DI_holding_type_city_holding"
+                    default_format = "#low"
+                    }
+            }
+
+            button_standard_clean = {
+                layoutpolicy_horizontal = expanding
+                size = { 0 44 }
                 enabled = "[GetScriptedGui('DI_tm_building_city_walls_sgui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                 onclick = "[GetScriptedGui('DI_tm_building_city_walls_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                 onrightclick = "[GetScriptedGui('DI_tm_destroy_building_city_walls_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
@@ -278,26 +298,6 @@ template DI_TM_Building_List_Template
                     parentanchor = left|vcenter
                     margin_left = 8
                     text = "building_type_city_walls_01"
-                    default_format = "#low"
-                    }
-            }
-
-            button_standard_clean = {
-                layoutpolicy_horizontal = expanding
-                size = { 0 44 }
-                enabled = "[GetScriptedGui('DI_tm_building_city_sgui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                onclick = "[GetScriptedGui('DI_tm_building_city_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                onrightclick = "[GetScriptedGui('DI_tm_destroy_building_city_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                button_ignore = none
-                tooltip = "DI_tm_building_button_tt"
-                using = tooltip_w
-
-                background = { using = Background_Area_Dark }
-
-                text_single = {
-                    parentanchor = left|vcenter
-                    margin_left = 8
-                    text = "game_concept_city_holding"
                     default_format = "#low"
                     }
             }
@@ -323,7 +323,7 @@ template DI_TM_Building_List_Template
                     layoutpolicy_horizontal = expanding
                     align = left
                     margin = { 0 7 }
-                    text = "game_concept_temple_holding"
+                    text = "DI_holding_type_church_holding"
                     default_format = "#bold"
                     fontsize_min = 14
                 }
@@ -364,7 +364,7 @@ template DI_TM_Building_List_Template
                 text_single = {
                     parentanchor = left|vcenter
                     margin_left = 8
-                    text = "game_concept_temple_holding"
+                    text = "DI_holding_type_church_holding"
                     default_format = "#low"
                     }
             }
@@ -390,7 +390,7 @@ template DI_TM_Building_List_Template
                     layoutpolicy_horizontal = expanding
                     align = left
                     margin = { 0 7 }
-                    text = "game_concept_tribe_holding"
+                    text = "DI_holding_type_tribal_holding"
                     default_format = "#bold"
                     fontsize_min = 14
                 }
@@ -431,7 +431,7 @@ template DI_TM_Building_List_Template
                 text_single = {
                     parentanchor = left|vcenter
                     margin_left = 8
-                    text = "game_concept_tribe_holding"
+                    text = "DI_holding_type_tribal_holding"
                     default_format = "#low"
                     }
             }
@@ -637,7 +637,7 @@ template DI_TM_Building_List_Template
                     layoutpolicy_horizontal = expanding
                     align = left
                     margin = { 0 7 }
-                    text = "local_holding_type_capitalized_herder_holding"
+                    text = "DI_holding_type_herder_holding"
                     default_format = "#bold"
                     fontsize_min = 14
                 }
@@ -678,7 +678,7 @@ template DI_TM_Building_List_Template
                 text_single = {
                     parentanchor = left|vcenter
                     margin_left = 8
-                    text = "building_type_herder_camp_01"
+                    text = "DI_holding_type_herder_holding"
                     default_format = "#low"
                     }
             }
@@ -704,7 +704,7 @@ template DI_TM_Building_List_Template
                     layoutpolicy_horizontal = expanding
                     align = left
                     margin = { 0 7 }
-                    text = "local_holding_type_capitalized_monastery_holding"
+                    text = "DI_holding_type_monastery_holding"
                     default_format = "#bold"
                     fontsize_min = 14
                 }
@@ -745,7 +745,7 @@ template DI_TM_Building_List_Template
                 text_single = {
                     parentanchor = left|vcenter
                     margin_left = 8
-                    text = "building_type_monastery_01"
+                    text = "DI_holding_type_monastery_holding"
                     default_format = "#low"
                     }
             }
@@ -771,7 +771,7 @@ template DI_TM_Building_List_Template
                     layoutpolicy_horizontal = expanding
                     align = left
                     margin = { 0 7 }
-                    text = "local_holding_type_capitalized_nomad_holding"
+                    text = "DI_holding_type_nomad_holding"
                     default_format = "#bold"
                     fontsize_min = 14
                 }
@@ -812,7 +812,7 @@ template DI_TM_Building_List_Template
                 text_single = {
                     parentanchor = left|vcenter
                     margin_left = 8
-                    text = "building_type_nomadic_camp_01"
+                    text = "DI_holding_type_nomad_holding"
                     default_format = "#low"
                     }
             }
@@ -838,7 +838,7 @@ template DI_TM_Building_List_Template
                     layoutpolicy_horizontal = expanding
                     align = left
                     margin = { 0 7 }
-                    text = "local_holding_type_capitalized_pirate_den_holding"
+                    text = "DI_holding_type_pirate_den_holding"
                     default_format = "#bold"
                     fontsize_min = 14
                 }
@@ -863,6 +863,26 @@ template DI_TM_Building_List_Template
 
             layoutpolicy_horizontal = expanding
             spacing = 5
+
+            button_standard_clean = {
+                layoutpolicy_horizontal = expanding
+                size = { 0 44 }
+                enabled = "[GetScriptedGui('DI_tm_building_pirate_den_sgui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onclick = "[GetScriptedGui('DI_tm_building_pirate_den_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onrightclick = "[GetScriptedGui('DI_tm_destroy_building_pirate_den_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                button_ignore = none
+                tooltip = "DI_tm_building_button_tt"
+                using = tooltip_w
+
+                background = { using = Background_Area_Dark }
+
+                text_single = {
+                    parentanchor = left|vcenter
+                    margin_left = 8
+                    text = "DI_holding_type_pirate_den_holding"
+                    default_format = "#low"
+                    }
+            }
 
             button_standard_clean = {
                 layoutpolicy_horizontal = expanding
@@ -983,26 +1003,6 @@ template DI_TM_Building_List_Template
                     default_format = "#low"
                     }
             }
-
-            button_standard_clean = {
-                layoutpolicy_horizontal = expanding
-                size = { 0 44 }
-                enabled = "[GetScriptedGui('DI_tm_building_pirate_den_sgui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                onclick = "[GetScriptedGui('DI_tm_building_pirate_den_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                onrightclick = "[GetScriptedGui('DI_tm_destroy_building_pirate_den_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                button_ignore = none
-                tooltip = "DI_tm_building_button_tt"
-                using = tooltip_w
-
-                background = { using = Background_Area_Dark }
-
-                text_single = {
-                    parentanchor = left|vcenter
-                    margin_left = 8
-                    text = "building_type_pirate_den_01"
-                    default_format = "#low"
-                    }
-            }
         }
 
         hbox = {
@@ -1025,7 +1025,7 @@ template DI_TM_Building_List_Template
                     layoutpolicy_horizontal = expanding
                     align = left
                     margin = { 0 7 }
-                    text = "local_holding_type_capitalized_ruin_holding"
+                    text = "DI_holding_type_ruin_holding"
                     default_format = "#bold"
                     fontsize_min = 14
                 }
@@ -1066,7 +1066,7 @@ template DI_TM_Building_List_Template
                 text_single = {
                     parentanchor = left|vcenter
                     margin_left = 8
-                    text = "building_type_ruin_01"
+                    text = "DI_holding_type_ruin_holding"
                     default_format = "#low"
                     }
             }
@@ -1272,7 +1272,7 @@ template DI_TM_Building_List_Template
                     layoutpolicy_horizontal = expanding
                     align = left
                     margin = { 0 7 }
-                    text = "local_holding_type_capitalized_settlement_holding"
+                    text = "DI_holding_type_settlement_holding"
                     default_format = "#bold"
                     fontsize_min = 14
                 }
@@ -1313,7 +1313,7 @@ template DI_TM_Building_List_Template
                 text_single = {
                     parentanchor = left|vcenter
                     margin_left = 8
-                    text = "building_type_settlement_01"
+                    text = "DI_holding_type_settlement_holding"
                     default_format = "#low"
                     }
             }
@@ -1519,7 +1519,7 @@ template DI_TM_Building_List_Template
                     layoutpolicy_horizontal = expanding
                     align = left
                     margin = { 0 7 }
-                    text = "local_holding_type_capitalized_temple_citadel_holding"
+                    text = "DI_holding_type_temple_citadel_holding"
                     default_format = "#bold"
                     fontsize_min = 14
                 }
@@ -1548,6 +1548,26 @@ template DI_TM_Building_List_Template
             button_standard_clean = {
                 layoutpolicy_horizontal = expanding
                 size = { 0 44 }
+                enabled = "[GetScriptedGui('DI_tm_building_temple_citadel_sgui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onclick = "[GetScriptedGui('DI_tm_building_temple_citadel_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onrightclick = "[GetScriptedGui('DI_tm_destroy_building_temple_citadel_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                button_ignore = none
+                tooltip = "DI_tm_building_button_tt"
+                using = tooltip_w
+
+                background = { using = Background_Area_Dark }
+
+                text_single = {
+                    parentanchor = left|vcenter
+                    margin_left = 8
+                    text = "DI_holding_type_temple_citadel_holding"
+                    default_format = "#low"
+                    }
+            }
+
+            button_standard_clean = {
+                layoutpolicy_horizontal = expanding
+                size = { 0 44 }
                 enabled = "[GetScriptedGui('DI_tm_building_megalith_sgui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                 onclick = "[GetScriptedGui('DI_tm_building_megalith_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                 onrightclick = "[GetScriptedGui('DI_tm_destroy_building_megalith_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
@@ -1561,26 +1581,6 @@ template DI_TM_Building_List_Template
                     parentanchor = left|vcenter
                     margin_left = 8
                     text = "building_type_megalith_01"
-                    default_format = "#low"
-                    }
-            }
-
-            button_standard_clean = {
-                layoutpolicy_horizontal = expanding
-                size = { 0 44 }
-                enabled = "[GetScriptedGui('DI_tm_building_temple_citadel_sgui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                onclick = "[GetScriptedGui('DI_tm_building_temple_citadel_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                onrightclick = "[GetScriptedGui('DI_tm_destroy_building_temple_citadel_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                button_ignore = none
-                tooltip = "DI_tm_building_button_tt"
-                using = tooltip_w
-
-                background = { using = Background_Area_Dark }
-
-                text_single = {
-                    parentanchor = left|vcenter
-                    margin_left = 8
-                    text = "building_type_temple_citadel_01"
                     default_format = "#low"
                     }
             }
@@ -1666,7 +1666,7 @@ template DI_TM_Building_List_Template
                     layoutpolicy_horizontal = expanding
                     align = left
                     margin = { 0 7 }
-                    text = "local_holding_type_capitalized_unknown_holding"
+                    text = "DI_holding_type_unknown_holding"
                     default_format = "#bold"
                     fontsize_min = 14
                 }
@@ -1707,7 +1707,7 @@ template DI_TM_Building_List_Template
                 text_single = {
                     parentanchor = left|vcenter
                     margin_left = 8
-                    text = "building_type_unknown_01"
+                    text = "DI_holding_type_unknown_holding"
                     default_format = "#low"
                     }
             }
@@ -1733,7 +1733,7 @@ template DI_TM_Building_List_Template
                     layoutpolicy_horizontal = expanding
                     align = left
                     margin = { 0 7 }
-                    text = "local_holding_type_capitalized_wilderness_holding"
+                    text = "DI_holding_type_wilderness_holding"
                     default_format = "#bold"
                     fontsize_min = 14
                 }
@@ -1774,7 +1774,7 @@ template DI_TM_Building_List_Template
                 text_single = {
                     parentanchor = left|vcenter
                     margin_left = 8
-                    text = "building_type_wilderness_01"
+                    text = "DI_holding_type_wilderness_holding"
                     default_format = "#low"
                     }
             }

@@ -1,0 +1,31 @@
+﻿l_spanish:
+
+ # AUTO-GENERATED complete holding-type labels
+ DI_holding_type_castle_holding: "$local_holding_type_capitalized_castle_holding$"
+ DI_holding_type_city_holding: "$local_holding_type_capitalized_city_holding$"
+ DI_holding_type_church_holding: "$local_holding_type_capitalized_church_holding$"
+ DI_holding_type_tribal_holding: "$local_holding_type_capitalized_tribal_holding$"
+ DI_holding_type_herder_holding: "$local_holding_type_capitalized_herder_holding$"
+ DI_holding_type_monastery_holding: "$local_holding_type_capitalized_monastery_holding$"
+ DI_holding_type_nomad_holding: "$local_holding_type_capitalized_nomad_holding$"
+ DI_holding_type_pirate_den_holding: "$local_holding_type_capitalized_pirate_den_holding$"
+ DI_holding_type_ruin_holding: "$local_holding_type_capitalized_ruin_holding$"
+ DI_holding_type_settlement_holding: "$game_concept_settlement_holding$ $game_concept_holding$"
+ DI_holding_type_temple_citadel_holding: "$local_holding_type_capitalized_temple_citadel_holding$"
+ DI_holding_type_unknown_holding: "$game_concept_unknown_holding$ $game_concept_holding$"
+ DI_holding_type_wilderness_holding: "$game_concept_wilderness_holding$ $game_concept_holding$"
+
+ # AUTO-GENERATED holding-type province filter labels
+ DI_holding_filter_castle_holding_loc: "Check $game_concept_castle_holding$"
+ DI_holding_filter_city_holding_loc: "Check $game_concept_city_holding$"
+ DI_holding_filter_church_holding_loc: "Check $game_concept_temple_holding$"
+ DI_holding_filter_tribal_holding_loc: "Check $game_concept_tribe_holding$"
+ DI_holding_filter_herder_holding_loc: "Check $local_holding_type_capitalized_herder_holding$"
+ DI_holding_filter_monastery_holding_loc: "Check $local_holding_type_capitalized_monastery_holding$"
+ DI_holding_filter_nomad_holding_loc: "Check $local_holding_type_capitalized_nomad_holding$"
+ DI_holding_filter_pirate_den_holding_loc: "Check $local_holding_type_capitalized_pirate_den_holding$"
+ DI_holding_filter_ruin_holding_loc: "Check $local_holding_type_capitalized_ruin_holding$"
+ DI_holding_filter_settlement_holding_loc: "Check $local_holding_type_capitalized_settlement_holding$"
+ DI_holding_filter_temple_citadel_holding_loc: "Check $local_holding_type_capitalized_temple_citadel_holding$"
+ DI_holding_filter_unknown_holding_loc: "Check $local_holding_type_capitalized_unknown_holding$"
+ DI_holding_filter_wilderness_holding_loc: "Check $local_holding_type_capitalized_wilderness_holding$"
