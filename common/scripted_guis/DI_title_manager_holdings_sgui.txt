@@ -280,7 +280,7 @@ DI_load_province_dropdown = {
     is_valid = {
         OR = {
             NOT = { has_global_variable_list = DI_province_filter_choices }
-            NOT = { has_global_variable = DI_province_filters_d0ddafc1aa63_loaded }
+            NOT = { has_global_variable = DI_province_filters_ab5da6553749_loaded }
         }
     }
 
@@ -288,11 +288,11 @@ DI_load_province_dropdown = {
         save_scope_as = player
 
         clear_global_variable_list = DI_province_filter_choices
-        set_global_variable = DI_province_filters_d0ddafc1aa63_loaded
+        set_global_variable = DI_province_filters_ab5da6553749_loaded
 
-        add_to_global_variable_list = { name = DI_province_filter_choices target = flag:all }
-        add_to_global_variable_list = { name = DI_province_filter_choices target = flag:hide }
-        add_to_global_variable_list = { name = DI_province_filter_choices target = flag:capital }
+        add_to_global_variable_list = { name = DI_province_filter_choices target = flag:DI_province_filter_all }
+        add_to_global_variable_list = { name = DI_province_filter_choices target = flag:DI_province_filter_hide }
+        add_to_global_variable_list = { name = DI_province_filter_choices target = flag:DI_province_filter_capital }
         add_to_global_variable_list = { name = DI_province_filter_choices target = flag:DI_holding_filter_castle_holding }
         add_to_global_variable_list = { name = DI_province_filter_choices target = flag:DI_holding_filter_city_holding }
         add_to_global_variable_list = { name = DI_province_filter_choices target = flag:DI_holding_filter_church_holding }
@@ -306,7 +306,7 @@ DI_load_province_dropdown = {
         add_to_global_variable_list = { name = DI_province_filter_choices target = flag:DI_holding_filter_temple_citadel_holding }
         add_to_global_variable_list = { name = DI_province_filter_choices target = flag:DI_holding_filter_unknown_holding }
         add_to_global_variable_list = { name = DI_province_filter_choices target = flag:DI_holding_filter_wilderness_holding }
-        add_to_global_variable_list = { name = DI_province_filter_choices target = flag:empty }
+        add_to_global_variable_list = { name = DI_province_filter_choices target = flag:DI_province_filter_empty }
     }
 }
 
@@ -321,7 +321,7 @@ DI_apply_province_filter_choice = {
         save_scope_as = player
 
         if = {
-            limit = { scope:filter_choice = flag:all }
+            limit = { scope:filter_choice = flag:DI_province_filter_all }
 
             if = {
                 limit = { has_variable_list = DI_action_provinces }
@@ -356,7 +356,7 @@ DI_apply_province_filter_choice = {
             }
         }
         else_if = {
-            limit = { scope:filter_choice = flag:hide }
+            limit = { scope:filter_choice = flag:DI_province_filter_hide }
 
             if = {
                 limit = { has_variable_list = DI_action_provinces }
@@ -421,7 +421,7 @@ DI_apply_province_filter_choice = {
             }
         }
         else_if = {
-            limit = { scope:filter_choice = flag:capital }
+            limit = { scope:filter_choice = flag:DI_province_filter_capital }
             clear_variable_list = DI_action_provinces
             if = {
                 limit = { has_variable = DI_provinces_hide }
@@ -869,7 +869,7 @@ DI_apply_province_filter_choice = {
             }
         }
         else_if = {
-            limit = { scope:filter_choice = flag:empty }
+            limit = { scope:filter_choice = flag:DI_province_filter_empty }
             clear_variable_list = DI_action_provinces
             if = {
                 limit = { has_variable = DI_provinces_hide }
