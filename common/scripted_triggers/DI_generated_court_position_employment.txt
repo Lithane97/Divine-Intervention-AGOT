@@ -278,6 +278,15 @@ DI_can_employ_selected_court_position = {
         court_position_type:light_infantry_captain_camp_officer = {
             can_employ_court_position_type = light_infantry_captain_camp_officer
         }
+        court_position_type:lorath_fisher_prince_court_position = {
+            can_employ_court_position_type = lorath_fisher_prince_court_position
+        }
+        court_position_type:lorath_harvest_prince_court_position = {
+            can_employ_court_position_type = lorath_harvest_prince_court_position
+        }
+        court_position_type:lorath_prince_of_streets_court_position = {
+            can_employ_court_position_type = lorath_prince_of_streets_court_position
+        }
         court_position_type:maester_court_position = {
             can_employ_court_position_type = maester_court_position
         }

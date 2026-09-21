@@ -2170,6 +2170,24 @@ DI_apply_court_position_profile_effect = {
                 target = trait:strategist
             }
         }
+        court_position_type:lorath_fisher_prince_court_position = {
+            set_variable = {
+                name = DI_cs_stewardship
+                value = 16
+            }
+        }
+        court_position_type:lorath_harvest_prince_court_position = {
+            set_variable = {
+                name = DI_cs_stewardship
+                value = 16
+            }
+        }
+        court_position_type:lorath_prince_of_streets_court_position = {
+            set_variable = {
+                name = DI_cs_stewardship
+                value = 16
+            }
+        }
         court_position_type:maester_court_position = {
             set_variable = {
                 name = DI_cs_learning

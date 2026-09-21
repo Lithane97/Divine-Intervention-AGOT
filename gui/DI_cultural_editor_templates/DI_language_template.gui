@@ -164,17 +164,17 @@ template DI_language_template
             blockoverride "icon" {}
         }
 
-        # agot_lhazaar
+        # agot_lhazar
         DI_widget_martial_pillar_item = {
             blockoverride "datacontext"
             {
-                datacontext = "[GetCulturePillar('language_agot_lhazaar')]"
+                datacontext = "[GetCulturePillar('language_agot_lhazar')]"
                 datacontext = "[GetPlayer.GetCulture]"
             }
 
             blockoverride "onclick"
             {
-                onclick = "[GetScriptedGui('DI_language_agot_lhazaar_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onclick = "[GetScriptedGui('DI_language_agot_lhazar_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
             }
 
             blockoverride "highlight" {}

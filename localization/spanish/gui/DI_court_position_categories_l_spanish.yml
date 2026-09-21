@@ -7,3 +7,6 @@
  DI_court_position_category_empire: "Empire or Greater"
  DI_court_position_category_landless_adventurer: "Landless Adventurer"
  DI_court_position_category_other: "Other Positions"
+
+ # AUTO-GENERATED compatch court-position category labels
+ DI_court_position_category_target_other: "Agot Other Positions"

@@ -5806,6 +5806,276 @@ DI_river_bows_effect = {
 	}
 }
 
+### Toll Collectors Spawner
+DI_toll_collectors_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = toll_collectors
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = toll_collectors
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = toll_collectors
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = toll_collectors
+			}
+		}
+	}
+}
+
+### Knights Of The Fool Spawner
+DI_knights_of_the_fool_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = knights_of_the_fool
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = knights_of_the_fool
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = knights_of_the_fool
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = knights_of_the_fool
+			}
+		}
+	}
+}
+
+### Ironbreakers Spawner
+DI_ironbreakers_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = ironbreakers
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = ironbreakers
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = ironbreakers
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = ironbreakers
+			}
+		}
+	}
+}
+
+### Warlord Scouts Spawner
+DI_warlord_scouts_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = warlord_scouts
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = warlord_scouts
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = warlord_scouts
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = warlord_scouts
+			}
+		}
+	}
+}
+
+### Willow Spears Spawner
+DI_willow_spears_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = willow_spears
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = willow_spears
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = willow_spears
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = willow_spears
+			}
+		}
+	}
+}
+
+### Green Fishers Spawner
+DI_green_fishers_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = green_fishers
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = green_fishers
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = green_fishers
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = green_fishers
+			}
+		}
+	}
+}
+
 ### Caravan Guards Spawner
 DI_caravan_guards_effect = {
 	scope = character
@@ -7021,51 +7291,6 @@ DI_pen_guards_effect = {
 	}
 }
 
-### Marcher Longbowmen Spawner
-DI_marcher_longbowmen_effect = {
-	scope = character
-
-	effect = {
-		random_owned_story = {
-			limit = {
-				story_type = DI_misc_variables_story
-			}
-			save_scope_as = DI_story
-		}
-		
-		if = {
-			limit = {
-				scope:DI_story = { has_variable = DI_pinned_char_var }
-			}
-			every_living_character = {
-				limit = { has_character_flag = pinned_for_edit }
-				save_scope_as = target
-
-				spawn_army = {
-					men_at_arms = {
-						type = marcher_longbowmen
-						men = scope:DI_story.var:DI_army_spawner_increment_value
-					}
-					location = scope:target.location
-					inheritable = no
-					name = marcher_longbowmen
-				}
-			}
-		}
-		else = {
-			spawn_army = {
-				men_at_arms = {
-					type = marcher_longbowmen
-					men = scope:DI_story.var:DI_army_spawner_increment_value
-				}
-				location = root.location
-				inheritable = no
-				name = marcher_longbowmen
-			}
-		}
-	}
-}
-
 ### Storm Knights Spawner
 DI_storm_knights_effect = {
 	scope = character
@@ -7106,6 +7331,321 @@ DI_storm_knights_effect = {
 				location = root.location
 				inheritable = no
 				name = storm_knights
+			}
+		}
+	}
+}
+
+### Kingswood Spears Spawner
+DI_kingswood_spears_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = kingswood_spears
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = kingswood_spears
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = kingswood_spears
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = kingswood_spears
+			}
+		}
+	}
+}
+
+### Weeping Sailors Spawner
+DI_weeping_sailors_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = weeping_sailors
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = weeping_sailors
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = weeping_sailors
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = weeping_sailors
+			}
+		}
+	}
+}
+
+### Milk Eye Archers Spawner
+DI_milk_eye_archers_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = milk_eye_archers
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = milk_eye_archers
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = milk_eye_archers
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = milk_eye_archers
+			}
+		}
+	}
+}
+
+### Sapphire Scouts Spawner
+DI_sapphire_scouts_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = sapphire_scouts
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = sapphire_scouts
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = sapphire_scouts
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = sapphire_scouts
+			}
+		}
+	}
+}
+
+### Vulture Killers Spawner
+DI_vulture_killers_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = vulture_killers
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = vulture_killers
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = vulture_killers
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = vulture_killers
+			}
+		}
+	}
+}
+
+### Feathered Blades Spawner
+DI_feathered_blades_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = feathered_blades
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = feathered_blades
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = feathered_blades
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = feathered_blades
+			}
+		}
+	}
+}
+
+### Hunters Of The Horn Spawner
+DI_hunters_of_the_horn_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = hunters_of_the_horn
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = hunters_of_the_horn
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = hunters_of_the_horn
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = hunters_of_the_horn
 			}
 		}
 	}
@@ -7781,6 +8321,141 @@ DI_rain_bringers_effect = {
 				location = root.location
 				inheritable = no
 				name = rain_bringers
+			}
+		}
+	}
+}
+
+### Fair Isle Seamen Spawner
+DI_fair_isle_seamen_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = fair_isle_seamen
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = fair_isle_seamen
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = fair_isle_seamen
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = fair_isle_seamen
+			}
+		}
+	}
+}
+
+### Silver Scouts Spawner
+DI_silver_scouts_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = silver_scouts
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = silver_scouts
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = silver_scouts
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = silver_scouts
+			}
+		}
+	}
+}
+
+### Ash Spears Spawner
+DI_ash_spears_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = ash_spears
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = ash_spears
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = ash_spears
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = ash_spears
 			}
 		}
 	}
@@ -9446,6 +10121,51 @@ DI_stormlands_heavy_infantry_effect = {
 				location = root.location
 				inheritable = no
 				name = stormlands_heavy_infantry
+			}
+		}
+	}
+}
+
+### Marcher Longbowmen Spawner
+DI_marcher_longbowmen_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = marcher_longbowmen
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = marcher_longbowmen
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = marcher_longbowmen
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = marcher_longbowmen
 			}
 		}
 	}

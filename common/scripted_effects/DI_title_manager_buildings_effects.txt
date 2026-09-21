@@ -141,6 +141,7 @@ DI_clear_special_building_effect = {
     if = { limit = { has_building = agot_myr_cliffs_01 } remove_building = agot_myr_cliffs_01 }
     if = { limit = { has_building = agot_taelas_gap_01 } remove_building = agot_taelas_gap_01 }
     if = { limit = { has_building = agot_naeros_irrigation_01 } remove_building = agot_naeros_irrigation_01 }
+    if = { limit = { has_building = agot_helanah_fort_01 } remove_building = agot_helanah_fort_01 }
     if = { limit = { has_building = agot_pentos_01 } remove_building = agot_pentos_01 }
     if = { limit = { has_building = agot_red_temple_pentos_01 } remove_building = agot_red_temple_pentos_01 }
     if = { limit = { has_building = agot_magister_harbor_01 } remove_building = agot_magister_harbor_01 }
@@ -149,6 +150,8 @@ DI_clear_special_building_effect = {
     if = { limit = { has_building = agot_valdrizes_01 } remove_building = agot_valdrizes_01 }
     if = { limit = { has_building = agot_nontelos_bazaar_01 } remove_building = agot_nontelos_bazaar_01 }
     if = { limit = { has_building = agot_ar_kon_barracks_01 } remove_building = agot_ar_kon_barracks_01 }
+    if = { limit = { has_building = agot_griapos_castle_01 } remove_building = agot_griapos_castle_01 }
+    if = { limit = { has_building = agot_crossroads_market_01 } remove_building = agot_crossroads_market_01 }
     if = { limit = { has_building = agot_hugor_hill_01 } remove_building = agot_hugor_hill_01 }
     if = { limit = { has_building = agot_godworf_01 } remove_building = agot_godworf_01 }
     if = { limit = { has_building = agot_warriors_ledge_01 } remove_building = agot_warriors_ledge_01 }
@@ -165,6 +168,106 @@ DI_clear_special_building_effect = {
     if = { limit = { has_building = agot_sweetwater_font_01 } remove_building = agot_sweetwater_font_01 }
     if = { limit = { has_building = agot_mothermont_01 } remove_building = agot_mothermont_01 }
     if = { limit = { has_building = agot_nevios_retreat_01 } remove_building = agot_nevios_retreat_01 }
+    if = { limit = { has_building = agot_revosghar_01 } remove_building = agot_revosghar_01 }
+    if = { limit = { has_building = agot_barbate_fortress_01 } remove_building = agot_barbate_fortress_01 }
+    if = { limit = { has_building = agot_carillon_walls_01 } remove_building = agot_carillon_walls_01 }
+    if = { limit = { has_building = agot_sinners_steps_01 } remove_building = agot_sinners_steps_01 }
+    if = { limit = { has_building = agot_rivermans_haunt_01 } remove_building = agot_rivermans_haunt_01 }
+    if = { limit = { has_building = agot_brewery_grove_01 } remove_building = agot_brewery_grove_01 }
+    if = { limit = { has_building = agot_high_port_01 } remove_building = agot_high_port_01 }
+    if = { limit = { has_building = agot_low_port_01 } remove_building = agot_low_port_01 }
+    if = { limit = { has_building = agot_smith_spire_01 } remove_building = agot_smith_spire_01 }
+    if = { limit = { has_building = agot_norvos_caves_01 } remove_building = agot_norvos_caves_01 }
+    if = { limit = { has_building = agot_green_marble_quarries_01 } remove_building = agot_green_marble_quarries_01 }
+    if = { limit = { has_building = agot_bloody_axe_pass_01 } remove_building = agot_bloody_axe_pass_01 }
+    if = { limit = { has_building = agot_goat_fort_01 } remove_building = agot_goat_fort_01 }
+    if = { limit = { has_building = agot_meletista_01 } remove_building = agot_meletista_01 }
+    if = { limit = { has_building = agot_dorenrashi_01 } remove_building = agot_dorenrashi_01 }
+    if = { limit = { has_building = agot_jorreblenon_01 } remove_building = agot_jorreblenon_01 }
+    if = { limit = { has_building = agot_vostmont_01 } remove_building = agot_vostmont_01 }
+    if = { limit = { has_building = agot_darkwash_watch_01 } remove_building = agot_darkwash_watch_01 }
+    if = { limit = { has_building = agot_third_eye_refuge_01 } remove_building = agot_third_eye_refuge_01 }
+    if = { limit = { has_building = agot_hall_of_the_streets_01 } remove_building = agot_hall_of_the_streets_01 }
+    if = { limit = { has_building = agot_fisher_hall_01 } remove_building = agot_fisher_hall_01 }
+    if = { limit = { has_building = agot_harvest_hall_01 } remove_building = agot_harvest_hall_01 }
+    if = { limit = { has_building = agot_qarlons_fort_01 } remove_building = agot_qarlons_fort_01 }
+    if = { limit = { has_building = agot_ruins_qarlons_fort_01 } remove_building = agot_ruins_qarlons_fort_01 }
+    if = { limit = { has_building = agot_ruins_qarlons_fort_02 } remove_building = agot_ruins_qarlons_fort_02 }
+    if = { limit = { has_building = agot_ruins_qarlons_fort_03 } remove_building = agot_ruins_qarlons_fort_03 }
+    if = { limit = { has_building = agot_ruins_qarlons_fort_04 } remove_building = agot_ruins_qarlons_fort_04 }
+    if = { limit = { has_building = agot_red_temple_lorath_01 } remove_building = agot_red_temple_lorath_01 }
+    if = { limit = { has_building = agot_leviathan_beach_01 } remove_building = agot_leviathan_beach_01 }
+    if = { limit = { has_building = agot_port_ampnavath_01 } remove_building = agot_port_ampnavath_01 }
+    if = { limit = { has_building = agot_hairy_port_01 } remove_building = agot_hairy_port_01 }
+    if = { limit = { has_building = agot_smiths_walls_01 } remove_building = agot_smiths_walls_01 }
+    if = { limit = { has_building = agot_bear_trap_01 } remove_building = agot_bear_trap_01 }
+    if = { limit = { has_building = agot_the_silver_mountain_01 } remove_building = agot_the_silver_mountain_01 }
+    if = { limit = { has_building = agot_onyx_palace_01 } remove_building = agot_onyx_palace_01 }
+    if = { limit = { has_building = agot_sanguine_pyramid_01 } remove_building = agot_sanguine_pyramid_01 }
+    if = { limit = { has_building = agot_braided_barracks_01 } remove_building = agot_braided_barracks_01 }
+    if = { limit = { has_building = agot_qohor_docks_01 } remove_building = agot_qohor_docks_01 }
+    if = { limit = { has_building = agot_temple_of_the_piercing_light_01 } remove_building = agot_temple_of_the_piercing_light_01 }
+    if = { limit = { has_building = agot_forest_of_steel_01 } remove_building = agot_forest_of_steel_01 }
+    if = { limit = { has_building = agot_grand_slave_markets_of_qohor_01 } remove_building = agot_grand_slave_markets_of_qohor_01 }
+    if = { limit = { has_building = agot_jewel_of_the_qhoyne_01 } remove_building = agot_jewel_of_the_qhoyne_01 }
+    if = { limit = { has_building = agot_yaghorsosten_harbor_01 } remove_building = agot_yaghorsosten_harbor_01 }
+    if = { limit = { has_building = agot_the_maw_01 } remove_building = agot_the_maw_01 }
+    if = { limit = { has_building = agot_qohor_digores_01 } remove_building = agot_qohor_digores_01 }
+    if = { limit = { has_building = agot_the_perch_01 } remove_building = agot_the_perch_01 }
+    if = { limit = { has_building = agot_the_obsidian_gatehouse_01 } remove_building = agot_the_obsidian_gatehouse_01 }
+    if = { limit = { has_building = agot_ebon_ridge_01 } remove_building = agot_ebon_ridge_01 }
+    if = { limit = { has_building = agot_ruins_palace_of_sorrows_01 } remove_building = agot_ruins_palace_of_sorrows_01 }
+    if = { limit = { has_building = agot_ruins_palace_of_sorrows_02 } remove_building = agot_ruins_palace_of_sorrows_02 }
+    if = { limit = { has_building = agot_ruins_palace_of_sorrows_03 } remove_building = agot_ruins_palace_of_sorrows_03 }
+    if = { limit = { has_building = agot_ruins_palace_of_sorrows_04 } remove_building = agot_ruins_palace_of_sorrows_04 }
+    if = { limit = { has_building = agot_ruins_palace_of_sorrows_05 } remove_building = agot_ruins_palace_of_sorrows_05 }
+    if = { limit = { has_building = agot_ruins_bridge_of_dreams_01 } remove_building = agot_ruins_bridge_of_dreams_01 }
+    if = { limit = { has_building = agot_ruins_bridge_of_dreams_02 } remove_building = agot_ruins_bridge_of_dreams_02 }
+    if = { limit = { has_building = agot_ruins_bridge_of_dreams_03 } remove_building = agot_ruins_bridge_of_dreams_03 }
+    if = { limit = { has_building = agot_ruins_temple_of_the_womb_01 } remove_building = agot_ruins_temple_of_the_womb_01 }
+    if = { limit = { has_building = agot_ruins_temple_of_the_womb_02 } remove_building = agot_ruins_temple_of_the_womb_02 }
+    if = { limit = { has_building = agot_ruins_temple_of_the_womb_03 } remove_building = agot_ruins_temple_of_the_womb_03 }
+    if = { limit = { has_building = agot_ruins_home_port_01 } remove_building = agot_ruins_home_port_01 }
+    if = { limit = { has_building = agot_ruins_home_port_02 } remove_building = agot_ruins_home_port_02 }
+    if = { limit = { has_building = agot_ruins_home_port_03 } remove_building = agot_ruins_home_port_03 }
+    if = { limit = { has_building = agot_ruins_festival_calle_01 } remove_building = agot_ruins_festival_calle_01 }
+    if = { limit = { has_building = agot_ruins_festival_calle_02 } remove_building = agot_ruins_festival_calle_02 }
+    if = { limit = { has_building = agot_ruins_festival_calle_03 } remove_building = agot_ruins_festival_calle_03 }
+    if = { limit = { has_building = agot_ruins_foreign_port_01 } remove_building = agot_ruins_foreign_port_01 }
+    if = { limit = { has_building = agot_ruins_foreign_port_02 } remove_building = agot_ruins_foreign_port_02 }
+    if = { limit = { has_building = agot_ruins_foreign_port_03 } remove_building = agot_ruins_foreign_port_03 }
+    if = { limit = { has_building = agot_ruins_fogs_touch_quarter_01 } remove_building = agot_ruins_fogs_touch_quarter_01 }
+    if = { limit = { has_building = agot_ruins_fogs_touch_quarter_02 } remove_building = agot_ruins_fogs_touch_quarter_02 }
+    if = { limit = { has_building = agot_ruins_fogs_touch_quarter_03 } remove_building = agot_ruins_fogs_touch_quarter_03 }
+    if = { limit = { has_building = agot_chroyane_new_quarter_01 } remove_building = agot_chroyane_new_quarter_01 }
+    if = { limit = { has_building = agot_chroyane_new_quarter_02 } remove_building = agot_chroyane_new_quarter_02 }
+    if = { limit = { has_building = agot_chroyane_new_quarter_03 } remove_building = agot_chroyane_new_quarter_03 }
+    if = { limit = { has_building = agot_chroyane_new_quarter_04 } remove_building = agot_chroyane_new_quarter_04 }
+    if = { limit = { has_building = agot_ruins_ar_noy_01 } remove_building = agot_ruins_ar_noy_01 }
+    if = { limit = { has_building = agot_ruins_ar_noy_02 } remove_building = agot_ruins_ar_noy_02 }
+    if = { limit = { has_building = agot_ruins_ar_noy_03 } remove_building = agot_ruins_ar_noy_03 }
+    if = { limit = { has_building = agot_ruins_ny_sar_01 } remove_building = agot_ruins_ny_sar_01 }
+    if = { limit = { has_building = agot_ruins_ny_sar_02 } remove_building = agot_ruins_ny_sar_02 }
+    if = { limit = { has_building = agot_ruins_ny_sar_03 } remove_building = agot_ruins_ny_sar_03 }
+    if = { limit = { has_building = agot_ruins_ghoyan_drohe_01 } remove_building = agot_ruins_ghoyan_drohe_01 }
+    if = { limit = { has_building = agot_ruins_ghoyan_drohe_02 } remove_building = agot_ruins_ghoyan_drohe_02 }
+    if = { limit = { has_building = agot_ruins_ghoyan_drohe_03 } remove_building = agot_ruins_ghoyan_drohe_03 }
+    if = { limit = { has_building = agot_wrecks_of_dagger_lake_01 } remove_building = agot_wrecks_of_dagger_lake_01 }
+    if = { limit = { has_building = agot_ruins_gate_of_the_mother_01 } remove_building = agot_ruins_gate_of_the_mother_01 }
+    if = { limit = { has_building = agot_ruins_gate_of_the_mother_02 } remove_building = agot_ruins_gate_of_the_mother_02 }
+    if = { limit = { has_building = agot_ruins_gate_of_the_mother_03 } remove_building = agot_ruins_gate_of_the_mother_03 }
+    if = { limit = { has_building = agot_golden_granary_01 } remove_building = agot_golden_granary_01 }
+    if = { limit = { has_building = agot_noyne_watch_01 } remove_building = agot_noyne_watch_01 }
+    if = { limit = { has_building = agot_khals_run_01 } remove_building = agot_khals_run_01 }
+    if = { limit = { has_building = agot_turtle_lake_01 } remove_building = agot_turtle_lake_01 }
+    if = { limit = { has_building = agot_tianos_bastion_01 } remove_building = agot_tianos_bastion_01 }
+    if = { limit = { has_building = agot_tianos_bastion_02 } remove_building = agot_tianos_bastion_02 }
+    if = { limit = { has_building = agot_tianos_bastion_03 } remove_building = agot_tianos_bastion_03 }
+    if = { limit = { has_building = agot_ruins_tianos_bastion_01 } remove_building = agot_ruins_tianos_bastion_01 }
+    if = { limit = { has_building = agot_ruins_tianos_bastion_02 } remove_building = agot_ruins_tianos_bastion_02 }
+    if = { limit = { has_building = agot_ruins_tianos_bastion_03 } remove_building = agot_ruins_tianos_bastion_03 }
+    if = { limit = { has_building = agot_ruins_tianos_bastion_04 } remove_building = agot_ruins_tianos_bastion_04 }
+    if = { limit = { has_building = agot_ruins_tianos_bastion_05 } remove_building = agot_ruins_tianos_bastion_05 }
     if = { limit = { has_building = agot_castle_black_01 } remove_building = agot_castle_black_01 }
     if = { limit = { has_building = agot_eastwatch_01 } remove_building = agot_eastwatch_01 }
     if = { limit = { has_building = agot_shadow_tower_01 } remove_building = agot_shadow_tower_01 }
@@ -231,6 +334,7 @@ DI_clear_special_building_effect = {
     if = { limit = { has_building = agot_golden_tooth_01 } remove_building = agot_golden_tooth_01 }
     if = { limit = { has_building = agot_ashemark_01 } remove_building = agot_ashemark_01 }
     if = { limit = { has_building = agot_silverhill_01 } remove_building = agot_silverhill_01 }
+    if = { limit = { has_building = agot_the_bower_01 } remove_building = agot_the_bower_01 }
     if = { limit = { has_building = agot_griffins_roost_01 } remove_building = agot_griffins_roost_01 }
     if = { limit = { has_building = agot_blackhaven_01 } remove_building = agot_blackhaven_01 }
     if = { limit = { has_building = agot_stonehelm_01 } remove_building = agot_stonehelm_01 }
@@ -282,6 +386,9 @@ DI_clear_special_building_effect = {
     if = { limit = { has_building = agot_ramsgate_01 } remove_building = agot_ramsgate_01 }
     if = { limit = { has_building = agot_oldcastle_01 } remove_building = agot_oldcastle_01 }
     if = { limit = { has_building = agot_dead_goose_tree_01 } remove_building = agot_dead_goose_tree_01 }
+    if = { limit = { has_building = agot_ruin_agot_dead_goose_tree_01 } remove_building = agot_ruin_agot_dead_goose_tree_01 }
+    if = { limit = { has_building = agot_ruin_agot_dead_goose_tree_02 } remove_building = agot_ruin_agot_dead_goose_tree_02 }
+    if = { limit = { has_building = agot_ruin_agot_dead_goose_tree_03 } remove_building = agot_ruin_agot_dead_goose_tree_03 }
     if = { limit = { has_building = agot_burned_port_01 } remove_building = agot_burned_port_01 }
     if = { limit = { has_building = agot_burned_port_02 } remove_building = agot_burned_port_02 }
     if = { limit = { has_building = agot_port_of_oldtown_01 } remove_building = agot_port_of_oldtown_01 }

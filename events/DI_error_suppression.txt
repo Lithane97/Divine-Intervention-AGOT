@@ -21,6 +21,7 @@ DI_error_suppression.1 = {
 
         ### Auto Generated Building Fixes ###
         ### Building Flags ###
+        DI_fix_variable_error = { X = agot_aele_maze }
         DI_fix_variable_error = { X = agot_amber_collection }
         DI_fix_variable_error = { X = agot_ar_kon_barracks }
         DI_fix_variable_error = { X = agot_arsenal }
@@ -28,7 +29,9 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_ashford_tourney_grounds }
         DI_fix_variable_error = { X = agot_atranta }
         DI_fix_variable_error = { X = agot_banefort }
+        DI_fix_variable_error = { X = agot_barbate_fortress }
         DI_fix_variable_error = { X = agot_barrow_keep }
+        DI_fix_variable_error = { X = agot_bear_trap }
         DI_fix_variable_error = { X = agot_bechester_motherhouse }
         DI_fix_variable_error = { X = agot_bechester_motherhouse_ruins }
         DI_fix_variable_error = { X = agot_bitterbridge }
@@ -37,6 +40,9 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_blackhaven }
         DI_fix_variable_error = { X = agot_blackpool }
         DI_fix_variable_error = { X = agot_bleeding_tower }
+        DI_fix_variable_error = { X = agot_bloody_axe_pass }
+        DI_fix_variable_error = { X = agot_braided_barracks }
+        DI_fix_variable_error = { X = agot_brewery_grove }
         DI_fix_variable_error = { X = agot_bridge_of_skulls }
         DI_fix_variable_error = { X = agot_brightwater_moat }
         DI_fix_variable_error = { X = agot_broken_shield_inn }
@@ -45,11 +51,13 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_btw_frostfang_crypts }
         DI_fix_variable_error = { X = agot_btw_milkwater_cairns }
         DI_fix_variable_error = { X = agot_burned_port }
+        DI_fix_variable_error = { X = agot_carillon_walls }
         DI_fix_variable_error = { X = agot_castamere }
         DI_fix_variable_error = { X = agot_castamere_ruins }
         DI_fix_variable_error = { X = agot_castle_black }
         DI_fix_variable_error = { X = agot_charred_weald }
         DI_fix_variable_error = { X = agot_chequered_square }
+        DI_fix_variable_error = { X = agot_chroyane_new_quarter }
         DI_fix_variable_error = { X = agot_cider_hall }
         DI_fix_variable_error = { X = agot_claw_isle }
         DI_fix_variable_error = { X = agot_cold_cradle }
@@ -57,10 +65,13 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_crab_fields }
         DI_fix_variable_error = { X = agot_crakehall }
         DI_fix_variable_error = { X = agot_crones_steps }
+        DI_fix_variable_error = { X = agot_crossroads_market }
         DI_fix_variable_error = { X = agot_cuy }
+        DI_fix_variable_error = { X = agot_darkwash_watch }
         DI_fix_variable_error = { X = agot_dead_goose_tree }
         DI_fix_variable_error = { X = agot_deep_den }
         DI_fix_variable_error = { X = agot_deepwood_motte }
+        DI_fix_variable_error = { X = agot_dorenrashi }
         DI_fix_variable_error = { X = agot_dragonmont }
         DI_fix_variable_error = { X = agot_dreadfort }
         DI_fix_variable_error = { X = agot_drekis_tunnels }
@@ -70,42 +81,55 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_dunstonbury }
         DI_fix_variable_error = { X = agot_duskendale }
         DI_fix_variable_error = { X = agot_eastwatch }
+        DI_fix_variable_error = { X = agot_ebon_ridge }
         DI_fix_variable_error = { X = agot_evenfall_hall }
         DI_fix_variable_error = { X = agot_fair_isle }
         DI_fix_variable_error = { X = agot_fairmarket }
         DI_fix_variable_error = { X = agot_feastfires }
+        DI_fix_variable_error = { X = agot_fisher_hall }
         DI_fix_variable_error = { X = agot_flea_bottom }
         DI_fix_variable_error = { X = agot_flints_cliffs }
+        DI_fix_variable_error = { X = agot_forest_of_steel }
         DI_fix_variable_error = { X = agot_gates_of_the_moon }
         DI_fix_variable_error = { X = agot_ghaston_grey }
         DI_fix_variable_error = { X = agot_glass_gardens }
+        DI_fix_variable_error = { X = agot_goat_fort }
         DI_fix_variable_error = { X = agot_godsgrace }
         DI_fix_variable_error = { X = agot_godworf }
         DI_fix_variable_error = { X = agot_gold_feather_house }
         DI_fix_variable_error = { X = agot_gold_mines }
+        DI_fix_variable_error = { X = agot_golden_granary }
         DI_fix_variable_error = { X = agot_golden_tooth }
         DI_fix_variable_error = { X = agot_goldengrove }
         DI_fix_variable_error = { X = agot_gorms_port }
         DI_fix_variable_error = { X = agot_grafton_keep }
+        DI_fix_variable_error = { X = agot_grand_slave_markets_of_qohor }
         DI_fix_variable_error = { X = agot_grand_temple_of_gelenei }
         DI_fix_variable_error = { X = agot_grand_temple_of_trios }
         DI_fix_variable_error = { X = agot_grassfield_florestries }
         DI_fix_variable_error = { X = agot_great_fleet }
         DI_fix_variable_error = { X = agot_great_ice_dome }
         DI_fix_variable_error = { X = agot_great_wheel }
+        DI_fix_variable_error = { X = agot_green_marble_quarries }
         DI_fix_variable_error = { X = agot_grey_cliffs }
         DI_fix_variable_error = { X = agot_grey_garden }
         DI_fix_variable_error = { X = agot_greywater_watch }
+        DI_fix_variable_error = { X = agot_griapos_castle }
         DI_fix_variable_error = { X = agot_griffins_roost }
         DI_fix_variable_error = { X = agot_gull_harbor }
         DI_fix_variable_error = { X = agot_haggons_tower }
+        DI_fix_variable_error = { X = agot_hairy_port }
         DI_fix_variable_error = { X = agot_halgars_keep }
+        DI_fix_variable_error = { X = agot_hall_of_the_streets }
         DI_fix_variable_error = { X = agot_hammerhorn }
         DI_fix_variable_error = { X = agot_hartalari_makseon }
+        DI_fix_variable_error = { X = agot_harvest_hall }
         DI_fix_variable_error = { X = agot_haywater_docks }
+        DI_fix_variable_error = { X = agot_helanah_fort }
         DI_fix_variable_error = { X = agot_hellgate_hall }
         DI_fix_variable_error = { X = agot_hellholt }
         DI_fix_variable_error = { X = agot_high_heart }
+        DI_fix_variable_error = { X = agot_high_port }
         DI_fix_variable_error = { X = agot_highpoint }
         DI_fix_variable_error = { X = agot_hightide }
         DI_fix_variable_error = { X = agot_hoare_castle }
@@ -121,22 +145,30 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_ironrath }
         DI_fix_variable_error = { X = agot_ironwood }
         DI_fix_variable_error = { X = agot_isle_of_the_gods }
+        DI_fix_variable_error = { X = agot_jewel_of_the_qhoyne }
+        DI_fix_variable_error = { X = agot_jorreblenon }
         DI_fix_variable_error = { X = agot_karhold }
         DI_fix_variable_error = { X = agot_khals_manse }
+        DI_fix_variable_error = { X = agot_khals_run }
         DI_fix_variable_error = { X = agot_kingswood_brotherhood }
         DI_fix_variable_error = { X = agot_krih_tin_mines }
         DI_fix_variable_error = { X = agot_lann_sept }
         DI_fix_variable_error = { X = agot_last_green }
         DI_fix_variable_error = { X = agot_last_hearth }
+        DI_fix_variable_error = { X = agot_leviathan_beach }
         DI_fix_variable_error = { X = agot_lighthouse }
         DI_fix_variable_error = { X = agot_lions_dock }
         DI_fix_variable_error = { X = agot_lonely_light }
+        DI_fix_variable_error = { X = agot_lorassyon_maze }
+        DI_fix_variable_error = { X = agot_lorath_maze }
         DI_fix_variable_error = { X = agot_lordsport }
+        DI_fix_variable_error = { X = agot_low_port }
         DI_fix_variable_error = { X = agot_lys_walls }
         DI_fix_variable_error = { X = agot_magister_harbor }
         DI_fix_variable_error = { X = agot_maidenpool }
         DI_fix_variable_error = { X = agot_maidens_vale }
         DI_fix_variable_error = { X = agot_maris_motherhouse }
+        DI_fix_variable_error = { X = agot_meletista }
         DI_fix_variable_error = { X = agot_merling_port }
         DI_fix_variable_error = { X = agot_mermaids_palace }
         DI_fix_variable_error = { X = agot_merryweather_vaults }
@@ -156,6 +188,8 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_nightfort }
         DI_fix_variable_error = { X = agot_nightsong }
         DI_fix_variable_error = { X = agot_nontelos_bazaar }
+        DI_fix_variable_error = { X = agot_norvos_caves }
+        DI_fix_variable_error = { X = agot_noyne_watch }
         DI_fix_variable_error = { X = agot_nymeros_tower }
         DI_fix_variable_error = { X = agot_oakenshield_bastion }
         DI_fix_variable_error = { X = agot_olafs_tomato_farm }
@@ -164,6 +198,7 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_oldcastle }
         DI_fix_variable_error = { X = agot_oldstones }
         DI_fix_variable_error = { X = agot_oldtown_walls }
+        DI_fix_variable_error = { X = agot_onyx_palace }
         DI_fix_variable_error = { X = agot_ormyan_palace }
         DI_fix_variable_error = { X = agot_osgood_square }
         DI_fix_variable_error = { X = agot_others_arrival }
@@ -182,42 +217,66 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_pirate_troop }
         DI_fix_variable_error = { X = agot_pit_of_snakes }
         DI_fix_variable_error = { X = agot_plankytown }
+        DI_fix_variable_error = { X = agot_port_ampnavath }
         DI_fix_variable_error = { X = agot_port_of_lys }
         DI_fix_variable_error = { X = agot_port_of_oldtown }
         DI_fix_variable_error = { X = agot_prison_of_lys }
+        DI_fix_variable_error = { X = agot_qarlons_fort }
         DI_fix_variable_error = { X = agot_qeldlen_fort }
+        DI_fix_variable_error = { X = agot_qohor_digores }
+        DI_fix_variable_error = { X = agot_qohor_docks }
+        DI_fix_variable_error = { X = agot_qohor_walls }
         DI_fix_variable_error = { X = agot_racallios_fort }
         DI_fix_variable_error = { X = agot_ramsgate }
         DI_fix_variable_error = { X = agot_raventree_hall }
         DI_fix_variable_error = { X = agot_ravos_base }
         DI_fix_variable_error = { X = agot_raymons_hall }
         DI_fix_variable_error = { X = agot_red_lake }
+        DI_fix_variable_error = { X = agot_red_temple_lorath }
         DI_fix_variable_error = { X = agot_red_temple_lys }
         DI_fix_variable_error = { X = agot_red_temple_myr }
         DI_fix_variable_error = { X = agot_red_temple_pentos }
         DI_fix_variable_error = { X = agot_red_temple_tyrosh }
         DI_fix_variable_error = { X = agot_redfort }
         DI_fix_variable_error = { X = agot_redwyne_port }
+        DI_fix_variable_error = { X = agot_revosghar }
         DI_fix_variable_error = { X = agot_rills_stables }
+        DI_fix_variable_error = { X = agot_rivermans_haunt }
         DI_fix_variable_error = { X = agot_rodriks_gift }
         DI_fix_variable_error = { X = agot_rooks_rest }
         DI_fix_variable_error = { X = agot_ruddy_hall }
+        DI_fix_variable_error = { X = agot_ruin_agot_dead_goose_tree }
         DI_fix_variable_error = { X = agot_ruin_high_heart }
         DI_fix_variable_error = { X = agot_ruin_tower_of_joy }
+        DI_fix_variable_error = { X = agot_ruins_ar_noy }
+        DI_fix_variable_error = { X = agot_ruins_bridge_of_dreams }
+        DI_fix_variable_error = { X = agot_ruins_chroyane_walls }
         DI_fix_variable_error = { X = agot_ruins_drekis_tunnels }
+        DI_fix_variable_error = { X = agot_ruins_festival_calle }
         DI_fix_variable_error = { X = agot_ruins_fist_of_the_first_men }
+        DI_fix_variable_error = { X = agot_ruins_fogs_touch_quarter }
+        DI_fix_variable_error = { X = agot_ruins_foreign_port }
+        DI_fix_variable_error = { X = agot_ruins_gate_of_the_mother }
+        DI_fix_variable_error = { X = agot_ruins_ghoyan_drohe }
         DI_fix_variable_error = { X = agot_ruins_gorms_port }
         DI_fix_variable_error = { X = agot_ruins_halgars_keep }
         DI_fix_variable_error = { X = agot_ruins_hellgate_hall }
         DI_fix_variable_error = { X = agot_ruins_hightide }
+        DI_fix_variable_error = { X = agot_ruins_home_port }
         DI_fix_variable_error = { X = agot_ruins_kingswood_brotherhood }
+        DI_fix_variable_error = { X = agot_ruins_ny_sar }
         DI_fix_variable_error = { X = agot_ruins_of_oldforge }
+        DI_fix_variable_error = { X = agot_ruins_palace_of_sorrows }
+        DI_fix_variable_error = { X = agot_ruins_qarlons_fort }
         DI_fix_variable_error = { X = agot_ruins_raymons_hall }
         DI_fix_variable_error = { X = agot_ruins_spicetown }
+        DI_fix_variable_error = { X = agot_ruins_temple_of_the_womb }
+        DI_fix_variable_error = { X = agot_ruins_tianos_bastion }
         DI_fix_variable_error = { X = agot_ruins_triarchy_council }
         DI_fix_variable_error = { X = agot_runestone }
         DI_fix_variable_error = { X = agot_ruthermont }
         DI_fix_variable_error = { X = agot_sandstone }
+        DI_fix_variable_error = { X = agot_sanguine_pyramid }
         DI_fix_variable_error = { X = agot_scholastic_guilds }
         DI_fix_variable_error = { X = agot_seagard }
         DI_fix_variable_error = { X = agot_sealords_palace }
@@ -230,6 +289,7 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_sharp_point_beacon }
         DI_fix_variable_error = { X = agot_silver_mines }
         DI_fix_variable_error = { X = agot_silverhill }
+        DI_fix_variable_error = { X = agot_sinners_steps }
         DI_fix_variable_error = { X = agot_sisterton }
         DI_fix_variable_error = { X = agot_skyreach }
         DI_fix_variable_error = { X = agot_slave_camps }
@@ -238,6 +298,8 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_slave_learning }
         DI_fix_variable_error = { X = agot_slave_martial }
         DI_fix_variable_error = { X = agot_slave_stewardship }
+        DI_fix_variable_error = { X = agot_smith_spire }
+        DI_fix_variable_error = { X = agot_smiths_walls }
         DI_fix_variable_error = { X = agot_spicetown }
         DI_fix_variable_error = { X = agot_spicetown_generic }
         DI_fix_variable_error = { X = agot_srunmued_copper_mines }
@@ -253,28 +315,40 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_strongsong }
         DI_fix_variable_error = { X = agot_summerhall }
         DI_fix_variable_error = { X = agot_summerhall_ruins }
+        DI_fix_variable_error = { X = agot_sunken_maze }
         DI_fix_variable_error = { X = agot_sunrise_keep }
         DI_fix_variable_error = { X = agot_sweetwater_font }
         DI_fix_variable_error = { X = agot_taelas_gap }
+        DI_fix_variable_error = { X = agot_temple_of_the_piercing_light }
         DI_fix_variable_error = { X = agot_temple_of_trade }
         DI_fix_variable_error = { X = agot_temple_of_yndros }
         DI_fix_variable_error = { X = agot_ten_towers }
+        DI_fix_variable_error = { X = agot_the_bower }
         DI_fix_variable_error = { X = agot_the_heated_pools }
+        DI_fix_variable_error = { X = agot_the_maw }
+        DI_fix_variable_error = { X = agot_the_obsidian_gatehouse }
+        DI_fix_variable_error = { X = agot_the_perch }
         DI_fix_variable_error = { X = agot_the_ring }
         DI_fix_variable_error = { X = agot_the_shadow_city }
+        DI_fix_variable_error = { X = agot_the_silver_mountain }
         DI_fix_variable_error = { X = agot_the_wall }
         DI_fix_variable_error = { X = agot_the_water_gardens }
         DI_fix_variable_error = { X = agot_thenn_great_circle }
         DI_fix_variable_error = { X = agot_thenn_great_kilns }
         DI_fix_variable_error = { X = agot_thenn_small_circle }
         DI_fix_variable_error = { X = agot_thenn_valley }
+        DI_fix_variable_error = { X = agot_third_eye_refuge }
+        DI_fix_variable_error = { X = agot_three_bells }
         DI_fix_variable_error = { X = agot_three_towers }
+        DI_fix_variable_error = { X = agot_tianos_bastion }
+        DI_fix_variable_error = { X = agot_timber_plantations_of_qohor }
         DI_fix_variable_error = { X = agot_titan }
         DI_fix_variable_error = { X = agot_torrhens_square }
         DI_fix_variable_error = { X = agot_tower_of_joy }
         DI_fix_variable_error = { X = agot_tree_of_crowns }
         DI_fix_variable_error = { X = agot_triarchy_council }
         DI_fix_variable_error = { X = agot_tumbleton }
+        DI_fix_variable_error = { X = agot_turtle_lake }
         DI_fix_variable_error = { X = agot_tyrosh }
         DI_fix_variable_error = { X = agot_tyrosh_walls }
         DI_fix_variable_error = { X = agot_unicorn_glen }
@@ -283,6 +357,7 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_valdrizes }
         DI_fix_variable_error = { X = agot_vineyard }
         DI_fix_variable_error = { X = agot_volmark }
+        DI_fix_variable_error = { X = agot_vostmont }
         DI_fix_variable_error = { X = agot_vultures_roost }
         DI_fix_variable_error = { X = agot_walls_of_seagard }
         DI_fix_variable_error = { X = agot_warg_king }
@@ -296,6 +371,8 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_widows_watch }
         DI_fix_variable_error = { X = agot_witchs_wood }
         DI_fix_variable_error = { X = agot_wolfs_den }
+        DI_fix_variable_error = { X = agot_wrecks_of_dagger_lake }
+        DI_fix_variable_error = { X = agot_yaghorsosten_harbor }
         DI_fix_variable_error = { X = agot_yronwood }
         DI_fix_variable_error = { X = apiaries }
         DI_fix_variable_error = { X = archery_ranges }
@@ -418,6 +495,7 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = ruin_infamous }
         DI_fix_variable_error = { X = ruin_renowned }
         DI_fix_variable_error = { X = ruin_salted_earth }
+        DI_fix_variable_error = { X = ruin_stone_men }
         DI_fix_variable_error = { X = ruin_wildfire }
         DI_fix_variable_error = { X = ruins_harrenhal }
         DI_fix_variable_error = { X = sacred_pool }
@@ -432,6 +510,7 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = special_kings_landing_hoodmarket }
         DI_fix_variable_error = { X = special_kings_landing_hoodmarket_destroyed }
         DI_fix_variable_error = { X = special_kings_landing_not_explosion_graphical }
+        DI_fix_variable_error = { X = special_ruin }
         DI_fix_variable_error = { X = special_the_wall }
         DI_fix_variable_error = { X = special_the_wall_broken_middle_graphical }
         DI_fix_variable_error = { X = special_the_wall_damaged }
@@ -480,6 +559,7 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = workshops }
 
         ### Building Types ###
+        DI_fix_variable_error = { X = agot_aele_maze_01 }
         DI_fix_variable_error = { X = agot_amber_collection_01 }
         DI_fix_variable_error = { X = agot_amber_collection_02 }
         DI_fix_variable_error = { X = agot_amber_collection_03 }
@@ -494,7 +574,9 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_ashford_tourney_grounds_01 }
         DI_fix_variable_error = { X = agot_atranta_01 }
         DI_fix_variable_error = { X = agot_banefort_01 }
+        DI_fix_variable_error = { X = agot_barbate_fortress_01 }
         DI_fix_variable_error = { X = agot_barrow_keep_01 }
+        DI_fix_variable_error = { X = agot_bear_trap_01 }
         DI_fix_variable_error = { X = agot_bechester_motherhouse_01 }
         DI_fix_variable_error = { X = agot_bechester_motherhouse_ruins_01 }
         DI_fix_variable_error = { X = agot_bechester_motherhouse_ruins_02 }
@@ -505,6 +587,9 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_blackhaven_01 }
         DI_fix_variable_error = { X = agot_blackpool_01 }
         DI_fix_variable_error = { X = agot_bleeding_tower_01 }
+        DI_fix_variable_error = { X = agot_bloody_axe_pass_01 }
+        DI_fix_variable_error = { X = agot_braided_barracks_01 }
+        DI_fix_variable_error = { X = agot_brewery_grove_01 }
         DI_fix_variable_error = { X = agot_bridge_of_skulls_01 }
         DI_fix_variable_error = { X = agot_brightwater_moat_01 }
         DI_fix_variable_error = { X = agot_broken_shield_inn_01 }
@@ -514,12 +599,17 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_btw_milkwater_cairns_01 }
         DI_fix_variable_error = { X = agot_burned_port_01 }
         DI_fix_variable_error = { X = agot_burned_port_02 }
+        DI_fix_variable_error = { X = agot_carillon_walls_01 }
         DI_fix_variable_error = { X = agot_castamere_01 }
         DI_fix_variable_error = { X = agot_castamere_ruins_01 }
         DI_fix_variable_error = { X = agot_castamere_ruins_02 }
         DI_fix_variable_error = { X = agot_castle_black_01 }
         DI_fix_variable_error = { X = agot_charred_weald_01 }
         DI_fix_variable_error = { X = agot_chequered_square_01 }
+        DI_fix_variable_error = { X = agot_chroyane_new_quarter_01 }
+        DI_fix_variable_error = { X = agot_chroyane_new_quarter_02 }
+        DI_fix_variable_error = { X = agot_chroyane_new_quarter_03 }
+        DI_fix_variable_error = { X = agot_chroyane_new_quarter_04 }
         DI_fix_variable_error = { X = agot_cider_hall_01 }
         DI_fix_variable_error = { X = agot_claw_isle_01 }
         DI_fix_variable_error = { X = agot_cold_cradle_01 }
@@ -527,10 +617,13 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_crab_fields_01 }
         DI_fix_variable_error = { X = agot_crakehall_01 }
         DI_fix_variable_error = { X = agot_crones_steps_01 }
+        DI_fix_variable_error = { X = agot_crossroads_market_01 }
         DI_fix_variable_error = { X = agot_cuy_01 }
+        DI_fix_variable_error = { X = agot_darkwash_watch_01 }
         DI_fix_variable_error = { X = agot_dead_goose_tree_01 }
         DI_fix_variable_error = { X = agot_deep_den_01 }
         DI_fix_variable_error = { X = agot_deepwood_motte_01 }
+        DI_fix_variable_error = { X = agot_dorenrashi_01 }
         DI_fix_variable_error = { X = agot_dragonmont_01 }
         DI_fix_variable_error = { X = agot_dreadfort_01 }
         DI_fix_variable_error = { X = agot_drekis_tunnels_01 }
@@ -541,19 +634,23 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_dunstonbury_01 }
         DI_fix_variable_error = { X = agot_duskendale_01 }
         DI_fix_variable_error = { X = agot_eastwatch_01 }
+        DI_fix_variable_error = { X = agot_ebon_ridge_01 }
         DI_fix_variable_error = { X = agot_evenfall_hall_01 }
         DI_fix_variable_error = { X = agot_fair_isle_01 }
         DI_fix_variable_error = { X = agot_fairmarket_01 }
         DI_fix_variable_error = { X = agot_fairmarket_02 }
         DI_fix_variable_error = { X = agot_feastfires_01 }
+        DI_fix_variable_error = { X = agot_fisher_hall_01 }
         DI_fix_variable_error = { X = agot_flea_bottom_01 }
         DI_fix_variable_error = { X = agot_flints_cliffs_01 }
+        DI_fix_variable_error = { X = agot_forest_of_steel_01 }
         DI_fix_variable_error = { X = agot_gates_of_the_moon_01 }
         DI_fix_variable_error = { X = agot_gates_of_the_moon_02 }
         DI_fix_variable_error = { X = agot_ghaston_grey_01 }
         DI_fix_variable_error = { X = agot_glass_gardens_01 }
         DI_fix_variable_error = { X = agot_glass_gardens_02 }
         DI_fix_variable_error = { X = agot_glass_gardens_03 }
+        DI_fix_variable_error = { X = agot_goat_fort_01 }
         DI_fix_variable_error = { X = agot_godsgrace_01 }
         DI_fix_variable_error = { X = agot_godworf_01 }
         DI_fix_variable_error = { X = agot_gold_feather_house_01 }
@@ -565,11 +662,13 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_gold_mines_06 }
         DI_fix_variable_error = { X = agot_gold_mines_07 }
         DI_fix_variable_error = { X = agot_gold_mines_08 }
+        DI_fix_variable_error = { X = agot_golden_granary_01 }
         DI_fix_variable_error = { X = agot_golden_tooth_01 }
         DI_fix_variable_error = { X = agot_goldengrove_01 }
         DI_fix_variable_error = { X = agot_gorms_port_01 }
         DI_fix_variable_error = { X = agot_gorms_port_02 }
         DI_fix_variable_error = { X = agot_grafton_keep_01 }
+        DI_fix_variable_error = { X = agot_grand_slave_markets_of_qohor_01 }
         DI_fix_variable_error = { X = agot_grand_temple_of_gelenei_01 }
         DI_fix_variable_error = { X = agot_grand_temple_of_trios_01 }
         DI_fix_variable_error = { X = agot_grassfield_florestries_01 }
@@ -578,20 +677,27 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_great_fleet_03 }
         DI_fix_variable_error = { X = agot_great_ice_dome_01 }
         DI_fix_variable_error = { X = agot_great_wheel_01 }
+        DI_fix_variable_error = { X = agot_green_marble_quarries_01 }
         DI_fix_variable_error = { X = agot_grey_cliffs_01 }
         DI_fix_variable_error = { X = agot_grey_garden_01 }
         DI_fix_variable_error = { X = agot_greywater_watch_01 }
+        DI_fix_variable_error = { X = agot_griapos_castle_01 }
         DI_fix_variable_error = { X = agot_griffins_roost_01 }
         DI_fix_variable_error = { X = agot_gull_harbor_01 }
         DI_fix_variable_error = { X = agot_haggons_tower_01 }
+        DI_fix_variable_error = { X = agot_hairy_port_01 }
         DI_fix_variable_error = { X = agot_halgars_keep_01 }
         DI_fix_variable_error = { X = agot_halgars_keep_02 }
+        DI_fix_variable_error = { X = agot_hall_of_the_streets_01 }
         DI_fix_variable_error = { X = agot_hammerhorn_01 }
         DI_fix_variable_error = { X = agot_hartalari_makseon_01 }
+        DI_fix_variable_error = { X = agot_harvest_hall_01 }
         DI_fix_variable_error = { X = agot_haywater_docks_01 }
+        DI_fix_variable_error = { X = agot_helanah_fort_01 }
         DI_fix_variable_error = { X = agot_hellgate_hall_01 }
         DI_fix_variable_error = { X = agot_hellholt_01 }
         DI_fix_variable_error = { X = agot_high_heart_01 }
+        DI_fix_variable_error = { X = agot_high_port_01 }
         DI_fix_variable_error = { X = agot_highpoint_01 }
         DI_fix_variable_error = { X = agot_hightide_01 }
         DI_fix_variable_error = { X = agot_hoare_castle_01 }
@@ -622,8 +728,11 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_ironwood_07 }
         DI_fix_variable_error = { X = agot_ironwood_08 }
         DI_fix_variable_error = { X = agot_isle_of_the_gods_01 }
+        DI_fix_variable_error = { X = agot_jewel_of_the_qhoyne_01 }
+        DI_fix_variable_error = { X = agot_jorreblenon_01 }
         DI_fix_variable_error = { X = agot_karhold_01 }
         DI_fix_variable_error = { X = agot_khals_manse_01 }
+        DI_fix_variable_error = { X = agot_khals_run_01 }
         DI_fix_variable_error = { X = agot_kingswood_brotherhood_01 }
         DI_fix_variable_error = { X = agot_krih_tin_mines_01 }
         DI_fix_variable_error = { X = agot_krih_tin_mines_02 }
@@ -632,17 +741,22 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_lann_sept_01 }
         DI_fix_variable_error = { X = agot_last_green_01 }
         DI_fix_variable_error = { X = agot_last_hearth_01 }
+        DI_fix_variable_error = { X = agot_leviathan_beach_01 }
         DI_fix_variable_error = { X = agot_lighthouse_01 }
         DI_fix_variable_error = { X = agot_lighthouse_02 }
         DI_fix_variable_error = { X = agot_lighthouse_03 }
         DI_fix_variable_error = { X = agot_lions_dock_01 }
         DI_fix_variable_error = { X = agot_lonely_light_01 }
+        DI_fix_variable_error = { X = agot_lorassyon_maze_01 }
+        DI_fix_variable_error = { X = agot_lorath_maze_01 }
         DI_fix_variable_error = { X = agot_lordsport_01 }
+        DI_fix_variable_error = { X = agot_low_port_01 }
         DI_fix_variable_error = { X = agot_lys_walls_01 }
         DI_fix_variable_error = { X = agot_magister_harbor_01 }
         DI_fix_variable_error = { X = agot_maidenpool_01 }
         DI_fix_variable_error = { X = agot_maidens_vale_01 }
         DI_fix_variable_error = { X = agot_maris_motherhouse_01 }
+        DI_fix_variable_error = { X = agot_meletista_01 }
         DI_fix_variable_error = { X = agot_merling_port_01 }
         DI_fix_variable_error = { X = agot_mermaids_palace_01 }
         DI_fix_variable_error = { X = agot_merryweather_vaults_01 }
@@ -664,6 +778,8 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_nightfort_01 }
         DI_fix_variable_error = { X = agot_nightsong_01 }
         DI_fix_variable_error = { X = agot_nontelos_bazaar_01 }
+        DI_fix_variable_error = { X = agot_norvos_caves_01 }
+        DI_fix_variable_error = { X = agot_noyne_watch_01 }
         DI_fix_variable_error = { X = agot_nymeros_tower_01 }
         DI_fix_variable_error = { X = agot_oakenshield_bastion_01 }
         DI_fix_variable_error = { X = agot_olafs_tomato_farm_01 }
@@ -673,6 +789,7 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_oldstones_01 }
         DI_fix_variable_error = { X = agot_oldstones_02 }
         DI_fix_variable_error = { X = agot_oldtown_walls_01 }
+        DI_fix_variable_error = { X = agot_onyx_palace_01 }
         DI_fix_variable_error = { X = agot_ormyan_palace_01 }
         DI_fix_variable_error = { X = agot_osgood_square_01 }
         DI_fix_variable_error = { X = agot_others_arrival_01 }
@@ -722,10 +839,15 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_pit_of_snakes_01 }
         DI_fix_variable_error = { X = agot_pit_of_snakes_02 }
         DI_fix_variable_error = { X = agot_plankytown_01 }
+        DI_fix_variable_error = { X = agot_port_ampnavath_01 }
         DI_fix_variable_error = { X = agot_port_of_lys_01 }
         DI_fix_variable_error = { X = agot_port_of_oldtown_01 }
         DI_fix_variable_error = { X = agot_prison_of_lys_01 }
+        DI_fix_variable_error = { X = agot_qarlons_fort_01 }
         DI_fix_variable_error = { X = agot_qeldlen_fort_01 }
+        DI_fix_variable_error = { X = agot_qohor_digores_01 }
+        DI_fix_variable_error = { X = agot_qohor_docks_01 }
+        DI_fix_variable_error = { X = agot_qohor_walls_01 }
         DI_fix_variable_error = { X = agot_racallios_fort_01 }
         DI_fix_variable_error = { X = agot_ramsgate_01 }
         DI_fix_variable_error = { X = agot_raventree_hall_01 }
@@ -734,27 +856,58 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_raymons_hall_02 }
         DI_fix_variable_error = { X = agot_red_lake_01 }
         DI_fix_variable_error = { X = agot_red_lake_02 }
+        DI_fix_variable_error = { X = agot_red_temple_lorath_01 }
         DI_fix_variable_error = { X = agot_red_temple_lys_01 }
         DI_fix_variable_error = { X = agot_red_temple_myr_01 }
         DI_fix_variable_error = { X = agot_red_temple_pentos_01 }
         DI_fix_variable_error = { X = agot_red_temple_tyrosh_01 }
         DI_fix_variable_error = { X = agot_redfort_01 }
         DI_fix_variable_error = { X = agot_redwyne_port_01 }
+        DI_fix_variable_error = { X = agot_revosghar_01 }
         DI_fix_variable_error = { X = agot_rills_stables_01 }
+        DI_fix_variable_error = { X = agot_rivermans_haunt_01 }
         DI_fix_variable_error = { X = agot_rodriks_gift_01 }
         DI_fix_variable_error = { X = agot_rooks_rest_01 }
         DI_fix_variable_error = { X = agot_ruddy_hall_01 }
+        DI_fix_variable_error = { X = agot_ruin_agot_dead_goose_tree_01 }
+        DI_fix_variable_error = { X = agot_ruin_agot_dead_goose_tree_02 }
+        DI_fix_variable_error = { X = agot_ruin_agot_dead_goose_tree_03 }
         DI_fix_variable_error = { X = agot_ruin_high_heart_01 }
         DI_fix_variable_error = { X = agot_ruin_high_heart_02 }
         DI_fix_variable_error = { X = agot_ruin_tower_of_joy_01 }
+        DI_fix_variable_error = { X = agot_ruins_ar_noy_01 }
+        DI_fix_variable_error = { X = agot_ruins_ar_noy_02 }
+        DI_fix_variable_error = { X = agot_ruins_ar_noy_03 }
+        DI_fix_variable_error = { X = agot_ruins_bridge_of_dreams_01 }
+        DI_fix_variable_error = { X = agot_ruins_bridge_of_dreams_02 }
+        DI_fix_variable_error = { X = agot_ruins_bridge_of_dreams_03 }
+        DI_fix_variable_error = { X = agot_ruins_chroyane_walls_01 }
+        DI_fix_variable_error = { X = agot_ruins_chroyane_walls_02 }
+        DI_fix_variable_error = { X = agot_ruins_chroyane_walls_03 }
+        DI_fix_variable_error = { X = agot_ruins_chroyane_walls_04 }
         DI_fix_variable_error = { X = agot_ruins_drekis_tunnels_01 }
         DI_fix_variable_error = { X = agot_ruins_drekis_tunnels_02 }
         DI_fix_variable_error = { X = agot_ruins_drekis_tunnels_03 }
         DI_fix_variable_error = { X = agot_ruins_drekis_tunnels_04 }
+        DI_fix_variable_error = { X = agot_ruins_festival_calle_01 }
+        DI_fix_variable_error = { X = agot_ruins_festival_calle_02 }
+        DI_fix_variable_error = { X = agot_ruins_festival_calle_03 }
         DI_fix_variable_error = { X = agot_ruins_fist_of_the_first_men_01 }
         DI_fix_variable_error = { X = agot_ruins_fist_of_the_first_men_02 }
         DI_fix_variable_error = { X = agot_ruins_fist_of_the_first_men_03 }
         DI_fix_variable_error = { X = agot_ruins_fist_of_the_first_men_04 }
+        DI_fix_variable_error = { X = agot_ruins_fogs_touch_quarter_01 }
+        DI_fix_variable_error = { X = agot_ruins_fogs_touch_quarter_02 }
+        DI_fix_variable_error = { X = agot_ruins_fogs_touch_quarter_03 }
+        DI_fix_variable_error = { X = agot_ruins_foreign_port_01 }
+        DI_fix_variable_error = { X = agot_ruins_foreign_port_02 }
+        DI_fix_variable_error = { X = agot_ruins_foreign_port_03 }
+        DI_fix_variable_error = { X = agot_ruins_gate_of_the_mother_01 }
+        DI_fix_variable_error = { X = agot_ruins_gate_of_the_mother_02 }
+        DI_fix_variable_error = { X = agot_ruins_gate_of_the_mother_03 }
+        DI_fix_variable_error = { X = agot_ruins_ghoyan_drohe_01 }
+        DI_fix_variable_error = { X = agot_ruins_ghoyan_drohe_02 }
+        DI_fix_variable_error = { X = agot_ruins_ghoyan_drohe_03 }
         DI_fix_variable_error = { X = agot_ruins_gorms_port_01 }
         DI_fix_variable_error = { X = agot_ruins_gorms_port_02 }
         DI_fix_variable_error = { X = agot_ruins_gorms_port_03 }
@@ -767,22 +920,46 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_ruins_hellgate_hall_02 }
         DI_fix_variable_error = { X = agot_ruins_hightide_01 }
         DI_fix_variable_error = { X = agot_ruins_hightide_02 }
+        DI_fix_variable_error = { X = agot_ruins_home_port_01 }
+        DI_fix_variable_error = { X = agot_ruins_home_port_02 }
+        DI_fix_variable_error = { X = agot_ruins_home_port_03 }
         DI_fix_variable_error = { X = agot_ruins_kingswood_brotherhood_01 }
         DI_fix_variable_error = { X = agot_ruins_kingswood_brotherhood_02 }
+        DI_fix_variable_error = { X = agot_ruins_ny_sar_01 }
+        DI_fix_variable_error = { X = agot_ruins_ny_sar_02 }
+        DI_fix_variable_error = { X = agot_ruins_ny_sar_03 }
         DI_fix_variable_error = { X = agot_ruins_of_oldforge_01 }
         DI_fix_variable_error = { X = agot_ruins_of_oldforge_02 }
         DI_fix_variable_error = { X = agot_ruins_of_oldforge_03 }
+        DI_fix_variable_error = { X = agot_ruins_palace_of_sorrows_01 }
+        DI_fix_variable_error = { X = agot_ruins_palace_of_sorrows_02 }
+        DI_fix_variable_error = { X = agot_ruins_palace_of_sorrows_03 }
+        DI_fix_variable_error = { X = agot_ruins_palace_of_sorrows_04 }
+        DI_fix_variable_error = { X = agot_ruins_palace_of_sorrows_05 }
+        DI_fix_variable_error = { X = agot_ruins_qarlons_fort_01 }
+        DI_fix_variable_error = { X = agot_ruins_qarlons_fort_02 }
+        DI_fix_variable_error = { X = agot_ruins_qarlons_fort_03 }
+        DI_fix_variable_error = { X = agot_ruins_qarlons_fort_04 }
         DI_fix_variable_error = { X = agot_ruins_raymons_hall_01 }
         DI_fix_variable_error = { X = agot_ruins_raymons_hall_02 }
         DI_fix_variable_error = { X = agot_ruins_raymons_hall_03 }
         DI_fix_variable_error = { X = agot_ruins_raymons_hall_04 }
         DI_fix_variable_error = { X = agot_ruins_spicetown_01 }
         DI_fix_variable_error = { X = agot_ruins_spicetown_02 }
+        DI_fix_variable_error = { X = agot_ruins_temple_of_the_womb_01 }
+        DI_fix_variable_error = { X = agot_ruins_temple_of_the_womb_02 }
+        DI_fix_variable_error = { X = agot_ruins_temple_of_the_womb_03 }
+        DI_fix_variable_error = { X = agot_ruins_tianos_bastion_01 }
+        DI_fix_variable_error = { X = agot_ruins_tianos_bastion_02 }
+        DI_fix_variable_error = { X = agot_ruins_tianos_bastion_03 }
+        DI_fix_variable_error = { X = agot_ruins_tianos_bastion_04 }
+        DI_fix_variable_error = { X = agot_ruins_tianos_bastion_05 }
         DI_fix_variable_error = { X = agot_ruins_triarchy_council_01 }
         DI_fix_variable_error = { X = agot_ruins_triarchy_council_02 }
         DI_fix_variable_error = { X = agot_runestone_01 }
         DI_fix_variable_error = { X = agot_ruthermont_01 }
         DI_fix_variable_error = { X = agot_sandstone_01 }
+        DI_fix_variable_error = { X = agot_sanguine_pyramid_01 }
         DI_fix_variable_error = { X = agot_scholastic_guilds_01 }
         DI_fix_variable_error = { X = agot_scholastic_guilds_02 }
         DI_fix_variable_error = { X = agot_scholastic_guilds_03 }
@@ -804,6 +981,7 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_silver_mines_07 }
         DI_fix_variable_error = { X = agot_silver_mines_08 }
         DI_fix_variable_error = { X = agot_silverhill_01 }
+        DI_fix_variable_error = { X = agot_sinners_steps_01 }
         DI_fix_variable_error = { X = agot_sisterton_01 }
         DI_fix_variable_error = { X = agot_skyreach_01 }
         DI_fix_variable_error = { X = agot_slave_camps_01 }
@@ -829,6 +1007,8 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_slave_stewardship_01 }
         DI_fix_variable_error = { X = agot_slave_stewardship_02 }
         DI_fix_variable_error = { X = agot_slave_stewardship_03 }
+        DI_fix_variable_error = { X = agot_smith_spire_01 }
+        DI_fix_variable_error = { X = agot_smiths_walls_01 }
         DI_fix_variable_error = { X = agot_spicetown_01 }
         DI_fix_variable_error = { X = agot_spicetown_generic_01 }
         DI_fix_variable_error = { X = agot_srunmued_copper_mines_01 }
@@ -855,28 +1035,42 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_summerhall_01 }
         DI_fix_variable_error = { X = agot_summerhall_ruins_01 }
         DI_fix_variable_error = { X = agot_summerhall_ruins_02 }
+        DI_fix_variable_error = { X = agot_sunken_maze_01 }
         DI_fix_variable_error = { X = agot_sunrise_keep_01 }
         DI_fix_variable_error = { X = agot_sweetwater_font_01 }
         DI_fix_variable_error = { X = agot_taelas_gap_01 }
+        DI_fix_variable_error = { X = agot_temple_of_the_piercing_light_01 }
         DI_fix_variable_error = { X = agot_temple_of_trade_01 }
         DI_fix_variable_error = { X = agot_temple_of_yndros_01 }
         DI_fix_variable_error = { X = agot_ten_towers_01 }
+        DI_fix_variable_error = { X = agot_the_bower_01 }
         DI_fix_variable_error = { X = agot_the_heated_pools_01 }
+        DI_fix_variable_error = { X = agot_the_maw_01 }
+        DI_fix_variable_error = { X = agot_the_obsidian_gatehouse_01 }
+        DI_fix_variable_error = { X = agot_the_perch_01 }
         DI_fix_variable_error = { X = agot_the_ring_01 }
         DI_fix_variable_error = { X = agot_the_shadow_city_01 }
+        DI_fix_variable_error = { X = agot_the_silver_mountain_01 }
         DI_fix_variable_error = { X = agot_the_wall_01 }
         DI_fix_variable_error = { X = agot_the_water_gardens_01 }
         DI_fix_variable_error = { X = agot_thenn_great_circle_01 }
         DI_fix_variable_error = { X = agot_thenn_great_kilns_01 }
         DI_fix_variable_error = { X = agot_thenn_small_circle_01 }
         DI_fix_variable_error = { X = agot_thenn_valley_01 }
+        DI_fix_variable_error = { X = agot_third_eye_refuge_01 }
+        DI_fix_variable_error = { X = agot_three_bells_01 }
         DI_fix_variable_error = { X = agot_three_towers_01 }
+        DI_fix_variable_error = { X = agot_tianos_bastion_01 }
+        DI_fix_variable_error = { X = agot_tianos_bastion_02 }
+        DI_fix_variable_error = { X = agot_tianos_bastion_03 }
+        DI_fix_variable_error = { X = agot_timber_plantations_of_qohor_01 }
         DI_fix_variable_error = { X = agot_titan_01 }
         DI_fix_variable_error = { X = agot_torrhens_square_01 }
         DI_fix_variable_error = { X = agot_tower_of_joy_01 }
         DI_fix_variable_error = { X = agot_tree_of_crowns_01 }
         DI_fix_variable_error = { X = agot_triarchy_council_01 }
         DI_fix_variable_error = { X = agot_tumbleton_01 }
+        DI_fix_variable_error = { X = agot_turtle_lake_01 }
         DI_fix_variable_error = { X = agot_tyrosh_01 }
         DI_fix_variable_error = { X = agot_tyrosh_walls_01 }
         DI_fix_variable_error = { X = agot_unicorn_glen_01 }
@@ -895,6 +1089,7 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_vineyard_02 }
         DI_fix_variable_error = { X = agot_vineyard_03 }
         DI_fix_variable_error = { X = agot_volmark_01 }
+        DI_fix_variable_error = { X = agot_vostmont_01 }
         DI_fix_variable_error = { X = agot_vultures_roost_01 }
         DI_fix_variable_error = { X = agot_walls_of_seagard_01 }
         DI_fix_variable_error = { X = agot_warg_king_01 }
@@ -915,6 +1110,8 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = agot_wolfs_den_01 }
         DI_fix_variable_error = { X = agot_wolfs_den_02 }
         DI_fix_variable_error = { X = agot_wolfs_den_03 }
+        DI_fix_variable_error = { X = agot_wrecks_of_dagger_lake_01 }
+        DI_fix_variable_error = { X = agot_yaghorsosten_harbor_01 }
         DI_fix_variable_error = { X = agot_yronwood_01 }
         DI_fix_variable_error = { X = apiaries_01 }
         DI_fix_variable_error = { X = apiaries_02 }
@@ -1391,6 +1588,8 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = ruin_infamous_01 }
         DI_fix_variable_error = { X = ruin_renowned_01 }
         DI_fix_variable_error = { X = ruin_salted_earth_01 }
+        DI_fix_variable_error = { X = ruin_stone_men_01 }
+        DI_fix_variable_error = { X = ruin_stone_men_02 }
         DI_fix_variable_error = { X = ruin_wildfire_01 }
         DI_fix_variable_error = { X = ruin_wildfire_02 }
         DI_fix_variable_error = { X = ruins_harrenhal_01 }
@@ -1440,6 +1639,7 @@ DI_error_suppression.1 = {
         DI_fix_variable_error = { X = special_kings_landing_hoodmarket }
         DI_fix_variable_error = { X = special_kings_landing_hoodmarket_destroyed }
         DI_fix_variable_error = { X = special_kings_landing_not_explosion_graphical }
+        DI_fix_variable_error = { X = special_ruin_01 }
         DI_fix_variable_error = { X = special_the_wall }
         DI_fix_variable_error = { X = special_the_wall_broken_middle_graphical }
         DI_fix_variable_error = { X = special_the_wall_damaged }

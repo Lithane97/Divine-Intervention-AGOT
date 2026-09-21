@@ -364,3 +364,9 @@ DI_court_position_category_other_sgui = {
     saved_scopes = { court_position_type }
     is_valid = { DI_court_position_category_other = yes }
 }
+
+DI_court_position_category_target_other_sgui = {
+    scope = character
+    saved_scopes = { court_position_type }
+    is_valid = { DI_court_position_category_target_other = yes }
+}

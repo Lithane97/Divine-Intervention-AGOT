@@ -287,6 +287,32 @@ DI_culture_has_innovation_agot_stormlands_fighting = {
 	}
 }
 
+# innovation_agot_marcher_longbows
+DI_remove_innovation_agot_marcher_longbows = {
+	scope = character
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_agot_marcher_longbows
+		}
+	}
+}
+
+DI_add_innovation_agot_marcher_longbows = {
+	scope = character
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_agot_marcher_longbows
+		}
+	}
+}
+
+DI_culture_has_innovation_agot_marcher_longbows = {
+	scope = culture
+	is_valid = {
+		has_innovation = innovation_agot_marcher_longbows
+	}
+}
+
 # innovation_agot_goldenheart_bowmen
 DI_remove_innovation_agot_goldenheart_bowmen = {
 	scope = character
@@ -648,6 +674,32 @@ DI_culture_has_innovation_longboats = {
 	scope = culture
 	is_valid = {
 		has_innovation = innovation_longboats
+	}
+}
+
+# innovation_rhoynar_sailing
+DI_remove_innovation_rhoynar_sailing = {
+	scope = character
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_rhoynar_sailing
+		}
+	}
+}
+
+DI_add_innovation_rhoynar_sailing = {
+	scope = character
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_rhoynar_sailing
+		}
+	}
+}
+
+DI_culture_has_innovation_rhoynar_sailing = {
+	scope = culture
+	is_valid = {
+		has_innovation = innovation_rhoynar_sailing
 	}
 }
 
