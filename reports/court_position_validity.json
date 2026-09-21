@@ -1,0 +1,3608 @@
+{
+  "schema_version": 1,
+  "counts": {
+    "supported": 4,
+    "runtime_checked": 117,
+    "not_spawnable": 10,
+    "needs_review": 0
+  },
+  "profiles": [
+    {
+      "position": "admiral_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } custom_tooltip={ text=none_does_not_have_a_full_time_job trigger_if={ limit={ NOT={ has_court_position=admiral_court_position } } court_position_does_not_already_have_a_job_trigger=yes } } can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "akolouthos_court_position",
+      "status": "not_spawnable",
+      "explanation": "No satisfiable validity branch for a new untitled courtier; spawning is disabled.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ akolouthos_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [],
+      "conditional_requirements": []
+    },
+    {
+      "position": "antiquarian_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ antiquarian_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "archer_captain_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=archer_captain }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "armorer_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=armorer }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "b_deep_lake_keeper",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ OR={ is_landed=no has_title=title:b_deep_lake } is_male=yes is_adult=yes has_trait=nightswatch NOR={ has_trait=maester has_trait=septon } base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOT={ scope:employee=title:d_nw_landless_first_ranger.holder } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "b_eastwatch_by_the_sea_keeper",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ OR={ is_landed=no has_title=title:c_eastwatch } is_male=yes is_adult=yes has_trait=nightswatch NOR={ has_trait=maester has_trait=septon } base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOT={ scope:employee=title:d_nw_landless_first_ranger.holder } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "b_greenguard_keeper",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } OR={ is_landed=no has_title=title:b_greenguard } is_male=yes is_adult=yes has_trait=nightswatch NOR={ has_trait=maester has_trait=septon } NOT={ scope:employee=title:d_nw_landless_first_ranger.holder } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "b_greyguard_keeper",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ OR={ is_landed=no has_title=title:b_greyguard } is_male=yes is_adult=yes has_trait=nightswatch NOR={ has_trait=maester has_trait=septon } base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOT={ scope:employee=title:d_nw_landless_first_ranger.holder } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "b_hoarfrost_hill_keeper",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ OR={ is_landed=no has_title=title:b_hoarfrost_hill } is_male=yes is_adult=yes has_trait=nightswatch NOR={ has_trait=maester has_trait=septon } base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOT={ scope:employee=title:d_nw_landless_first_ranger.holder } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "b_icemark_keeper",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ OR={ is_landed=no has_title=title:b_icemark } is_male=yes is_adult=yes has_trait=nightswatch NOR={ has_trait=maester has_trait=septon } base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOT={ scope:employee=title:d_nw_landless_first_ranger.holder } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "b_long_barrow_keeper",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } OR={ is_landed=no has_title=title:b_long_barrow } is_male=yes is_adult=yes has_trait=nightswatch NOR={ has_trait=maester has_trait=septon } NOT={ scope:employee=title:d_nw_landless_first_ranger.holder } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "b_oakenshield_keeper",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ OR={ is_landed=no has_title=title:b_oakenshield } is_male=yes is_adult=yes has_trait=nightswatch NOR={ has_trait=maester has_trait=septon } base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOT={ scope:employee=title:d_nw_landless_first_ranger.holder } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "b_queensgate_keeper",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ OR={ is_landed=no has_title=title:b_queensgate } is_male=yes is_adult=yes has_trait=nightswatch NOR={ has_trait=maester has_trait=septon } base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOT={ scope:employee=title:d_nw_landless_first_ranger.holder } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "b_rimegate_keeper",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } OR={ is_landed=no has_title=title:b_rimegate } is_male=yes is_adult=yes has_trait=nightswatch NOR={ has_trait=maester has_trait=septon } NOT={ scope:employee=title:d_nw_landless_first_ranger.holder } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "b_sable_hall_keeper",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ OR={ is_landed=no has_title=title:b_sable_hall } is_male=yes is_adult=yes has_trait=nightswatch NOR={ has_trait=maester has_trait=septon } base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOT={ scope:employee=title:d_nw_landless_first_ranger.holder } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "b_sentinel_stand_keeper",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ OR={ is_landed=no has_title=title:b_sentinel_stand } is_male=yes is_adult=yes has_trait=nightswatch NOR={ has_trait=maester has_trait=septon } base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOT={ scope:employee=title:d_nw_landless_first_ranger.holder } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "b_stonedoor_keeper",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ OR={ is_landed=no has_title=title:b_stonedoor } is_male=yes is_adult=yes has_trait=nightswatch NOR={ has_trait=maester has_trait=septon } base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOT={ scope:employee=title:d_nw_landless_first_ranger.holder } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "b_the_nightfort_keeper",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ OR={ is_landed=no has_title=title:b_the_nightfort } is_male=yes is_adult=yes has_trait=nightswatch NOR={ has_trait=maester has_trait=septon } base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOT={ scope:employee=title:d_nw_landless_first_ranger.holder } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "b_the_shadow_tower_keeper",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ OR={ is_landed=no has_title=title:c_the_shadow_tower } is_male=yes is_adult=yes has_trait=nightswatch NOR={ has_trait=maester has_trait=septon } base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOT={ scope:employee=title:d_nw_landless_first_ranger.holder } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "b_the_torches_keeper",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } OR={ is_landed=no has_title=title:b_the_torches } is_male=yes is_adult=yes has_trait=nightswatch NOR={ has_trait=maester has_trait=septon } NOT={ scope:employee=title:d_nw_landless_first_ranger.holder } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "b_westwatch_by_the_bridge_keeper",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ OR={ is_landed=no has_title=title:b_westwatch_by_the_bridge } is_male=yes is_adult=yes has_trait=nightswatch NOR={ has_trait=maester has_trait=septon } base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOT={ scope:employee=title:d_nw_landless_first_ranger.holder } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "b_woodswatch_by_the_pool_keeper",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ OR={ is_landed=no has_title=title:b_woodswatch_by_the_pool } is_male=yes is_adult=yes has_trait=nightswatch NOR={ has_trait=maester has_trait=septon } base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOT={ scope:employee=title:d_nw_landless_first_ranger.holder } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "bloodrider_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ bloodrider_validity_trigger={ EMPLOYER=scope:liege } faith={ has_doctrine_parameter=can_make_bloodriders } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "bodyguard_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=bodyguard }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "bookmaker_court_position",
+      "status": "supported",
+      "explanation": "Requirements are generated or satisfied by the fresh-character context.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ bookmaker_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [],
+      "conditional_requirements": []
+    },
+    {
+      "position": "boyan_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_mpo_court_positions.txt",
+      "requirements": [
+        "scope:employee={ liege=scope:liege boyan_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege }",
+        "government_has_flag=government_is_nomadic"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "camelry_captain_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=camelry_captain }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "camp_cook_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=camp_cook }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "camp_priest_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=camp_priest }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "cave_hermit_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ cave_hermit_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "champion_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ champion_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "charioteer_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ charioteer_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege }"
+      ],
+      "conditional_requirements": []
+    },
+    {
+      "position": "cherbi_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_mpo_court_positions.txt",
+      "requirements": [
+        "scope:employee={ liege=scope:liege cherbi_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege }",
+        "government_has_flag=government_is_nomadic"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "chief_engineer_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=chief_engineer }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "chief_eunuch_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ liege?=scope:liege chief_eunuch_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "chief_forager_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=chief_forager }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "chief_qadi_court_position",
+      "status": "not_spawnable",
+      "explanation": "No satisfiable validity branch for a new untitled courtier; spawning is disabled.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ chief_qadi_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [],
+      "conditional_requirements": []
+    },
+    {
+      "position": "chronicler_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ chronicler_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "court_artificer_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=court_artificer }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "court_astrologer_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_mpo_court_positions.txt",
+      "requirements": [
+        "scope:employee={ liege=scope:liege court_astrologer_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "court_brahmin_court_position",
+      "status": "not_spawnable",
+      "explanation": "No satisfiable validity branch for a new untitled courtier; spawning is disabled.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_mandala_court_positions.txt",
+      "requirements": [
+        "scope:employee={ court_brahmin_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [],
+      "conditional_requirements": []
+    },
+    {
+      "position": "court_brewmaster_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ liege=scope:liege court_brewmaster_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "court_gardener_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ court_gardener_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "court_guru_court_position",
+      "status": "not_spawnable",
+      "explanation": "No satisfiable validity branch for a new untitled courtier; spawning is disabled.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_mandala_court_positions.txt",
+      "requirements": [
+        "scope:employee={ court_guru_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [],
+      "conditional_requirements": []
+    },
+    {
+      "position": "court_jester_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ court_jester_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ scope:liege={ is_ai=yes } }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "court_musician_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ court_musician_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "court_physician_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=court_physician }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "court_poet_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ court_poet_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "court_scholar_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ court_scholar_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "court_smith_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } custom_tooltip={ text=IS_NOT_THE_SPOUSE_OF_CHARACTER_COURT_POSITION NOT={ is_spouse_of=scope:liege } } custom_tooltip={ text=none_does_not_have_a_full_time_job trigger_if={ limit={ NOT={ has_court_position=court_smith_court_position } } court_position_does_not_already_have_a_job_trigger=yes } } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "court_tutor_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ court_tutor_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "crimson_cloaks_commander_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOR={ has_trait=kingsguard has_trait=maester has_trait=septon } can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege } is_courtier_of=scope:liege }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "cultural_emissary_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=cultural_emissary }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "cupbearer_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ cupbearer_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "elephantry_captain_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=elephantry_captain }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "eparch_court_position",
+      "status": "supported",
+      "explanation": "Requirements are generated or satisfied by the fresh-character context.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_admin_court_position.txt",
+      "requirements": [
+        "scope:employee={ liege=scope:liege OR={ is_landed=no custom_tooltip={ text=eparch_distance_trigger_desc capital_province?={ squared_distance={ target=scope:liege.capital_province value<50000 } } government_allows=administrative } } NOT={ has_trait=eunuch } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [],
+      "conditional_requirements": []
+    },
+    {
+      "position": "executioner_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ executioner_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "favored_minister_court_position",
+      "status": "not_spawnable",
+      "explanation": "No satisfiable validity branch for a new untitled courtier; spawning is disabled.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_celestial_court_positions.txt",
+      "requirements": [
+        "scope:employee={ is_councillor_of=scope:liege }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [],
+      "conditional_requirements": []
+    },
+    {
+      "position": "fire_dragon_engineer_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_celestial_court_positions.txt",
+      "requirements": [
+        "scope:employee={ fire_dragon_engineer_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "first_sword_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } custom_tooltip={ text=none_does_not_have_a_full_time_job trigger_if={ limit={ NOT={ has_court_position=first_sword_court_position } } court_position_does_not_already_have_a_job_trigger=yes } } can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "food_taster_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ food_taster_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ scope:liege.faith={ NOT={ has_doctrine=doctrine_clerical_function_recruitment } } }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "foreign_emissary_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_mpo_court_positions.txt",
+      "requirements": [
+        "scope:employee={ liege=scope:liege foreign_emissary_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "gaoler_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOT={ is_spouse_of=scope:liege } is_ruler=no custom_tooltip={ text=none_does_not_have_a_full_time_job trigger_if={ limit={ NOT={ has_court_position=gaoler_court_position } } court_position_does_not_already_have_a_job_trigger=yes } } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "garuda_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=garuda }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "goldcloaks_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions_crownlands.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } OR={ AND={ any_liege_or_above={ has_title=title:b_goldguard_heights } is_landed=no } has_title=title:b_goldguard_heights } NOR={ has_trait=kingsguard has_trait=maester has_trait=septon } can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "any_liege_or_above={ has_title=title:b_goldguard_heights }",
+        "can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "grand_guardian_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_celestial_court_positions.txt",
+      "requirements": [
+        "scope:employee={ grand_guardian_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "grand_mentor_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_celestial_court_positions.txt",
+      "requirements": [
+        "scope:employee={ grand_mentor_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "grand_preceptor_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_celestial_court_positions.txt",
+      "requirements": [
+        "scope:employee={ grand_preceptor_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "grey_cloaks_commander_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOR={ has_trait=kingsguard has_trait=maester has_trait=septon } can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege } is_courtier_of=scope:liege }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "harbormaster_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee?={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } custom_tooltip={ text=employee_is_not_your_spouse NOT={ is_spouse_of=scope:liege } } custom_tooltip={ text=none_does_not_have_a_full_time_job trigger_if={ limit={ NOT={ has_court_position=harbormaster_court_position } } court_position_does_not_already_have_a_job_trigger=yes } } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "head_dragonkeeper_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOR={ is_imprisoned=yes is_landed=yes } custom_tooltip={ text=none_does_not_have_a_full_time_job trigger_if={ limit={ NOT={ has_court_position=head_dragonkeeper_court_position } } court_position_does_not_already_have_a_job_trigger=yes } } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "head_groom_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=head_groom }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "head_porter_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=head_porter }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "heavy_cavalry_captain_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=heavy_cavalry_captain }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "heavy_infantry_captain_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=heavy_infantry_captain }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "high_almoner_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ high_almoner_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "high_reeve_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions_crownlands.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOR={ has_trait=kingsguard has_trait=maester has_trait=septon } is_courtier_of=scope:liege }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "horse_archer_captain_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=horse_archer_captain }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "household_guard_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } custom_tooltip={ text=none_does_not_have_a_full_time_job trigger_if={ limit={ NOT={ has_court_position=household_guard_court_position } } court_position_does_not_already_have_a_job_trigger=yes } } can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "huntperson_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=huntperson }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "justiciar_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions_crownlands.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOR={ has_trait=kingsguard has_trait=maester has_trait=septon } can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege } OR={ AND={ is_vassal_of=title:c_kings_landing.holder highest_held_title_tier<=tier_duchy highest_held_title_tier>tier_barony } is_courtier_of=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "keeper_of_keys_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions_crownlands.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOR={ has_trait=kingsguard has_trait=maester has_trait=septon } is_courtier_of=scope:liege }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "keeper_of_swans_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ keeper_of_swans_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "keeper_of_the_harem_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_celestial_court_positions.txt",
+      "requirements": [
+        "scope:employee={ keeper_of_the_harem_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "keeper_of_the_horses_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_mpo_court_positions.txt",
+      "requirements": [
+        "scope:employee={ liege=scope:liege keeper_of_the_horses_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "government_has_flag=government_is_nomadic"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "kennelperson_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=kennelperson }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "khlon_glan_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_mandala_court_positions.txt",
+      "requirements": [
+        "scope:employee={ khlon_glan_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "lady_in_waiting_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ lady_in_waiting_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "laureate_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=laureate }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "light_cavalry_captain_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=light_cavalry_captain }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "light_infantry_captain_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=light_infantry_captain }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "lorath_fisher_prince_court_position",
+      "status": "not_spawnable",
+      "explanation": "No satisfiable validity branch for a new untitled courtier; spawning is disabled.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ has_title=title:d_fisher_principality }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [],
+      "conditional_requirements": []
+    },
+    {
+      "position": "lorath_harvest_prince_court_position",
+      "status": "supported",
+      "explanation": "Requirements are generated or satisfied by the fresh-character context.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ domain_size<1 }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [],
+      "conditional_requirements": []
+    },
+    {
+      "position": "lorath_prince_of_streets_court_position",
+      "status": "not_spawnable",
+      "explanation": "No satisfiable validity branch for a new untitled courtier; spawning is disabled.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ has_title=title:d_principality_of_the_streets }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [],
+      "conditional_requirements": []
+    },
+    {
+      "position": "maester_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ is_imprisoned=no OR={ has_trait_xp={ trait=maester value=100 } has_trait=disgraced_maester has_character_flag=former_acolyte } }",
+        "scope:liege={ trigger_if={ limit={ has_title=title:h_the_iron_throne } scope:employee={ has_inactive_trait=grandmaester } } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [],
+      "conditional_requirements": [
+        {
+          "when": [
+            "scope:liege={ has_title=title:h_the_iron_throne }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "master_assassin_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ master_assassin_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "government_has_flag=government_is_herder",
+        "can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "master_at_arms_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "master_bard_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=master_bard }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "master_of_arms_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=master_of_arms }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "master_of_horse_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ master_of_horse_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "master_of_hunt_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ master_of_hunt_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "master_of_spoils_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=master_of_spoils }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "master_thief_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=master_thief }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "nw_septon",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\01_agot_nights_watch_positions.txt",
+      "requirements": [
+        "scope:employee={ is_male=yes is_adult=yes has_trait=nightswatch has_trait=septon base_court_position_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "person_haggler_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=person_haggler }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "pike_captain_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=pike_captain }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "princes_pass_court_position",
+      "status": "not_spawnable",
+      "explanation": "No satisfiable validity branch for a new untitled courtier; spawning is disabled.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } OR={ has_title=title:k_the_red_mountains has_title=title:d_the_princes_pass has_title=title:d_redmarch } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [],
+      "conditional_requirements": []
+    },
+    {
+      "position": "quartermaster_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=quartermaster }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "royal_architect_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ royal_architect_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "royal_counter_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions_crownlands.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOR={ has_trait=kingsguard has_trait=maester has_trait=septon } is_courtier_of=scope:liege }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "royal_mint_officer_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions_crownlands.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOR={ has_trait=kingsguard has_trait=maester has_trait=septon } is_courtier_of=scope:liege }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "royal_scales_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions_crownlands.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOR={ has_trait=kingsguard has_trait=maester has_trait=septon } is_courtier_of=scope:liege }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "sea_watch_commander_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions_crownlands.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } NOR={ has_trait=kingsguard has_trait=maester has_trait=septon } can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege } is_courtier_of=scope:liege }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "can_be_combatant_based_on_gender_trigger={ ARMY_OWNER=scope:liege }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "second_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=second }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "seneschal_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ seneschal_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "septa_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } is_courtier_of=scope:liege has_trait=septon is_male=no }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "septon_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "siege_engineer_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_mpo_court_positions.txt",
+      "requirements": [
+        "scope:employee={ liege=scope:liege siege_engineer_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "stone_way_court_position",
+      "status": "not_spawnable",
+      "explanation": "No satisfiable validity branch for a new untitled courtier; spawning is disabled.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } OR={ has_title=title:k_yronwood has_title=title:d_the_stoneway has_title=title:d_greenbelt } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [],
+      "conditional_requirements": []
+    },
+    {
+      "position": "stooge_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=stooge }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "travel_leader_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=travel_leader }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "is_clergy=no"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ bannable_serving_diarch_trigger=yes }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "warden_of_the_east_court_position",
+      "status": "supported",
+      "explanation": "Requirements are generated or satisfied by the fresh-character context.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee?={ OR={ is_vassal_of=scope:liege is_courtier_of=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [],
+      "conditional_requirements": []
+    },
+    {
+      "position": "warden_of_the_north_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee?={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } OR={ is_vassal_of=scope:liege is_courtier_of=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "warden_of_the_south_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee?={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } OR={ is_vassal_of=scope:liege is_courtier_of=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "warden_of_the_west_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee?={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } OR={ is_vassal_of=scope:liege is_courtier_of=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "wet_nurse_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_court_positions.txt",
+      "requirements": [
+        "scope:employee={ wet_nurse_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "government_has_flag=government_is_herder"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "white_knife_court_position",
+      "status": "not_spawnable",
+      "explanation": "No satisfiable validity branch for a new untitled courtier; spawning is disabled.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_agot_court_positions.txt",
+      "requirements": [
+        "scope:employee={ base_court_position_validity_trigger={ EMPLOYER=scope:liege } OR={ has_title=title:k_the_white_knife has_title=title:d_white_harbor has_title=title:d_keystone } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [],
+      "conditional_requirements": []
+    },
+    {
+      "position": "witness_camp_officer",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\common\\Crusader Kings III\\game\\common\\court_positions\\types\\00_camp_officers.txt",
+      "requirements": [
+        "valid_camp_officer_trigger={ OFFICER=witness }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "yeke_jarquchi_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_mpo_court_positions.txt",
+      "requirements": [
+        "scope:employee={ liege=scope:liege yeke_jarquchi_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "government_has_flag=government_is_nomadic"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    },
+    {
+      "position": "yurtchi_court_position",
+      "status": "runtime_checked",
+      "explanation": "Generated adjustments and runtime conditions apply; appointment depends on the current character and employer.",
+      "source_file": "D:\\SteamLibrary\\steamapps\\workshop\\content\\1158310\\2962333032\\common\\court_positions\\types\\00_mpo_court_positions.txt",
+      "requirements": [
+        "scope:employee={ liege=scope:liege yurtchi_validity_trigger={ EMPLOYER=scope:liege } }"
+      ],
+      "review_reasons": [],
+      "runtime_conditions": [
+        "NOT={ trigger_if={ limit={ tgp_realm_has_ceremonial_liege_trigger=yes } custom_tooltip={ text=tgp_has_ceremonial_liege_title_tt has_title=top_liege.primary_title.var:administrative_ui_special_title } } trigger_else={ custom_tooltip={ text=tgp_has_ceremonial_liege_title_no_title_tt always=no } } }",
+        "government_has_flag=government_is_nomadic"
+      ],
+      "conditional_requirements": [
+        {
+          "when": [
+            "AND={ exists=top_liege }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        },
+        {
+          "when": [
+            "AND={ exists=employer }"
+          ],
+          "satisfiable": true,
+          "review_reasons": []
+        }
+      ]
+    }
+  ]
+}

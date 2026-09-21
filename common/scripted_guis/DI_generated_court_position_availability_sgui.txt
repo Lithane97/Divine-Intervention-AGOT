@@ -4,6 +4,9 @@ DI_court_position_available = {
     is_valid = {
         switch = {
             trigger = scope:court_position_type
+            court_position_type:akolouthos_court_position = {
+                always = no
+            }
             court_position_type:archer_captain_camp_officer = {
                 has_dlc_feature = roads_to_power
             }
@@ -190,6 +193,9 @@ DI_court_position_available = {
             court_position_type:chief_forager_camp_officer = {
                 has_dlc_feature = roads_to_power
             }
+            court_position_type:chief_qadi_court_position = {
+                always = no
+            }
             court_position_type:chronicler_court_position = {
                 has_dlc_feature = legends
             }
@@ -197,9 +203,11 @@ DI_court_position_available = {
                 has_dlc_feature = royal_court
             }
             court_position_type:court_brahmin_court_position = {
+                always = no
                 has_dlc_feature = all_under_heaven
             }
             court_position_type:court_guru_court_position = {
+                always = no
                 has_dlc_feature = all_under_heaven
             }
             court_position_type:court_poet_court_position = {
@@ -219,6 +227,9 @@ DI_court_position_available = {
             }
             court_position_type:executioner_court_position = {
                 has_dlc_feature = royal_court
+            }
+            court_position_type:favored_minister_court_position = {
+                always = no
             }
             court_position_type:food_taster_court_position = {
                 has_dlc_feature = royal_court
@@ -269,6 +280,12 @@ DI_court_position_available = {
             court_position_type:light_infantry_captain_camp_officer = {
                 has_dlc_feature = roads_to_power
             }
+            court_position_type:lorath_fisher_prince_court_position = {
+                always = no
+            }
+            court_position_type:lorath_prince_of_streets_court_position = {
+                always = no
+            }
             court_position_type:master_bard_camp_officer = {
                 has_dlc_feature = roads_to_power
             }
@@ -295,6 +312,9 @@ DI_court_position_available = {
             court_position_type:pike_captain_camp_officer = {
                 has_dlc_feature = roads_to_power
             }
+            court_position_type:princes_pass_court_position = {
+                always = no
+            }
             court_position_type:quartermaster_camp_officer = {
                 has_dlc_feature = roads_to_power
             }
@@ -310,6 +330,9 @@ DI_court_position_available = {
                     has_variable = DI_char_spawner_female
                 }
             }
+            court_position_type:stone_way_court_position = {
+                always = no
+            }
             court_position_type:stooge_camp_officer = {
                 has_dlc_feature = roads_to_power
             }
@@ -319,6 +342,9 @@ DI_court_position_available = {
                     story_type = DI_misc_variables_story
                     has_variable = DI_char_spawner_female
                 }
+            }
+            court_position_type:white_knife_court_position = {
+                always = no
             }
             court_position_type:witness_camp_officer = {
                 has_dlc_feature = roads_to_power

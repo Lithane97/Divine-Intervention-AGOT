@@ -441,3 +441,2494 @@ DI_should_use_ordered_court_position_revoke = {
         fallback = { always = no }
     }
 }
+
+
+DI_court_position_spawn_enabled = {
+    switch = {
+        trigger = scope:court_position_type
+        court_position_type:admiral_court_position = {
+            scope:target = {
+                any_sub_realm_county = {
+                    is_coastal_county = yes
+                }
+            }
+        }
+        court_position_type:akolouthos_court_position = { always = no }
+        court_position_type:antiquarian_court_position = {
+            scope:target = {
+                OR = {
+                    is_landed_or_landless_administrative = yes
+                    government_has_flag = government_is_nomadic
+                }
+                trigger_if = {
+                    limit = {
+                        is_ai = yes
+                    }
+                    has_any_artifact = yes
+                }
+            }
+        }
+        court_position_type:archer_captain_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = archer_captain_captain_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_archer_captain_officer
+                    }
+                }
+            }
+        }
+        court_position_type:armorer_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = armorer_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_armorer_officer
+                    }
+                }
+            }
+        }
+        court_position_type:b_deep_lake_keeper = {
+            scope:target = {
+                government_has_flag = government_is_nw
+            }
+        }
+        court_position_type:b_eastwatch_by_the_sea_keeper = {
+            scope:target = {
+                government_has_flag = government_is_nw
+            }
+        }
+        court_position_type:b_greenguard_keeper = {
+            scope:target = {
+                government_has_flag = government_is_nw
+            }
+        }
+        court_position_type:b_greyguard_keeper = {
+            scope:target = {
+                government_has_flag = government_is_nw
+            }
+        }
+        court_position_type:b_hoarfrost_hill_keeper = {
+            scope:target = {
+                government_has_flag = government_is_nw
+            }
+        }
+        court_position_type:b_icemark_keeper = {
+            scope:target = {
+                government_has_flag = government_is_nw
+            }
+        }
+        court_position_type:b_long_barrow_keeper = {
+            scope:target = {
+                government_has_flag = government_is_nw
+            }
+        }
+        court_position_type:b_oakenshield_keeper = {
+            scope:target = {
+                government_has_flag = government_is_nw
+            }
+        }
+        court_position_type:b_queensgate_keeper = {
+            scope:target = {
+                government_has_flag = government_is_nw
+            }
+        }
+        court_position_type:b_rimegate_keeper = {
+            scope:target = {
+                government_has_flag = government_is_nw
+            }
+        }
+        court_position_type:b_sable_hall_keeper = {
+            scope:target = {
+                government_has_flag = government_is_nw
+            }
+        }
+        court_position_type:b_sentinel_stand_keeper = {
+            scope:target = {
+                government_has_flag = government_is_nw
+            }
+        }
+        court_position_type:b_stonedoor_keeper = {
+            scope:target = {
+                government_has_flag = government_is_nw
+            }
+        }
+        court_position_type:b_the_nightfort_keeper = {
+            scope:target = {
+                government_has_flag = government_is_nw
+            }
+        }
+        court_position_type:b_the_shadow_tower_keeper = {
+            scope:target = {
+                government_has_flag = government_is_nw
+            }
+        }
+        court_position_type:b_the_torches_keeper = {
+            scope:target = {
+                government_has_flag = government_is_nw
+            }
+        }
+        court_position_type:b_westwatch_by_the_bridge_keeper = {
+            scope:target = {
+                government_has_flag = government_is_nw
+            }
+        }
+        court_position_type:b_woodswatch_by_the_pool_keeper = {
+            scope:target = {
+                government_has_flag = government_is_nw
+            }
+        }
+        court_position_type:bloodrider_court_position = {
+            scope:target = {
+                faith = {
+                    has_doctrine_parameter = can_make_bloodriders
+                }
+            }
+        }
+        court_position_type:bodyguard_court_position = {
+            scope:target = {
+                trigger_if = {
+                    limit = {
+                        government_has_flag = government_is_nomadic
+                    }
+                    domicile ?= {
+                        has_domicile_building_or_higher = character_warfare_yurt_01
+                    }
+                }
+            }
+        }
+        court_position_type:bookmaker_court_position = {
+            scope:target = {
+                is_landed_or_landless_administrative = yes
+                culture = {
+                    has_cultural_parameter = hosts_chariot_races
+                }
+            }
+        }
+        court_position_type:boyan_court_position = {
+            scope:target = {
+                highest_held_title_tier >= tier_county
+                government_has_flag = government_is_nomadic
+            }
+        }
+        court_position_type:camelry_captain_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = camelry_captain_captain_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_camelry_captain_officer
+                    }
+                }
+            }
+        }
+        court_position_type:camp_cook_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = camp_cook_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_camp_cook_officer
+                    }
+                }
+            }
+        }
+        court_position_type:camp_priest_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = camp_priest_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_camp_priest_officer
+                    }
+                }
+            }
+        }
+        court_position_type:cave_hermit_court_position = {
+            scope:target = {
+                is_landed_or_landless_administrative = yes
+                custom_tooltip = {
+                    text = cave_hermit_court_position_tt
+                    has_variable = encountered_recruitable_hermit
+                }
+            }
+        }
+        court_position_type:champion_court_position = {
+            scope:target = {
+                is_landed_or_landless_administrative = yes
+            }
+        }
+        court_position_type:charioteer_court_position = {
+            scope:target = {
+                is_landed_or_landless_administrative = yes
+                culture = {
+                    has_cultural_parameter = hosts_chariot_races
+                }
+            }
+        }
+        court_position_type:cherbi_court_position = {
+            scope:target = {
+                highest_held_title_tier >= tier_county
+                government_has_flag = government_is_nomadic
+            }
+        }
+        court_position_type:chief_engineer_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = chief_engineer_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_chief_engineer_officer
+                    }
+                }
+            }
+        }
+        court_position_type:chief_eunuch_court_position = {
+            scope:target = {
+                OR = {
+                    is_landed_or_landless_administrative = yes
+                    government_has_flag = government_is_nomadic
+                }
+                highest_held_title_tier >= tier_duchy
+                save_temporary_scope_as = root_scope
+                can_employ_court_eunuchs_trigger = {
+                    CHAR = scope:root_scope
+                }
+            }
+        }
+        court_position_type:chief_forager_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = chief_forager_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_chief_forager_officer
+                    }
+                }
+            }
+        }
+        court_position_type:chief_qadi_court_position = { always = no }
+        court_position_type:chronicler_court_position = {
+            scope:target = {
+                trigger_if = {
+                    limit = {
+                        government_has_flag = government_is_nomadic
+                    }
+                    domicile ?= {
+                        has_domicile_building_or_higher = court_yurt_01
+                    }
+                }
+                trigger_else = {
+                    is_landed_or_landless_administrative = yes
+                }
+            }
+        }
+        court_position_type:court_artificer_court_position = {
+            scope:target = {
+                is_landed_or_landless_administrative = yes
+                has_royal_court = yes
+            }
+        }
+        court_position_type:court_astrologer_court_position = {
+            scope:target = {
+                highest_held_title_tier >= tier_county
+                government_has_flag = government_is_nomadic
+            }
+        }
+        court_position_type:court_brahmin_court_position = { always = no }
+        court_position_type:court_brewmaster_court_position = {
+            scope:target = {
+                OR = {
+                    is_landed_or_landless_administrative = yes
+                    government_has_flag = government_is_nomadic
+                }
+                custom_tooltip = {
+                    text = court_brewmaster_requirement_tt
+                    any_sub_realm_barony = {
+                        county.holder = root
+                        title_province = {
+                            has_building_or_higher = breweries_01
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:court_gardener_court_position = {
+            scope:target = {
+                is_landed_or_landless_administrative = yes
+                culture = {
+                    has_cultural_parameter = can_appoint_court_gardener
+                }
+            }
+        }
+        court_position_type:court_guru_court_position = { always = no }
+        court_position_type:court_jester_court_position = {
+            scope:target = {
+                is_landed_or_landless_administrative = yes
+                highest_held_title_tier >= tier_duchy
+            }
+        }
+        court_position_type:court_musician_court_position = {
+            scope:target = {
+                OR = {
+                    is_landed_or_landless_administrative = yes
+                    government_has_flag = government_is_nomadic
+                }
+                trigger_if = {
+                    limit = {
+                        government_has_flag = government_is_nomadic
+                        root.culture ?= {
+                            has_cultural_parameter = better_court_musicians
+                        }
+                    }
+                    OR = {
+                        has_realm_law = nomadic_authority_5
+                        has_realm_law = nomadic_authority_4
+                        has_realm_law = nomadic_authority_3
+                        has_realm_law = nomadic_authority_2
+                    }
+                }
+                trigger_else_if = {
+                    limit = {
+                        government_has_flag = government_is_nomadic
+                    }
+                    OR = {
+                        has_realm_law = nomadic_authority_5
+                        has_realm_law = nomadic_authority_4
+                        has_realm_law = nomadic_authority_3
+                    }
+                }
+                trigger_else_if = {
+                    limit = {
+                        root.culture ?= {
+                            has_cultural_parameter = better_court_musicians
+                        }
+                    }
+                    highest_held_title_tier >= tier_duchy
+                }
+                trigger_else = {
+                    highest_held_title_tier >= tier_kingdom
+                }
+            }
+        }
+        court_position_type:court_physician_court_position = {
+            scope:target = {
+                NOR = {
+                    culture = {
+                        has_innovation = innovation_maesters
+                    }
+                    has_title = title:h_the_iron_throne
+                }
+            }
+        }
+        court_position_type:court_poet_court_position = {
+            scope:target = {
+                OR = {
+                    is_landed_or_landless_administrative = yes
+                    government_has_flag = government_is_nomadic
+                }
+                trigger_if = {
+                    limit = {
+                        government_has_flag = government_is_nomadic
+                        root.culture ?= {
+                            has_cultural_parameter = better_court_poets
+                        }
+                    }
+                    OR = {
+                        has_realm_law = nomadic_authority_5
+                        has_realm_law = nomadic_authority_4
+                        has_realm_law = nomadic_authority_3
+                        has_realm_law = nomadic_authority_2
+                    }
+                }
+                trigger_else_if = {
+                    limit = {
+                        government_has_flag = government_is_nomadic
+                    }
+                    OR = {
+                        has_realm_law = nomadic_authority_5
+                        has_realm_law = nomadic_authority_4
+                        has_realm_law = nomadic_authority_3
+                    }
+                }
+                trigger_else_if = {
+                    limit = {
+                        root.culture ?= {
+                            has_cultural_parameter = better_court_poets
+                        }
+                    }
+                    highest_held_title_tier >= tier_duchy
+                }
+                trigger_else_if = {
+                    limit = {
+                        dynasty ?= {
+                            has_dynasty_perk = tgp_japan_legacy_2
+                        }
+                    }
+                    highest_held_title_tier >= tier_county
+                }
+                trigger_else = {
+                    highest_held_title_tier >= tier_kingdom
+                }
+            }
+        }
+        court_position_type:court_scholar_court_position = {
+            scope:target = {
+                is_landed_or_landless_administrative = yes
+                highest_held_title_tier >= tier_kingdom
+                culture = {
+                    has_cultural_tradition = tradition_fp3_beacon_of_learning
+                }
+            }
+        }
+        court_position_type:court_tutor_court_position = {
+            scope:target = {
+                trigger_if = {
+                    limit = {
+                        government_has_flag = government_is_nomadic
+                    }
+                    domicile ?= {
+                        has_domicile_parameter = nomad_unlock_court_tutor
+                    }
+                }
+                trigger_else = {
+                    is_landed_or_landless_administrative = yes
+                }
+            }
+        }
+        court_position_type:crimson_cloaks_commander_court_position = {
+            scope:target = {
+                has_title = title:c_lannisport
+            }
+        }
+        court_position_type:cultural_emissary_court_position = {
+            scope:target = {
+                dynasty ?= {
+                    has_dynasty_perk = ep1_culture_legacy_4
+                }
+            }
+        }
+        court_position_type:cupbearer_court_position = {
+            scope:target = {
+                highest_held_title_tier >= tier_kingdom
+                is_landed_or_landless_administrative = yes
+            }
+        }
+        court_position_type:elephantry_captain_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = elephantry_captain_captain_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_elephantry_captain_officer
+                    }
+                }
+            }
+        }
+        court_position_type:eparch_court_position = {
+            scope:target = {
+                highest_held_title_tier >= tier_empire
+            }
+        }
+        court_position_type:executioner_court_position = {
+            scope:target = {
+                is_landed_or_landless_administrative = yes
+                highest_held_title_tier >= tier_kingdom
+                NAND = {
+                    culture = {
+                        has_cultural_pillar = heritage_first_man
+                    }
+                    NOR = {
+                        has_trait = lazy
+                        has_trait = craven
+                        has_trait = arbitrary
+                    }
+                }
+            }
+        }
+        court_position_type:favored_minister_court_position = { always = no }
+        court_position_type:fire_dragon_engineer_court_position = {
+            scope:target = {
+                highest_held_title_tier >= tier_kingdom
+                government_has_flag = government_is_celestial
+            }
+        }
+        court_position_type:food_taster_court_position = {
+            scope:target = {
+                is_landed_or_landless_administrative = yes
+                trigger_if = {
+                    limit = {
+                        root.culture ?= {
+                            has_cultural_parameter = better_food_tasters
+                        }
+                    }
+                    highest_held_title_tier >= tier_duchy
+                }
+                trigger_else = {
+                    highest_held_title_tier >= tier_kingdom
+                }
+            }
+        }
+        court_position_type:foreign_emissary_court_position = {
+            scope:target = {
+                highest_held_title_tier >= tier_county
+                government_has_flag = government_is_nomadic
+            }
+        }
+        court_position_type:gaoler_court_position = {
+            scope:target = {
+                any_held_title = {
+                    tier = tier_county
+                    any_county_province = {
+                        has_holding_type = castle_holding
+                        OR = {
+                            has_building = castle_05
+                            has_building = castle_04
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:garuda_court_position = {
+            scope:target = {
+                always = no
+            }
+        }
+        court_position_type:goldcloaks_court_position = {
+            scope:target = {
+                has_title = title:c_kings_landing
+            }
+            scope:target = {
+                OR = {
+                    AND = {
+                        has_title = title:b_goldguard_heights
+                    }
+                    any_liege_or_above = {
+                        has_title = title:b_goldguard_heights
+                    }
+                }
+            }
+        }
+        court_position_type:grand_guardian_court_position = {
+            scope:target = {
+                is_independent_ruler = yes
+                government_has_flag = government_is_celestial
+                highest_held_title_tier >= tier_empire
+            }
+        }
+        court_position_type:grand_mentor_court_position = {
+            scope:target = {
+                is_independent_ruler = yes
+                government_has_flag = government_is_celestial
+                highest_held_title_tier >= tier_empire
+            }
+        }
+        court_position_type:grand_preceptor_court_position = {
+            scope:target = {
+                is_independent_ruler = yes
+                government_has_flag = government_is_celestial
+                highest_held_title_tier >= tier_empire
+            }
+        }
+        court_position_type:grey_cloaks_commander_court_position = {
+            scope:target = {
+                has_title = title:c_oldtown
+            }
+        }
+        court_position_type:harbormaster_court_position = {
+            scope:target = {
+                OR = {
+                    has_title = title:c_kings_landing
+                    any_held_county = {
+                        any_county_province = {
+                            has_holding_type = city_holding
+                            OR = {
+                                has_building = city_05
+                                has_building = city_04
+                            }
+                            has_building_or_higher = common_tradeport_01
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:head_groom_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = head_groom_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_head_groom_officer
+                    }
+                }
+            }
+        }
+        court_position_type:head_porter_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                OR = {
+                    custom_tooltip = {
+                        text = head_porter_camp_officer_parameter_tt
+                        domicile ?= {
+                            has_domicile_parameter = camp_unlocks_head_porter_officer
+                        }
+                    }
+                    has_perk = local_inspection_perk
+                }
+            }
+        }
+        court_position_type:heavy_cavalry_captain_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = heavy_cavalry_captain_captain_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_heavy_cavalry_captain_officer
+                    }
+                }
+            }
+        }
+        court_position_type:heavy_infantry_captain_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = heavy_infantry_captain_captain_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_heavy_infantry_captain_officer
+                    }
+                }
+            }
+        }
+        court_position_type:high_almoner_court_position = {
+            scope:target = {
+                is_landed_or_landless_administrative = yes
+                highest_held_title_tier >= tier_kingdom
+            }
+        }
+        court_position_type:high_reeve_court_position = {
+            scope:target = {
+                has_title = title:h_the_iron_throne
+            }
+        }
+        court_position_type:horse_archer_captain_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = horse_archer_captain_captain_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_horse_archer_captain_officer
+                    }
+                }
+            }
+        }
+        court_position_type:huntperson_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = huntperson_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_huntperson_officer
+                    }
+                }
+            }
+        }
+        court_position_type:justiciar_court_position = {
+            scope:target = {
+                has_title = title:h_the_iron_throne
+            }
+        }
+        court_position_type:keeper_of_keys_court_position = {
+            scope:target = {
+                has_title = title:h_the_iron_throne
+            }
+        }
+        court_position_type:keeper_of_swans_court_position = {
+            scope:target = {
+                is_landed_or_landless_administrative = yes
+                dynasty = dynasty:dynn_Swann
+                NOT = {
+                    has_government = nights_watch_government
+                }
+            }
+        }
+        court_position_type:keeper_of_the_harem_court_position = {
+            scope:target = {
+                highest_held_title_tier = tier_hegemony
+                government_has_flag = government_is_celestial
+                save_temporary_scope_as = root_scope
+                can_employ_court_eunuchs_trigger = {
+                    CHAR = scope:root_scope
+                }
+            }
+        }
+        court_position_type:keeper_of_the_horses_court_position = {
+            scope:target = {
+                highest_held_title_tier >= tier_county
+                government_has_flag = government_is_nomadic
+            }
+        }
+        court_position_type:kennelperson_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = kennelperson_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_kennelperson_officer
+                    }
+                }
+            }
+        }
+        court_position_type:khlon_glan_court_position = {
+            scope:target = {
+                is_landed_or_landless_administrative = yes
+            }
+        }
+        court_position_type:lady_in_waiting_court_position = {
+            scope:target = {
+                is_landed_or_landless_administrative = yes
+                highest_held_title_tier >= tier_duchy
+                OR = {
+                    any_child = {
+                        is_female = yes
+                        is_married = no
+                    }
+                    is_married = yes
+                    is_female = yes
+                }
+            }
+        }
+        court_position_type:laureate_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                has_trait = violet_poet
+            }
+        }
+        court_position_type:light_cavalry_captain_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = light_cavalry_captain_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_light_cavalry_captain_officer
+                    }
+                }
+            }
+        }
+        court_position_type:light_infantry_captain_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = light_infantry_captain_captain_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_light_infantry_captain_officer
+                    }
+                }
+            }
+        }
+        court_position_type:lorath_fisher_prince_court_position = { always = no }
+        court_position_type:lorath_harvest_prince_court_position = {
+            scope:target = {
+                has_title = title:k_lorath
+            }
+        }
+        court_position_type:lorath_prince_of_streets_court_position = { always = no }
+        court_position_type:maester_court_position = {
+            scope:target = {
+                OR = {
+                    culture = {
+                        has_innovation = innovation_maesters
+                    }
+                    has_title = title:h_the_iron_throne
+                }
+            }
+        }
+        court_position_type:master_assassin_court_position = {
+            scope:target = {
+                OR = {
+                    is_landed_or_landless_administrative = yes
+                    government_has_flag = government_is_nomadic
+                }
+                faith = {
+                    has_doctrine = tenet_fp3_fedayeen
+                }
+            }
+        }
+        court_position_type:master_at_arms_court_position = {
+            scope:target = {
+                culture = {
+                    has_innovation = innovation_agot_sword_bound
+                }
+            }
+        }
+        court_position_type:master_bard_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = master_bard_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_master_bard_officer
+                    }
+                }
+            }
+        }
+        court_position_type:master_of_arms_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = master_of_arms_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_master_of_arms_officer
+                    }
+                }
+            }
+        }
+        court_position_type:master_of_horse_court_position = {
+            scope:target = {
+                is_landed_or_landless_administrative = yes
+                highest_held_title_tier >= tier_duchy
+            }
+        }
+        court_position_type:master_of_hunt_court_position = {
+            scope:target = {
+                OR = {
+                    is_landed_or_landless_administrative = yes
+                    government_has_flag = government_is_nomadic
+                }
+            }
+        }
+        court_position_type:master_of_spoils_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = master_of_spoils_captain_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_master_of_spoils_officer
+                    }
+                }
+            }
+        }
+        court_position_type:master_thief_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = master_thief_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_master_thief_officer
+                    }
+                }
+            }
+        }
+        court_position_type:nw_septon = {
+            scope:target = {
+                government_has_flag = government_is_nw
+                agot_is_landless_nw_character = no
+            }
+        }
+        court_position_type:person_haggler_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = person_haggler_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_person_haggler_officer
+                    }
+                }
+            }
+        }
+        court_position_type:pike_captain_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = pike_captain_captain_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_pike_captain_officer
+                    }
+                }
+            }
+        }
+        court_position_type:princes_pass_court_position = { always = no }
+        court_position_type:quartermaster_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                OR = {
+                    custom_tooltip = {
+                        text = quartermaster_camp_officer_parameter_tt
+                        domicile ?= {
+                            has_domicile_parameter = camp_unlocks_quartermaster_officer
+                        }
+                    }
+                    has_perk = local_inspection_perk
+                }
+            }
+        }
+        court_position_type:royal_architect_court_position = {
+            scope:target = {
+                is_landed_or_landless_administrative = yes
+                highest_held_title_tier >= tier_kingdom
+            }
+        }
+        court_position_type:royal_counter_court_position = {
+            scope:target = {
+                has_title = title:h_the_iron_throne
+            }
+        }
+        court_position_type:royal_mint_officer_court_position = {
+            scope:target = {
+                title:h_the_iron_throne = {
+                    exists = yes
+                }
+                top_liege ?= title:h_the_iron_throne.holder
+                OR = {
+                    has_title = title:c_kings_landing
+                    has_title = title:c_oldtown
+                    has_title = title:c_lannisport
+                }
+            }
+        }
+        court_position_type:royal_scales_court_position = {
+            scope:target = {
+                has_title = title:h_the_iron_throne
+            }
+        }
+        court_position_type:sea_watch_commander_court_position = {
+            scope:target = {
+                has_title = title:h_the_iron_throne
+            }
+        }
+        court_position_type:second_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = second_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_second_officer
+                    }
+                }
+            }
+        }
+        court_position_type:seneschal_court_position = {
+            scope:target = {
+                is_landed_or_landless_administrative = yes
+            }
+        }
+        court_position_type:septa_court_position = {
+            scope:target = {
+                NOT = {
+                    government_has_flag = government_is_nw
+                }
+                OR = {
+                    faith = {
+                        religion_tag = the_seven_religion
+                    }
+                    capital_county ?= {
+                        title_province = {
+                            geographical_region = world_westeros_seven_kingdoms
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:septon_court_position = {
+            scope:target = {
+                any_courtier_or_guest = {
+                    faith = {
+                        religion_tag = the_seven_religion
+                    }
+                }
+                NOT = {
+                    faith = {
+                        religion_tag = the_seven_religion
+                    }
+                }
+            }
+        }
+        court_position_type:siege_engineer_court_position = {
+            scope:target = {
+                highest_held_title_tier >= tier_county
+                government_has_flag = government_is_nomadic
+            }
+        }
+        court_position_type:stone_way_court_position = { always = no }
+        court_position_type:stooge_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+            }
+        }
+        court_position_type:warden_of_the_east_court_position = {
+            scope:target = {
+                has_title = title:h_the_iron_throne
+            }
+        }
+        court_position_type:warden_of_the_north_court_position = {
+            scope:target = {
+                has_title = title:h_the_iron_throne
+            }
+        }
+        court_position_type:warden_of_the_south_court_position = {
+            scope:target = {
+                has_title = title:h_the_iron_throne
+            }
+        }
+        court_position_type:warden_of_the_west_court_position = {
+            scope:target = {
+                has_title = title:h_the_iron_throne
+            }
+        }
+        court_position_type:wet_nurse_court_position = {
+            scope:target = {
+                trigger_if = {
+                    limit = {
+                        government_has_flag = government_is_nomadic
+                    }
+                    custom_tooltip = {
+                        text = has_wet_nurse_domicile_building
+                        domicile ?= {
+                            has_domicile_parameter = nomad_unlock_wet_nurse
+                        }
+                    }
+                }
+                trigger_else = {
+                    is_landed_or_landless_administrative = yes
+                }
+            }
+        }
+        court_position_type:white_knife_court_position = { always = no }
+        court_position_type:witness_camp_officer = {
+            scope:target = {
+                custom_tooltip = {
+                    text = landless_government_tt
+                    government_has_flag = government_is_landless_adventurer
+                }
+                custom_tooltip = {
+                    text = witness_camp_officer_parameter_tt
+                    domicile ?= {
+                        has_domicile_parameter = camp_unlocks_witness_officer
+                    }
+                }
+            }
+        }
+        court_position_type:yeke_jarquchi_court_position = {
+            scope:target = {
+                highest_held_title_tier >= tier_county
+                government_has_flag = government_is_nomadic
+            }
+        }
+        court_position_type:yurtchi_court_position = {
+            scope:target = {
+                highest_held_title_tier >= tier_county
+                government_has_flag = government_is_nomadic
+            }
+        }
+        fallback = { always = yes }
+    }
+}
+
+DI_generated_court_position_candidate_valid = {
+    scope:new_courtier = {
+        switch = {
+            trigger = scope:court_position_type
+            court_position_type:admiral_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    custom_tooltip = {
+                        text = none_does_not_have_a_full_time_job
+                        trigger_if = {
+                            limit = {
+                                NOT = {
+                                    has_court_position = admiral_court_position
+                                }
+                            }
+                            court_position_does_not_already_have_a_job_trigger = yes
+                        }
+                    }
+                    can_be_combatant_based_on_gender_trigger = {
+                        ARMY_OWNER = scope:target
+                    }
+                }
+            }
+            court_position_type:akolouthos_court_position = {
+                always = no
+            }
+            court_position_type:antiquarian_court_position = {
+                scope:new_courtier = {
+                    antiquarian_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:archer_captain_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = archer_captain
+                }
+            }
+            court_position_type:armorer_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = armorer
+                }
+            }
+            court_position_type:b_deep_lake_keeper = {
+                scope:new_courtier = {
+                    OR = {
+                        is_landed = no
+                        has_title = title:b_deep_lake
+                    }
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    NOR = {
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOT = {
+                        scope:new_courtier = title:d_nw_landless_first_ranger.holder
+                    }
+                }
+            }
+            court_position_type:b_eastwatch_by_the_sea_keeper = {
+                scope:new_courtier = {
+                    OR = {
+                        is_landed = no
+                        has_title = title:c_eastwatch
+                    }
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    NOR = {
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOT = {
+                        scope:new_courtier = title:d_nw_landless_first_ranger.holder
+                    }
+                }
+            }
+            court_position_type:b_greenguard_keeper = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    OR = {
+                        is_landed = no
+                        has_title = title:b_greenguard
+                    }
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    NOR = {
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    NOT = {
+                        scope:new_courtier = title:d_nw_landless_first_ranger.holder
+                    }
+                }
+            }
+            court_position_type:b_greyguard_keeper = {
+                scope:new_courtier = {
+                    OR = {
+                        is_landed = no
+                        has_title = title:b_greyguard
+                    }
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    NOR = {
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOT = {
+                        scope:new_courtier = title:d_nw_landless_first_ranger.holder
+                    }
+                }
+            }
+            court_position_type:b_hoarfrost_hill_keeper = {
+                scope:new_courtier = {
+                    OR = {
+                        is_landed = no
+                        has_title = title:b_hoarfrost_hill
+                    }
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    NOR = {
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOT = {
+                        scope:new_courtier = title:d_nw_landless_first_ranger.holder
+                    }
+                }
+            }
+            court_position_type:b_icemark_keeper = {
+                scope:new_courtier = {
+                    OR = {
+                        is_landed = no
+                        has_title = title:b_icemark
+                    }
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    NOR = {
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOT = {
+                        scope:new_courtier = title:d_nw_landless_first_ranger.holder
+                    }
+                }
+            }
+            court_position_type:b_long_barrow_keeper = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    OR = {
+                        is_landed = no
+                        has_title = title:b_long_barrow
+                    }
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    NOR = {
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    NOT = {
+                        scope:new_courtier = title:d_nw_landless_first_ranger.holder
+                    }
+                }
+            }
+            court_position_type:b_oakenshield_keeper = {
+                scope:new_courtier = {
+                    OR = {
+                        is_landed = no
+                        has_title = title:b_oakenshield
+                    }
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    NOR = {
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOT = {
+                        scope:new_courtier = title:d_nw_landless_first_ranger.holder
+                    }
+                }
+            }
+            court_position_type:b_queensgate_keeper = {
+                scope:new_courtier = {
+                    OR = {
+                        is_landed = no
+                        has_title = title:b_queensgate
+                    }
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    NOR = {
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOT = {
+                        scope:new_courtier = title:d_nw_landless_first_ranger.holder
+                    }
+                }
+            }
+            court_position_type:b_rimegate_keeper = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    OR = {
+                        is_landed = no
+                        has_title = title:b_rimegate
+                    }
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    NOR = {
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    NOT = {
+                        scope:new_courtier = title:d_nw_landless_first_ranger.holder
+                    }
+                }
+            }
+            court_position_type:b_sable_hall_keeper = {
+                scope:new_courtier = {
+                    OR = {
+                        is_landed = no
+                        has_title = title:b_sable_hall
+                    }
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    NOR = {
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOT = {
+                        scope:new_courtier = title:d_nw_landless_first_ranger.holder
+                    }
+                }
+            }
+            court_position_type:b_sentinel_stand_keeper = {
+                scope:new_courtier = {
+                    OR = {
+                        is_landed = no
+                        has_title = title:b_sentinel_stand
+                    }
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    NOR = {
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOT = {
+                        scope:new_courtier = title:d_nw_landless_first_ranger.holder
+                    }
+                }
+            }
+            court_position_type:b_stonedoor_keeper = {
+                scope:new_courtier = {
+                    OR = {
+                        is_landed = no
+                        has_title = title:b_stonedoor
+                    }
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    NOR = {
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOT = {
+                        scope:new_courtier = title:d_nw_landless_first_ranger.holder
+                    }
+                }
+            }
+            court_position_type:b_the_nightfort_keeper = {
+                scope:new_courtier = {
+                    OR = {
+                        is_landed = no
+                        has_title = title:b_the_nightfort
+                    }
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    NOR = {
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOT = {
+                        scope:new_courtier = title:d_nw_landless_first_ranger.holder
+                    }
+                }
+            }
+            court_position_type:b_the_shadow_tower_keeper = {
+                scope:new_courtier = {
+                    OR = {
+                        is_landed = no
+                        has_title = title:c_the_shadow_tower
+                    }
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    NOR = {
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOT = {
+                        scope:new_courtier = title:d_nw_landless_first_ranger.holder
+                    }
+                }
+            }
+            court_position_type:b_the_torches_keeper = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    OR = {
+                        is_landed = no
+                        has_title = title:b_the_torches
+                    }
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    NOR = {
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    NOT = {
+                        scope:new_courtier = title:d_nw_landless_first_ranger.holder
+                    }
+                }
+            }
+            court_position_type:b_westwatch_by_the_bridge_keeper = {
+                scope:new_courtier = {
+                    OR = {
+                        is_landed = no
+                        has_title = title:b_westwatch_by_the_bridge
+                    }
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    NOR = {
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOT = {
+                        scope:new_courtier = title:d_nw_landless_first_ranger.holder
+                    }
+                }
+            }
+            court_position_type:b_woodswatch_by_the_pool_keeper = {
+                scope:new_courtier = {
+                    OR = {
+                        is_landed = no
+                        has_title = title:b_woodswatch_by_the_pool
+                    }
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    NOR = {
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOT = {
+                        scope:new_courtier = title:d_nw_landless_first_ranger.holder
+                    }
+                }
+            }
+            court_position_type:bloodrider_court_position = {
+                scope:new_courtier = {
+                    bloodrider_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    faith = {
+                        has_doctrine_parameter = can_make_bloodriders
+                    }
+                }
+            }
+            court_position_type:bodyguard_court_position = {
+                valid_camp_officer_trigger = {
+                    OFFICER = bodyguard
+                }
+            }
+            court_position_type:bookmaker_court_position = {
+                scope:new_courtier = {
+                    bookmaker_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:boyan_court_position = {
+                scope:new_courtier = {
+                    liege = scope:target
+                    boyan_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:camelry_captain_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = camelry_captain
+                }
+            }
+            court_position_type:camp_cook_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = camp_cook
+                }
+            }
+            court_position_type:camp_priest_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = camp_priest
+                }
+            }
+            court_position_type:cave_hermit_court_position = {
+                scope:new_courtier = {
+                    cave_hermit_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:champion_court_position = {
+                scope:new_courtier = {
+                    champion_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:charioteer_court_position = {
+                scope:new_courtier = {
+                    charioteer_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:cherbi_court_position = {
+                scope:new_courtier = {
+                    liege = scope:target
+                    cherbi_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:chief_engineer_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = chief_engineer
+                }
+            }
+            court_position_type:chief_eunuch_court_position = {
+                scope:new_courtier = {
+                    liege ?= scope:target
+                    chief_eunuch_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:chief_forager_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = chief_forager
+                }
+            }
+            court_position_type:chief_qadi_court_position = {
+                always = no
+            }
+            court_position_type:chronicler_court_position = {
+                scope:new_courtier = {
+                    chronicler_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:court_artificer_court_position = {
+                valid_camp_officer_trigger = {
+                    OFFICER = court_artificer
+                }
+            }
+            court_position_type:court_astrologer_court_position = {
+                scope:new_courtier = {
+                    liege = scope:target
+                    court_astrologer_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:court_brahmin_court_position = {
+                always = no
+            }
+            court_position_type:court_brewmaster_court_position = {
+                scope:new_courtier = {
+                    liege = scope:target
+                    court_brewmaster_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:court_gardener_court_position = {
+                scope:new_courtier = {
+                    court_gardener_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:court_guru_court_position = {
+                always = no
+            }
+            court_position_type:court_jester_court_position = {
+                scope:new_courtier = {
+                    court_jester_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:court_musician_court_position = {
+                scope:new_courtier = {
+                    court_musician_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:court_physician_court_position = {
+                valid_camp_officer_trigger = {
+                    OFFICER = court_physician
+                }
+            }
+            court_position_type:court_poet_court_position = {
+                scope:new_courtier = {
+                    court_poet_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:court_scholar_court_position = {
+                scope:new_courtier = {
+                    court_scholar_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:court_smith_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    custom_tooltip = {
+                        text = IS_NOT_THE_SPOUSE_OF_CHARACTER_COURT_POSITION
+                        NOT = {
+                            is_spouse_of = scope:target
+                        }
+                    }
+                    custom_tooltip = {
+                        text = none_does_not_have_a_full_time_job
+                        trigger_if = {
+                            limit = {
+                                NOT = {
+                                    has_court_position = court_smith_court_position
+                                }
+                            }
+                            court_position_does_not_already_have_a_job_trigger = yes
+                        }
+                    }
+                }
+            }
+            court_position_type:court_tutor_court_position = {
+                scope:new_courtier = {
+                    court_tutor_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:crimson_cloaks_commander_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOR = {
+                        has_trait = kingsguard
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    can_be_combatant_based_on_gender_trigger = {
+                        ARMY_OWNER = scope:target
+                    }
+                    is_courtier_of = scope:target
+                }
+            }
+            court_position_type:cultural_emissary_court_position = {
+                valid_camp_officer_trigger = {
+                    OFFICER = cultural_emissary
+                }
+            }
+            court_position_type:cupbearer_court_position = {
+                scope:new_courtier = {
+                    cupbearer_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:elephantry_captain_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = elephantry_captain
+                }
+            }
+            court_position_type:eparch_court_position = {
+                scope:new_courtier = {
+                    liege = scope:target
+                    OR = {
+                        is_landed = no
+                        custom_tooltip = {
+                            text = eparch_distance_trigger_desc
+                            capital_province ?= {
+                                squared_distance = {
+                                    target = scope:target.capital_province
+                                    value < 50000
+                                }
+                            }
+                            government_allows = administrative
+                        }
+                    }
+                    NOT = {
+                        has_trait = eunuch
+                    }
+                }
+            }
+            court_position_type:executioner_court_position = {
+                scope:new_courtier = {
+                    executioner_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:favored_minister_court_position = {
+                always = no
+            }
+            court_position_type:fire_dragon_engineer_court_position = {
+                scope:new_courtier = {
+                    fire_dragon_engineer_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:first_sword_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    custom_tooltip = {
+                        text = none_does_not_have_a_full_time_job
+                        trigger_if = {
+                            limit = {
+                                NOT = {
+                                    has_court_position = first_sword_court_position
+                                }
+                            }
+                            court_position_does_not_already_have_a_job_trigger = yes
+                        }
+                    }
+                    can_be_combatant_based_on_gender_trigger = {
+                        ARMY_OWNER = scope:target
+                    }
+                }
+            }
+            court_position_type:food_taster_court_position = {
+                scope:new_courtier = {
+                    food_taster_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:foreign_emissary_court_position = {
+                scope:new_courtier = {
+                    liege = scope:target
+                    foreign_emissary_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:gaoler_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOT = {
+                        is_spouse_of = scope:target
+                    }
+                    is_ruler = no
+                    custom_tooltip = {
+                        text = none_does_not_have_a_full_time_job
+                        trigger_if = {
+                            limit = {
+                                NOT = {
+                                    has_court_position = gaoler_court_position
+                                }
+                            }
+                            court_position_does_not_already_have_a_job_trigger = yes
+                        }
+                    }
+                }
+            }
+            court_position_type:garuda_court_position = {
+                valid_camp_officer_trigger = {
+                    OFFICER = garuda
+                }
+            }
+            court_position_type:goldcloaks_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    OR = {
+                        AND = {
+                            any_liege_or_above = {
+                                has_title = title:b_goldguard_heights
+                            }
+                            is_landed = no
+                        }
+                        has_title = title:b_goldguard_heights
+                    }
+                    NOR = {
+                        has_trait = kingsguard
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    can_be_combatant_based_on_gender_trigger = {
+                        ARMY_OWNER = scope:target
+                    }
+                }
+            }
+            court_position_type:grand_guardian_court_position = {
+                scope:new_courtier = {
+                    grand_guardian_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:grand_mentor_court_position = {
+                scope:new_courtier = {
+                    grand_mentor_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:grand_preceptor_court_position = {
+                scope:new_courtier = {
+                    grand_preceptor_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:grey_cloaks_commander_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOR = {
+                        has_trait = kingsguard
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    can_be_combatant_based_on_gender_trigger = {
+                        ARMY_OWNER = scope:target
+                    }
+                    is_courtier_of = scope:target
+                }
+            }
+            court_position_type:harbormaster_court_position = {
+                scope:new_courtier ?= {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    custom_tooltip = {
+                        text = employee_is_not_your_spouse
+                        NOT = {
+                            is_spouse_of = scope:target
+                        }
+                    }
+                    custom_tooltip = {
+                        text = none_does_not_have_a_full_time_job
+                        trigger_if = {
+                            limit = {
+                                NOT = {
+                                    has_court_position = harbormaster_court_position
+                                }
+                            }
+                            court_position_does_not_already_have_a_job_trigger = yes
+                        }
+                    }
+                }
+            }
+            court_position_type:head_dragonkeeper_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOR = {
+                        is_imprisoned = yes
+                        is_landed = yes
+                    }
+                    custom_tooltip = {
+                        text = none_does_not_have_a_full_time_job
+                        trigger_if = {
+                            limit = {
+                                NOT = {
+                                    has_court_position = head_dragonkeeper_court_position
+                                }
+                            }
+                            court_position_does_not_already_have_a_job_trigger = yes
+                        }
+                    }
+                }
+            }
+            court_position_type:head_groom_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = head_groom
+                }
+            }
+            court_position_type:head_porter_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = head_porter
+                }
+            }
+            court_position_type:heavy_cavalry_captain_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = heavy_cavalry_captain
+                }
+            }
+            court_position_type:heavy_infantry_captain_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = heavy_infantry_captain
+                }
+            }
+            court_position_type:high_almoner_court_position = {
+                scope:new_courtier = {
+                    high_almoner_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:high_reeve_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOR = {
+                        has_trait = kingsguard
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    is_courtier_of = scope:target
+                }
+            }
+            court_position_type:horse_archer_captain_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = horse_archer_captain
+                }
+            }
+            court_position_type:household_guard_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    custom_tooltip = {
+                        text = none_does_not_have_a_full_time_job
+                        trigger_if = {
+                            limit = {
+                                NOT = {
+                                    has_court_position = household_guard_court_position
+                                }
+                            }
+                            court_position_does_not_already_have_a_job_trigger = yes
+                        }
+                    }
+                    can_be_combatant_based_on_gender_trigger = {
+                        ARMY_OWNER = scope:target
+                    }
+                }
+            }
+            court_position_type:huntperson_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = huntperson
+                }
+            }
+            court_position_type:justiciar_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOR = {
+                        has_trait = kingsguard
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    can_be_combatant_based_on_gender_trigger = {
+                        ARMY_OWNER = scope:target
+                    }
+                    OR = {
+                        AND = {
+                            is_vassal_of = title:c_kings_landing.holder
+                            highest_held_title_tier <= tier_duchy
+                            highest_held_title_tier > tier_barony
+                        }
+                        is_courtier_of = scope:target
+                    }
+                }
+            }
+            court_position_type:keeper_of_keys_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOR = {
+                        has_trait = kingsguard
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    is_courtier_of = scope:target
+                }
+            }
+            court_position_type:keeper_of_swans_court_position = {
+                scope:new_courtier = {
+                    keeper_of_swans_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:keeper_of_the_harem_court_position = {
+                scope:new_courtier = {
+                    keeper_of_the_harem_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:keeper_of_the_horses_court_position = {
+                scope:new_courtier = {
+                    liege = scope:target
+                    keeper_of_the_horses_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:kennelperson_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = kennelperson
+                }
+            }
+            court_position_type:khlon_glan_court_position = {
+                scope:new_courtier = {
+                    khlon_glan_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:lady_in_waiting_court_position = {
+                scope:new_courtier = {
+                    lady_in_waiting_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:laureate_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = laureate
+                }
+            }
+            court_position_type:light_cavalry_captain_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = light_cavalry_captain
+                }
+            }
+            court_position_type:light_infantry_captain_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = light_infantry_captain
+                }
+            }
+            court_position_type:lorath_fisher_prince_court_position = {
+                always = no
+            }
+            court_position_type:lorath_harvest_prince_court_position = {
+                scope:new_courtier = {
+                    domain_size < 1
+                }
+            }
+            court_position_type:lorath_prince_of_streets_court_position = {
+                always = no
+            }
+            court_position_type:maester_court_position = {
+                scope:new_courtier = {
+                    is_imprisoned = no
+                    OR = {
+                        has_trait_xp = {
+                            trait = maester
+                            value = 100
+                        }
+                        has_trait = disgraced_maester
+                        has_character_flag = former_acolyte
+                    }
+                }
+                scope:target = {
+                    trigger_if = {
+                        limit = {
+                            has_title = title:h_the_iron_throne
+                        }
+                        scope:new_courtier = {
+                            has_inactive_trait = grandmaester
+                        }
+                    }
+                }
+            }
+            court_position_type:master_assassin_court_position = {
+                scope:new_courtier = {
+                    master_assassin_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:master_at_arms_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:master_bard_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = master_bard
+                }
+            }
+            court_position_type:master_of_arms_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = master_of_arms
+                }
+            }
+            court_position_type:master_of_horse_court_position = {
+                scope:new_courtier = {
+                    master_of_horse_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:master_of_hunt_court_position = {
+                scope:new_courtier = {
+                    master_of_hunt_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:master_of_spoils_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = master_of_spoils
+                }
+            }
+            court_position_type:master_thief_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = master_thief
+                }
+            }
+            court_position_type:nw_septon = {
+                scope:new_courtier = {
+                    is_male = yes
+                    is_adult = yes
+                    has_trait = nightswatch
+                    has_trait = septon
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:person_haggler_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = person_haggler
+                }
+            }
+            court_position_type:pike_captain_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = pike_captain
+                }
+            }
+            court_position_type:princes_pass_court_position = {
+                always = no
+            }
+            court_position_type:quartermaster_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = quartermaster
+                }
+            }
+            court_position_type:royal_architect_court_position = {
+                scope:new_courtier = {
+                    royal_architect_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:royal_counter_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOR = {
+                        has_trait = kingsguard
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    is_courtier_of = scope:target
+                }
+            }
+            court_position_type:royal_mint_officer_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOR = {
+                        has_trait = kingsguard
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    is_courtier_of = scope:target
+                }
+            }
+            court_position_type:royal_scales_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOR = {
+                        has_trait = kingsguard
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    is_courtier_of = scope:target
+                }
+            }
+            court_position_type:sea_watch_commander_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    NOR = {
+                        has_trait = kingsguard
+                        has_trait = maester
+                        has_trait = septon
+                    }
+                    can_be_combatant_based_on_gender_trigger = {
+                        ARMY_OWNER = scope:target
+                    }
+                    is_courtier_of = scope:target
+                }
+            }
+            court_position_type:second_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = second
+                }
+            }
+            court_position_type:seneschal_court_position = {
+                scope:new_courtier = {
+                    seneschal_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:septa_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    is_courtier_of = scope:target
+                    has_trait = septon
+                    is_male = no
+                }
+            }
+            court_position_type:septon_court_position = {
+                scope:new_courtier = {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:siege_engineer_court_position = {
+                scope:new_courtier = {
+                    liege = scope:target
+                    siege_engineer_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:stone_way_court_position = {
+                always = no
+            }
+            court_position_type:stooge_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = stooge
+                }
+            }
+            court_position_type:travel_leader_court_position = {
+                valid_camp_officer_trigger = {
+                    OFFICER = travel_leader
+                }
+            }
+            court_position_type:warden_of_the_east_court_position = {
+                scope:new_courtier ?= {
+                    OR = {
+                        is_vassal_of = scope:target
+                        is_courtier_of = scope:target
+                    }
+                }
+            }
+            court_position_type:warden_of_the_north_court_position = {
+                scope:new_courtier ?= {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    OR = {
+                        is_vassal_of = scope:target
+                        is_courtier_of = scope:target
+                    }
+                }
+            }
+            court_position_type:warden_of_the_south_court_position = {
+                scope:new_courtier ?= {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    OR = {
+                        is_vassal_of = scope:target
+                        is_courtier_of = scope:target
+                    }
+                }
+            }
+            court_position_type:warden_of_the_west_court_position = {
+                scope:new_courtier ?= {
+                    base_court_position_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                    OR = {
+                        is_vassal_of = scope:target
+                        is_courtier_of = scope:target
+                    }
+                }
+            }
+            court_position_type:wet_nurse_court_position = {
+                scope:new_courtier = {
+                    wet_nurse_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:white_knife_court_position = {
+                always = no
+            }
+            court_position_type:witness_camp_officer = {
+                valid_camp_officer_trigger = {
+                    OFFICER = witness
+                }
+            }
+            court_position_type:yeke_jarquchi_court_position = {
+                scope:new_courtier = {
+                    liege = scope:target
+                    yeke_jarquchi_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            court_position_type:yurtchi_court_position = {
+                scope:new_courtier = {
+                    liege = scope:target
+                    yurtchi_validity_trigger = {
+                        EMPLOYER = scope:target
+                    }
+                }
+            }
+            fallback = { always = no }
+        }
+    }
+}

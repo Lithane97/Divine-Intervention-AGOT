@@ -1009,10 +1009,6 @@ DI_apply_court_position_profile_effect = {
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
-                target = trait:lifestyle_mystic
-            }
-            add_to_variable_list = {
-                name = DI_cs_trait_list
                 target = trait:patient
             }
             add_to_variable_list = {
@@ -2053,6 +2049,10 @@ DI_apply_court_position_profile_effect = {
                 name = DI_cs_martial
                 value = 16
             }
+            set_variable = {
+                name = DI_cs_prowess
+                value = 12
+            }
             add_to_variable_list = {
                 name = DI_cs_trait_list
                 target = trait:administrator
@@ -2195,10 +2195,6 @@ DI_apply_court_position_profile_effect = {
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
-                target = trait:disgraced_maester
-            }
-            add_to_variable_list = {
-                name = DI_cs_trait_list
                 target = trait:inquisitive
             }
             add_to_variable_list = {
@@ -2212,6 +2208,10 @@ DI_apply_court_position_profile_effect = {
             add_to_variable_list = {
                 name = DI_cs_trait_list
                 target = trait:lifestyle_physician
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
+                target = trait:maester
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
@@ -3055,7 +3055,33 @@ DI_apply_court_position_profile_effect = {
 DI_apply_court_position_validity_effect = {
     switch = {
         trigger = $COURT_POSITION$
+        court_position_type:admiral_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:antiquarian_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:archer_captain_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
         court_position_type:armorer_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = wrathful
@@ -3072,159 +3098,290 @@ DI_apply_court_position_validity_effect = {
             }
         }
         court_position_type:b_deep_lake_keeper = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:b_eastwatch_by_the_sea_keeper = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:b_greenguard_keeper = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:b_greyguard_keeper = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:b_hoarfrost_hill_keeper = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:b_icemark_keeper = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:b_long_barrow_keeper = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:b_oakenshield_keeper = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:b_queensgate_keeper = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:b_rimegate_keeper = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:b_sable_hall_keeper = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:b_sentinel_stand_keeper = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:b_stonedoor_keeper = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:b_the_nightfort_keeper = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:b_the_shadow_tower_keeper = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:b_the_torches_keeper = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:b_westwatch_by_the_bridge_keeper = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:b_woodswatch_by_the_pool_keeper = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:bloodrider_court_position = {
+            remove_trait = agot_dummy_trait
             remove_trait = blind
             remove_trait = disloyal
+            remove_trait = dragon
             remove_trait = infirm
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+            if = {
+                limit = {
+                    NOT = {
+                        OR = {
+                            faith = faith:dothraki_faith
+                        }
+                    }
+                }
+                random_list = {
+                    1 = { set_character_faith = faith:dothraki_faith }
+                }
+            }
         }
         court_position_type:bodyguard_court_position = {
+            remove_trait = agot_dummy_trait
             remove_trait = blind
+            remove_trait = dragon
             remove_trait = infirm
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:boyan_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:camelry_captain_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
         }
         court_position_type:camp_cook_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = gluttonous
@@ -3238,6 +3395,11 @@ DI_apply_court_position_validity_effect = {
             }
         }
         court_position_type:camp_priest_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = zealous
@@ -3263,11 +3425,35 @@ DI_apply_court_position_validity_effect = {
             }
             set_character_faith = scope:target.faith
         }
+        court_position_type:cave_hermit_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
         court_position_type:champion_court_position = {
+            remove_trait = agot_dummy_trait
             remove_trait = blind
+            remove_trait = dragon
             remove_trait = infirm
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:cherbi_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
         }
         court_position_type:chief_engineer_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = patient
@@ -3290,6 +3476,11 @@ DI_apply_court_position_validity_effect = {
             }
         }
         court_position_type:chief_eunuch_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = eunuch_1
@@ -3300,6 +3491,11 @@ DI_apply_court_position_validity_effect = {
             }
         }
         court_position_type:chief_forager_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = humble
@@ -3333,7 +3529,26 @@ DI_apply_court_position_validity_effect = {
                 }
             }
         }
+        court_position_type:chronicler_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:court_artificer_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
         court_position_type:court_astrologer_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = nomadic_philosophy
@@ -3564,16 +3779,96 @@ DI_apply_court_position_validity_effect = {
                 set_age = 16
             }
         }
+        court_position_type:court_gardener_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:court_jester_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:court_musician_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:court_physician_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:court_poet_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
         court_position_type:court_scholar_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
+        court_position_type:court_smith_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:court_tutor_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
         court_position_type:crimson_cloaks_commander_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = kingsguard
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:cultural_emissary_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:cupbearer_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:elephantry_captain_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
         }
         court_position_type:eparch_court_position = {
             remove_trait = beardless_eunuch
@@ -3590,20 +3885,110 @@ DI_apply_court_position_validity_effect = {
                 set_age = 16
             }
         }
+        court_position_type:fire_dragon_engineer_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:first_sword_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:food_taster_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:foreign_emissary_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:gaoler_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
         court_position_type:garuda_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             set_knight_status = force
         }
         court_position_type:goldcloaks_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = kingsguard
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:grand_guardian_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:grand_mentor_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:grand_preceptor_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
         }
         court_position_type:grey_cloaks_commander_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = kingsguard
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:harbormaster_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:head_dragonkeeper_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
         }
         court_position_type:head_groom_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = patient
@@ -3617,6 +4002,11 @@ DI_apply_court_position_validity_effect = {
             }
         }
         court_position_type:head_porter_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = humble
@@ -3632,12 +4022,57 @@ DI_apply_court_position_validity_effect = {
                 }
             }
         }
+        court_position_type:heavy_cavalry_captain_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:heavy_infantry_captain_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:high_almoner_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
         court_position_type:high_reeve_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = kingsguard
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:horse_archer_captain_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:household_guard_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
         }
         court_position_type:huntperson_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = patient
@@ -3660,16 +4095,52 @@ DI_apply_court_position_validity_effect = {
             }
         }
         court_position_type:justiciar_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = kingsguard
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
         }
         court_position_type:keeper_of_keys_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = kingsguard
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:keeper_of_swans_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:keeper_of_the_harem_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:keeper_of_the_horses_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
         }
         court_position_type:kennelperson_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = gregarious
@@ -3682,7 +4153,26 @@ DI_apply_court_position_validity_effect = {
                 }
             }
         }
+        court_position_type:khlon_glan_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:lady_in_waiting_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
         court_position_type:laureate_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = gregarious
@@ -3701,7 +4191,54 @@ DI_apply_court_position_validity_effect = {
                 }
             }
         }
+        court_position_type:light_cavalry_captain_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:light_infantry_captain_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:master_assassin_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+            if = {
+                limit = {
+                    NOT = {
+                        OR = {
+                            faith = faith:fc_pan_faceless
+                            faith = faith:fg_pan_garth
+                        }
+                    }
+                }
+                random_list = {
+                    1 = { set_character_faith = faith:fc_pan_faceless }
+                    1 = { set_character_faith = faith:fg_pan_garth }
+                }
+            }
+        }
+        court_position_type:master_at_arms_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
         court_position_type:master_bard_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = gregarious
@@ -3724,6 +4261,11 @@ DI_apply_court_position_validity_effect = {
             }
         }
         court_position_type:master_of_arms_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = brave
@@ -3748,11 +4290,28 @@ DI_apply_court_position_validity_effect = {
                 }
             }
         }
+        court_position_type:master_of_horse_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
         court_position_type:master_of_hunt_court_position = {
+            remove_trait = agot_dummy_trait
             remove_trait = blind
+            remove_trait = dragon
             remove_trait = infirm
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
         }
         court_position_type:master_of_spoils_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = greedy
@@ -3769,6 +4328,11 @@ DI_apply_court_position_validity_effect = {
             }
         }
         court_position_type:master_thief_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = craven
@@ -3785,12 +4349,22 @@ DI_apply_court_position_validity_effect = {
             }
         }
         court_position_type:nw_septon = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             if = {
                 limit = { age < 16 }
                 set_age = 16
             }
         }
         court_position_type:person_haggler_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = callous
@@ -3806,7 +4380,19 @@ DI_apply_court_position_validity_effect = {
                 }
             }
         }
+        court_position_type:pike_captain_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
         court_position_type:quartermaster_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = greedy
@@ -3825,30 +4411,137 @@ DI_apply_court_position_validity_effect = {
                 }
             }
         }
+        court_position_type:royal_architect_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
         court_position_type:royal_counter_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = kingsguard
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
         }
         court_position_type:royal_mint_officer_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = kingsguard
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
         }
         court_position_type:royal_scales_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = kingsguard
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
         }
         court_position_type:sea_watch_commander_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
             remove_trait = kingsguard
             remove_trait = maester
+            remove_trait = ruin
             remove_trait = septon
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:second_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:seneschal_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:septa_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:septon_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:siege_engineer_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:stooge_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:travel_leader_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:warden_of_the_north_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:warden_of_the_south_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:warden_of_the_west_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
         }
         court_position_type:wet_nurse_court_position = {
+            remove_trait = agot_dummy_trait
             remove_trait = devoted
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
         }
         court_position_type:witness_camp_officer = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
             random_list = {
                 1 = {
                     add_trait = honest
@@ -3860,6 +4553,20 @@ DI_apply_court_position_validity_effect = {
                     add_trait = brave
                 }
             }
+        }
+        court_position_type:yeke_jarquchi_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:yurtchi_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
         }
         fallback = { }
     }
@@ -3912,6 +4619,3844 @@ DI_apply_court_position_trait_xp_effect = {
             add_trait_xp = {
                 trait = lifestyle_physician
                 value = 100
+            }
+        }
+        fallback = { }
+    }
+}
+
+DI_apply_court_position_extended_validity_effect = {
+    switch = {
+        trigger = $COURT_POSITION$
+        court_position_type:admiral_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:antiquarian_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:archer_captain_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:armorer_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:b_deep_lake_keeper = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:b_eastwatch_by_the_sea_keeper = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:b_greenguard_keeper = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:b_greyguard_keeper = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:b_hoarfrost_hill_keeper = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:b_icemark_keeper = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:b_long_barrow_keeper = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:b_oakenshield_keeper = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:b_queensgate_keeper = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:b_rimegate_keeper = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:b_sable_hall_keeper = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:b_sentinel_stand_keeper = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:b_stonedoor_keeper = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:b_the_nightfort_keeper = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:b_the_shadow_tower_keeper = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:b_the_torches_keeper = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:b_westwatch_by_the_bridge_keeper = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:b_woodswatch_by_the_pool_keeper = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:bloodrider_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:bodyguard_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:boyan_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:camelry_captain_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:camp_cook_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:camp_priest_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:cave_hermit_court_position = {
+            if = {
+                limit = { NOT = { has_trait_xp = { trait = lifestyle_mystic value >= 50 } } }
+                add_trait = lifestyle_mystic
+                add_trait_xp = { trait = lifestyle_mystic value = 50 }
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:champion_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:cherbi_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:chief_engineer_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:chief_eunuch_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:chief_forager_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:chronicler_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:court_artificer_court_position = {
+            if = {
+                limit = { NOT = { exists = inspiration } }
+                create_inspiration = { type = weapon_inspiration gold = 0 }
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:court_astrologer_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:court_brewmaster_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:court_gardener_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:court_jester_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    AND = {
+                        scope:target = {
+                            is_ai = yes
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:court_musician_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:court_physician_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:court_poet_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:court_scholar_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:court_smith_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:court_tutor_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:crimson_cloaks_commander_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:cultural_emissary_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:cupbearer_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:elephantry_captain_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:executioner_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:fire_dragon_engineer_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:first_sword_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:food_taster_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    AND = {
+                        scope:target.faith = {
+                            NOT = {
+                                has_doctrine = doctrine_clerical_function_recruitment
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:foreign_emissary_court_position = {
+            if = {
+                limit = { culture = scope:target.culture }
+                random_list = {
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:abular } } }
+                        set_culture = culture:abular
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:andal } } }
+                        set_culture = culture:andal
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:andalosi } } }
+                        set_culture = culture:andalosi
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:aobao_ren } } }
+                        set_culture = culture:aobao_ren
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:asshaii } } }
+                        set_culture = culture:asshaii
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:astapori } } }
+                        set_culture = culture:astapori
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:axeman } } }
+                        set_culture = culture:axeman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:barrowman } } }
+                        set_culture = culture:barrowman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:basiliskite } } }
+                        set_culture = culture:basiliskite
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:bayasabhadan } } }
+                        set_culture = culture:bayasabhadan
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:bearman } } }
+                        set_culture = culture:bearman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:bixi_ren } } }
+                        set_culture = culture:bixi_ren
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:bloodless_man } } }
+                        set_culture = culture:bloodless_man
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:braavosi } } }
+                        set_culture = culture:braavosi
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:brindled_man } } }
+                        set_culture = culture:brindled_man
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:carcosan } } }
+                        set_culture = culture:carcosan
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:cave_dweller } } }
+                        set_culture = culture:cave_dweller
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:cenaakh_fen } } }
+                        set_culture = culture:cenaakh_fen
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:cewi_fen } } }
+                        set_culture = culture:cewi_fen
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:children_culture } } }
+                        set_culture = culture:children_culture
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:chroyanar } } }
+                        set_culture = culture:chroyanar
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:clawman } } }
+                        set_culture = culture:clawman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:crannogman } } }
+                        set_culture = culture:crannogman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:crownlander } } }
+                        set_culture = culture:crownlander
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:cymmeri } } }
+                        set_culture = culture:cymmeri
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:dathian } } }
+                        set_culture = culture:dathian
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:dawiz_fen } } }
+                        set_culture = culture:dawiz_fen
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:dornish_andal } } }
+                        set_culture = culture:dornish_andal
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:dothraki } } }
+                        set_culture = culture:dothraki
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:dragon_culture } } }
+                        set_culture = culture:dragon_culture
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:elyrian } } }
+                        set_culture = culture:elyrian
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:essarian } } }
+                        set_culture = culture:essarian
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:essosi_valyrian } } }
+                        set_culture = culture:essosi_valyrian
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:fangman } } }
+                        set_culture = culture:fangman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:farosi } } }
+                        set_culture = culture:farosi
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:feicui_ren } } }
+                        set_culture = culture:feicui_ren
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:first_clan } } }
+                        set_culture = culture:first_clan
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:first_man } } }
+                        set_culture = culture:first_man
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:fish_man } } }
+                        set_culture = culture:fish_man
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:fisher_queen_race } } }
+                        set_culture = culture:fisher_queen_race
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:forestman } } }
+                        set_culture = culture:forestman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:frozen_shoreman } } }
+                        set_culture = culture:frozen_shoreman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:ghaeni } } }
+                        set_culture = culture:ghaeni
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:ghardaqi } } }
+                        set_culture = culture:ghardaqi
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:ghiscari_original } } }
+                        set_culture = culture:ghiscari_original
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:giant_culture } } }
+                        set_culture = culture:giant_culture
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:gilal_fen } } }
+                        set_culture = culture:gilal_fen
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:gipps } } }
+                        set_culture = culture:gipps
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:giren_fen } } }
+                        set_culture = culture:giren_fen
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:gogossite } } }
+                        set_culture = culture:gogossite
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:goraez_fen } } }
+                        set_culture = culture:goraez_fen
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:gorgari } } }
+                        set_culture = culture:gorgari
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:goroshari } } }
+                        set_culture = culture:goroshari
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:greenblood } } }
+                        set_culture = culture:greenblood
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:greenborn } } }
+                        set_culture = culture:greenborn
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:grey_man } } }
+                        set_culture = culture:grey_man
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:harborman } } }
+                        set_culture = culture:harborman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:hartalari } } }
+                        set_culture = culture:hartalari
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:haungyu_ren } } }
+                        set_culture = culture:haungyu_ren
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:hazdahni } } }
+                        set_culture = culture:hazdahni
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:heinao_ren } } }
+                        set_culture = culture:heinao_ren
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:high_valyrian } } }
+                        set_culture = culture:high_valyrian
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:honeywiner } } }
+                        set_culture = culture:honeywiner
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:hornfoot } } }
+                        set_culture = culture:hornfoot
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:hyrkoonan_original } } }
+                        set_culture = culture:hyrkoonan_original
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:ib_sarese } } }
+                        set_culture = culture:ib_sarese
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:ibbatese } } }
+                        set_culture = culture:ibbatese
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:ibbenese } } }
+                        set_culture = culture:ibbenese
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:ice_riverman } } }
+                        set_culture = culture:ice_riverman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:ifequevron } } }
+                        set_culture = culture:ifequevron
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:ironborn } } }
+                        set_culture = culture:ironborn
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:jade_islander } } }
+                        set_culture = culture:jade_islander
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:jhalai } } }
+                        set_culture = culture:jhalai
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:jhogwin } } }
+                        set_culture = culture:jhogwin
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:jogos_nhai } } }
+                        set_culture = culture:jogos_nhai
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:kayakayanayan } } }
+                        set_culture = culture:kayakayanayan
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:krakenman } } }
+                        set_culture = culture:krakenman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:lakefolk } } }
+                        set_culture = culture:lakefolk
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:lengii } } }
+                        set_culture = culture:lengii
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:lhazareen } } }
+                        set_culture = culture:lhazareen
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:lion_man } } }
+                        set_culture = culture:lion_man
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:lorathi } } }
+                        set_culture = culture:lorathi
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:lyseni } } }
+                        set_culture = culture:lyseni
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:madekh_fen } } }
+                        set_culture = culture:madekh_fen
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:mantaryan } } }
+                        set_culture = culture:mantaryan
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:manticorian } } }
+                        set_culture = culture:manticorian
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:marahaiian } } }
+                        set_culture = culture:marahaiian
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:marcher } } }
+                        set_culture = culture:marcher
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:mazemaker } } }
+                        set_culture = culture:mazemaker
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:meereenese } } }
+                        set_culture = culture:meereenese
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:mellar } } }
+                        set_culture = culture:mellar
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:milkwaterman } } }
+                        set_culture = culture:milkwaterman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:moluuni } } }
+                        set_culture = culture:moluuni
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:moon_clan } } }
+                        set_culture = culture:moon_clan
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:moraqi } } }
+                        set_culture = culture:moraqi
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:mossovite } } }
+                        set_culture = culture:mossovite
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:myrish } } }
+                        set_culture = culture:myrish
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:naathi } } }
+                        set_culture = culture:naathi
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:nefer } } }
+                        set_culture = culture:nefer
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:nightrunner } } }
+                        set_culture = culture:nightrunner
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:nonteloshi } } }
+                        set_culture = culture:nonteloshi
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:northern_clan } } }
+                        set_culture = culture:northern_clan
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:northman } } }
+                        set_culture = culture:northman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:norvoshi } } }
+                        set_culture = culture:norvoshi
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:noynar } } }
+                        set_culture = culture:noynar
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:omberi } } }
+                        set_culture = culture:omberi
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:omborui } } }
+                        set_culture = culture:omborui
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:others_culture } } }
+                        set_culture = culture:others_culture
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:painted_clansman } } }
+                        set_culture = culture:painted_clansman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:pentoshi } } }
+                        set_culture = culture:pentoshi
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:qaathi } } }
+                        set_culture = culture:qaathi
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:qaleen } } }
+                        set_culture = culture:qaleen
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:qartheen } } }
+                        set_culture = culture:qartheen
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:qhoynar } } }
+                        set_culture = culture:qhoynar
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:qohorik } } }
+                        set_culture = culture:qohorik
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:reachman } } }
+                        set_culture = culture:reachman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:rhoynar_original } } }
+                        set_culture = culture:rhoynar_original
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:riverman_main } } }
+                        set_culture = culture:riverman_main
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:salt_dornish } } }
+                        set_culture = culture:salt_dornish
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:sand_dornish } } }
+                        set_culture = culture:sand_dornish
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:sarar } } }
+                        set_culture = culture:sarar
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:sarhar } } }
+                        set_culture = culture:sarhar
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:shadowman } } }
+                        set_culture = culture:shadowman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:shamyrianan } } }
+                        set_culture = culture:shamyrianan
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:shan_ren } } }
+                        set_culture = culture:shan_ren
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:shieldman } } }
+                        set_culture = culture:shieldman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:shryke } } }
+                        set_culture = culture:shryke
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:shuzduni } } }
+                        set_culture = culture:shuzduni
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:sisterman } } }
+                        set_culture = culture:sisterman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:skagosi } } }
+                        set_culture = culture:skagosi
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:stone_dornish } } }
+                        set_culture = culture:stone_dornish
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:stonemen } } }
+                        set_culture = culture:stonemen
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:stormlander_main } } }
+                        set_culture = culture:stormlander_main
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:tagaez_fen } } }
+                        set_culture = culture:tagaez_fen
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:thenn } } }
+                        set_culture = culture:thenn
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:tolosi } } }
+                        set_culture = culture:tolosi
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:trimbaez_fen } } }
+                        set_culture = culture:trimbaez_fen
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:tyroshi } } }
+                        set_culture = culture:tyroshi
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:unknown_culture } } }
+                        set_culture = culture:unknown_culture
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:vahari } } }
+                        set_culture = culture:vahari
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:valeman_finger } } }
+                        set_culture = culture:valeman_finger
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:valeman_main } } }
+                        set_culture = culture:valeman_main
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:valeman_upper } } }
+                        set_culture = culture:valeman_upper
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:valyrian_original } } }
+                        set_culture = culture:valyrian_original
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:vineman } } }
+                        set_culture = culture:vineman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:volantene } } }
+                        set_culture = culture:volantene
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:walanoi } } }
+                        set_culture = culture:walanoi
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:westerman_main } } }
+                        set_culture = culture:westerman_main
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:westerosi_valyrian } } }
+                        set_culture = culture:westerosi_valyrian
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:winged_man } } }
+                        set_culture = culture:winged_man
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:wolfswood_clansman } } }
+                        set_culture = culture:wolfswood_clansman
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:yeenite } } }
+                        set_culture = culture:yeenite
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:yunkaii } } }
+                        set_culture = culture:yunkaii
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:zabhadi } } }
+                        set_culture = culture:zabhadi
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:zamettari } } }
+                        set_culture = culture:zamettari
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:zanhar_fen } } }
+                        set_culture = culture:zanhar_fen
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:zhenzhu_ren } } }
+                        set_culture = culture:zhenzhu_ren
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:zivylar_fen } } }
+                        set_culture = culture:zivylar_fen
+                    }
+                    1 = {
+                        trigger = { scope:target = { NOT = { culture = culture:zoqora } } }
+                        set_culture = culture:zoqora
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:gaoler_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:garuda_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:goldcloaks_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:grand_guardian_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:grand_mentor_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:grand_preceptor_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:grey_cloaks_commander_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:harbormaster_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:head_dragonkeeper_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:head_groom_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:head_porter_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:heavy_cavalry_captain_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:heavy_infantry_captain_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:high_almoner_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:high_reeve_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:horse_archer_captain_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:household_guard_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:huntperson_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:justiciar_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:keeper_of_keys_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:keeper_of_swans_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:keeper_of_the_harem_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:keeper_of_the_horses_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:kennelperson_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:khlon_glan_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:lady_in_waiting_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:laureate_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:light_cavalry_captain_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:light_infantry_captain_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:maester_court_position = {
+            if = {
+                limit = { NOT = { has_trait_xp = { trait = maester value >= 100 } } }
+                add_trait = maester
+                add_trait_xp = { trait = maester value = 100 }
+            }
+            if = {
+                limit = {
+                    scope:target = {
+                        has_title = title:h_the_iron_throne
+                    }
+                }
+                add_trait = grandmaester
+                make_trait_inactive = grandmaester
+            }
+        }
+        court_position_type:master_assassin_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:master_at_arms_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:master_bard_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:master_of_arms_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:master_of_horse_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:master_of_hunt_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:master_of_spoils_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:master_thief_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:nw_septon = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:person_haggler_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:pike_captain_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:quartermaster_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:royal_architect_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:royal_counter_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:royal_mint_officer_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:royal_scales_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:sea_watch_commander_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:second_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:seneschal_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:septa_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:septon_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:siege_engineer_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:stooge_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:travel_leader_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    AND = {
+                        bannable_serving_diarch_trigger = yes
+                    }
+                }
+            }
+        }
+        court_position_type:warden_of_the_north_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:warden_of_the_south_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:warden_of_the_west_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:wet_nurse_court_position = {
+            if = {
+                limit = { effective_age > 45 }
+                if = {
+                    limit = { is_immortal = yes }
+                    set_immortal_age = 45
+                }
+                else = { set_age = 45 }
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:witness_camp_officer = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:yeke_jarquchi_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:yurtchi_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
             }
         }
         fallback = { }
@@ -4003,12 +8548,19 @@ DI_revoke_selected_court_position_holder_effect = {
 }
 
 DI_spawn_selected_court_position_effect = {
+    scope:target = { save_scope_as = liege }
+    if = {
+    limit = { DI_court_position_spawn_enabled = yes }
     DI_spawn_low_court_character_effect = yes
     scope:new_courtier = {
+        save_scope_as = employee
         DI_apply_court_position_validity_effect = { COURT_POSITION = scope:court_position_type }
         DI_apply_court_position_trait_xp_effect = { COURT_POSITION = scope:court_position_type }
         DI_court_position_post_spawn_effect = { COURT_POSITION = scope:court_position_type }
+        DI_apply_court_position_extended_validity_effect = { COURT_POSITION = scope:court_position_type }
     }
+    if = {
+        limit = { DI_generated_court_position_candidate_valid = yes }
     if = {
         limit = { NOT = { DI_can_employ_selected_court_position = yes } }
         DI_revoke_selected_court_position_holder_effect = yes
@@ -4016,5 +8568,7 @@ DI_spawn_selected_court_position_effect = {
     appoint_court_position = {
         recipient = scope:new_courtier
         court_position = scope:court_position_type
+    }
+    }
     }
 }
