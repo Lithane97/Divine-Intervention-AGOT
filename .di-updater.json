@@ -28,7 +28,7 @@
     },
     "common/scripted_effects/DI_generated_court_position_profiles.txt": {
       "kind": "generated",
-      "last_written_hash": "2772aefb20c3a6c123ac1821ffacd910a89a20260760fb052900169c54076ee8"
+      "last_written_hash": "492eee15ac6a3237963b866501c7b4f4d628a17b68dc6e05ea0585d77014e71f"
     },
     "common/scripted_effects/DI_lifestyle_present_effects.txt": {
       "kind": "generated",
@@ -64,7 +64,7 @@
     },
     "common/scripted_guis/DI_generated_court_position_availability_sgui.txt": {
       "kind": "generated",
-      "last_written_hash": "6b173e5bba711e1603db7187ae0cdd373f139f05e489c7120b2c0c7b310af3b8"
+      "last_written_hash": "a9d069da9b2961f9279062ebcedc38766579560ef5ed1db37946613d1d00c8d8"
     },
     "common/scripted_guis/DI_innovations_sgui.txt": {
       "kind": "generated",
@@ -84,7 +84,7 @@
     },
     "common/scripted_triggers/DI_generated_court_position_employment.txt": {
       "kind": "generated",
-      "last_written_hash": "724236d20f0f43188e1767c349f19733c1c495f7faf1547aee83d825bef995b1"
+      "last_written_hash": "5f753c69da9a4de402681843f9c26333734110ca27ca2061fd0e4a068b25e7c9"
     },
     "gui/DI_army_spawner_templates/DI_as_all_types_template.gui": {
       "kind": "generated",
@@ -296,7 +296,7 @@
     },
     "reports/court_position_validity.json": {
       "kind": "generated",
-      "last_written_hash": "8734f76f9ab5da565279d8dd668bb511cca3080a765bec697fbda9e5fd44c2e5"
+      "last_written_hash": "6bf2ba8cdd696bc392e635ed250132392fb218b26a36e89b4c36db2faddf8f1a"
     }
   }
 }

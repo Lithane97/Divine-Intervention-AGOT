@@ -1009,6 +1009,10 @@ DI_apply_court_position_profile_effect = {
             }
             add_to_variable_list = {
                 name = DI_cs_trait_list
+                target = trait:lifestyle_mystic
+            }
+            add_to_variable_list = {
+                name = DI_cs_trait_list
                 target = trait:patient
             }
             add_to_variable_list = {
@@ -3558,6 +3562,13 @@ DI_apply_court_position_validity_effect = {
                 }
             }
         }
+        court_position_type:court_brahmin_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
         court_position_type:court_brewmaster_court_position = {
             remove_trait = agot_dummy_trait
             remove_trait = dragon
@@ -3780,6 +3791,13 @@ DI_apply_court_position_validity_effect = {
             }
         }
         court_position_type:court_gardener_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:court_guru_court_position = {
             remove_trait = agot_dummy_trait
             remove_trait = dragon
             remove_trait = ruin
@@ -4387,6 +4405,13 @@ DI_apply_court_position_validity_effect = {
             remove_trait = unknown
             remove_trait = wilderness
         }
+        court_position_type:princes_pass_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
         court_position_type:quartermaster_camp_officer = {
             remove_trait = agot_dummy_trait
             remove_trait = dragon
@@ -4493,6 +4518,13 @@ DI_apply_court_position_validity_effect = {
             remove_trait = unknown
             remove_trait = wilderness
         }
+        court_position_type:stone_way_court_position = {
+            remove_trait = agot_dummy_trait
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
         court_position_type:stooge_camp_officer = {
             remove_trait = agot_dummy_trait
             remove_trait = dragon
@@ -4531,6 +4563,13 @@ DI_apply_court_position_validity_effect = {
         court_position_type:wet_nurse_court_position = {
             remove_trait = agot_dummy_trait
             remove_trait = devoted
+            remove_trait = dragon
+            remove_trait = ruin
+            remove_trait = unknown
+            remove_trait = wilderness
+        }
+        court_position_type:white_knife_court_position = {
+            remove_trait = agot_dummy_trait
             remove_trait = dragon
             remove_trait = ruin
             remove_trait = unknown
@@ -5636,6 +5675,33 @@ DI_apply_court_position_extended_validity_effect = {
                 }
             }
         }
+        court_position_type:court_brahmin_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
         court_position_type:court_brewmaster_court_position = {
             if = {
                 limit = {
@@ -5689,6 +5755,33 @@ DI_apply_court_position_extended_validity_effect = {
             }
         }
         court_position_type:court_gardener_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:court_guru_court_position = {
             if = {
                 limit = {
                     AND = {
@@ -7904,6 +7997,33 @@ DI_apply_court_position_extended_validity_effect = {
                 }
             }
         }
+        court_position_type:princes_pass_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
         court_position_type:quartermaster_camp_officer = {
             if = {
                 limit = {
@@ -8201,6 +8321,33 @@ DI_apply_court_position_extended_validity_effect = {
                 }
             }
         }
+        court_position_type:stone_way_court_position = {
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
         court_position_type:stooge_camp_officer = {
             if = {
                 limit = {
@@ -8352,6 +8499,33 @@ DI_apply_court_position_extended_validity_effect = {
                 }
                 else = { set_age = 45 }
             }
+            if = {
+                limit = {
+                    AND = {
+                        exists = top_liege
+                    }
+                }
+                remove_trait = agot_dummy_trait
+                remove_trait = ruin
+                remove_trait = unknown
+                remove_trait = wilderness
+            }
+            if = {
+                limit = {
+                    AND = {
+                        exists = employer
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            exists = employer.top_liege
+                        }
+                    }
+                }
+            }
+        }
+        court_position_type:white_knife_court_position = {
             if = {
                 limit = {
                     AND = {
@@ -8549,8 +8723,6 @@ DI_revoke_selected_court_position_holder_effect = {
 
 DI_spawn_selected_court_position_effect = {
     scope:target = { save_scope_as = liege }
-    if = {
-    limit = { DI_court_position_spawn_enabled = yes }
     DI_spawn_low_court_character_effect = yes
     scope:new_courtier = {
         save_scope_as = employee
@@ -8560,15 +8732,11 @@ DI_spawn_selected_court_position_effect = {
         DI_apply_court_position_extended_validity_effect = { COURT_POSITION = scope:court_position_type }
     }
     if = {
-        limit = { DI_generated_court_position_candidate_valid = yes }
-    if = {
         limit = { NOT = { DI_can_employ_selected_court_position = yes } }
         DI_revoke_selected_court_position_holder_effect = yes
     }
     appoint_court_position = {
         recipient = scope:new_courtier
         court_position = scope:court_position_type
-    }
-    }
     }
 }
